@@ -17,7 +17,7 @@ const GaramondFont = localFont({
 const HelveticaNeueFont = localFont({
     src: [
         {
-            path: './fonts/HelveticaNeueBold.woff2',
+            path: './fonts/HelveticaNeueCondensedBold.woff2',
             weight: '700',
             style: 'normal',
         },
@@ -34,12 +34,24 @@ const HelveticaNowFont = localFont({
     ],
 });
 
+const palette = {
+    white: {
+        main: '#fff',
+    },
+};
+
 const theme = createTheme({
+    palette,
     typography: {
         fontFamily: GaramondFont.style.fontFamily,
 
         h1: {
             fontFamily: HelveticaNeueFont.style.fontFamily,
+
+            fontSize: 110,
+            fontWeight: 700,
+            lineHeight: '88px',
+            letterSpacing: '-0.015em',
         },
         h2: {
             fontFamily: HelveticaNeueFont.style.fontFamily,
@@ -57,8 +69,29 @@ const theme = createTheme({
             fontFamily: HelveticaNeueFont.style.fontFamily,
         },
 
+        subtitle1: {
+            fontSize: 48,
+            lineHeight: '45.6px',
+            letterSpacing: '-0.02em',
+        },
+
         button: {
             fontFamily: HelveticaNowFont.style.fontFamily,
+            fontSize: 16,
+        },
+    },
+
+    components: {
+        MuiButton: {
+            styleOverrides: {
+                root: {
+                    borderRadius: 0,
+                },
+
+                outlinedWhite: {
+                    borderColor: palette.white.main,
+                },
+            },
         },
     },
 });

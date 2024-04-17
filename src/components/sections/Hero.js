@@ -1,10 +1,27 @@
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import React from 'react';
 
-export default function Hero() {
+export default function Hero({ backgroundImage, children }) {
     return (
-        <Box>
-            <Typography variant="h1">HERO</Typography>
+        <Box
+            sx={{
+                minHeight: '100vh',
+                px: 2,
+                py: 10,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+
+                backgroundImage: backgroundImage
+                    ? `url(${backgroundImage})`
+                    : 'none',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center center',
+            }}
+        >
+            {children}
         </Box>
     );
 }
