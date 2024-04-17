@@ -7,8 +7,6 @@ import Link from 'next/link';
 export default function Home() {
     return (
         <main>
-            <Button>Test</Button>
-
             <Hero backgroundImage={HeroBg.src}>
                 <Box
                     sx={{
