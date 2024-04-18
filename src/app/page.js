@@ -1,12 +1,12 @@
-import Image from 'next/image';
 import { Box, Typography, Button } from '@mui/material';
 import Hero from '@/components/sections/Hero';
 import HeroBg from '../../assets/images/hpbg.jpg';
 import Link from 'next/link';
+import PageLayout from '@/components/layouts/PageLayout';
 
 export default function Home() {
     return (
-        <main>
+        <PageLayout hasFooter={false}>
             <Hero backgroundImage={HeroBg.src}>
                 <Box
                     sx={{
@@ -33,6 +33,6 @@ export default function Home() {
                     </Box>
                 </Box>
             </Hero>
-        </main>
+        </PageLayout>
     );
 }
