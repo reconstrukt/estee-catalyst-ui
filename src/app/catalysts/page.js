@@ -1,8 +1,11 @@
 import { Box, Typography, Button } from '@mui/material';
 import Hero from '@/components/sections/Hero';
-
 import Link from 'next/link';
 import PageLayout from '@/components/layouts/PageLayout';
+import Image from 'next/image';
+
+import CatalistsImage from '../../../assets/images/catalysts.jpg';
+import MediaBox from '@/components/elements/MediaBox';
 
 export default function Catalysts() {
     return (
@@ -40,6 +43,7 @@ export default function Catalysts() {
                 sx={{
                     textAlign: 'center',
                     p: 2,
+                    mb: 2,
                 }}
             >
                 <Typography variant="subtitle1">
@@ -50,6 +54,20 @@ export default function Catalysts() {
                     aspiring entrepreneurs with capital, mentorship, resources
                     and key partners.
                 </Typography>
+            </Box>
+
+            <Box
+                sx={{
+                    position: 'relative',
+                }}
+            >
+                <Image
+                    src={CatalistsImage.src}
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}
+                />
             </Box>
         </PageLayout>
     );
