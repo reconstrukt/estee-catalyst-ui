@@ -6,6 +6,16 @@ const themeGlobalCss = (
             body: {
                 color: 'black',
             },
+
+            a: {
+                textDecoration: 'none',
+                color: 'inherit',
+
+                '&:hover': {
+                    textDecoration: 'underline',
+                    textDecorationThickness: 'from-font',
+                },
+            },
         }}
     />
 );
