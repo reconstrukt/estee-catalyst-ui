@@ -5,7 +5,6 @@ import PageLayout from '@/components/layouts/PageLayout';
 import Image from 'next/image';
 
 import CatalistsImage from '../../../assets/images/catalysts.jpg';
-import MediaBox from '@/components/elements/MediaBox';
 
 export default function Catalysts() {
     return (
@@ -29,13 +28,6 @@ export default function Catalysts() {
                         program to find and support the next generation of
                         beauty entrepreneurs.
                     </Typography>
-                    <Box mt={2}>
-                        <Link href="/catalysts">
-                            <Button variant="outlined" color="white">
-                                LEARN MORE
-                            </Button>
-                        </Link>
-                    </Box>
                 </Box>
             </Hero>
 

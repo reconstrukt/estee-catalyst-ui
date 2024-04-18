@@ -38,6 +38,14 @@ const palette = {
     white: {
         main: '#fff',
     },
+
+    pink: {
+        main: '#FF64B4',
+    },
+
+    red: {
+        main: '#C80000',
+    },
 };
 
 const theme = createTheme({
@@ -55,6 +63,11 @@ const theme = createTheme({
         },
         h2: {
             fontFamily: HelveticaNeueFont.style.fontFamily,
+
+            fontSize: 42,
+            fontWeight: 700,
+            lineHeight: '37.8px',
+            letterSpacing: '-0.015em',
         },
         h3: {
             fontFamily: HelveticaNeueFont.style.fontFamily,
@@ -78,6 +91,10 @@ const theme = createTheme({
         button: {
             fontFamily: HelveticaNowFont.style.fontFamily,
             fontSize: 16,
+        },
+
+        body1: {
+            fontSize: 24,
         },
     },
 
