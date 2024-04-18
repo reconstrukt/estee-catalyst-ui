@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import React from 'react';
 
-export default function Hero({ backgroundImage, children }) {
+export default function Hero({ backgroundImage, children, sx }) {
     return (
         <Box
             sx={{
@@ -19,6 +19,8 @@ export default function Hero({ backgroundImage, children }) {
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center center',
+
+                ...sx,
             }}
         >
             {children}
