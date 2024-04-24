@@ -126,6 +126,22 @@ const typography = {
         lineHeight: '20.8px',
         textAlign: 'center',
     },
+
+    menu: {
+        fontFamily: HelveticaNeueFont.style.fontFamily,
+
+        fontSize: 40,
+        fontWeight: 700,
+        lineHeight: '36px',
+        letterSpacing: '-0.015em',
+
+        [defaultTheme.breakpoints.up('md')]: {
+            fontSize: 100,
+            fontWeight: 700,
+            lineHeight: '80px',
+            letterSpacing: '-0.015em',
+        },
+    },
 };
 
 const theme = createTheme({

@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from '../../../assets/svg/logo.svg';
 import MenuIcon from '../../../assets/svg/MenuIcon.svg';
 import CloseIcon from '../../../assets/svg/CloseIcon.svg';
-import { Box, Button } from '@mui/material';
+import { Box, Button, Stack, Typography } from '@mui/material';
+import Link from 'next/link';
+import HeroBg from '../../../assets/images/hpbg.jpg';
 
 export default function Header() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen((val) => !val);
+    };
+
     return (
         <Box
             component="header"
@@ -20,8 +28,10 @@ export default function Header() {
         >
             <Box
                 sx={{
+                    position: 'relative',
                     display: 'flex',
                     alignItems: 'center',
+                    zIndex: 2,
                 }}
             >
                 <Box
@@ -75,7 +85,9 @@ export default function Header() {
                             },
                         }}
                     >
-                        <Logo width="100%" height="100%" />
+                        <Link href="/">
+                            <Logo width="100%" height="100%" />
+                        </Link>
                     </Box>
                 </Box>
 
@@ -97,11 +109,112 @@ export default function Header() {
                         <Button
                             variant="text"
                             color="white"
-                            endIcon={<MenuIcon />}
+                            endIcon={menuOpen ? <CloseIcon /> : <MenuIcon />}
+                            onClick={toggleMenu}
                         >
                             MENU
                         </Button>
                     </Box>
+                </Box>
+            </Box>
+
+            <Box
+                sx={{
+                    position: 'fixed',
+                    width: '100%',
+                    height: '100vh',
+                    top: 0,
+                    left: 0,
+                    backgroundImage: `url(${HeroBg.src})`,
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover',
+
+                    transition: 'opacity 0.3s ease',
+
+                    opacity: menuOpen ? 1 : 0,
+                    pointerEvents: menuOpen ? 'all' : 'none',
+                }}
+            >
+                <Box
+                    sx={{
+                        width: '100%',
+                        height: '100%',
+                        backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                        backdropFilter: 'blur(5px)',
+                    }}
+                >
+                    <Stack
+                        alignItems="center"
+                        justifyContent="center"
+                        sx={{
+                            textTransform: 'uppercase',
+                            paddingTop: '70px',
+                            minHeight: '100%',
+
+                            a: {
+                                textDecoration: 'none !important',
+
+                                '&:hover': {
+                                    opacity: 0.8,
+                                },
+                            },
+                        }}
+                    >
+                        <Box>
+                            <Link href="/catalysts">
+                                <Typography variant="menu">
+                                    THE CATALYSTS
+                                </Typography>
+                            </Link>
+                        </Box>
+                        <Box>
+                            <Link href="/application-criteria">
+                                <Typography variant="menu">
+                                    Application Criteria
+                                </Typography>
+                            </Link>
+                        </Box>
+                        <Box>
+                            <Link href="/prizes">
+                                <Typography variant="menu">Prizes</Typography>
+                            </Link>
+                        </Box>
+                        <Box>
+                            <Link href="/judges">
+                                <Typography variant="menu">Judges</Typography>
+                            </Link>
+                        </Box>
+                        <Box>
+                            <Link href="/masterclasses">
+                                <Typography variant="menu">
+                                    Masterclasses
+                                </Typography>
+                            </Link>
+                        </Box>
+                        <Box>
+                            <Link href="/winners">
+                                <Typography variant="menu">
+                                    2023 Winners
+                                </Typography>
+                            </Link>
+                        </Box>
+                        <Box>
+                            <Link href="/contact-us">
+                                <Typography variant="menu">Contact</Typography>
+                            </Link>
+                        </Box>
+                        <Box>
+                            <Link href="/press">
+                                <Typography variant="menu">Press</Typography>
+                            </Link>
+                        </Box>
+                        <Box>
+                            <Link href="/faq">
+                                <Typography variant="menu">FAQ</Typography>
+                            </Link>
+                        </Box>
+                    </Stack>
                 </Box>
             </Box>
         </Box>
