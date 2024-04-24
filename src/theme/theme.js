@@ -54,18 +54,31 @@ const typography = {
     h1: {
         fontFamily: HelveticaNeueFont.style.fontFamily,
 
-        fontSize: 110,
+        fontSize: 48,
         fontWeight: 700,
-        lineHeight: '88px',
+        lineHeight: '43.2px',
         letterSpacing: '-0.015em',
+
+        [defaultTheme.breakpoints.up('md')]: {
+            fontSize: 110,
+            fontWeight: 700,
+            lineHeight: '88px',
+            letterSpacing: '-0.015em',
+        },
     },
     h2: {
         fontFamily: HelveticaNeueFont.style.fontFamily,
 
-        fontSize: 42,
+        //styleName: HEADLINE M/32 uppercase M;
+        fontSize: 32,
         fontWeight: 700,
-        lineHeight: '37.8px',
+        lineHeight: '28.8px',
         letterSpacing: '-0.015em',
+
+        [defaultTheme.breakpoints.up('md')]: {
+            fontSize: 42,
+            lineHeight: '37.8px',
+        },
     },
     h3: {
         fontFamily: HelveticaNeueFont.style.fontFamily,
@@ -81,9 +94,14 @@ const typography = {
     },
 
     subtitle1: {
-        fontSize: 48,
-        lineHeight: '45.6px',
-        letterSpacing: '-0.02em',
+        fontSize: 24,
+        lineHeight: '22.8px',
+
+        [defaultTheme.breakpoints.up('md')]: {
+            fontSize: 48,
+            lineHeight: '45.6px',
+            letterSpacing: '-0.02em',
+        },
     },
 
     button: {
@@ -92,7 +110,13 @@ const typography = {
     },
 
     body1: {
-        fontSize: 24,
+        fontSize: 20,
+        lineHeight: '1em',
+
+        [defaultTheme.breakpoints.up('md')]: {
+            fontSize: 24,
+            lineHeight: '22.8px',
+        },
     },
 
     body2: {
