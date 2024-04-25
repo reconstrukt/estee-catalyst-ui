@@ -93,6 +93,11 @@ const typography = {
     },
     h4: {
         fontFamily: HelveticaNeueFont.style.fontFamily,
+
+        fontSize: 24,
+        fontWeight: 700,
+        lineHeight: '21.6px',
+        letterSpacing: '-0.015em',
     },
     h5: {
         fontFamily: HelveticaNeueFont.style.fontFamily,
