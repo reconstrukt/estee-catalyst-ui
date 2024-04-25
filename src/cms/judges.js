@@ -59,7 +59,7 @@ const judges = [
 
     {
         image: annemarie,
-        name: 'CLÉMENTINE DEROZI',
+        name: 'CLÉMENTINE SNOW',
         title: (
             <>
                 Founder and CEO,
