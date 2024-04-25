@@ -34,7 +34,10 @@ export default function ApplicationCriteria() {
 
             <Stack
                 sx={{
-                    flexDirection: 'row',
+                    flexDirection: {
+                        xs: 'column',
+                        md: 'row',
+                    },
                     textAlign: 'center',
                 }}
             >
@@ -43,7 +46,7 @@ export default function ApplicationCriteria() {
                     sx={{
                         flex: 1,
                         backgroundColor: 'pink.main',
-                        py: 14,
+                        py: 12,
                         px: 3,
                         alignItems: 'center',
                     }}
@@ -97,7 +100,7 @@ export default function ApplicationCriteria() {
                     sx={{
                         flex: 1,
                         backgroundColor: 'red.main',
-                        py: 14,
+                        py: 12,
                         px: 3,
                         alignItems: 'center',
                     }}

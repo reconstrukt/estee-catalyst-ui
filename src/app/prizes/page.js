@@ -37,7 +37,10 @@ export default function ThePrizes() {
 
             <Stack
                 sx={{
-                    flexDirection: 'row',
+                    flexDirection: {
+                        xs: 'column',
+                        md: 'row',
+                    },
                     textAlign: 'center',
                 }}
             >
@@ -45,7 +48,7 @@ export default function ThePrizes() {
                     spacing={4}
                     sx={{
                         flex: 1,
-                        py: 14,
+                        py: 12,
                         px: 3,
                         alignItems: 'center',
                     }}
@@ -84,7 +87,11 @@ export default function ThePrizes() {
                     spacing={4}
                     sx={{
                         flex: 1,
-                        py: 14,
+                        pt: {
+                            xs: 0,
+                            md: 12,
+                        },
+                        pb: 12,
                         px: 3,
                         alignItems: 'center',
                     }}
