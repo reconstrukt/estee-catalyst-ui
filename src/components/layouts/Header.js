@@ -23,13 +23,19 @@ export default function Header({ transparentHeader }) {
             component="header"
             sx={{
                 position: aboveTheFold ? 'absolute' : 'fixed',
-                marginBottom: aboveTheFold ? '-60px' : 0,
+                marginBottom: menuOpen ? 0 : aboveTheFold ? '-60px' : 0,
                 top: aboveTheFold ? 0 : scrollDirection === 'up' ? 0 : -100,
-                color: transparentHeader || menuOpen ? 'white.main' : 'black',
-                backgroundColor:
-                    transparentHeader || menuOpen || aboveTheFold
-                        ? 'transparent'
-                        : 'white.main',
+                color:
+                    !aboveTheFold && !menuOpen
+                        ? 'black'
+                        : transparentHeader || menuOpen
+                          ? 'white.main'
+                          : 'black',
+                backgroundColor: !aboveTheFold
+                    ? 'white.main'
+                    : transparentHeader || menuOpen
+                      ? 'transparent'
+                      : 'white.main',
                 transition: 'all 0.3s ease',
                 px: 2,
                 py: 2,
@@ -61,7 +67,11 @@ export default function Header({ transparentHeader }) {
                     <Button
                         variant="outlined"
                         color={
-                            transparentHeader || menuOpen ? 'white' : 'black'
+                            !aboveTheFold && !menuOpen
+                                ? 'black'
+                                : transparentHeader || menuOpen
+                                  ? 'white'
+                                  : 'black'
                         }
                         sx={{
                             padding: '5px 10px',
@@ -122,9 +132,11 @@ export default function Header({ transparentHeader }) {
                         <Button
                             variant="text"
                             color={
-                                transparentHeader || menuOpen
-                                    ? 'white'
-                                    : 'black'
+                                !aboveTheFold && !menuOpen
+                                    ? 'black'
+                                    : transparentHeader || menuOpen
+                                      ? 'white'
+                                      : 'black'
                             }
                             endIcon={menuOpen ? <CloseIcon /> : <MenuIcon />}
                             onClick={toggleMenu}
