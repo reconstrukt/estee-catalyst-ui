@@ -60,10 +60,10 @@ export default function ContactUs() {
                     }}
                 >
                     <Typography variant="h1" mb={1}>
-                        PRESS
+                        THE JUDGES
                     </Typography>
                     <Typography variant="subtitle1">
-                        Read what others say about us
+                        Our extraordinary judges.
                     </Typography>
                 </Box>
             </Hero>
@@ -150,6 +150,40 @@ export default function ContactUs() {
                                 </IconButton>
                             </Box>
                         </Stack>
+
+                        <Box>
+                            <Stack
+                                direction="row"
+                                spacing={0.5}
+                                alignItems="center"
+                                justifyContent="center"
+                            >
+                                {judges.map((judge, i) => (
+                                    <ButtonBase
+                                        key={i}
+                                        onClick={() => setSelected(judge)}
+                                    >
+                                        <Box
+                                            sx={{
+                                                width: 48,
+                                                height: 60,
+                                            }}
+                                        >
+                                            <Image
+                                                src={judge.image.src}
+                                                width={0}
+                                                height={0}
+                                                sizes="100vw"
+                                                style={{
+                                                    width: '100%',
+                                                    height: 'auto',
+                                                }}
+                                            />
+                                        </Box>
+                                    </ButtonBase>
+                                ))}
+                            </Stack>
+                        </Box>
 
                         <Box px={2}>
                             <Box
