@@ -11,7 +11,7 @@ export default function PageLayout({
 }) {
     return (
         <Box component="main">
-            <Header transparent={transparentHeader} />
+            <Header transparentHeader={transparentHeader} />
 
             {children}
 

@@ -13,7 +13,7 @@ import FaqImage from '../../../assets/images/faq.jpg';
 
 export default function FaqPage() {
     return (
-        <PageLayout transparentHeader={false}>
+        <PageLayout>
             <Hero
                 sx={{
                     minHeight: '85vh',

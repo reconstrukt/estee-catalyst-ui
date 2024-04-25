@@ -5,21 +5,32 @@ import CloseIcon from '../../../assets/svg/CloseIcon.svg';
 import { Box, Button, Stack, Typography } from '@mui/material';
 import Link from 'next/link';
 import HeroBg from '../../../assets/images/hpbg.jpg';
+import useScrollPosition from '@/hooks/useScrollPosition';
 
-export default function Header() {
+export default function Header({ transparentHeader }) {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen((val) => !val);
     };
 
+    const { scrollDirection, scrollPos, aboveTheFold } = useScrollPosition();
+
+    console.log(scrollDirection, scrollPos, aboveTheFold);
+
     return (
         <Box
             component="header"
             sx={{
-                position: 'fixed',
-                color: 'white.main',
-                backgroundColor: 'transparent',
+                position: aboveTheFold ? 'absolute' : 'fixed',
+                marginBottom: aboveTheFold ? '-60px' : 0,
+                top: aboveTheFold ? 0 : scrollDirection === 'up' ? 0 : -100,
+                color: transparentHeader || menuOpen ? 'white.main' : 'black',
+                backgroundColor:
+                    transparentHeader || menuOpen || aboveTheFold
+                        ? 'transparent'
+                        : 'white.main',
+                transition: 'all 0.3s ease',
                 px: 2,
                 py: 2,
                 zIndex: 5000,
@@ -49,7 +60,9 @@ export default function Header() {
                 >
                     <Button
                         variant="outlined"
-                        color="white"
+                        color={
+                            transparentHeader || menuOpen ? 'white' : 'black'
+                        }
                         sx={{
                             padding: '5px 10px',
                         }}
@@ -108,7 +121,11 @@ export default function Header() {
                     <Box>
                         <Button
                             variant="text"
-                            color="white"
+                            color={
+                                transparentHeader || menuOpen
+                                    ? 'white'
+                                    : 'black'
+                            }
                             endIcon={menuOpen ? <CloseIcon /> : <MenuIcon />}
                             onClick={toggleMenu}
                         >

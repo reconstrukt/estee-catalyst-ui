@@ -8,7 +8,7 @@ import CriteriaImage from '../../../assets/images/app-criteria.jpg';
 
 export default function ApplicationCriteria() {
     return (
-        <PageLayout transparentHeader={false}>
+        <PageLayout>
             <Hero
                 sx={{
                     minHeight: '85vh',

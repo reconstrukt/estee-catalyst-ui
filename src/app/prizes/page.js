@@ -8,7 +8,7 @@ import PrizesImage from '../../../assets/images/the-prizes.jpg';
 
 export default function ThePrizes() {
     return (
-        <PageLayout transparentHeader={false}>
+        <PageLayout>
             <Hero
                 sx={{
                     minHeight: '85vh',

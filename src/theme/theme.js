@@ -46,6 +46,10 @@ const palette = {
     red: {
         main: '#C80000',
     },
+
+    black: {
+        main: '#000000',
+    },
 };
 
 const typography = {
