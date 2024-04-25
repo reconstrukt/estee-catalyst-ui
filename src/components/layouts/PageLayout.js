@@ -3,6 +3,7 @@
 import { Box } from '@mui/material';
 import React from 'react';
 import Header from './Header';
+import Footer from './Footer';
 
 export default function PageLayout({
     children,
@@ -15,7 +16,7 @@ export default function PageLayout({
 
             {children}
 
-            {hasFooter && <Box>Footer</Box>}
+            {hasFooter && <Footer />}
         </Box>
     );
 }

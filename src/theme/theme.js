@@ -50,6 +50,10 @@ const palette = {
     black: {
         main: '#000000',
     },
+
+    offWhite: {
+        main: '#F9F0EA',
+    },
 };
 
 const typography = {
