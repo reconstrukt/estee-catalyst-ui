@@ -115,6 +115,7 @@ const typography = {
     button: {
         fontFamily: HelveticaNowFont.style.fontFamily,
         fontSize: 16,
+        lineHeight: 1.2,
     },
 
     body1: {
@@ -217,6 +218,43 @@ const theme = createTheme({
                 content: {
                     justifyContent: 'center',
                     textAlign: 'center',
+                },
+            },
+        },
+
+        MuiOutlinedInput: {
+            styleOverrides: {
+                root: {
+                    ...typography.button,
+
+                    [defaultTheme.breakpoints.up('md')]: {
+                        ...typography.button,
+                    },
+
+                    '& .MuiOutlinedInput-notchedOutline': {
+                        borderRadius: 0,
+                        borderColor: palette.black.main,
+                    },
+                },
+            },
+        },
+
+        MuiFormControlLabel: {
+            styleOverrides: {
+                root: {
+                    ...typography.button,
+
+                    [defaultTheme.breakpoints.up('md')]: {
+                        ...typography.button,
+                    },
+                },
+            },
+        },
+
+        MuiCheckbox: {
+            styleOverrides: {
+                root: {
+                    // background: 'red',
                 },
             },
         },
