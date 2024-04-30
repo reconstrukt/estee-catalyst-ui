@@ -6,6 +6,7 @@ import { Box, Button, Stack, Typography } from '@mui/material';
 import Link from 'next/link';
 import HeroBg from '../../../assets/images/hpbg.jpg';
 import useScrollPosition from '@/hooks/useScrollPosition';
+import useApplicationPortal from '../application-portal/ApplicationContext';
 
 export default function Header({ transparentHeader }) {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -16,7 +17,7 @@ export default function Header({ transparentHeader }) {
 
     const { scrollDirection, scrollPos, aboveTheFold } = useScrollPosition();
 
-    console.log(scrollDirection, scrollPos, aboveTheFold);
+    const { setDialogOpen } = useApplicationPortal();
 
     return (
         <Box
@@ -76,6 +77,7 @@ export default function Header({ transparentHeader }) {
                         sx={{
                             padding: '5px 10px',
                         }}
+                        onClick={() => setDialogOpen(true)}
                     >
                         APPLY NOW
                     </Button>

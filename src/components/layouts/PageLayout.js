@@ -4,6 +4,8 @@ import { Box } from '@mui/material';
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import { ApplicationPortalProvider } from '../application-portal/ApplicationContext';
+import ApplicationPortal from '../application-portal/ApplicationPortal';
 
 export default function PageLayout({
     children,
@@ -12,11 +14,15 @@ export default function PageLayout({
 }) {
     return (
         <Box component="main">
-            <Header transparentHeader={transparentHeader} />
+            <ApplicationPortalProvider>
+                <Header transparentHeader={transparentHeader} />
 
-            {children}
+                <ApplicationPortal />
 
-            {hasFooter && <Footer />}
+                {children}
+
+                {hasFooter && <Footer />}
+            </ApplicationPortalProvider>
         </Box>
     );
 }
