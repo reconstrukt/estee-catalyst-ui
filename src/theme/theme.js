@@ -49,6 +49,7 @@ const palette = {
 
     black: {
         main: '#000000',
+        contrastText: '#fff',
     },
 
     offWhite: {
@@ -172,6 +173,14 @@ const theme = createTheme({
                 outlinedWhite: {
                     borderColor: palette.white.main,
                 },
+
+                containedBlack: {
+                    // color: palette.white.main,
+                },
+            },
+
+            defaultProps: {
+                disableElevation: true,
             },
         },
 
@@ -241,6 +250,11 @@ const theme = createTheme({
                         borderColor: palette.black.main,
                     },
                 },
+
+                input: {
+                    paddingTop: 4,
+                    paddingBottom: 4,
+                },
             },
         },
 
@@ -260,6 +274,23 @@ const theme = createTheme({
             styleOverrides: {
                 root: {
                     // background: 'red',
+                },
+            },
+        },
+
+        MuiFormLabel: {
+            styleOverrides: {
+                root: {
+                    ...typography.button,
+                    color: palette.black.main,
+                    fontSize: 12,
+                    marginBottom: 4,
+                    textAlign: 'left',
+
+                    [defaultTheme.breakpoints.up('md')]: {
+                        ...typography.button,
+                        fontSize: 12,
+                    },
                 },
             },
         },
