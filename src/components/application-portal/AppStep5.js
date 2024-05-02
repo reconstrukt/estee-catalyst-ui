@@ -12,6 +12,7 @@ import {
 } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
+import TheTextarea from '../elements/TheTextarea';
 
 export default function AppStep5() {
     const { setStep } = useApplicationPortal();
@@ -277,10 +278,7 @@ export default function AppStep5() {
                 {checked.includes('other') && (
                     <Box>
                         <InputLabel>Type here</InputLabel>
-                        <TextField
-                            fullWidth
-                            multiline
-                            rows={4}
+                        <TheTextarea
                             value={values.product_categories_other}
                             onChange={(e) =>
                                 handleChange(e, 'product_categories_other')
