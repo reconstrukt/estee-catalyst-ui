@@ -11,6 +11,7 @@ import {
     RadioGroup,
     Radio,
     FormControlLabel,
+    NativeSelect,
 } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
@@ -20,6 +21,11 @@ export default function AppStep3() {
 
     const [values, setValues] = useState({
         in_market: 0,
+
+        company_launch_date: '',
+        company_country: '',
+        num_of_employees: '',
+        company_category: '',
     });
 
     const handleChange = (e, field) => {
@@ -67,7 +73,7 @@ export default function AppStep3() {
                         >
                             <FormControlLabel
                                 value={1}
-                                control={<Radio />}
+                                control={<Radio color="black" />}
                                 label={
                                     <Typography variant="button">
                                         YES
@@ -76,7 +82,7 @@ export default function AppStep3() {
                             />
                             <FormControlLabel
                                 value={0}
-                                control={<Radio />}
+                                control={<Radio color="black" />}
                                 label={
                                     <Typography variant="button">NO</Typography>
                                 }
@@ -85,67 +91,64 @@ export default function AppStep3() {
                     </Stack>
 
                     <Box>
-                        <InputLabel>Instagram</InputLabel>
+                        <InputLabel>Date of Company Launch</InputLabel>
                         <TextField
                             fullWidth
-                            value={values.instagram}
-                            onChange={(e) => handleChange(e, 'instagram')}
+                            value={values.company_launch_date}
+                            onChange={(e) =>
+                                handleChange(e, 'company_launch_date')
+                            }
                         />
                     </Box>
 
                     <Box>
-                        <InputLabel>Facebook</InputLabel>
+                        <InputLabel>Country of Company HQ</InputLabel>
                         <TextField
                             fullWidth
-                            value={values.facebook}
-                            onChange={(e) => handleChange(e, 'facebook')}
+                            value={values.company_country}
+                            onChange={(e) => handleChange(e, 'company_country')}
                         />
                     </Box>
 
                     <Box>
-                        <InputLabel>Youtube</InputLabel>
-                        <TextField
+                        <InputLabel>Number of Employees </InputLabel>
+                        {/* <TextField
                             fullWidth
-                            value={values.youtube}
-                            onChange={(e) => handleChange(e, 'youtube')}
-                        />
+                            value={values.num_of_employees}
+                            onChange={(e) =>
+                                handleChange(e, 'num_of_employees')
+                            }
+                        /> */}
+                        <NativeSelect
+                            variant="outlined"
+                            fullWidth
+                            value={values.num_of_employees}
+                            onChange={(e) =>
+                                handleChange(e, 'num_of_employees')
+                            }
+                        >
+                            <option value="1-10">1-10</option>
+                            <option value="10-50">10-50</option>
+                            <option value="50-100">50-100</option>
+                            <option value="100+">100+</option>
+                        </NativeSelect>
                     </Box>
 
-                    <Box>
-                        <InputLabel>Tiktok</InputLabel>
-                        <TextField
-                            fullWidth
-                            value={values.tiktok}
-                            onChange={(e) => handleChange(e, 'tiktok')}
-                        />
-                    </Box>
-
-                    <Box>
-                        <InputLabel>Linkedin</InputLabel>
-                        <TextField
-                            fullWidth
-                            value={values.linkedin}
-                            onChange={(e) => handleChange(e, 'linkedin')}
-                        />
-                    </Box>
-
-                    <Box>
-                        <InputLabel>Snapchat</InputLabel>
-                        <TextField
-                            fullWidth
-                            value={values.snapchat}
-                            onChange={(e) => handleChange(e, 'snapchat')}
-                        />
-                    </Box>
-
-                    <Box>
-                        <InputLabel>Other</InputLabel>
-                        <TextField
-                            fullWidth
-                            value={values.other_social}
-                            onChange={(e) => handleChange(e, 'other_social')}
-                        />
-                    </Box>
+                    <Stack spacing={2.5} pt={5}>
+                        <Typography>
+                            What category is your company in?
+                        </Typography>
+                        <Box>
+                            <InputLabel>Choose from below</InputLabel>
+                            <TextField
+                                fullWidth
+                                value={values.company_category}
+                                onChange={(e) =>
+                                    handleChange(e, 'company_category')
+                                }
+                            />
+                        </Box>
+                    </Stack>
                 </Stack>
 
                 <Box mt={8}>

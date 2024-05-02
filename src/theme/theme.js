@@ -303,6 +303,40 @@ const theme = createTheme({
                 },
             },
         },
+
+        MuiNativeSelect: {
+            styleOverrides: {
+                root: {},
+
+                outlined: {
+                    border: '1px solid black !important',
+                    borderRadius: '0 !important',
+                    ...typography.button,
+                    paddingTop: 4,
+                    paddingBottom: 4,
+                    paddingLeft: '14px !important',
+                    height: '20px !important',
+
+                    [defaultTheme.breakpoints.up('md')]: {
+                        ...typography.button,
+                    },
+                },
+            },
+        },
+
+        MuiInputBase: {
+            styleOverrides: {
+                root: {
+                    '&:hover:not(.Mui-disabled, .Mui-error):before': {
+                        borderBottom: '0 !important',
+                    },
+
+                    '&::after': {
+                        borderBottom: '0 !important',
+                    },
+                },
+            },
+        },
     },
 });
 
