@@ -157,6 +157,15 @@ const typography = {
             letterSpacing: '-0.015em',
         },
     },
+
+    caption: {
+        fontFamily: HelveticaNowFont.style.fontFamily,
+        fontSize: 24,
+        fontWeight: 400,
+        lineHeight: '20.8px',
+        textAlign: 'center',
+        textTransform: 'uppercase',
+    },
 };
 
 const theme = createTheme({

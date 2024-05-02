@@ -9,10 +9,14 @@ import {
     ButtonBase,
 } from '@mui/material';
 import CloseIcon from '../../../assets/svg/CloseIcon.svg';
+
 import AppStep0 from './AppStep0';
+import AppStep1 from './AppStep1';
+import AppStep2 from './AppStep2';
+import AppStep3 from './AppStep3';
 
 export default function ApplicationPortal() {
-    const { dialogOpen, setDialogOpen, step } = useApplicationPortal();
+    const { dialogOpen, setDialogOpen, step, goBack } = useApplicationPortal();
 
     return (
         <>
@@ -36,8 +40,8 @@ export default function ApplicationPortal() {
                         justifyContent="space-between"
                     >
                         <Box>
-                            <ButtonBase>
-                                {step > -1 && (
+                            <ButtonBase onClick={goBack}>
+                                {step > 1 && (
                                     <Typography variant="h4">BACK</Typography>
                                 )}
                             </ButtonBase>
@@ -59,7 +63,10 @@ export default function ApplicationPortal() {
                             flex: 1,
                         }}
                     >
-                        <AppStep0 />
+                        {step === 0 && <AppStep0 />}
+                        {step === 1 && <AppStep1 />}
+                        {step === 2 && <AppStep2 />}
+                        {step === 3 && <AppStep3 />}
                     </Box>
                 </Stack>
             </Dialog>

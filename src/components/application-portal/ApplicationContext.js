@@ -7,6 +7,12 @@ export const ApplicationPortalProvider = ({ children }) => {
     const [dialogOpen, setDialogOpen] = useState(false);
     const [step, setStep] = useState(0);
 
+    const goBack = () => {
+        if (step < 2) return;
+
+        setStep(step - 1);
+    };
+
     return (
         <ApplicationPortalContext.Provider
             value={{
@@ -15,6 +21,7 @@ export const ApplicationPortalProvider = ({ children }) => {
                 setDialogOpen,
                 step,
                 setStep,
+                goBack,
             }}
         >
             {children}
