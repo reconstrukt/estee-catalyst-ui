@@ -45,10 +45,8 @@ export default function AppStep3() {
 
         setValues((val) => ({
             ...val,
-            in_market: newValue,
+            in_market: newValue === 'yes' ? 1 : 0,
         }));
-
-        console.log(newValue);
     };
 
     return (
@@ -68,11 +66,11 @@ export default function AppStep3() {
                         </Typography>
                         <RadioGroup
                             row
-                            value={values.in_market}
+                            value={values.in_market === 1 ? 'yes' : 'no'}
                             onChange={handleRadioChange}
                         >
                             <FormControlLabel
-                                value={1}
+                                value={'yes'}
                                 control={<Radio color="black" />}
                                 label={
                                     <Typography variant="button">
@@ -81,7 +79,7 @@ export default function AppStep3() {
                                 }
                             />
                             <FormControlLabel
-                                value={0}
+                                value={'no'}
                                 control={<Radio color="black" />}
                                 label={
                                     <Typography variant="button">NO</Typography>
@@ -90,42 +88,50 @@ export default function AppStep3() {
                         </RadioGroup>
                     </Stack>
 
-                    <Box>
-                        <InputLabel>Date of Company Launch</InputLabel>
-                        <TextField
-                            fullWidth
-                            value={values.company_launch_date}
-                            onChange={(e) =>
-                                handleChange(e, 'company_launch_date')
-                            }
-                        />
-                    </Box>
+                    {values.in_market ? (
+                        <>
+                            <Box>
+                                <InputLabel>Date of Company Launch</InputLabel>
+                                <TextField
+                                    fullWidth
+                                    value={values.company_launch_date}
+                                    onChange={(e) =>
+                                        handleChange(e, 'company_launch_date')
+                                    }
+                                />
+                            </Box>
 
-                    <Box>
-                        <InputLabel>Country of Company HQ</InputLabel>
-                        <TextField
-                            fullWidth
-                            value={values.company_country}
-                            onChange={(e) => handleChange(e, 'company_country')}
-                        />
-                    </Box>
+                            <Box>
+                                <InputLabel>Country of Company HQ</InputLabel>
+                                <TextField
+                                    fullWidth
+                                    value={values.company_country}
+                                    onChange={(e) =>
+                                        handleChange(e, 'company_country')
+                                    }
+                                />
+                            </Box>
 
-                    <Box>
-                        <InputLabel>Number of Employees </InputLabel>
-                        <NativeSelect
-                            variant="outlined"
-                            fullWidth
-                            value={values.num_of_employees}
-                            onChange={(e) =>
-                                handleChange(e, 'num_of_employees')
-                            }
-                        >
-                            <option value="1-10">1-10</option>
-                            <option value="10-50">10-50</option>
-                            <option value="50-100">50-100</option>
-                            <option value="100+">100+</option>
-                        </NativeSelect>
-                    </Box>
+                            <Box>
+                                <InputLabel>Number of Employees </InputLabel>
+                                <NativeSelect
+                                    variant="outlined"
+                                    fullWidth
+                                    value={values.num_of_employees}
+                                    onChange={(e) =>
+                                        handleChange(e, 'num_of_employees')
+                                    }
+                                >
+                                    <option value="1-10">1-10</option>
+                                    <option value="10-50">10-50</option>
+                                    <option value="50-100">50-100</option>
+                                    <option value="100+">100+</option>
+                                </NativeSelect>
+                            </Box>
+                        </>
+                    ) : (
+                        ''
+                    )}
 
                     <Stack spacing={2.5} pt={5}>
                         <Typography>
