@@ -12,12 +12,11 @@ import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 import TheTextarea from '../elements/TheTextarea';
 
-export default function AppStep5() {
+export default function AppStep6() {
     const { setStep } = useApplicationPortal();
 
     const [values, setValues] = useState({
-        product_categories: '',
-        product_categories_other: '',
+        target_age_demographic: '',
     });
 
     const handleChange = (e, field) => {
@@ -50,14 +49,14 @@ export default function AppStep5() {
 
             setValues((val) => ({
                 ...val,
-                product_categories: pc,
+                target_age_demographic: pc,
             }));
         }
     }, [checked]);
 
     const handleNext = () => {
         // TODO: make API call
-        setStep(6);
+        setStep(7);
     };
 
     return (
@@ -65,13 +64,12 @@ export default function AppStep5() {
             <Stack spacing={5}>
                 <Stack spacing={2}>
                     <Typography variant="h2">APPLICATION PORTAL</Typography>
-                    <Typography variant="caption">STEP 5/11</Typography>
+                    <Typography variant="caption">STEP 6/11</Typography>
                 </Stack>
 
                 <Stack>
                     <Typography>
-                        Q3. In which product categories do you sell or plan to
-                        sell (please select all that apply)?
+                        Q4. What age demographic are you targeting?
                     </Typography>
                 </Stack>
 
@@ -85,15 +83,15 @@ export default function AppStep5() {
                             control={
                                 <Checkbox
                                     checked={
-                                        checked && checked.includes('skin care')
+                                        checked && checked.includes('UNDER 18')
                                     }
                                     color="black"
-                                    onChange={() => toggleCheck('skin care')}
+                                    onChange={() => toggleCheck('UNDER 18')}
                                 />
                             }
                             label={
                                 <Typography variant="button" color="black">
-                                    SKIN CARE
+                                    UNDER 18
                                 </Typography>
                             }
                         />
@@ -106,15 +104,15 @@ export default function AppStep5() {
                             control={
                                 <Checkbox
                                     checked={
-                                        checked && checked.includes('hair care')
+                                        checked && checked.includes('26 - 40')
                                     }
                                     color="black"
-                                    onChange={() => toggleCheck('hair care')}
+                                    onChange={() => toggleCheck('26 - 40')}
                                 />
                             }
                             label={
                                 <Typography variant="button" color="black">
-                                    HAIR CARE
+                                    26 - 40
                                 </Typography>
                             }
                         />
@@ -126,58 +124,14 @@ export default function AppStep5() {
                             }}
                             control={
                                 <Checkbox
-                                    checked={
-                                        checked && checked.includes('fragrance')
-                                    }
+                                    checked={checked && checked.includes('60+')}
                                     color="black"
-                                    onChange={() => toggleCheck('fragrance')}
+                                    onChange={() => toggleCheck('60+')}
                                 />
                             }
                             label={
                                 <Typography variant="button" color="black">
-                                    FRAGRANCE
-                                </Typography>
-                            }
-                        />
-
-                        <FormControlLabel
-                            sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                            }}
-                            control={
-                                <Checkbox
-                                    checked={
-                                        checked && checked.includes('mens')
-                                    }
-                                    color="black"
-                                    onChange={() => toggleCheck('mens')}
-                                />
-                            }
-                            label={
-                                <Typography variant="button" color="black">
-                                    MENS
-                                </Typography>
-                            }
-                        />
-
-                        <FormControlLabel
-                            sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                            }}
-                            control={
-                                <Checkbox
-                                    checked={
-                                        checked && checked.includes('other')
-                                    }
-                                    color="black"
-                                    onChange={() => toggleCheck('other')}
-                                />
-                            }
-                            label={
-                                <Typography variant="button" color="black">
-                                    OTHER
+                                    60+
                                 </Typography>
                             }
                         />
@@ -192,15 +146,15 @@ export default function AppStep5() {
                             control={
                                 <Checkbox
                                     checked={
-                                        checked && checked.includes('body care')
+                                        checked && checked.includes('19 - 25')
                                     }
                                     color="black"
-                                    onChange={() => toggleCheck('body care')}
+                                    onChange={() => toggleCheck('19 - 25')}
                                 />
                             }
                             label={
                                 <Typography variant="button" color="black">
-                                    BODY CARE
+                                    19 - 25
                                 </Typography>
                             }
                         />
@@ -213,77 +167,20 @@ export default function AppStep5() {
                             control={
                                 <Checkbox
                                     checked={
-                                        checked && checked.includes('makeup')
+                                        checked && checked.includes('41 - 59')
                                     }
                                     color="black"
-                                    onChange={() => toggleCheck('makeup')}
+                                    onChange={() => toggleCheck('41 - 59')}
                                 />
                             }
                             label={
                                 <Typography variant="button" color="black">
-                                    MAKEUP
-                                </Typography>
-                            }
-                        />
-
-                        <FormControlLabel
-                            sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                            }}
-                            control={
-                                <Checkbox
-                                    checked={
-                                        checked &&
-                                        checked.includes('home fragrance')
-                                    }
-                                    color="black"
-                                    onChange={() =>
-                                        toggleCheck('home fragrance')
-                                    }
-                                />
-                            }
-                            label={
-                                <Typography variant="button" color="black">
-                                    HOME FRAGRANCE
-                                </Typography>
-                            }
-                        />
-
-                        <FormControlLabel
-                            sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                            }}
-                            control={
-                                <Checkbox
-                                    checked={
-                                        checked && checked.includes('content')
-                                    }
-                                    color="black"
-                                    onChange={() => toggleCheck('content')}
-                                />
-                            }
-                            label={
-                                <Typography variant="button" color="black">
-                                    CONTENT
+                                    41 - 59
                                 </Typography>
                             }
                         />
                     </Stack>
                 </Stack>
-
-                {checked.includes('other') && (
-                    <Box>
-                        <InputLabel>Type here</InputLabel>
-                        <TheTextarea
-                            value={values.product_categories_other}
-                            onChange={(e) =>
-                                handleChange(e, 'product_categories_other')
-                            }
-                        />
-                    </Box>
-                )}
 
                 <Box mt={8}>
                     <LoadingButton
