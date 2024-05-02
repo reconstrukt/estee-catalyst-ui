@@ -37,7 +37,7 @@ export default function AppStep3() {
 
     const handleNext = () => {
         // TODO: make API call
-        setStep(3);
+        setStep(4);
     };
 
     const handleRadioChange = (e) => {
@@ -112,13 +112,6 @@ export default function AppStep3() {
 
                     <Box>
                         <InputLabel>Number of Employees </InputLabel>
-                        {/* <TextField
-                            fullWidth
-                            value={values.num_of_employees}
-                            onChange={(e) =>
-                                handleChange(e, 'num_of_employees')
-                            }
-                        /> */}
                         <NativeSelect
                             variant="outlined"
                             fullWidth
@@ -140,13 +133,36 @@ export default function AppStep3() {
                         </Typography>
                         <Box>
                             <InputLabel>Choose from below</InputLabel>
-                            <TextField
+                            {/* <TextField
                                 fullWidth
                                 value={values.company_category}
                                 onChange={(e) =>
                                     handleChange(e, 'company_category')
                                 }
-                            />
+                            /> */}
+                            <NativeSelect
+                                variant="outlined"
+                                fullWidth
+                                value={values.company_category}
+                                onChange={(e) =>
+                                    handleChange(e, 'company_category')
+                                }
+                            >
+                                <option value="Makeup">Makeup</option>
+                                <option value="Skin care">Skin care</option>
+                                <option value="Body care">Body care</option>
+                                <option value="Hair care">Hair care</option>
+                                <option value="Fragrance">Fragrance</option>
+                                <option value="Home fragrance">
+                                    Home fragrance
+                                </option>
+                                <option value="Creative storytelling">
+                                    Creative storytelling
+                                </option>
+                                <option value="Retail or experiental concept">
+                                    Retail or experiental concept
+                                </option>
+                            </NativeSelect>
                         </Box>
                     </Stack>
                 </Stack>
