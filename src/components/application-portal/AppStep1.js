@@ -5,7 +5,8 @@ import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 
 export default function AppStep1() {
-    const { setStep } = useApplicationPortal();
+    const { setStep, updateApplication } = useApplicationPortal();
+    const [loading, setLoading] = useState(false);
 
     const [values, setValues] = useState({
         firstname: '',
@@ -27,9 +28,15 @@ export default function AppStep1() {
         }));
     };
 
-    const handleNext = () => {
+    const handleNext = async () => {
         // TODO: make API call
-        setStep(2);
+        setLoading(true);
+        const res = await updateApplication(values);
+
+        // if ()
+
+        setLoading(false);
+        // setStep(2);  // handled by provider
     };
 
     return (

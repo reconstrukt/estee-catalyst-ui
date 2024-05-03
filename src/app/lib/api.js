@@ -26,3 +26,20 @@ export const validateApplication = (uuid, token) => {
         (response) => response.json(),
     );
 };
+
+export const editApplication = (uuid, fields) => {
+    const formData = new FormData();
+
+    for (let key in fields) {
+        formData.append(key, fields[key]);
+    }
+
+    const options = {
+        method: 'POST',
+        body: formData,
+    };
+
+    return fetch(apiUrl + `/application/${uuid}/edit`, options).then(
+        (response) => response.json(),
+    );
+};

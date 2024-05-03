@@ -13,8 +13,6 @@ export default function Home() {
     const searchParams = useSearchParams();
     const { setDialogOpen } = useApplicationPortal();
 
-    console.log('appmodal', searchParams.get('appmodal'));
-
     useEffect(() => {
         const appmodal = searchParams.get('appmodal');
 
