@@ -19,6 +19,7 @@ import AppStep5 from './AppStep5';
 import AppStep6 from './AppStep6';
 import AppStep7 from './AppStep7';
 import AppStep8 from './AppStep8';
+import AppStep9 from './AppStep9';
 
 export default function ApplicationPortal() {
     const { dialogOpen, setDialogOpen, step, goBack } = useApplicationPortal();
@@ -77,6 +78,7 @@ export default function ApplicationPortal() {
                         {step === 6 && <AppStep6 />}
                         {step === 7 && <AppStep7 />}
                         {step === 8 && <AppStep8 />}
+                        {step === 9 && <AppStep9 />}
                     </Box>
                 </Stack>
             </Dialog>
