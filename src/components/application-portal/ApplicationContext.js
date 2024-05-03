@@ -5,7 +5,7 @@ const ApplicationPortalContext = createContext({});
 export const ApplicationPortalProvider = ({ children }) => {
     const [email, setEmail] = useState('');
     const [dialogOpen, setDialogOpen] = useState(false);
-    const [step, setStep] = useState(8);
+    const [step, setStep] = useState(0);
 
     const goBack = () => {
         if (step < 2) return;
