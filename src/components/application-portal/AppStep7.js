@@ -35,11 +35,6 @@ export default function AppStep7() {
     return (
         <StepWrapper>
             <Stack spacing={5}>
-                <Stack spacing={2}>
-                    <Typography variant="h2">APPLICATION PORTAL</Typography>
-                    <Typography variant="caption">STEP 7/11</Typography>
-                </Stack>
-
                 <Stack spacing={5}>
                     <Typography>
                         Q5: Please provide your 'elevator pitch' in 100 words or

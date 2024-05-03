@@ -52,11 +52,6 @@ export default function AppStep3() {
     return (
         <StepWrapper>
             <Stack spacing={5}>
-                <Stack spacing={2}>
-                    <Typography variant="h2">APPLICATION PORTAL</Typography>
-                    <Typography variant="caption">STEP 3/11</Typography>
-                </Stack>
-
                 <Stack spacing={1}>
                     <Stack alignItems="center" spacing={2.5}>
                         <Typography>

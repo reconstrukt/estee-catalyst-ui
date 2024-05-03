@@ -26,11 +26,6 @@ export default function AppStep4() {
     return (
         <StepWrapper>
             <Stack spacing={5}>
-                <Stack spacing={2}>
-                    <Typography variant="h2">APPLICATION PORTAL</Typography>
-                    <Typography variant="caption">STEP 4/11</Typography>
-                </Stack>
-
                 <Stack>
                     <Typography>
                         Please upload a link to a TikTok that is a minimum of 1

@@ -48,11 +48,6 @@ export default function AppStep11() {
     return (
         <StepWrapper>
             <Stack spacing={5}>
-                <Stack spacing={2}>
-                    <Typography variant="h2">APPLICATION PORTAL</Typography>
-                    <Typography variant="caption">STEP 11/11</Typography>
-                </Stack>
-
                 <Stack spacing={5}>
                     <Typography>
                         Anything else you&apos;d like us to know (100 words or

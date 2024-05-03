@@ -72,6 +72,24 @@ export default function ApplicationPortal() {
                         }}
                     >
                         {step === 0 && <AppStep0 />}
+
+                        {step > 0 && (
+                            <Stack
+                                spacing={2}
+                                sx={{
+                                    textAlign: 'center',
+                                    mb: 5,
+                                }}
+                            >
+                                <Typography variant="h2">
+                                    APPLICATION PORTAL
+                                </Typography>
+                                <Typography variant="caption">
+                                    STEP {step}/11
+                                </Typography>
+                            </Stack>
+                        )}
+
                         {step === 1 && <AppStep1 />}
                         {step === 2 && <AppStep2 />}
                         {step === 3 && <AppStep3 />}

@@ -62,11 +62,6 @@ export default function AppStep6() {
     return (
         <StepWrapper>
             <Stack spacing={5}>
-                <Stack spacing={2}>
-                    <Typography variant="h2">APPLICATION PORTAL</Typography>
-                    <Typography variant="caption">STEP 6/11</Typography>
-                </Stack>
-
                 <Stack>
                     <Typography>
                         Q4. What age demographic are you targeting?

@@ -63,11 +63,6 @@ export default function AppStep9() {
     return (
         <StepWrapper>
             <Stack spacing={5}>
-                <Stack spacing={2}>
-                    <Typography variant="h2">APPLICATION PORTAL</Typography>
-                    <Typography variant="caption">STEP 9/11</Typography>
-                </Stack>
-
                 <Stack>
                     <Typography>
                         If currently, in market, what are your distribution

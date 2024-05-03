@@ -35,11 +35,6 @@ export default function AppStep10() {
     return (
         <StepWrapper>
             <Stack spacing={5}>
-                <Stack spacing={2}>
-                    <Typography variant="h2">APPLICATION PORTAL</Typography>
-                    <Typography variant="caption">STEP 10/11</Typography>
-                </Stack>
-
                 <Stack spacing={5}>
                     <Typography>
                         Do you have any information around interest (pre-launch)

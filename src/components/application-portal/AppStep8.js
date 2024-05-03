@@ -36,11 +36,6 @@ export default function AppStep8() {
     return (
         <StepWrapper>
             <Stack spacing={5}>
-                <Stack spacing={2}>
-                    <Typography variant="h2">APPLICATION PORTAL</Typography>
-                    <Typography variant="caption">STEP 8/11</Typography>
-                </Stack>
-
                 <Stack spacing={5}>
                     <Typography>
                         Q7: Tell us a little about your background and

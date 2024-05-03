@@ -63,11 +63,6 @@ export default function AppStep5() {
     return (
         <StepWrapper>
             <Stack spacing={5}>
-                <Stack spacing={2}>
-                    <Typography variant="h2">APPLICATION PORTAL</Typography>
-                    <Typography variant="caption">STEP 5/11</Typography>
-                </Stack>
-
                 <Stack>
                     <Typography>
                         Q3. In which product categories do you sell or plan to

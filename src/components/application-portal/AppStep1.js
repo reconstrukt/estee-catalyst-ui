@@ -35,11 +35,6 @@ export default function AppStep1() {
     return (
         <StepWrapper>
             <Stack spacing={5}>
-                <Stack spacing={2}>
-                    <Typography variant="h2">APPLICATION PORTAL</Typography>
-                    <Typography variant="caption">STEP 1/11</Typography>
-                </Stack>
-
                 <Stack spacing={1}>
                     <Box>
                         <InputLabel>First Name</InputLabel>
