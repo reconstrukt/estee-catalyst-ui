@@ -17,6 +17,12 @@ export const initApplication = (email) => {
     );
 };
 
-export const fetchToken = () => {
-    return fetch(apiUrl + '/token').then((response) => response.json());
+export const validateApplication = (uuid, token) => {
+    const options = {
+        method: 'POST',
+    };
+
+    return fetch(apiUrl + `/validate/${uuid}/${token}`, options).then(
+        (response) => response.json(),
+    );
 };

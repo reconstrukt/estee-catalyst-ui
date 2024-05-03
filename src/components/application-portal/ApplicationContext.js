@@ -6,6 +6,7 @@ export const ApplicationPortalProvider = ({ children }) => {
     const [email, setEmail] = useState('');
     const [dialogOpen, setDialogOpen] = useState(false);
     const [step, setStep] = useState(0);
+    const [application, setApplication] = useState({});
 
     const goBack = () => {
         if (step < 2) return;
@@ -22,6 +23,7 @@ export const ApplicationPortalProvider = ({ children }) => {
                 step,
                 setStep,
                 goBack,
+                setApplication,
             }}
         >
             {children}
