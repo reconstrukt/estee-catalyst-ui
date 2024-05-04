@@ -32,13 +32,10 @@ export default function AppStep1() {
     };
 
     const handleNext = async () => {
-        // TODO: make API call
         setLoading(true);
         const res = await updateApplication(values);
 
-        if (res.success) {
-            setStep(2);
-        } else {
+        if (!res.success) {
             // TODO handle errs
         }
 
