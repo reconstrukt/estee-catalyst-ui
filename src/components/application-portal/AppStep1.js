@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import StepWrapper from './StepWrapper';
-import { Typography, Stack, Box, InputLabel, TextField } from '@mui/material';
+import { Stack, Box, InputLabel, TextField } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 
 export default function AppStep1() {
-    const { setStep, updateApplication, application } = useApplicationPortal();
+    const { updateApplication, application } = useApplicationPortal();
     const [loading, setLoading] = useState(false);
 
     const [values, setValues] = useState({
@@ -145,6 +145,7 @@ export default function AppStep1() {
                             width: 221,
                         }}
                         onClick={handleNext}
+                        loading={loading}
                     >
                         NEXT STEP
                     </LoadingButton>
