@@ -18,12 +18,14 @@ export const ApplicationPortalProvider = ({ children }) => {
         console.log('edit application', res);
 
         if (res.success) {
-            setStep(step + 1);
+            setApplication(res.data);
 
-            return true;
-        } else {
-            return res;
+            if (step < 11) {
+                setStep(step + 1);
+            }
         }
+
+        return res;
     };
 
     const goBack = () => {
@@ -41,6 +43,7 @@ export const ApplicationPortalProvider = ({ children }) => {
                 step,
                 setStep,
                 goBack,
+                application,
                 setApplication,
                 updateApplication,
             }}
