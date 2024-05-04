@@ -5,10 +5,12 @@ import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 
 export default function AppStep4() {
-    const { setStep } = useApplicationPortal();
+    const { application, updateApplication } = useApplicationPortal();
+    const [loading, setLoading] = useState(false);
 
     const [values, setValues] = useState({
-        video_link: '',
+        video_link: application.video_link ? application.video_link : '',
+        step: application.step ? application.step : 4,
     });
 
     const handleChange = (e, field) => {
@@ -18,9 +20,15 @@ export default function AppStep4() {
         }));
     };
 
-    const handleNext = () => {
-        // TODO: make API call
-        setStep(5);
+    const handleNext = async () => {
+        setLoading(true);
+        const res = await updateApplication(values);
+
+        if (!res.success) {
+            // TODO handle errs
+        }
+
+        setLoading(false);
     };
 
     return (
@@ -57,6 +65,7 @@ export default function AppStep4() {
 
                 <Box mt={8}>
                     <LoadingButton
+                        loading={loading}
                         variant="contained"
                         color="black"
                         sx={{

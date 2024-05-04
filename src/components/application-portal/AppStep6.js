@@ -4,29 +4,28 @@ import {
     Typography,
     Stack,
     Box,
-    InputLabel,
     FormControlLabel,
     Checkbox,
 } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
-import TheTextarea from '../elements/TheTextarea';
 
 export default function AppStep6() {
-    const { setStep } = useApplicationPortal();
+    const { application, updateApplication } = useApplicationPortal();
+    const [loading, setLoading] = useState(false);
 
     const [values, setValues] = useState({
-        target_age_demographic: '',
+        target_age_demographic: application.target_age_demographic
+            ? application.target_age_demographic
+            : '',
+        step: application.step ? application.step : 6,
     });
 
-    const handleChange = (e, field) => {
-        setValues((val) => ({
-            ...val,
-            [field]: e.target.value,
-        }));
-    };
-
-    const [checked, setChecked] = useState([]);
+    const [checked, setChecked] = useState(
+        application.target_age_demographic
+            ? application.target_age_demographic.split(',')
+            : [],
+    );
 
     const toggleCheck = (val) => {
         setChecked((old) => {
@@ -54,9 +53,15 @@ export default function AppStep6() {
         }
     }, [checked]);
 
-    const handleNext = () => {
-        // TODO: make API call
-        setStep(7);
+    const handleNext = async () => {
+        setLoading(true);
+        const res = await updateApplication(values);
+
+        if (!res.success) {
+            // TODO handle errs
+        }
+
+        setLoading(false);
     };
 
     return (
@@ -179,6 +184,7 @@ export default function AppStep6() {
 
                 <Box mt={8}>
                     <LoadingButton
+                        loading={loading}
                         variant="contained"
                         color="black"
                         sx={{

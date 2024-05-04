@@ -19,7 +19,7 @@ export default function AppStep1() {
         state: application.state ? application.state : '',
         zip: application.zip ? application.zip : '',
         country: application.country ? application.country : '',
-        step: application.step ? application.step : 2, // always send currentStep + 1 to api
+        step: application.step ? application.step : 1,
     });
 
     console.log('step 1, application: ', application);

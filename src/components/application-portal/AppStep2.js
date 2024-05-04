@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 import StepWrapper from './StepWrapper';
-import { Typography, Stack, Box, InputLabel, TextField } from '@mui/material';
+import { Stack, Box, InputLabel, TextField } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 
 export default function AppStep2() {
-    const { setStep } = useApplicationPortal();
+    const { application, updateApplication } = useApplicationPortal();
+    const [loading, setLoading] = useState(false);
 
     const [values, setValues] = useState({
-        website: '',
-        instagram: '',
-        facebook: '',
-        youtube: '',
-        tiktok: '',
-        linkedin: '',
-        snapchat: '',
-        other_social: '',
+        website: application.website ? application.website : '',
+        instagram: application.instagram ? application.instagram : '',
+        facebook: application.facebook ? application.facebook : '',
+        youtube: application.youtube ? application.youtube : '',
+        tiktok: application.tiktok ? application.tiktok : '',
+        linkedin: application.linkedin ? application.linkedin : '',
+        snapchat: application.snapchat ? application.snapchat : '',
+        other_social: application.other_social ? application.other_social : '',
+        step: application.step ? application.step : 1,
     });
 
     const handleChange = (e, field) => {
@@ -25,9 +27,15 @@ export default function AppStep2() {
         }));
     };
 
-    const handleNext = () => {
-        // TODO: make API call
-        setStep(3);
+    const handleNext = async () => {
+        setLoading(true);
+        const res = await updateApplication(values);
+
+        if (!res.success) {
+            // TODO handle errs
+        }
+
+        setLoading(false);
     };
 
     return (
@@ -110,6 +118,7 @@ export default function AppStep2() {
                 <Box mt={8}>
                     <LoadingButton
                         variant="contained"
+                        loading={loading}
                         color="black"
                         sx={{
                             width: 221,

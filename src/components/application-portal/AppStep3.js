@@ -6,8 +6,6 @@ import {
     Box,
     InputLabel,
     TextField,
-    FormLabel,
-    FormControl,
     RadioGroup,
     Radio,
     FormControlLabel,
@@ -17,15 +15,24 @@ import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 
 export default function AppStep3() {
-    const { setStep } = useApplicationPortal();
+    const { application, updateApplication } = useApplicationPortal();
+    const [loading, setLoading] = useState(false);
 
     const [values, setValues] = useState({
-        in_market: 0,
-
-        company_launch_date: '',
-        company_country: '',
-        num_of_employees: '',
-        company_category: '',
+        in_market: application.in_market ? application.in_market : 0,
+        company_launch_date: application.company_launch_date
+            ? application.company_launch_date
+            : '',
+        company_country: application.company_country
+            ? application.company_country
+            : '',
+        num_of_employees: application.num_of_employees
+            ? application.num_of_employees
+            : '',
+        company_category: application.company_category
+            ? application.company_category
+            : '',
+        step: application.step ? application.step : 3,
     });
 
     const handleChange = (e, field) => {
@@ -35,9 +42,15 @@ export default function AppStep3() {
         }));
     };
 
-    const handleNext = () => {
-        // TODO: make API call
-        setStep(4);
+    const handleNext = async () => {
+        setLoading(true);
+        const res = await updateApplication(values);
+
+        if (!res.success) {
+            // TODO handle errs
+        }
+
+        setLoading(false);
     };
 
     const handleRadioChange = (e) => {
@@ -170,6 +183,7 @@ export default function AppStep3() {
 
                 <Box mt={8}>
                     <LoadingButton
+                        loading={loading}
                         variant="contained"
                         color="black"
                         sx={{
