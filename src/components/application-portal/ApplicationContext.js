@@ -19,10 +19,7 @@ export const ApplicationPortalProvider = ({ children }) => {
 
         if (res.success) {
             setApplication(res.data);
-
-            if (step < 11) {
-                setStep(step + 1);
-            }
+            setStep(step + 1);
         }
 
         return res;

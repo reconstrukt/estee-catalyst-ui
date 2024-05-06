@@ -14,6 +14,7 @@ import TheTextarea from '../elements/TheTextarea';
 
 export default function AppStep11() {
     const { application, updateApplication } = useApplicationPortal();
+    const [loading, setLoading] = useState(false);
 
     const [values, setValues] = useState({
         anything_else: application.anything_else
@@ -32,12 +33,16 @@ export default function AppStep11() {
         }));
     };
 
-    const handleNext = () => {
-        // TODO: make API call
-        // SUBMIT
-        // setStep(11);
+    const handleNext = async () => {
+        setLoading(true);
+        const res = await updateApplication(values);
 
-        console.log('SUBMITTING!');
+        if (!res.success) {
+            // TODO handle errs
+        } else {
+        }
+
+        setLoading(false);
     };
 
     const handleCheck = (e, field) => {
@@ -172,12 +177,14 @@ export default function AppStep11() {
 
                 <Box mt={8}>
                     <LoadingButton
+                        loading={loading}
                         variant="contained"
                         color="black"
                         sx={{
                             width: 221,
                         }}
                         onClick={handleNext}
+                        disabled={!values.terms || !values.privacy}
                     >
                         SUBMIT
                     </LoadingButton>

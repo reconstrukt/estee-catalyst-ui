@@ -22,6 +22,7 @@ import AppStep8 from './AppStep8';
 import AppStep9 from './AppStep9';
 import AppStep10 from './AppStep10';
 import AppStep11 from './AppStep11';
+import AppStepFinal from './AppStepFinal';
 
 export default function ApplicationPortal() {
     const { dialogOpen, setDialogOpen, step, goBack } = useApplicationPortal();
@@ -49,7 +50,7 @@ export default function ApplicationPortal() {
                     >
                         <Box>
                             <ButtonBase onClick={goBack}>
-                                {step > 1 && (
+                                {step > 1 && step !== 12 && (
                                     <Typography variant="h4">BACK</Typography>
                                 )}
                             </ButtonBase>
@@ -101,6 +102,8 @@ export default function ApplicationPortal() {
                         {step === 9 && <AppStep9 />}
                         {step === 10 && <AppStep10 />}
                         {step === 11 && <AppStep11 />}
+
+                        {step === 12 && <AppStepFinal />}
                     </Box>
                 </Stack>
             </Dialog>

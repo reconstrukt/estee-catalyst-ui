@@ -34,13 +34,15 @@ export default function AppStep0() {
         console.log(res);
 
         if (res.success) {
-            const link = res.data.url.replace(
-                'https://estee-catalyst.reconstrukt.net',
-                '',
-            );
-
             // TODO REMOVE THIS:
-            setLink(link);
+
+            if (res.data.url) {
+                const link = res.data.url.replace(
+                    'https://estee-catalyst.reconstrukt.net',
+                    '',
+                );
+                setLink(link);
+            }
 
             if (res.data.submitted) {
                 setState('submitted');
@@ -52,6 +54,11 @@ export default function AppStep0() {
         }
 
         setLoading(false);
+    };
+
+    const handleReApply = () => {
+        setEmail('');
+        setState('init');
     };
 
     return (
@@ -145,6 +152,42 @@ export default function AppStep0() {
                     <Link href={link}>
                         <Button>go to {link}</Button>
                     </Link>
+                </Stack>
+            )}
+
+            {state === 'submitted' && (
+                <Stack
+                    spacing={2.5}
+                    alignItems="center"
+                    mt={2.5}
+                    sx={{
+                        px: {
+                            xs: 2,
+                            md: 0,
+                        },
+                    }}
+                >
+                    <Typography variant="h2">SORRY</Typography>
+                    <Typography>
+                        You've already applied. Try different email.
+                    </Typography>
+
+                    <Box
+                        sx={{
+                            pt: 8,
+                        }}
+                    >
+                        <LoadingButton
+                            variant="contained"
+                            color="black"
+                            sx={{
+                                width: 221,
+                            }}
+                            onClick={handleReApply}
+                        >
+                            APPLY
+                        </LoadingButton>
+                    </Box>
                 </Stack>
             )}
         </StepWrapper>
