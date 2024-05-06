@@ -1,4 +1,11 @@
-import { Box, InputLabel, Stack, TextField, Typography } from '@mui/material';
+import {
+    Box,
+    Button,
+    InputLabel,
+    Stack,
+    TextField,
+    Typography,
+} from '@mui/material';
 import React, { useState } from 'react';
 import PortalImage from '../../../assets/images/app-portal.jpg';
 import Image from 'next/image';
@@ -7,14 +14,17 @@ import useApplicationPortal from './ApplicationContext';
 import StepWrapper from './StepWrapper';
 
 import { initApplication } from '@/app/lib/api';
+import Link from 'next/link';
 
 export default function AppStep0() {
     const [email, setEmail] = useState('');
     const { step, setStep } = useApplicationPortal();
     const [loading, setLoading] = useState(false);
     const [state, setState] = useState('init'); // init | exists | created | submitted
+    const [link, setLink] = useState('');
 
     const handleStart = async () => {
+        setLoading(true);
         if (!email) return;
 
         // TODO: make API call
@@ -22,8 +32,25 @@ export default function AppStep0() {
         const res = await initApplication(email);
 
         console.log(res);
-        // then
-        // setStep(1);
+
+        if (res.success) {
+            const link = res.data.url.replace(
+                'https://estee-catalyst.reconstrukt.net',
+                '',
+            );
+            // TODO REMOVE THIS:
+            setLink(link);
+
+            if (res.data.submitted) {
+                setState('submitted');
+            } else if (res.data.exists) {
+                setState('exists');
+            } else {
+                setState('created');
+            }
+        }
+
+        setLoading(false);
     };
 
     return (
@@ -82,6 +109,42 @@ export default function AppStep0() {
                         </LoadingButton>
                     </Box>
                 </>
+            )}
+
+            {(state === 'exists' || state === 'created') && (
+                <Stack
+                    spacing={2.5}
+                    alignItems="center"
+                    mt={2.5}
+                    sx={{
+                        px: {
+                            xs: 2,
+                            md: 0,
+                        },
+                    }}
+                >
+                    <Typography variant="h2">THANKS</Typography>
+                    <Typography>
+                        Check your inbox for a link to{' '}
+                        {state === 'exists' ? 'continue' : 'get started'}
+                    </Typography>
+                    <LoadingButton
+                        loading={loading}
+                        variant="outlined"
+                        color="black"
+                        sx={{
+                            width: 221,
+                        }}
+                        onClick={handleStart}
+                    >
+                        RESEND EMAIL
+                    </LoadingButton>
+
+                    {/* // TODO REMOVE THIS: */}
+                    <Link href={link}>
+                        <Button>go to {link}</Button>
+                    </Link>
+                </Stack>
             )}
         </StepWrapper>
     );
