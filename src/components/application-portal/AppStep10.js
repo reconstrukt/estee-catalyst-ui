@@ -16,6 +16,7 @@ export default function AppStep10() {
         why_will_you_win: application.why_will_you_win
             ? application.why_will_you_win
             : '',
+        step: application.step ? application.step : 10,
     });
 
     const handleChange = (e, field) => {

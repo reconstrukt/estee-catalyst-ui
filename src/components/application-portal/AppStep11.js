@@ -13,12 +13,16 @@ import useApplicationPortal from './ApplicationContext';
 import TheTextarea from '../elements/TheTextarea';
 
 export default function AppStep11() {
-    const { setStep } = useApplicationPortal();
+    const { application, updateApplication } = useApplicationPortal();
 
     const [values, setValues] = useState({
-        anything_else: '',
+        anything_else: application.anything_else
+            ? application.anything_else
+            : '',
+        step: application.step ? application.step : 11,
         terms: 0,
         privacy: 0,
+        submitted: 1,
     });
 
     const handleChange = (e, field) => {

@@ -24,8 +24,8 @@ export default function AppStep0() {
     const [link, setLink] = useState('');
 
     const handleStart = async () => {
-        setLoading(true);
         if (!email) return;
+        setLoading(true);
 
         // TODO: make API call
         console.log('starting api call: ', email);
@@ -38,6 +38,7 @@ export default function AppStep0() {
                 'https://estee-catalyst.reconstrukt.net',
                 '',
             );
+
             // TODO REMOVE THIS:
             setLink(link);
 
