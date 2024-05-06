@@ -13,11 +13,17 @@ import useApplicationPortal from './ApplicationContext';
 import TheTextarea from '../elements/TheTextarea';
 
 export default function AppStep9() {
-    const { setStep } = useApplicationPortal();
+    const { application, updateApplication } = useApplicationPortal();
+    const [loading, setLoading] = useState(false);
 
     const [values, setValues] = useState({
-        distribution_channels: '',
-        distribution_channels_other: '',
+        distribution_channels: application.distribution_channels
+            ? application.distribution_channels
+            : '',
+        distribution_channels_other: application.distribution_channels_other
+            ? application.distribution_channels_other
+            : '',
+        step: application.step ? application.step : 9,
     });
 
     const handleChange = (e, field) => {
@@ -27,7 +33,11 @@ export default function AppStep9() {
         }));
     };
 
-    const [checked, setChecked] = useState([]);
+    const [checked, setChecked] = useState(
+        application.distribution_channels
+            ? application.distribution_channels.split(',')
+            : [],
+    );
 
     const toggleCheck = (val) => {
         setChecked((old) => {
@@ -55,9 +65,15 @@ export default function AppStep9() {
         }
     }, [checked]);
 
-    const handleNext = () => {
-        // TODO: make API call
-        setStep(10);
+    const handleNext = async () => {
+        setLoading(true);
+        const res = await updateApplication(values);
+
+        if (!res.success) {
+            // TODO handle errs
+        }
+
+        setLoading(false);
     };
 
     return (
@@ -209,6 +225,7 @@ export default function AppStep9() {
 
                 <Box mt={8}>
                     <LoadingButton
+                        loading={loading}
                         variant="contained"
                         color="black"
                         sx={{

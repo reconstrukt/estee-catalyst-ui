@@ -1,23 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import StepWrapper from './StepWrapper';
-import {
-    Typography,
-    Stack,
-    Box,
-    InputLabel,
-    FormControlLabel,
-    Checkbox,
-} from '@mui/material';
+import { Typography, Stack, Box, InputLabel } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 import TheTextarea from '../elements/TheTextarea';
 
 export default function AppStep10() {
-    const { setStep } = useApplicationPortal();
+    const { application, updateApplication } = useApplicationPortal();
+    const [loading, setLoading] = useState(false);
 
     const [values, setValues] = useState({
-        interest_and_traction: '',
-        why_will_you_win: '',
+        interest_and_traction: application.interest_and_traction
+            ? application.interest_and_traction
+            : '',
+        why_will_you_win: application.why_will_you_win
+            ? application.why_will_you_win
+            : '',
     });
 
     const handleChange = (e, field) => {
@@ -27,9 +25,15 @@ export default function AppStep10() {
         }));
     };
 
-    const handleNext = () => {
-        // TODO: make API call
-        setStep(11);
+    const handleNext = async () => {
+        setLoading(true);
+        const res = await updateApplication(values);
+
+        if (!res.success) {
+            // TODO handle errs
+        }
+
+        setLoading(false);
     };
 
     return (
@@ -70,6 +74,7 @@ export default function AppStep10() {
 
                 <Box mt={8}>
                     <LoadingButton
+                        loading={loading}
                         variant="contained"
                         color="black"
                         sx={{

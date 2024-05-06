@@ -14,11 +14,17 @@ import useApplicationPortal from './ApplicationContext';
 import TheTextarea from '../elements/TheTextarea';
 
 export default function AppStep8() {
-    const { setStep } = useApplicationPortal();
+    const { application, updateApplication } = useApplicationPortal();
+    const [loading, setLoading] = useState(false);
 
     const [values, setValues] = useState({
-        concept_background: '',
-        social_impact: '',
+        concept_background: application.concept_background
+            ? application.concept_background
+            : '',
+        social_impact: application.social_impact
+            ? application.social_impact
+            : '',
+        step: application.step ? application.step : 8,
     });
 
     const handleChange = (e, field) => {
@@ -28,9 +34,15 @@ export default function AppStep8() {
         }));
     };
 
-    const handleNext = () => {
-        // TODO: make API call
-        setStep(9);
+    const handleNext = async () => {
+        setLoading(true);
+        const res = await updateApplication(values);
+
+        if (!res.success) {
+            // TODO handle errs
+        }
+
+        setLoading(false);
     };
 
     return (
@@ -77,6 +89,7 @@ export default function AppStep8() {
 
                 <Box mt={8}>
                     <LoadingButton
+                        loading={loading}
                         variant="contained"
                         color="black"
                         sx={{

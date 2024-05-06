@@ -1,23 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import StepWrapper from './StepWrapper';
-import {
-    Typography,
-    Stack,
-    Box,
-    InputLabel,
-    FormControlLabel,
-    Checkbox,
-} from '@mui/material';
+import { Typography, Stack, Box, InputLabel } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 import TheTextarea from '../elements/TheTextarea';
 
 export default function AppStep7() {
-    const { setStep } = useApplicationPortal();
+    const { application, updateApplication } = useApplicationPortal();
+    const [loading, setLoading] = useState(false);
 
     const [values, setValues] = useState({
-        elevator_pitch: '',
-        market_opportunity: '',
+        elevator_pitch: application.elevator_pitch
+            ? application.elevator_pitch
+            : '',
+        market_opportunity: application.market_opportunity
+            ? application.market_opportunity
+            : '',
+        step: application.step ? application.step : 7,
     });
 
     const handleChange = (e, field) => {
@@ -27,9 +26,15 @@ export default function AppStep7() {
         }));
     };
 
-    const handleNext = () => {
-        // TODO: make API call
-        setStep(8);
+    const handleNext = async () => {
+        setLoading(true);
+        const res = await updateApplication(values);
+
+        if (!res.success) {
+            // TODO handle errs
+        }
+
+        setLoading(false);
     };
 
     return (
@@ -67,6 +72,7 @@ export default function AppStep7() {
 
                 <Box mt={8}>
                     <LoadingButton
+                        loading={loading}
                         variant="contained"
                         color="black"
                         sx={{
