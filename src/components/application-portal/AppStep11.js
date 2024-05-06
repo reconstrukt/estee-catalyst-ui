@@ -13,18 +13,20 @@ import useApplicationPortal from './ApplicationContext';
 import TheTextarea from '../elements/TheTextarea';
 
 export default function AppStep11() {
-    const { application, updateApplication } = useApplicationPortal();
+    const { application, updateApplication, values, setValues } =
+        useApplicationPortal();
     const [loading, setLoading] = useState(false);
 
-    const [values, setValues] = useState({
-        anything_else: application.anything_else
-            ? application.anything_else
-            : '',
-        step: application.step ? application.step : 11,
-        terms: 0,
-        privacy: 0,
-        submitted: 1,
-    });
+    useEffect(() => {
+        setValues({
+            anything_else: application.anything_else
+                ? application.anything_else
+                : '',
+            terms: 0,
+            privacy: 0,
+            submitted: 1,
+        });
+    }, []);
 
     const handleChange = (e, field) => {
         setValues((val) => ({
@@ -35,7 +37,7 @@ export default function AppStep11() {
 
     const handleNext = async () => {
         setLoading(true);
-        const res = await updateApplication(values);
+        const res = await updateApplication();
 
         if (!res.success) {
             // TODO handle errs

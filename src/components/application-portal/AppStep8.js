@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import StepWrapper from './StepWrapper';
 import {
     Typography,
@@ -14,18 +14,20 @@ import useApplicationPortal from './ApplicationContext';
 import TheTextarea from '../elements/TheTextarea';
 
 export default function AppStep8() {
-    const { application, updateApplication } = useApplicationPortal();
+    const { application, updateApplication, values, setValues } =
+        useApplicationPortal();
     const [loading, setLoading] = useState(false);
 
-    const [values, setValues] = useState({
-        concept_background: application.concept_background
-            ? application.concept_background
-            : '',
-        social_impact: application.social_impact
-            ? application.social_impact
-            : '',
-        step: application.step ? application.step : 8,
-    });
+    useEffect(() => {
+        setValues({
+            concept_background: application.concept_background
+                ? application.concept_background
+                : '',
+            social_impact: application.social_impact
+                ? application.social_impact
+                : '',
+        });
+    }, []);
 
     const handleChange = (e, field) => {
         setValues((val) => ({
@@ -36,7 +38,7 @@ export default function AppStep8() {
 
     const handleNext = async () => {
         setLoading(true);
-        const res = await updateApplication(values);
+        const res = await updateApplication();
 
         if (!res.success) {
             // TODO handle errs

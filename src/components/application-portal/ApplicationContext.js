@@ -9,10 +9,15 @@ export const ApplicationPortalProvider = ({ children }) => {
     const [step, setStep] = useState(0);
     const [application, setApplication] = useState({});
 
-    const updateApplication = async (fields) => {
+    const [values, setValues] = useState({});
+
+    const updateApplication = async () => {
         const res = await editApplication(application.uuid, {
-            ...fields,
-            step,
+            ...values,
+            step:
+                application && application.step && application.step > step
+                    ? application.step
+                    : step,
         });
 
         console.log('edit application', res);
@@ -36,6 +41,7 @@ export const ApplicationPortalProvider = ({ children }) => {
         setStep(0);
         setApplication({});
         setEmail('');
+        setValues({});
     };
 
     return (
@@ -51,6 +57,8 @@ export const ApplicationPortalProvider = ({ children }) => {
                 setApplication,
                 updateApplication,
                 resetApplication,
+                values,
+                setValues,
             }}
         >
             {children}

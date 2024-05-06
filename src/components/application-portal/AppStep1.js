@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import StepWrapper from './StepWrapper';
 import { Stack, Box, InputLabel, TextField } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 
 export default function AppStep1() {
-    const { updateApplication, application } = useApplicationPortal();
+    const { updateApplication, application, values, setValues } =
+        useApplicationPortal();
     const [loading, setLoading] = useState(false);
 
-    const [values, setValues] = useState({
-        firstname: application.firstname ? application.firstname : '',
-        lastname: application.lastname ? application.lastname : '',
-        company: application.company ? application.company : '',
-        title: application.title ? application.title : '',
-        address1: application.address1 ? application.address1 : '',
-        address2: application.address2 ? application.address2 : '',
-        city: application.city ? application.city : '',
-        state: application.state ? application.state : '',
-        zip: application.zip ? application.zip : '',
-        country: application.country ? application.country : '',
-        step: application.step ? application.step : 1,
-    });
-
-    console.log('step 1, application: ', application);
+    useEffect(() => {
+        setValues({
+            firstname: application.firstname ? application.firstname : '',
+            lastname: application.lastname ? application.lastname : '',
+            company: application.company ? application.company : '',
+            title: application.title ? application.title : '',
+            address1: application.address1 ? application.address1 : '',
+            address2: application.address2 ? application.address2 : '',
+            city: application.city ? application.city : '',
+            state: application.state ? application.state : '',
+            zip: application.zip ? application.zip : '',
+            country: application.country ? application.country : '',
+        });
+    }, []);
 
     const handleChange = (e, field) => {
         setValues((val) => ({
@@ -33,7 +33,7 @@ export default function AppStep1() {
 
     const handleNext = async () => {
         setLoading(true);
-        const res = await updateApplication(values);
+        const res = await updateApplication();
 
         if (!res.success) {
             // TODO handle errs

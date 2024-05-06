@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import StepWrapper from './StepWrapper';
 import { Typography, Stack, Box, InputLabel, TextField } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 
 export default function AppStep4() {
-    const { application, updateApplication } = useApplicationPortal();
+    const { application, updateApplication, values, setValues } =
+        useApplicationPortal();
     const [loading, setLoading] = useState(false);
 
-    const [values, setValues] = useState({
-        video_link: application.video_link ? application.video_link : '',
-        step: application.step ? application.step : 4,
-    });
+    useEffect(() => {
+        setValues({
+            video_link: application.video_link ? application.video_link : '',
+        });
+    }, []);
 
     const handleChange = (e, field) => {
         setValues((val) => ({
@@ -22,7 +24,7 @@ export default function AppStep4() {
 
     const handleNext = async () => {
         setLoading(true);
-        const res = await updateApplication(values);
+        const res = await updateApplication();
 
         if (!res.success) {
             // TODO handle errs

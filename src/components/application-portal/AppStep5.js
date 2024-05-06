@@ -13,18 +13,20 @@ import useApplicationPortal from './ApplicationContext';
 import TheTextarea from '../elements/TheTextarea';
 
 export default function AppStep5() {
-    const { application, updateApplication } = useApplicationPortal();
+    const { application, updateApplication, values, setValues } =
+        useApplicationPortal();
     const [loading, setLoading] = useState(false);
 
-    const [values, setValues] = useState({
-        product_categories: application.product_categories
-            ? application.product_categories
-            : '',
-        product_categories_other: application.product_categories_other
-            ? application.product_categories_other
-            : '',
-        step: application.step ? application.step : 5,
-    });
+    useEffect(() => {
+        setValues({
+            product_categories: application.product_categories
+                ? application.product_categories
+                : '',
+            product_categories_other: application.product_categories_other
+                ? application.product_categories_other
+                : '',
+        });
+    }, []);
 
     const handleChange = (e, field) => {
         setValues((val) => ({
@@ -67,7 +69,7 @@ export default function AppStep5() {
 
     const handleNext = async () => {
         setLoading(true);
-        const res = await updateApplication(values);
+        const res = await updateApplication();
 
         if (!res.success) {
             // TODO handle errs

@@ -18,24 +18,20 @@ import Link from 'next/link';
 
 export default function AppStep0() {
     const [email, setEmail] = useState('');
-    const { step, setStep } = useApplicationPortal();
     const [loading, setLoading] = useState(false);
     const [state, setState] = useState('init'); // init | exists | created | submitted
     const [link, setLink] = useState('');
+    const [error, setError] = useState('');
 
     const handleStart = async () => {
         if (!email) return;
         setLoading(true);
 
-        // TODO: make API call
-        console.log('starting api call: ', email);
         const res = await initApplication(email);
-
         console.log(res);
 
         if (res.success) {
             // TODO REMOVE THIS:
-
             if (res.data.url) {
                 const link = res.data.url.replace(
                     'https://estee-catalyst.reconstrukt.net',
@@ -51,6 +47,8 @@ export default function AppStep0() {
             } else {
                 setState('created');
             }
+        } else {
+            setError(res.message);
         }
 
         setLoading(false);
@@ -100,6 +98,8 @@ export default function AppStep0() {
                                 fullWidth
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
+                                helperText={!!error && error}
+                                error={!!error}
                             />
                         </Box>
                     </Stack>

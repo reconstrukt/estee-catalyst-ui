@@ -11,14 +11,16 @@ import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 
 export default function AppStep6() {
-    const { application, updateApplication } = useApplicationPortal();
+    const { application, updateApplication, values, setValues } =
+        useApplicationPortal();
     const [loading, setLoading] = useState(false);
 
-    const [values, setValues] = useState({
-        target_age_demographic: application.target_age_demographic
-            ? application.target_age_demographic
-            : '',
-        step: application.step ? application.step : 6,
+    useEffect(() => {
+        setValues({
+            target_age_demographic: application.target_age_demographic
+                ? application.target_age_demographic
+                : '',
+        });
     });
 
     const [checked, setChecked] = useState(
@@ -55,7 +57,7 @@ export default function AppStep6() {
 
     const handleNext = async () => {
         setLoading(true);
-        const res = await updateApplication(values);
+        const res = await updateApplication();
 
         if (!res.success) {
             // TODO handle errs

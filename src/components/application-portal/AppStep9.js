@@ -13,18 +13,20 @@ import useApplicationPortal from './ApplicationContext';
 import TheTextarea from '../elements/TheTextarea';
 
 export default function AppStep9() {
-    const { application, updateApplication } = useApplicationPortal();
+    const { application, updateApplication, values, setValues } =
+        useApplicationPortal();
     const [loading, setLoading] = useState(false);
 
-    const [values, setValues] = useState({
-        distribution_channels: application.distribution_channels
-            ? application.distribution_channels
-            : '',
-        distribution_channels_other: application.distribution_channels_other
-            ? application.distribution_channels_other
-            : '',
-        step: application.step ? application.step : 9,
-    });
+    useEffect(() => {
+        setValues({
+            distribution_channels: application.distribution_channels
+                ? application.distribution_channels
+                : '',
+            distribution_channels_other: application.distribution_channels_other
+                ? application.distribution_channels_other
+                : '',
+        });
+    }, []);
 
     const handleChange = (e, field) => {
         setValues((val) => ({
@@ -67,7 +69,7 @@ export default function AppStep9() {
 
     const handleNext = async () => {
         setLoading(true);
-        const res = await updateApplication(values);
+        const res = await updateApplication();
 
         if (!res.success) {
             // TODO handle errs

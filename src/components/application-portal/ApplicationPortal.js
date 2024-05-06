@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useApplicationPortal from './ApplicationContext';
 import {
     Dialog,
@@ -7,6 +7,7 @@ import {
     Typography,
     IconButton,
     ButtonBase,
+    Button,
 } from '@mui/material';
 import CloseIcon from '../../../assets/svg/CloseIcon.svg';
 
@@ -23,9 +24,32 @@ import AppStep9 from './AppStep9';
 import AppStep10 from './AppStep10';
 import AppStep11 from './AppStep11';
 import AppStepFinal from './AppStepFinal';
+import { LoadingButton } from '@mui/lab';
 
 export default function ApplicationPortal() {
-    const { dialogOpen, setDialogOpen, step, goBack } = useApplicationPortal();
+    const {
+        dialogOpen,
+        setDialogOpen,
+        step,
+        goBack,
+        updateApplication,
+        values,
+    } = useApplicationPortal();
+
+    const [loading, setLoading] = useState(false);
+
+    const handleSaveAndExit = async () => {
+        setLoading(true);
+        const res = await updateApplication();
+
+        if (!res.success) {
+            // TODO handle errs
+        } else {
+            setDialogOpen(false);
+        }
+
+        setLoading(false);
+    };
 
     return (
         <>
@@ -49,21 +73,43 @@ export default function ApplicationPortal() {
                         justifyContent="space-between"
                     >
                         <Box>
-                            <ButtonBase onClick={goBack}>
-                                {step > 1 && step !== 12 && (
+                            {/* <ButtonBase onClick={goBack}>
                                     <Typography variant="h4">BACK</Typography>
-                                )}
-                            </ButtonBase>
+                                </ButtonBase> */}
+
+                            {step > 1 && step !== 12 && (
+                                <Button
+                                    color="black"
+                                    onClick={goBack}
+                                    sx={{
+                                        pl: 0,
+                                        minWidth: 0,
+                                    }}
+                                >
+                                    BACK
+                                </Button>
+                            )}
                         </Box>
 
                         <Box>
-                            <IconButton
-                                variant="text"
-                                color="black"
-                                onClick={() => setDialogOpen(false)}
-                            >
-                                <CloseIcon />
-                            </IconButton>
+                            {step === 0 || step === 12 ? (
+                                <IconButton
+                                    variant="text"
+                                    color="black"
+                                    onClick={() => setDialogOpen(false)}
+                                >
+                                    <CloseIcon />
+                                </IconButton>
+                            ) : (
+                                <LoadingButton
+                                    loading={loading}
+                                    variant="outlined"
+                                    color="black"
+                                    onClick={handleSaveAndExit}
+                                >
+                                    SAVE AND EXIT
+                                </LoadingButton>
+                            )}
                         </Box>
                     </Stack>
 

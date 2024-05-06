@@ -1,24 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import StepWrapper from './StepWrapper';
 import { Stack, Box, InputLabel, TextField } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 
 export default function AppStep2() {
-    const { application, updateApplication } = useApplicationPortal();
+    const { application, updateApplication, values, setValues } =
+        useApplicationPortal();
     const [loading, setLoading] = useState(false);
 
-    const [values, setValues] = useState({
-        website: application.website ? application.website : '',
-        instagram: application.instagram ? application.instagram : '',
-        facebook: application.facebook ? application.facebook : '',
-        youtube: application.youtube ? application.youtube : '',
-        tiktok: application.tiktok ? application.tiktok : '',
-        linkedin: application.linkedin ? application.linkedin : '',
-        snapchat: application.snapchat ? application.snapchat : '',
-        other_social: application.other_social ? application.other_social : '',
-        step: application.step ? application.step : 1,
-    });
+    useEffect(() => {
+        setValues({
+            website: application.website ? application.website : '',
+            instagram: application.instagram ? application.instagram : '',
+            facebook: application.facebook ? application.facebook : '',
+            youtube: application.youtube ? application.youtube : '',
+            tiktok: application.tiktok ? application.tiktok : '',
+            linkedin: application.linkedin ? application.linkedin : '',
+            snapchat: application.snapchat ? application.snapchat : '',
+            other_social: application.other_social
+                ? application.other_social
+                : '',
+        });
+    }, []);
 
     const handleChange = (e, field) => {
         setValues((val) => ({
@@ -29,7 +33,7 @@ export default function AppStep2() {
 
     const handleNext = async () => {
         setLoading(true);
-        const res = await updateApplication(values);
+        const res = await updateApplication();
 
         if (!res.success) {
             // TODO handle errs

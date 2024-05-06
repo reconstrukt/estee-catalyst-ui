@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import StepWrapper from './StepWrapper';
 import {
     Typography,
@@ -15,25 +15,27 @@ import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 
 export default function AppStep3() {
-    const { application, updateApplication } = useApplicationPortal();
+    const { application, updateApplication, values, setValues } =
+        useApplicationPortal();
     const [loading, setLoading] = useState(false);
 
-    const [values, setValues] = useState({
-        in_market: application.in_market ? application.in_market : 0,
-        company_launch_date: application.company_launch_date
-            ? application.company_launch_date
-            : '',
-        company_country: application.company_country
-            ? application.company_country
-            : '',
-        num_of_employees: application.num_of_employees
-            ? application.num_of_employees
-            : '',
-        company_category: application.company_category
-            ? application.company_category
-            : '',
-        step: application.step ? application.step : 3,
-    });
+    useEffect(() => {
+        setValues({
+            in_market: application.in_market ? application.in_market : 0,
+            company_launch_date: application.company_launch_date
+                ? application.company_launch_date
+                : '',
+            company_country: application.company_country
+                ? application.company_country
+                : '',
+            num_of_employees: application.num_of_employees
+                ? application.num_of_employees
+                : '',
+            company_category: application.company_category
+                ? application.company_category
+                : '',
+        });
+    }, []);
 
     const handleChange = (e, field) => {
         setValues((val) => ({
@@ -44,7 +46,7 @@ export default function AppStep3() {
 
     const handleNext = async () => {
         setLoading(true);
-        const res = await updateApplication(values);
+        const res = await updateApplication();
 
         if (!res.success) {
             // TODO handle errs

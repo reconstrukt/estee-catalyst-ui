@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import StepWrapper from './StepWrapper';
 import { Typography, Stack, Box, InputLabel } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
@@ -6,18 +6,20 @@ import useApplicationPortal from './ApplicationContext';
 import TheTextarea from '../elements/TheTextarea';
 
 export default function AppStep7() {
-    const { application, updateApplication } = useApplicationPortal();
+    const { application, updateApplication, values, setValues } =
+        useApplicationPortal();
     const [loading, setLoading] = useState(false);
 
-    const [values, setValues] = useState({
-        elevator_pitch: application.elevator_pitch
-            ? application.elevator_pitch
-            : '',
-        market_opportunity: application.market_opportunity
-            ? application.market_opportunity
-            : '',
-        step: application.step ? application.step : 7,
-    });
+    useEffect(() => {
+        setValues({
+            elevator_pitch: application.elevator_pitch
+                ? application.elevator_pitch
+                : '',
+            market_opportunity: application.market_opportunity
+                ? application.market_opportunity
+                : '',
+        });
+    }, []);
 
     const handleChange = (e, field) => {
         setValues((val) => ({
@@ -28,7 +30,7 @@ export default function AppStep7() {
 
     const handleNext = async () => {
         setLoading(true);
-        const res = await updateApplication(values);
+        const res = await updateApplication();
 
         if (!res.success) {
             // TODO handle errs
