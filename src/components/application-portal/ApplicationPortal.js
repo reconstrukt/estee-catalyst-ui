@@ -10,6 +10,7 @@ import {
     Button,
 } from '@mui/material';
 import CloseIcon from '../../../assets/svg/CloseIcon.svg';
+import Logo from '../../../assets/svg/logo.svg';
 
 import AppStep0 from './AppStep0';
 import AppStep1 from './AppStep1';
@@ -71,12 +72,15 @@ export default function ApplicationPortal() {
                         py={1}
                         alignItems="center"
                         justifyContent="space-between"
+                        mb={5}
                     >
-                        <Box>
-                            {/* <ButtonBase onClick={goBack}>
-                                    <Typography variant="h4">BACK</Typography>
-                                </ButtonBase> */}
-
+                        <Box
+                            sx={{
+                                flex: 1,
+                                display: 'flex',
+                                justifyContent: 'flex-start',
+                            }}
+                        >
                             {step > 1 && step !== 12 && (
                                 <Button
                                     color="black"
@@ -91,7 +95,40 @@ export default function ApplicationPortal() {
                             )}
                         </Box>
 
-                        <Box>
+                        <Box
+                            sx={{
+                                flex: 1,
+                                display: {
+                                    xs: 'none',
+                                    md: 'flex',
+                                },
+                                justifyContent: 'center',
+                            }}
+                        >
+                            <Box
+                                sx={{
+                                    width: {
+                                        xs: 131,
+                                        sm: 182,
+                                    },
+
+                                    height: {
+                                        xs: 18,
+                                        sm: 25,
+                                    },
+                                }}
+                            >
+                                <Logo width="100%" height="100%" />
+                            </Box>
+                        </Box>
+
+                        <Box
+                            sx={{
+                                flex: 1,
+                                display: 'flex',
+                                justifyContent: 'flex-end',
+                            }}
+                        >
                             {step === 0 || step === 12 ? (
                                 <IconButton
                                     variant="text"
