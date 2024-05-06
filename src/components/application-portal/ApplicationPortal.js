@@ -26,6 +26,7 @@ import AppStep10 from './AppStep10';
 import AppStep11 from './AppStep11';
 import AppStepFinal from './AppStepFinal';
 import { LoadingButton } from '@mui/lab';
+import ApplicationProgress from './ApplicationProgress';
 
 export default function ApplicationPortal() {
     const {
@@ -168,9 +169,8 @@ export default function ApplicationPortal() {
                                 <Typography variant="h2">
                                     APPLICATION PORTAL
                                 </Typography>
-                                <Typography variant="caption">
-                                    STEP {step}/11
-                                </Typography>
+
+                                <ApplicationProgress step={step} />
                             </Stack>
                         )}
 
