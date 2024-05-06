@@ -103,6 +103,7 @@ export default function AppStep3() {
                             <Box>
                                 <InputLabel>Date of Company Launch</InputLabel>
                                 <TextField
+                                    type="date"
                                     fullWidth
                                     value={values.company_launch_date}
                                     onChange={(e) =>
