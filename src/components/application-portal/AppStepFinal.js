@@ -1,18 +1,21 @@
-import {
-    Box,
-    Button,
-    InputLabel,
-    Stack,
-    TextField,
-    Typography,
-} from '@mui/material';
-import React, { useState } from 'react';
+import { Box, Button, Stack, Typography } from '@mui/material';
+import React from 'react';
 import PortalImage from '../../../assets/images/app-portal.jpg';
 import Image from 'next/image';
 import StepWrapper from './StepWrapper';
-import Link from 'next/link';
+import useApplicationPortal from './ApplicationContext';
+import { useRouter } from 'next/navigation';
 
 export default function AppStepFinal() {
+    const { setDialogOpen, resetApplication } = useApplicationPortal();
+    const router = useRouter();
+
+    const handleBackToWebsite = () => {
+        router.push('/');
+        setDialogOpen(false);
+        resetApplication();
+    };
+
     return (
         <StepWrapper
             sx={{
@@ -43,11 +46,13 @@ export default function AppStepFinal() {
                 <Typography>Thank you for applying</Typography>
             </Stack>
             <Box mt={8}>
-                <Link href="/">
-                    <Button color="black" variant="contained">
-                        BACK TO WEBSITE
-                    </Button>
-                </Link>
+                <Button
+                    color="black"
+                    variant="contained"
+                    onClick={handleBackToWebsite}
+                >
+                    BACK TO WEBSITE
+                </Button>
             </Box>
         </StepWrapper>
     );

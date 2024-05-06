@@ -31,6 +31,13 @@ export const ApplicationPortalProvider = ({ children }) => {
         setStep(step - 1);
     };
 
+    const resetApplication = () => {
+        setDialogOpen(false);
+        setStep(0);
+        setApplication({});
+        setEmail('');
+    };
+
     return (
         <ApplicationPortalContext.Provider
             value={{
@@ -43,6 +50,7 @@ export const ApplicationPortalProvider = ({ children }) => {
                 application,
                 setApplication,
                 updateApplication,
+                resetApplication,
             }}
         >
             {children}
