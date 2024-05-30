@@ -5,15 +5,20 @@ import PageLayout from '@/components/layouts/PageLayout';
 import Image from 'next/image';
 
 import PrizesImage from '../../../assets/images/the-prizes.jpg';
+import prizesmob from '../../../assets/images/prizesmob.jpg';
+import prizes from '../../../assets/images/prizes.jpg';
+import Section from '@/components/sections/Section';
 
 export default function ThePrizes() {
     return (
         <PageLayout>
             <Hero
                 sx={{
-                    minHeight: '85vh',
+                    backgroundImage: {
+                        xs: `url(${prizesmob.src})`,
+                        md: `url(${prizes.src})`,
+                    },
                 }}
-                backgroundImage={PrizesImage.src}
             >
                 <Box
                     sx={{
@@ -26,102 +31,130 @@ export default function ThePrizes() {
                         THE PRIZES
                     </Typography>
                     <Typography variant="subtitle1">
-                        In addition to a total prize pool of 4 crore ($500,000
-                        USD), each company will have the potential to build a
-                        long-term partnership with Estée Lauder&apos;s New
-                        Incubation Ventures (the strategic early-stage investing
-                        and incubation arm of The Estée Lauder Companies).
+                        Two winners of The Catalysts will receive funding for
+                        their project based on their submitted business plans.
                     </Typography>
                 </Box>
             </Hero>
 
-            <Stack
+            <Section
                 sx={{
-                    flexDirection: {
-                        xs: 'column',
-                        md: 'row',
-                    },
                     textAlign: 'center',
                 }}
             >
+                <Box mb={8}>
+                    <Typography variant="subtitle1">
+                        By participating in the program, all applicants will
+                        have access to the following:
+                    </Typography>
+                </Box>
+
                 <Stack
-                    spacing={4}
                     sx={{
-                        flex: 1,
-                        py: 12,
-                        px: 3,
-                        alignItems: 'center',
+                        flexDirection: {
+                            xs: 'column',
+                            md: 'row',
+                        },
                     }}
                 >
-                    <Typography variant="h2">IMAGINE</Typography>
-
-                    <Typography
-                        variant="body1"
+                    <Box
                         sx={{
-                            maxWidth: 600,
+                            flex: 1,
+                            px: {
+                                xs: 0,
+                                md: 4,
+                            },
+                            py: {
+                                xs: 4,
+                                md: 4,
+                            },
                         }}
                     >
-                        Pre-launch Beauty Concepts in the categories of Skin
-                        Care, Make Up, Hair Care, Personal Fragrance and Home
-                        Fragrance.
-                        <br />
-                        <br />
-                        UP TO $75K
-                        <br />
-                        <br />
-                        • National and International Press support
-                        <br />
-                        <br />
-                        • Exposure on Estée Lauder New Incubation Ventures and
-                        Nykaa Social Channels
-                        <br />
-                        <br />
-                        • Mentorship and resource support via ELC and related
-                        partners
-                        <br />
-                        <br />• Trend presentation by Intercos
-                    </Typography>
+                        <Typography variant="h2" sx={{ mb: 1 }}>
+                            FINANCIAL SUPPORT:
+                        </Typography>
+                        <Typography variant="body1">
+                            A total prize pool of up to $500k to directly fund
+                            the most innovative and inspiring creative concepts.
+                        </Typography>
+                    </Box>
+                    <Box
+                        sx={{
+                            flex: 1,
+                            px: {
+                                xs: 0,
+                                md: 4,
+                            },
+                            py: {
+                                xs: 4,
+                                md: 4,
+                            },
+                        }}
+                    >
+                        <Typography variant="h2" sx={{ mb: 1 }}>
+                            AWARENESS:
+                        </Typography>
+                        <Typography variant="body1">
+                            National and international press for the winners,
+                            along with amplification on the Estée Lauder
+                            Companies platforms.
+                        </Typography>
+                    </Box>
                 </Stack>
 
                 <Stack
-                    spacing={4}
                     sx={{
-                        flex: 1,
-                        pt: {
-                            xs: 0,
-                            md: 12,
+                        flexDirection: {
+                            xs: 'column',
+                            md: 'row',
                         },
-                        pb: 12,
-                        px: 3,
-                        alignItems: 'center',
                     }}
                 >
-                    <Typography variant="h2">GROW</Typography>
-
-                    <Typography variant="body1" sx={{ maxWidth: 600 }}>
-                        In-market Beauty Concepts in the categories of Skin
-                        Care, Make Up, Hair Care, Personal Fragrance and Home
-                        Fragrance
-                        <br />
-                        <br />
-                        UP TO $150K.
-                        <br />
-                        <br />
-                        • National and International Press support
-                        <br />
-                        <br />
-                        • Exposure on Estée Lauder New Incubation Ventures and
-                        Nykaa Social Channels
-                        <br />
-                        <br />
-                        • Mentorship and resource support via ELC and related
-                        partners
-                        <br />
-                        <br />• Opportunity to discuss a pilot project with ELC
-                        R&D team
-                    </Typography>
+                    <Box
+                        sx={{
+                            flex: 1,
+                            px: {
+                                xs: 0,
+                                md: 4,
+                            },
+                            py: {
+                                xs: 4,
+                                md: 4,
+                            },
+                        }}
+                    >
+                        <Typography variant="h2" sx={{ mb: 1 }}>
+                            MENTORSHIP:
+                        </Typography>
+                        <Typography variant="body1">
+                            Access to experts from across the beauty landscape:
+                            including product and content development, brand
+                            building, finance, operations and supply chain.
+                        </Typography>
+                    </Box>
+                    <Box
+                        sx={{
+                            flex: 1,
+                            px: {
+                                xs: 0,
+                                md: 4,
+                            },
+                            py: {
+                                xs: 4,
+                                md: 4,
+                            },
+                        }}
+                    >
+                        <Typography variant="h2" sx={{ mb: 1 }}>
+                            DISTRIBUTION SUPPORT:
+                        </Typography>
+                        <Typography variant="body1">
+                            Valuable guidance on how to scale and reach
+                            consumers at both local and global levels.
+                        </Typography>
+                    </Box>
                 </Stack>
-            </Stack>
+            </Section>
         </PageLayout>
     );
 }
