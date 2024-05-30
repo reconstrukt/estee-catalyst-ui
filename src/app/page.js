@@ -14,6 +14,9 @@ import Image from 'next/image';
 import ShanaImage from '../../assets/images/shana.jpg';
 import PrizesVImage from '../../assets/images/prizesvertical.jpg';
 import PrizesHImage from '../../assets/images/prizeshorizontal.jpg';
+import Grid from '@/components/sections/Grid';
+import GridItem from '@/components/sections/GridItem';
+import judges from '@/cms/judges';
 
 export default function Home() {
     const searchParams = useSearchParams();
@@ -284,7 +287,99 @@ export default function Home() {
                 </Stack>
             </Section>
 
-            <Section></Section>
+            <Section
+                sx={{
+                    backgroundImage: sharedStyles.linearGradient.orangeRed,
+                }}
+            >
+                <Stack>
+                    <Box>
+                        <Typography variant="h1">
+                            A JURY OF CREATIVE LEADERS
+                        </Typography>
+                    </Box>
+
+                    <Box>
+                        <Grid
+                            innerSx={{
+                                maxWidth: 1172,
+                            }}
+                        >
+                            {judges.map((item, index) => (
+                                <GridItem
+                                    key={index}
+                                    sx={{
+                                        flex: {
+                                            xs: '1 0 40%',
+                                            md: '1 0 21%',
+                                        },
+                                    }}
+                                >
+                                    <Stack
+                                        spacing={2}
+                                        sx={{
+                                            alignItems: 'center',
+                                            textAlign: 'center',
+                                        }}
+                                    >
+                                        <Box
+                                            sx={{
+                                                width: {
+                                                    xs: 170,
+                                                    md: 222,
+                                                },
+                                                height: {
+                                                    xs: 217,
+                                                    md: 277,
+                                                },
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+
+                                                backgroundImage: `url(${item.image.src})`,
+                                                backgroundPosition: 'center',
+                                                backgroundSize: 'cover',
+                                            }}
+                                        ></Box>
+
+                                        <Box>
+                                            <Typography
+                                                variant="h4"
+                                                sx={{ mb: 0.5 }}
+                                            >
+                                                {item.name}
+                                            </Typography>
+                                            <Typography variant="body1">
+                                                {item.title}
+                                            </Typography>
+                                        </Box>
+                                    </Stack>
+                                </GridItem>
+                            ))}
+                        </Grid>
+                    </Box>
+
+                    <Box>
+                        <Link href="/judges">
+                            <Button variant="outlined" color="black">
+                                READ MORE
+                            </Button>
+                        </Link>
+                    </Box>
+                </Stack>
+            </Section>
+
+            <Section
+                sx={{
+                    backgroundColor: 'black.main',
+                    color: 'white.main',
+                    py: 8,
+                }}
+            >
+                <Stack>
+                    <Typography variant="h2">PRESS</Typography>
+                </Stack>
+            </Section>
         </PageLayout>
     );
 }

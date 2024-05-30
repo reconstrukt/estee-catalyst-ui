@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '@mui/material';
 
-export default function GridItem({ children }) {
+export default function GridItem({ children, sx }) {
     return (
         <Box
             sx={{
@@ -11,6 +11,7 @@ export default function GridItem({ children }) {
                 },
                 display: 'flex',
                 justifyContent: 'center',
+                ...sx,
             }}
         >
             <Box
