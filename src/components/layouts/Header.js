@@ -230,7 +230,7 @@ export default function Header({ transparentHeader }) {
                         <Box>
                             <Link href="/winners">
                                 <Typography variant="menu">
-                                    2023 Winners
+                                    2024 Winners
                                 </Typography>
                             </Link>
                         </Box>

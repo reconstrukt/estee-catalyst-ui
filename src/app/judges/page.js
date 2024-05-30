@@ -20,6 +20,9 @@ import GridItem from '@/components/sections/GridItem';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
+import jurymob from '../../../assets/images/jurymob.jpg';
+import jury from '../../../assets/images/jury.jpg';
+
 export default function ContactUs() {
     const [selected, setSelected] = useState(null);
     const [nextJudge, setNextJudge] = useState(null);
@@ -51,7 +54,14 @@ export default function ContactUs() {
 
     return (
         <PageLayout>
-            <Hero backgroundImage={PressImage.src}>
+            <Hero
+                sx={{
+                    backgroundImage: {
+                        xs: `url(${jurymob.src})`,
+                        md: `url(${jury.src})`,
+                    },
+                }}
+            >
                 <Box
                     sx={{
                         textAlign: 'center',
@@ -60,10 +70,7 @@ export default function ContactUs() {
                     }}
                 >
                     <Typography variant="h1" mb={1}>
-                        THE JUDGES
-                    </Typography>
-                    <Typography variant="subtitle1">
-                        Our extraordinary judges.
+                        A JURY OF CREATIVE LEADERS
                     </Typography>
                 </Box>
             </Hero>

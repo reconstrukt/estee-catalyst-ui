@@ -2,14 +2,23 @@ import { Box, Typography, Stack } from '@mui/material';
 import Hero from '@/components/sections/Hero';
 import PageLayout from '@/components/layouts/PageLayout';
 
-import PressImage from '../../../assets/images/press.jpg';
 import winners from '@/cms/winners';
 import Link from 'next/link';
+
+import winmob from '../../../assets/images/winmob.jpg';
+import win from '../../../assets/images/win.jpg';
 
 export default function ContactUs() {
     return (
         <PageLayout>
-            <Hero backgroundImage={PressImage.src}>
+            <Hero
+                sx={{
+                    backgroundImage: {
+                        xs: `url(${winmob.src})`,
+                        md: `url(${win.src})`,
+                    },
+                }}
+            >
                 <Box
                     sx={{
                         textAlign: 'center',
