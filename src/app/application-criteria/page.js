@@ -9,6 +9,8 @@ import Image from 'next/image';
 import criteriamob from '../../../assets/images/criteriamob.jpg';
 import criteria from '../../../assets/images/criteria.jpg';
 import useApplicationPortal from '@/components/application-portal/ApplicationContext';
+import Section from '@/components/sections/Section';
+import sharedStyles from '@/theme/sharedStyles';
 
 export default function ApplicationCriteria() {
     const { setDialogOpen } = useApplicationPortal();
@@ -173,6 +175,94 @@ export default function ApplicationCriteria() {
                     </Typography>
                 </Stack>
             </Stack>
+
+            <Section>
+                <Stack spacing={8}>
+                    <Stack
+                        spacing={3}
+                        sx={{
+                            '& a': {
+                                textDecoration: 'underline',
+                            },
+                        }}
+                    >
+                        <Typography variant="h2">ANY QUESTIONS?</Typography>
+                        <Typography>
+                            Check out the <Link href="/faq">FAQs</Link> or{' '}
+                            <Link href="mailto:hello@beautyandyouawards.com">
+                                email
+                            </Link>{' '}
+                            us
+                        </Typography>
+                    </Stack>
+
+                    <Stack
+                        spacing={3}
+                        sx={{
+                            '& a': {
+                                textDecoration: 'underline',
+                            },
+                        }}
+                    >
+                        <Typography variant="h2">
+                            FINALISTS WILL BE ANNOUNCED IN SEPTEMBER 2024.
+                        </Typography>
+                        <Box>
+                            <Button
+                                variant="outlined"
+                                color="black"
+                                onClick={() => setDialogOpen(true)}
+                            >
+                                START APPLICATION
+                            </Button>
+                        </Box>
+                    </Stack>
+                </Stack>
+            </Section>
+
+            <Section
+                sx={{
+                    backgroundImage: sharedStyles.linearGradient.orangeRed,
+                }}
+            >
+                <Stack spacing={8} sx={{ maxWidth: 1172, margin: '0 auto' }}>
+                    <Typography variant="h1">WHO CAN APPLY</Typography>
+
+                    <Stack spacing={3}>
+                        <Typography variant="h2">NEW BRANDS</Typography>
+                        <Typography>
+                            Do you have a breakthrough product innovation or
+                            business idea for the beauty industry that needs
+                            funding to become a reality? The Catalysts is
+                            seeking founders who have new brand and product
+                            concepts and need support to make them happen.
+                        </Typography>
+                    </Stack>
+
+                    <Stack spacing={3}>
+                        <Typography variant="h2">EXISTING BRANDS</Typography>
+                        <Typography>
+                            Whether a fashion designer, retailer, or another
+                            business entirely, we want to hear from those who
+                            have already built a brand and want to extend its
+                            creativity into the world of beauty through a
+                            product line or limited edition collection.
+                        </Typography>
+                    </Stack>
+
+                    <Stack spacing={3}>
+                        <Typography variant="h2">
+                            CREATIVE STORYTELLERS
+                        </Typography>
+                        <Typography>
+                            Beyond brands, The Catalysts is open to creative
+                            practitioners who would use funding to create work
+                            such as a film, book, or podcast that speaks to new
+                            ideas and new audiences in beauty.
+                        </Typography>
+                    </Stack>
+                </Stack>
+            </Section>
         </PageLayout>
     );
 }
