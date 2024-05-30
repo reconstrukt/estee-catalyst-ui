@@ -2,7 +2,6 @@
 
 import { Box, Typography, Button, Stack } from '@mui/material';
 import Hero from '@/components/sections/Hero';
-import HeroBg from '../../assets/images/hpbg.jpg';
 import Link from 'next/link';
 import PageLayout from '@/components/layouts/PageLayout';
 import { useSearchParams } from 'next/navigation';
@@ -18,6 +17,15 @@ import Grid from '@/components/sections/Grid';
 import GridItem from '@/components/sections/GridItem';
 import judges from '@/cms/judges';
 import Slider from 'react-slick';
+
+import about from '../../assets/slider/about.jpg';
+import aboutmob from '../../assets/slider/aboutmob.jpg';
+import applynow from '../../assets/slider/applynow.jpg';
+import applynowmob from '../../assets/slider/applynowmob.jpg';
+import jury from '../../assets/slider/jury.jpg';
+import jurymob from '../../assets/slider/jurymob.jpg';
+import tbc from '../../assets/slider/tbc.jpg';
+import tbcmob from '../../assets/slider/tbcmob.jpg';
 
 export default function Home() {
     const searchParams = useSearchParams();
@@ -42,56 +50,129 @@ export default function Home() {
                     slidesToShow={1}
                     slidesToScroll={1}
                 >
-                    <Hero backgroundImage={HeroBg.src}>
+                    <Hero
+                        sx={{
+                            backgroundImage: {
+                                xs: `url(${aboutmob.src})`,
+                                md: `url(${about.src})`,
+                            },
+                        }}
+                    >
                         <Box
                             sx={{
                                 textAlign: 'center',
                                 color: 'white.main',
+                                textShadow: '0px 0px 30px #0000004D',
                             }}
                         >
                             <Typography variant="h1" mb={1}>
-                                THE ESTÉE LAUDER
-                                <br />
-                                COMPANIES
+                                A NEW PLATFORM
                             </Typography>
                             <Typography variant="subtitle1">
-                                New incubation ventures signature program
-                                <br />
-                                for beauty start-ups in the world.
+                                To discover those shaping the future of beauty
                             </Typography>
                             <Box mt={2}>
                                 <Link href="/catalysts">
                                     <Button variant="outlined" color="white">
-                                        LEARN MORE
+                                        ABOUT THE CATALYSTS
                                     </Button>
                                 </Link>
                             </Box>
                         </Box>
                     </Hero>
 
-                    <Hero backgroundImage={HeroBg.src}>
+                    <Hero
+                        sx={{
+                            backgroundImage: {
+                                xs: `url(${applynowmob.src})`,
+                                md: `url(${applynow.src})`,
+                            },
+                        }}
+                    >
                         <Box
                             sx={{
                                 textAlign: 'center',
                                 color: 'white.main',
+                                textShadow: '0px 0px 30px #0000004D',
                             }}
                         >
                             <Typography variant="h1" mb={1}>
-                                THE ESTÉE LAUDER
-                                <br />
-                                COMPANIES
+                                CALLING ALL VISIONARIES
                             </Typography>
                             <Typography variant="subtitle1">
-                                New incubation ventures signature program
+                                {/* New incubation ventures signature program
                                 <br />
-                                for beauty start-ups in the world.
+                                for beauty start-ups in the world. */}
                             </Typography>
                             <Box mt={2}>
-                                <Link href="/catalysts">
+                                <Button
+                                    variant="outlined"
+                                    color="white"
+                                    onClick={() => setDialogOpen(true)}
+                                >
+                                    APPLY NOW
+                                </Button>
+                            </Box>
+                        </Box>
+                    </Hero>
+
+                    <Hero
+                        sx={{
+                            backgroundImage: {
+                                xs: `url(${jurymob.src})`,
+                                md: `url(${jury.src})`,
+                            },
+                        }}
+                    >
+                        <Box
+                            sx={{
+                                textAlign: 'center',
+                                color: 'white.main',
+                                textShadow: '0px 0px 30px #0000004D',
+                            }}
+                        >
+                            <Typography variant="h1" mb={1}>
+                                OUR CREATIVE COLLECTIVE
+                            </Typography>
+                            <Typography variant="subtitle1">
+                                Meet our jury of industry leaders
+                            </Typography>
+                            <Box mt={2}>
+                                <Link href="/judges">
                                     <Button variant="outlined" color="white">
-                                        LEARN MORE
+                                        THE JURY
                                     </Button>
                                 </Link>
+                            </Box>
+                        </Box>
+                    </Hero>
+
+                    <Hero
+                        sx={{
+                            backgroundImage: {
+                                xs: `url(${tbcmob.src})`,
+                                md: `url(${tbc.src})`,
+                            },
+                        }}
+                    >
+                        <Box
+                            sx={{
+                                textAlign: 'center',
+                                color: 'white.main',
+                                textShadow: '0px 0px 30px #0000004D',
+                            }}
+                        >
+                            <Typography variant="h1" mb={1}>
+                                CREATED IN PARTNERSHIP WITH TIKTOK
+                            </Typography>
+                            <Typography variant="subtitle1">
+                                A unique opportunity to get your brand seen by
+                                the world
+                            </Typography>
+                            <Box mt={2}>
+                                <Button variant="outlined" color="white">
+                                    LEARN MORE
+                                </Button>
                             </Box>
                         </Box>
                     </Hero>
