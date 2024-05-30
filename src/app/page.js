@@ -67,7 +67,6 @@ export default function Home() {
                             sx={{
                                 textAlign: 'center',
                                 color: 'white.main',
-                                textShadow: '0px 0px 30px #0000004D',
                             }}
                         >
                             <Typography variant="h1" mb={1}>
@@ -98,7 +97,6 @@ export default function Home() {
                             sx={{
                                 textAlign: 'center',
                                 color: 'white.main',
-                                textShadow: '0px 0px 30px #0000004D',
                             }}
                         >
                             <Typography variant="h1" mb={1}>
@@ -133,7 +131,6 @@ export default function Home() {
                             sx={{
                                 textAlign: 'center',
                                 color: 'white.main',
-                                textShadow: '0px 0px 30px #0000004D',
                             }}
                         >
                             <Typography variant="h1" mb={1}>
@@ -164,7 +161,6 @@ export default function Home() {
                             sx={{
                                 textAlign: 'center',
                                 color: 'white.main',
-                                textShadow: '0px 0px 30px #0000004D',
                             }}
                         >
                             <Typography variant="h1" mb={1}>

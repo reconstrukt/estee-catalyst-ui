@@ -20,6 +20,8 @@ export default function Hero({ backgroundImage, children, sx }) {
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center center',
 
+                textShadow: '0px 0px 30px #0000004D',
+
                 ...sx,
             }}
         >

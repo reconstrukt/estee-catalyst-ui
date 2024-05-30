@@ -14,6 +14,7 @@ export default function Catalysts() {
             <Hero
                 sx={{
                     minHeight: '85vh',
+                    textShadow: 'none',
                 }}
             >
                 <Box
