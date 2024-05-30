@@ -125,6 +125,7 @@ const typography = {
     },
 
     body1: {
+        fontFamily: GaramondFont.style.fontFamily,
         fontSize: 20,
         lineHeight: '1em',
 

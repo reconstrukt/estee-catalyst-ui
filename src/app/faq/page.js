@@ -9,16 +9,19 @@ import {
 import Hero from '@/components/sections/Hero';
 import PageLayout from '@/components/layouts/PageLayout';
 
-import FaqImage from '../../../assets/images/faq.jpg';
+import faqmob from '../../../assets/images/faqmob.jpg';
+import faq from '../../../assets/images/faq.jpg';
 
 export default function FaqPage() {
     return (
         <PageLayout>
             <Hero
                 sx={{
-                    minHeight: '85vh',
+                    backgroundImage: {
+                        xs: `url(${faqmob.src})`,
+                        md: `url(${faq.src})`,
+                    },
                 }}
-                backgroundImage={FaqImage.src}
             >
                 <Box
                     sx={{

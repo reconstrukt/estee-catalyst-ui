@@ -2,16 +2,21 @@ import { Box, Typography, Stack } from '@mui/material';
 import Hero from '@/components/sections/Hero';
 import PageLayout from '@/components/layouts/PageLayout';
 
-import PrizesImage from '../../../assets/images/the-prizes.jpg';
+import contactmob from '../../../assets/images/contactmob.jpg';
+import contact from '../../../assets/images/contact.jpg';
+import Section from '@/components/sections/Section';
+import sharedStyles from '@/theme/sharedStyles';
 
 export default function ContactUs() {
     return (
         <PageLayout>
             <Hero
                 sx={{
-                    minHeight: '85vh',
+                    backgroundImage: {
+                        xs: `url(${contactmob.src})`,
+                        md: `url(${contact.src})`,
+                    },
                 }}
-                backgroundImage={PrizesImage.src}
             >
                 <Box
                     sx={{
@@ -21,85 +26,27 @@ export default function ContactUs() {
                     }}
                 >
                     <Typography variant="h1" mb={1}>
-                        CONTACT US
+                        GET IN TOUCH
                     </Typography>
                 </Box>
             </Hero>
 
-            <Stack
+            <Section
                 sx={{
-                    flexDirection: 'row',
-                    textAlign: 'center',
+                    backgroundImage: sharedStyles.linearGradient.pinkRed,
                 }}
             >
                 <Stack
                     spacing={6}
                     sx={{
-                        flex: 1,
-                        backgroundColor: 'pink.main',
-                        py: 14,
-                        px: 3,
-                        alignItems: 'center',
+                        maxWidth: 1172,
+                        margin: '0 auto',
                     }}
                 >
-                    <Stack alignItems="center" spacing={2}>
+                    <Stack alignItems="center" spacing={3}>
                         <Typography variant="h2">
-                            COMPANIES INTERESTED
-                            <br />
-                            IN SUPPORTING BEAUTY&YOU
-                        </Typography>
-
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                maxWidth: 600,
-                            }}
-                        >
-                            <a href="mailto:applications@beautyandyouawards.com">
-                                applications@beautyandyouawards.com
-                            </a>
-                        </Typography>
-                    </Stack>
-
-                    <Stack alignItems="center" spacing={2}>
-                        <Typography variant="h2">
-                            QUESTIONS ABOUT APPLICATIONS
-                            <br />
-                            AND THE APPLICATION PROCESS
-                        </Typography>
-
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                maxWidth: 600,
-                            }}
-                        >
-                            <a href="mailto:partners@beautyandyouawards.com">
-                                partners@beautyandyouawards.com
-                            </a>
-                        </Typography>
-                    </Stack>
-
-                    <Stack alignItems="center" spacing={2}>
-                        <Typography variant="h2">MEDIA REQUESTS</Typography>
-
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                maxWidth: 600,
-                            }}
-                        >
-                            <a href="mailto:media@beautyandyouawards.com">
-                                media@beautyandyouawards.com
-                            </a>
-                        </Typography>
-                    </Stack>
-
-                    <Stack alignItems="center" spacing={2}>
-                        <Typography variant="h2">
-                            ANY OTHER QUESTIONS?
-                            <br />
-                            PLEASE CONTACT US BELOW
+                            IF YOU ARE A COMPANY INTERESTED IN SUPPORTING THE
+                            CATALYSTS, PLEASE REACH OUT TO:
                         </Typography>
 
                         <Typography
@@ -114,11 +61,12 @@ export default function ContactUs() {
                         </Typography>
                     </Stack>
 
-                    <Stack alignItems="center" spacing={2}>
-                        <Typography variant="h2">CONNECT ON SOCIAL</Typography>
-                    </Stack>
+                    <Typography variant="h2">
+                        FOR ANYTHING ELSE, PLEASE SEE OUR FAQ PAGE, OR CONTACT
+                        US
+                    </Typography>
                 </Stack>
-            </Stack>
+            </Section>
         </PageLayout>
     );
 }
