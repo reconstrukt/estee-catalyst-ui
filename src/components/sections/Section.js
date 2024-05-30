@@ -6,7 +6,10 @@ export default function Section({ children, sx }) {
         <Box
             component="section"
             sx={{
-                py: 15,
+                py: {
+                    xs: 12,
+                    md: 15,
+                },
                 ...sx,
             }}
         >
