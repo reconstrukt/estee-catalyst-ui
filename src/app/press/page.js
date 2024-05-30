@@ -8,10 +8,20 @@ import Link from 'next/link';
 import Grid from '@/components/sections/Grid';
 import GridItem from '@/components/sections/GridItem';
 
+import pressmob from '../../../assets/images/pressmob.jpg';
+import pressimg from '../../../assets/images/press.jpg';
+
 export default function ContactUs() {
     return (
         <PageLayout>
-            <Hero backgroundImage={PressImage.src}>
+            <Hero
+                sx={{
+                    backgroundImage: {
+                        xs: `url(${pressmob.src})`,
+                        md: `url(${pressimg.src})`,
+                    },
+                }}
+            >
                 <Box
                     sx={{
                         textAlign: 'center',
