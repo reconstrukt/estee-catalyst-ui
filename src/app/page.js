@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, Stack } from '@mui/material';
 import Hero from '@/components/sections/Hero';
 import HeroBg from '../../assets/images/hpbg.jpg';
 import Link from 'next/link';
@@ -8,6 +8,8 @@ import PageLayout from '@/components/layouts/PageLayout';
 import { useSearchParams } from 'next/navigation';
 import useApplicationPortal from '@/components/application-portal/ApplicationContext';
 import { useEffect } from 'react';
+import Section from '@/components/sections/Section';
+import sharedStyles from '@/theme/sharedStyles';
 
 export default function Home() {
     const searchParams = useSearchParams();
@@ -49,6 +51,56 @@ export default function Home() {
                     </Box>
                 </Box>
             </Hero>
+
+            <Section>
+                <Stack alignItems="center" spacing={3}>
+                    <Typography variant="h2">
+                        A FIRST-OF-ITS-KIND GLOBAL BEAUTY INITIATIVE
+                    </Typography>
+
+                    <Typography variant="subtitle1">
+                        All it takes is an idea. Whether you’re a brand founder,
+                        fashion designer, perfumer, photographer, skincare
+                        scientist, or makeup artist, The Catalysts is an open
+                        call for new ideas set to transform the future of beauty
+                        – and an opportunity to receive vital funding to make
+                        your plans into reality.{' '}
+                    </Typography>
+
+                    <Link href="/catalysts">
+                        <Button variant="outlined" color="black">
+                            READ MORE
+                        </Button>
+                    </Link>
+                </Stack>
+            </Section>
+
+            <Section
+                sx={{
+                    backgroundImage: sharedStyles.linearGradient.pinkRed,
+                }}
+            >
+                <Stack alignItems="center" spacing={3}>
+                    <Typography variant="h2">
+                        A FIRST-OF-ITS-KIND GLOBAL BEAUTY INITIATIVE
+                    </Typography>
+
+                    <Typography variant="subtitle1">
+                        All it takes is an idea. Whether you’re a brand founder,
+                        fashion designer, perfumer, photographer, skincare
+                        scientist, or makeup artist, The Catalysts is an open
+                        call for new ideas set to transform the future of beauty
+                        – and an opportunity to receive vital funding to make
+                        your plans into reality.{' '}
+                    </Typography>
+
+                    <Link href="/catalysts">
+                        <Button variant="outlined" color="black">
+                            READ MORE
+                        </Button>
+                    </Link>
+                </Stack>
+            </Section>
         </PageLayout>
     );
 }
