@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Typography, Button, Stack } from '@mui/material';
+import { Box, Typography, Button, Stack, Slide } from '@mui/material';
 import Hero from '@/components/sections/Hero';
 import Link from 'next/link';
 import PageLayout from '@/components/layouts/PageLayout';
@@ -26,10 +26,15 @@ import jury from '../../assets/slider/jury.jpg';
 import jurymob from '../../assets/slider/jurymob.jpg';
 import tbc from '../../assets/slider/tbc.jpg';
 import tbcmob from '../../assets/slider/tbcmob.jpg';
+import press from '@/cms/press';
+import theme from '@/theme/theme';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export default function Home() {
     const searchParams = useSearchParams();
     const { setDialogOpen } = useApplicationPortal();
+
+    const isLg = useMediaQuery(theme.breakpoints.up('lg'));
 
     useEffect(() => {
         const appmodal = searchParams.get('appmodal');
@@ -40,7 +45,7 @@ export default function Home() {
     }, []);
 
     return (
-        <PageLayout hasFooter={false}>
+        <PageLayout>
             <Box>
                 <Slider
                     dots={true}
@@ -496,9 +501,65 @@ export default function Home() {
                     py: 8,
                 }}
             >
-                <Stack>
+                <Stack mb={4}>
                     <Typography variant="h2">PRESS</Typography>
                 </Stack>
+
+                <Box
+                    sx={{
+                        position: 'relative',
+                        width: {
+                            xs: '150%',
+                            sm: '100%',
+                        },
+                        left: {
+                            xs: '-25%',
+                            sm: 0,
+                        },
+                    }}
+                >
+                    <Slider
+                        arrows={false}
+                        infinite={true}
+                        autoplay={true}
+                        autoplaySpeed={5000}
+                        slidesToShow={isLg ? 6 : 3}
+                        slidesToScroll={isLg ? 3 : 1}
+                    >
+                        {press.map((item, index) => (
+                            <Stack
+                                key={index}
+                                spacing={2}
+                                direction="row"
+                                justifyContent="center"
+                            >
+                                <Box
+                                    sx={{
+                                        width: {
+                                            xs: '100%',
+                                            md: '100%',
+                                        },
+                                        height: {
+                                            xs: 50,
+                                            md: 50,
+                                        },
+                                        border: '1px solid',
+                                        borderColor: 'black.main',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+
+                                        '& svg path': {
+                                            fill: 'currentColor',
+                                        },
+                                    }}
+                                >
+                                    {item.logo}
+                                </Box>
+                            </Stack>
+                        ))}
+                    </Slider>
+                </Box>
             </Section>
         </PageLayout>
     );
