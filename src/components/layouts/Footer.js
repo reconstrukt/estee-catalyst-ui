@@ -5,6 +5,7 @@ import TikTokLogo from '../../../assets/svg/TikTokLogo.svg';
 import IdexLogo from '../../../assets/svg/IdexLogo.svg';
 import NewsletterForm from '../sections/NewsletterForm';
 import Link from 'next/link';
+import { HelveticaNowFont } from '@/theme/theme';
 
 export default function Footer() {
     return (
@@ -92,6 +93,8 @@ export default function Footer() {
                                 xs: 'flex-start',
                                 md: 'space-evenly',
                             },
+                            fontFamily: HelveticaNowFont.style.fontFamily,
+                            fontSize: 16,
                         }}
                     >
                         <Stack spacing={2.5}>
