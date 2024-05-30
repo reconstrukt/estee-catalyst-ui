@@ -1,19 +1,27 @@
+'use client';
+
 import { Box, Typography, Button, Stack } from '@mui/material';
 import Hero from '@/components/sections/Hero';
 import Link from 'next/link';
 import PageLayout from '@/components/layouts/PageLayout';
 import Image from 'next/image';
 
-import CriteriaImage from '../../../assets/images/app-criteria.jpg';
+import criteriamob from '../../../assets/images/criteriamob.jpg';
+import criteria from '../../../assets/images/criteria.jpg';
+import useApplicationPortal from '@/components/application-portal/ApplicationContext';
 
 export default function ApplicationCriteria() {
+    const { setDialogOpen } = useApplicationPortal();
+
     return (
         <PageLayout>
             <Hero
                 sx={{
-                    minHeight: '85vh',
+                    backgroundImage: {
+                        xs: `url(${criteriamob.src})`,
+                        md: `url(${criteria.src})`,
+                    },
                 }}
-                backgroundImage={CriteriaImage.src}
             >
                 <Box
                     sx={{
@@ -27,8 +35,18 @@ export default function ApplicationCriteria() {
                         CRITERIA
                     </Typography>
                     <Typography variant="subtitle1">
-                        What you need to know before applying for the program:
+                        What you need to know before applying
                     </Typography>
+
+                    <Box mt={2}>
+                        <Button
+                            variant="outlined"
+                            color="white"
+                            onClick={() => setDialogOpen(true)}
+                        >
+                            START APPLICATION
+                        </Button>
+                    </Box>
                 </Box>
             </Hero>
 
@@ -51,47 +69,38 @@ export default function ApplicationCriteria() {
                         alignItems: 'center',
                     }}
                 >
-                    <Typography variant="h2">
-                        APPLICATION
-                        <br />
-                        CRITERIA
-                    </Typography>
+                    <Typography variant="h2">CRITERIA</Typography>
 
                     <Typography
                         variant="body1"
                         sx={{
                             maxWidth: 668,
+                            textAlign: 'left',
+
+                            '& li': {
+                                fontSize: 20,
+                            },
                         }}
                     >
-                        1. Applicants to the BEAUTY&YOU Program 2023 must be 18
-                        years of age or older as of December 31st 2022.
+                        1. Applicants to The Catalysts 2024 must be at least 21
+                        years of age, as of December 31st 2023.
                         <br />
                         <br />
-                        2. There are four application categories in the Main
-                        Prizes.
+                        2. Applications should be submitting ideas and business
+                        plans focused on the following categories:
                         <br />
                         <br />
-                        IMAGINE: Companies that are pre-launch and pre-revenue
-                        with founders seeking initial launch funding.
-                        <br />
-                        <br />
-                        GROW: Companies currently trading in-market with some
-                        revenue and founders seeking growth capital. Applicants
-                        are revenue-generating companies with at least one point
-                        of distribution - company website is sufficient.
-                        <br />
-                        <br />
-                        BREAKTHROUGH: Applicants from the R&D, active ingredient
-                        world who are submitting active ingredient submissions
-                        that are focused on solutions for the Indian Consumer
-                        Market.
-                        <br />
-                        <br />
-                        CREATE: Photographers, Filmmakers, Make Up Artists, Hair
-                        Stylists submitting work that represents the theme of
-                        Experiential Beauty in India. Applicants may be based
-                        anywhere in the world but must submit an application
-                        that is aligned with the theme.
+                        <ul>
+                            <li>Makeup</li>
+                            <li>Skin care</li>
+                            <li>Body care</li>
+                            <li>Hair care</li>
+                            <li>Fragrance</li>
+                            <li>Home fragrance</li>
+                            <li>Creative storytelling – a visual concept,</li>
+                            <li>for example an exhibition, book, or film </li>
+                            <li>Retail or experiential concept</li>
+                        </ul>
                     </Typography>
                 </Stack>
 
@@ -105,41 +114,62 @@ export default function ApplicationCriteria() {
                         alignItems: 'center',
                     }}
                 >
-                    <Typography variant="h2">
-                        ITEMS YOU WILL NEED TO
-                        <br />
-                        COMPLETE THE APPLICATION
-                    </Typography>
+                    <Stack>
+                        <Typography variant="h2">
+                            WHAT YOU WILL NEED TO COMPLETE YOUR APPLICATION
+                        </Typography>
+                        <Typography variant="body1">
+                            (may vary depending on category)
+                        </Typography>
+                    </Stack>
 
-                    <Typography variant="body1" sx={{ maxWidth: 668 }}>
-                        1. Company details, including your India Incorporation 
-                        Number (if applicable) and links to your social
-                        channels.
+                    <Typography
+                        variant="body1"
+                        sx={{
+                            maxWidth: 668,
+                            textAlign: 'left',
+                            '& li': {
+                                fontSize: 20,
+                            },
+                        }}
+                    >
+                        1. Company details, if applicable
                         <br />
                         <br />
-                        2. Executive summary or submission about  your business,
-                        idea or creative work. Please make sure  you cover the
+                        2. Country of residence
+                        <br />
+                        <br />
+                        3. Links to your social channels
+                        <br />
+                        <br />
+                        4. One page executive summary about your business, idea
+                        or creative work. Please make sure you cover the
                         following points in your summary:
                         <br />
-                        <br />
-                        Market opportunity
-                        <br />
-                        Problem and Solution
-                        <br />
-                        Brand and Product Idea
-                        <br />
-                        Distribution Plan
-                        <br />
-                        Why your company should win
-                        <br />
-                        Your experiential beauty concept
-                        <br />
-                        <br />
-                        3. Any video assets that support your application.
-                        <br />
-                        <br />
-                        4. Any questions? Check out our FAQs section  or email
-                        us at applications@beautyandyouawards.com.
+                        <ul>
+                            <li>
+                                Vision for Beauty—What inspires you. Market
+                                opportunity – why you have identified this area
+                                as a space you feel would benefit from your idea
+                            </li>
+                            <li>
+                                Problem and solution – what problem your idea
+                                will solve, or what gap it would fill
+                            </li>
+                            <li>Brand, product or experience idea</li>
+                            <li>Your audience or community</li>
+                            <li>
+                                Distribution plan – where you see your product
+                                being sold, and on which channels
+                            </li>
+                            <li>
+                                Why your company should win – what makes you
+                                deserving of fundingA Tiktok (or other video
+                                submission if Tiktok is not available)
+                                explaining Your Vision for Beauty and tagged
+                                #JointheCatalysts.
+                            </li>
+                        </ul>
                     </Typography>
                 </Stack>
             </Stack>
