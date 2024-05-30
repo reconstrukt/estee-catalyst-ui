@@ -17,6 +17,7 @@ import PrizesHImage from '../../assets/images/prizeshorizontal.jpg';
 import Grid from '@/components/sections/Grid';
 import GridItem from '@/components/sections/GridItem';
 import judges from '@/cms/judges';
+import Slider from 'react-slick';
 
 export default function Home() {
     const searchParams = useSearchParams();
@@ -32,32 +33,70 @@ export default function Home() {
 
     return (
         <PageLayout hasFooter={false}>
-            <Hero backgroundImage={HeroBg.src}>
-                <Box
-                    sx={{
-                        textAlign: 'center',
-                        color: 'white.main',
-                    }}
+            <Box>
+                <Slider
+                    dots={true}
+                    infinite={true}
+                    autoplay={true}
+                    autoplaySpeed={5000}
+                    slidesToShow={1}
+                    slidesToScroll={1}
                 >
-                    <Typography variant="h1" mb={1}>
-                        THE ESTÉE LAUDER
-                        <br />
-                        COMPANIES
-                    </Typography>
-                    <Typography variant="subtitle1">
-                        New incubation ventures signature program
-                        <br />
-                        for beauty start-ups in the world.
-                    </Typography>
-                    <Box mt={2}>
-                        <Link href="/catalysts">
-                            <Button variant="outlined" color="white">
-                                LEARN MORE
-                            </Button>
-                        </Link>
-                    </Box>
-                </Box>
-            </Hero>
+                    <Hero backgroundImage={HeroBg.src}>
+                        <Box
+                            sx={{
+                                textAlign: 'center',
+                                color: 'white.main',
+                            }}
+                        >
+                            <Typography variant="h1" mb={1}>
+                                THE ESTÉE LAUDER
+                                <br />
+                                COMPANIES
+                            </Typography>
+                            <Typography variant="subtitle1">
+                                New incubation ventures signature program
+                                <br />
+                                for beauty start-ups in the world.
+                            </Typography>
+                            <Box mt={2}>
+                                <Link href="/catalysts">
+                                    <Button variant="outlined" color="white">
+                                        LEARN MORE
+                                    </Button>
+                                </Link>
+                            </Box>
+                        </Box>
+                    </Hero>
+
+                    <Hero backgroundImage={HeroBg.src}>
+                        <Box
+                            sx={{
+                                textAlign: 'center',
+                                color: 'white.main',
+                            }}
+                        >
+                            <Typography variant="h1" mb={1}>
+                                THE ESTÉE LAUDER
+                                <br />
+                                COMPANIES
+                            </Typography>
+                            <Typography variant="subtitle1">
+                                New incubation ventures signature program
+                                <br />
+                                for beauty start-ups in the world.
+                            </Typography>
+                            <Box mt={2}>
+                                <Link href="/catalysts">
+                                    <Button variant="outlined" color="white">
+                                        LEARN MORE
+                                    </Button>
+                                </Link>
+                            </Box>
+                        </Box>
+                    </Hero>
+                </Slider>
+            </Box>
 
             <Section>
                 <Stack alignItems="center" spacing={3}>

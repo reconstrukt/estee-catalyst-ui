@@ -1,5 +1,8 @@
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import Providers from '@/components/providers/Providers';
+import { Box } from '@mui/material';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export const metadata = {
     title: 'Create Next App',
@@ -10,9 +13,16 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <AppRouterCacheProvider>
-                    <Providers>{children}</Providers>
-                </AppRouterCacheProvider>
+                <Box
+                    sx={{
+                        position: 'relative',
+                        overflowX: 'hidden',
+                    }}
+                >
+                    <AppRouterCacheProvider>
+                        <Providers>{children}</Providers>
+                    </AppRouterCacheProvider>
+                </Box>
             </body>
         </html>
     );
