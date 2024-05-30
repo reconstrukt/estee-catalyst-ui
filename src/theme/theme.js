@@ -4,7 +4,7 @@ import localFont from 'next/font/local';
 
 const defaultTheme = createTheme();
 
-const GaramondFont = localFont({
+export const GaramondFont = localFont({
     src: [
         {
             path: './fonts/AppleGaramond.woff2',
@@ -14,7 +14,7 @@ const GaramondFont = localFont({
     ],
 });
 
-const HelveticaNeueFont = localFont({
+export const HelveticaNeueFont = localFont({
     src: [
         {
             path: './fonts/HelveticaNeueCondensedBold.woff2',
@@ -24,7 +24,7 @@ const HelveticaNeueFont = localFont({
     ],
 });
 
-const HelveticaNowFont = localFont({
+export const HelveticaNowFont = localFont({
     src: [
         {
             path: './fonts/HelveticaNowDisplay-Regular.woff2',

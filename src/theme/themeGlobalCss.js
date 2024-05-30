@@ -1,10 +1,13 @@
 import { GlobalStyles } from '@mui/material';
+import { GaramondFont } from './theme';
 
 const themeGlobalCss = (
     <GlobalStyles
         styles={{
             body: {
                 color: 'black',
+                fontFamily: GaramondFont.style.fontFamily,
+                fontSize: 20,
             },
 
             a: {
