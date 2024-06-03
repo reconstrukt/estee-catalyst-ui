@@ -2,7 +2,6 @@ import { Box, Typography, Stack } from '@mui/material';
 import Hero from '@/components/sections/Hero';
 import PageLayout from '@/components/layouts/PageLayout';
 
-import PressImage from '../../../assets/images/press.jpg';
 import press from '@/cms/press';
 import Link from 'next/link';
 import Grid from '@/components/sections/Grid';
