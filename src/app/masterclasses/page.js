@@ -25,27 +25,27 @@ import Image from 'next/image';
 export default function Masterclasses() {
     const [selected, setSelected] = useState(null);
 
-    const [nextJudge, setNextJudge] = useState(null);
+    const [nextLesson, setNextLesson] = useState(null);
 
     const dialogTitleRef = useRef(null);
 
     useEffect(() => {
         if (!selected) {
-            setNextJudge(null);
+            setNextLesson(null);
         } else {
             let index = masterclasses.findIndex(
-                (el) => el.name === selected.name,
+                (el) => el.lesson === selected.lesson,
             );
             if (!!masterclasses[index + 1]) {
-                setNextJudge(masterclasses[index + 1]);
+                setNextLesson(masterclasses[index + 1]);
             } else {
-                setNextJudge(masterclasses[0]);
+                setNextLesson(masterclasses[0]);
             }
         }
     }, [selected]);
 
-    const onNextJudgeClick = () => {
-        setSelected(nextJudge);
+    const onNextLessonClick = () => {
+        setSelected(nextLesson);
 
         if (dialogTitleRef.current) {
             dialogTitleRef.current.scrollIntoView({
@@ -176,10 +176,7 @@ export default function Masterclasses() {
                         >
                             <Box>
                                 <Typography variant="h4">
-                                    {selected.lesson}
-                                </Typography>
-                                <Typography variant="h4">
-                                    {selected.title}
+                                    {selected.lesson.toUpperCase()}
                                 </Typography>
                             </Box>
 
@@ -232,24 +229,27 @@ export default function Masterclasses() {
                             <Box
                                 sx={{
                                     width: {
-                                        xs: 234,
-                                        md: 341,
+                                        xs: 222,
+                                        md: 333,
                                     },
                                     height: {
-                                        xs: 292,
-                                        md: 425,
+                                        xs: 396,
+                                        md: 594,
                                     },
                                     margin: 'auto',
                                     mt: 8,
+
+                                    video: {
+                                        width: '100%',
+                                        height: '100%',
+                                        borderRadius: '10px',
+                                        overflow: 'hidden',
+                                    },
                                 }}
                             >
-                                <Image
-                                    src={selected.thumb.src}
-                                    width={0}
-                                    height={0}
-                                    sizes="100vw"
-                                    style={{ width: '100%', height: 'auto' }}
-                                />
+                                <video controls>
+                                    <source src={selected.video} />
+                                </video>
                             </Box>
 
                             <Box
@@ -260,18 +260,18 @@ export default function Masterclasses() {
                                 }}
                             >
                                 <Typography variant="h2" sx={{ mb: 1 }}>
-                                    {selected.title}
+                                    {selected.title.toUpperCase()}
                                 </Typography>
                                 <Typography variant="subtitle1">
                                     {selected.copy}
                                 </Typography>
                             </Box>
 
-                            {nextJudge && (
+                            {nextLesson && (
                                 <Box
                                     sx={{
                                         maxWidth: 222,
-                                        margin: 'auto',
+                                        margin: '0 auto 50px',
                                         textAlign: 'center',
                                     }}
                                 >
@@ -284,7 +284,7 @@ export default function Masterclasses() {
                                             sx={{
                                                 cursor: 'pointer',
                                             }}
-                                            onClick={onNextJudgeClick}
+                                            onClick={onNextLessonClick}
                                         >
                                             <Stack
                                                 spacing={2}
@@ -296,22 +296,24 @@ export default function Masterclasses() {
                                                 <Box
                                                     sx={{
                                                         width: {
-                                                            xs: 170,
-                                                            md: 222,
+                                                            xs: 174,
+                                                            // md: 222,
                                                         },
                                                         height: {
-                                                            xs: 217,
-                                                            md: 277,
+                                                            xs: 310,
+                                                            // md: 277,
                                                         },
                                                         display: 'flex',
                                                         alignItems: 'center',
                                                         justifyContent:
                                                             'center',
 
-                                                        backgroundImage: `url(${nextJudge.thumb.src})`,
+                                                        backgroundImage: `url(${nextLesson.thumb.src})`,
                                                         backgroundPosition:
                                                             'center',
                                                         backgroundSize: 'cover',
+                                                        borderRadius: '10px',
+                                                        overflow: 'hidden',
                                                     }}
                                                 ></Box>
 
@@ -320,10 +322,10 @@ export default function Masterclasses() {
                                                         variant="h4"
                                                         sx={{ mb: 0.5 }}
                                                     >
-                                                        {nextJudge.lesson}
+                                                        {nextLesson.lesson}
                                                     </Typography>
                                                     <Typography variant="body1">
-                                                        {nextJudge.title}
+                                                        {nextLesson.title}
                                                     </Typography>
                                                 </Box>
                                             </Stack>
