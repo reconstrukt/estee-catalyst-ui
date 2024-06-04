@@ -216,7 +216,7 @@ export default function Home() {
                         margin: '0 auto',
                     }}
                 >
-                    <Box
+                    {/* <Box
                         sx={{
                             width: {
                                 xs: 237,
@@ -238,7 +238,7 @@ export default function Home() {
                                 height: 'auto',
                             }}
                         />
-                    </Box>
+                    </Box> */}
 
                     <Stack spacing={1}>
                         <Typography variant="h2">
