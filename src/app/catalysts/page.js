@@ -6,6 +6,7 @@ import Image from 'next/image';
 
 import CatalistsImage from '../../../assets/images/catalysts.jpg';
 import ShanaImage from '../../../assets/images/shana.jpg';
+import VanessaImage from '../../../assets/images/vanessa.jpeg';
 import NIVLogo from '../../../assets/svg/NIVLogo.svg';
 import TikTokLogo from '../../../assets/svg/TikTokLogo.svg';
 
@@ -196,7 +197,7 @@ export default function Catalysts() {
                             flex: {
                                 md: '1 0 50%',
                             },
-                            backgroundImage: `url(${ShanaImage.src})`,
+                            backgroundImage: `url(${VanessaImage.src})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
 
