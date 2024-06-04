@@ -8,7 +8,7 @@ import marina from 'assets/experts/marina.jpg';
 import montague from 'assets/experts/montague.jpg';
 import nellie from 'assets/experts/nellie.jpg';
 import shar from 'assets/experts/shar.jpg';
-import sophie from 'assets/experts/sophie.JPG';
+import sophie from 'assets/experts/sophie.jpg';
 import sunday from 'assets/experts/sunday.jpg';
 import tendai from 'assets/experts/tendai.jpg';
 import yasmin from 'assets/experts/yasmin.jpg';
