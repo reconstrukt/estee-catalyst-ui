@@ -31,7 +31,7 @@ const experts = [
         name: 'TENDAI MOYO',
         title: (
             <>
-                CEO & Co-Founder , <br />
+                CEO & Co-Founder, <br />
                 RUKA Hair
             </>
         ),
@@ -43,7 +43,7 @@ const experts = [
         name: 'YASMIN SEWELL',
         title: (
             <>
-                Founder , <br />
+                Founder, <br />
                 VYRAO
             </>
         ),
@@ -55,7 +55,7 @@ const experts = [
         name: 'MARINA MANSOUR',
         title: (
             <>
-                Vice President- Beauty & Wellness , <br />
+                Vice President- Beauty & Wellness, <br />
                 Kyra
             </>
         ),
@@ -67,7 +67,7 @@ const experts = [
         name: 'MONTAGUE ASHLEY-CRAIG',
         title: (
             <>
-                Founder , <br />
+                Founder, <br />
                 MontaMonta
             </>
         ),
@@ -79,7 +79,7 @@ const experts = [
         name: 'NELLIE EDEN',
         title: (
             <>
-                Creative Director , <br />
+                Creative Director, <br />
                 IDEX Capital Partners
             </>
         ),
@@ -91,7 +91,7 @@ const experts = [
         name: 'SUNDAY RILEY',
         title: (
             <>
-                CEO , <br />
+                CEO, <br />
                 Sunday Riley
             </>
         ),
@@ -110,7 +110,7 @@ const experts = [
         name: 'ALEX SOSSAH',
         title: (
             <>
-                Founder & Creative Director , <br />
+                Founder & Creative Director, <br />
                 Metallic Inc
             </>
         ),
@@ -122,7 +122,7 @@ const experts = [
         name: 'ALEX BROWNSELL',
         title: (
             <>
-                Co-Founder & Creative Director , <br />
+                Co-Founder & Creative Director, <br />
                 Bleach London
             </>
         ),
@@ -134,7 +134,7 @@ const experts = [
         name: 'DOM BRIDGES',
         title: (
             <>
-                Founder , <br />
+                Founder, <br />
                 Haeckels
             </>
         ),
@@ -153,7 +153,7 @@ const experts = [
         name: 'CATHERINE PELTON',
         title: (
             <>
-                Principal, Investment , <br />
+                Principal, Investment, <br />
                 True
             </>
         ),
@@ -165,7 +165,7 @@ const experts = [
         name: 'SHARMADEAN REID',
         title: (
             <>
-                Founder & CEO , <br />
+                Founder & CEO, <br />
                 The Stack World
             </>
         ),
