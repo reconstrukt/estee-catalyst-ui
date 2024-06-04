@@ -75,9 +75,15 @@ const judges = [
     },
 
     {
-        image: '',
+        image: shana,
+        name: 'SHANA RANDHAVA',
+        copy: `As the head of New Incubation Ventures (NIV), Shana Randhava is responsible for building The Estée Lauder Companies (ELC) early-stage investment and incubation strategy. This new team is building a distinctive capability for ELC to invest in and experiment at scale and create an actionable pipeline of next generation brands for the ELC portfolio. Prior to creating NIV, Shana led the New Business Development team and was responsible for shaping and executing the ELC’s M&A strategy for DECIEM, Dr. Jart+, Forest Essentials, BY Killian and Too Faced. New Incubation Ventures (NIV) is the strategic early-stage investment and incubation arm for The Estée Lauder Companies.`,
+    },
+
+    {
+        image: courtney,
         name: 'COURTNEY MCHUGH',
-        copy: ``,
+        copy: `Courtney is a key member of the founding team of United Talent Agency’s (UTA) Venture team, where she leads the Incubation division. Her role involves assisting top-tier talent in launching businesses from the incubation stage to exit. Courtney is responsible for identifying best-in-class partners, participating in deal stage negotiations, and helping talent develop their product offerings, strategic brand positioning, and go-to-market strategies. She has played a significant role in shaping the brands of Issa Rae, Emma Chamberlain, Priyanka Chopra, Taraji P Henson, Tamara Mellon, Tia Mowry, Elizabeth Banks, and others. Additionally, she is an investor in early-stage startups, a mentor for A16 TxO fund, and an advisor to founders.`,
     },
 
     {
