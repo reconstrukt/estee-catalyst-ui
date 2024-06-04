@@ -42,6 +42,8 @@ export default function Masterclasses() {
                 setNextLesson(masterclasses[0]);
             }
         }
+
+        console.log('selected: ', selected);
     }, [selected]);
 
     const onNextLessonClick = () => {
