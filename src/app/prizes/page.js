@@ -71,11 +71,12 @@ export default function ThePrizes() {
                         }}
                     >
                         <Typography variant="h2" sx={{ mb: 1 }}>
-                            FINANCIAL SUPPORT:
+                            FINANCIAL AND MARKETING SUPPORT:
                         </Typography>
                         <Typography variant="body1">
                             A total prize pool of up to $500k to directly fund
-                            the most innovative and inspiring creative concepts.
+                            the most innovative and inspiring creative concepts
+                            plus up to $150k in ad credits from TikTok.
                         </Typography>
                     </Box>
                     <Box
