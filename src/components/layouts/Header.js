@@ -238,13 +238,13 @@ export default function Header({ transparentHeader }) {
                                 </Typography>
                             </Link>
                         </Box>
-                        <Box>
+                        {/* <Box>
                             <Link href="/winners">
                                 <Typography variant="menu">
                                     2024 Winners
                                 </Typography>
                             </Link>
-                        </Box>
+                        </Box> */}
                         <Box>
                             <Link href="/contact-us">
                                 <Typography variant="menu">Contact</Typography>
