@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from '../../../assets/svg/logo.svg';
 import MenuIcon from '../../../assets/svg/MenuIcon.svg';
 import CloseIcon from '../../../assets/svg/CloseIcon.svg';
@@ -10,9 +10,16 @@ import about from '../../../assets/slider/about.jpg';
 import aboutmob from '../../../assets/slider/aboutmob.jpg';
 import useScrollPosition from '@/hooks/useScrollPosition';
 import useApplicationPortal from '../application-portal/ApplicationContext';
+import { usePathname } from 'next/navigation';
 
 export default function Header({ transparentHeader }) {
     const [menuOpen, setMenuOpen] = useState(false);
+
+    const pathname = usePathname();
+    useEffect(() => {
+        document.body.style.overflow = 'auto';
+        setMenuOpen(false);
+    }, [pathname]);
 
     const toggleMenu = () => {
         if (!menuOpen) {
