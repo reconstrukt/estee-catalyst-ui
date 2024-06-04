@@ -6,6 +6,8 @@ import sallyann from 'assets/judges/sallyann.webp';
 import shana from 'assets/judges/shana.webp';
 import thomas from 'assets/judges/thomas.webp';
 import vanessa from 'assets/judges/vanessa.webp';
+import grace from 'assets/judges/grace.webp';
+import mitchell from 'assets/judges/mitchell.webp';
 
 const judges = [
     {
