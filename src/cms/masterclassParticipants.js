@@ -1,16 +1,22 @@
-import carlos from 'assets/judges/carlos.webp';
-import courtney from 'assets/judges/courtney.webp';
-import hung from 'assets/judges/hung.webp';
-import ruba from 'assets/judges/ruba.webp';
-import sallyann from 'assets/judges/sallyann.webp';
-import shana from 'assets/judges/shana.webp';
-import thomas from 'assets/judges/thomas.webp';
-import vanessa from 'assets/judges/vanessa.webp';
+import alexb from 'assets/experts/alexb.jpg';
+import alexs from 'assets/experts/alexs.jpg';
+import catherine from 'assets/experts/catherine.jpg';
+import dom from 'assets/experts/dom.jpg';
+import fenn from 'assets/experts/fenn.jpg';
+import joanna from 'assets/experts/joanna.jpg';
+import marina from 'assets/experts/marina.jpg';
+import montague from 'assets/experts/montague.jpg';
+import nellie from 'assets/experts/nellie.jpg';
+import shar from 'assets/experts/shar.jpg';
+import sophie from 'assets/experts/sophie.JPG';
+import sunday from 'assets/experts/sunday.jpg';
+import tendai from 'assets/experts/tendai.jpg';
+import yasmin from 'assets/experts/yasmin.jpg';
 
 const experts = [
     {
-        image: hung,
-        name: 'Joanna Ellner',
+        image: joanna,
+        name: 'JOANNA ELLNER',
         title: (
             <>
                 Founder & CEO, <br />
@@ -21,8 +27,8 @@ const experts = [
     },
 
     {
-        image: hung,
-        name: 'Varaidzo Tendai Moyo ',
+        image: tendai,
+        name: 'TENDAI MOYO',
         title: (
             <>
                 CEO & Co-Founder , <br />
@@ -33,8 +39,8 @@ const experts = [
     },
 
     {
-        image: hung,
-        name: 'Yasmin Sewell',
+        image: yasmin,
+        name: 'YASMIN SEWELL',
         title: (
             <>
                 Founder , <br />
@@ -45,8 +51,8 @@ const experts = [
     },
 
     {
-        image: hung,
-        name: 'Marina Mansour',
+        image: marina,
+        name: 'MARINA MANSOUR',
         title: (
             <>
                 Vice President- Beauty & Wellness , <br />
@@ -57,8 +63,8 @@ const experts = [
     },
 
     {
-        image: hung,
-        name: 'Montague Ashley-Craig',
+        image: montague,
+        name: 'MONTAGUE ASHLEY-CRAIG',
         title: (
             <>
                 Founder , <br />
@@ -69,8 +75,8 @@ const experts = [
     },
 
     {
-        image: hung,
-        name: 'Nellie Eden',
+        image: nellie,
+        name: 'NELLIE EDEN',
         title: (
             <>
                 Creative Director , <br />
@@ -81,27 +87,27 @@ const experts = [
     },
 
     {
-        image: hung,
-        name: 'Sunday Riley',
+        image: sunday,
+        name: 'SUNDAY RILEY',
         title: (
             <>
                 CEO , <br />
                 Sunday Riley
             </>
         ),
-        copy: `A legendary beauty authority, Sunday Riley is the founder, CEO, and chief formulator of Sunday Riley Modern Skincare. Founded in 2009, the cult brand continues to define the burgeoning niche beauty category thanks to its best-selling products and household-name status. As a wife, mother of four, and animal lover, Sunday is devoted to the brand's core values of advocating for human rights and sustainability.`,
+        copy: `A legendary beauty authority, Sunday Riley is the founder, CEO, and chief formulator of Sunday Riley Modern Skincare. Founded in 2009, the cult brand continues to define the burgeoning niche beauty category thanks to its best-selling products and household-name status. AS A WIFE, MOTHER OF FOUR, AND ANIMAL LOVER, SUNDAY IS DEVOTED TO THE BRAND'S CORE VALUES OF ADVOCATING FOR HUMAN RIGHTS AND SUSTAINABILITY.`,
     },
 
     {
-        image: hung,
-        name: 'Sophie Carbonari',
+        image: sophie,
+        name: 'SOPHIE CARBONARI',
         title: <>The French Facialist</>,
         copy: `Sophie Carbonari was just sixteen when she began studying beauty and hairdressing. Now, the Mali-born, south of France-raised facialist is renowned for her unique and personal approach to facials – based on stimulating the deep muscles and a patchwork of ancestral techniques from all over the world – including lymphatic drainage, ayurveda and kobido.`,
     },
 
     {
-        image: hung,
-        name: 'Alex Sossah',
+        image: alexs,
+        name: 'ALEX SOSSAH',
         title: (
             <>
                 Founder & Creative Director , <br />
@@ -112,8 +118,8 @@ const experts = [
     },
 
     {
-        image: hung,
-        name: 'Alex Brownsell',
+        image: alexb,
+        name: 'ALEX BROWNSELL',
         title: (
             <>
                 Co-Founder & Creative Director , <br />
@@ -124,8 +130,8 @@ const experts = [
     },
 
     {
-        image: hung,
-        name: 'Dom Bridges',
+        image: dom,
+        name: 'DOM BRIDGES',
         title: (
             <>
                 Founder , <br />
@@ -136,15 +142,15 @@ const experts = [
     },
 
     {
-        image: hung,
-        name: 'Fenn O’Meally',
+        image: fenn,
+        name: 'FENN O’MEALLY',
         title: <>Filmmaker</>,
         copy: `Born in Birmingham and of Jamaican heritage, for Fenn O’Meally the camera is a way to explore and study human stories, many of which observe her Caribbean roots. With a background of dance, her visuals see her lean on her early childhood love of movement and music. She has directed films for some of the world’s leading brands including; Nike, Burberry, Byredo, Louis Vuitton, Chanel, Dior, and Prada among many others, and worked with some of the World's most exciting artists, including Kendrick Lamar, Jorja Smith, Sampha and Spike Lee.`,
     },
 
     {
-        image: hung,
-        name: 'Catherine Pelton',
+        image: catherine,
+        name: 'CATHERINE PELTON',
         title: (
             <>
                 Principal, Investment , <br />
@@ -155,8 +161,8 @@ const experts = [
     },
 
     {
-        image: hung,
-        name: 'Sharmadean Reid',
+        image: shar,
+        name: 'SHARMADEAN REID',
         title: (
             <>
                 Founder & CEO , <br />

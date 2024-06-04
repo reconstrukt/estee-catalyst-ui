@@ -505,7 +505,7 @@ export default function Masterclasses() {
                                                 sizes="100vw"
                                                 style={{
                                                     width: '100%',
-                                                    height: 'auto',
+                                                    height: '100%',
                                                 }}
                                             />
                                         </Box>
@@ -534,7 +534,11 @@ export default function Masterclasses() {
                                     width={0}
                                     height={0}
                                     sizes="100vw"
-                                    style={{ width: '100%', height: 'auto' }}
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'contain',
+                                    }}
                                 />
                             </Box>
 
