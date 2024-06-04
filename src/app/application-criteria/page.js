@@ -79,6 +79,10 @@ export default function ApplicationCriteria() {
                             maxWidth: 668,
                             textAlign: 'left',
 
+                            '& ul': {
+                                paddingLeft: '20px',
+                            },
+
                             '& li': {
                                 fontSize: 20,
                             },
@@ -120,8 +124,19 @@ export default function ApplicationCriteria() {
                         <Typography variant="h2">
                             WHAT YOU WILL NEED TO COMPLETE YOUR APPLICATION
                         </Typography>
-                        <Typography variant="body1">
-                            (may vary depending on category)
+                        <Typography
+                            variant="body1"
+                            sx={{
+                                a: {
+                                    textDecoration: 'underline',
+                                },
+                            }}
+                        >
+                            (may very depending on category, please review of{' '}
+                            <Link href="/terms-and-conditions">
+                                Terms & Conditions
+                            </Link>{' '}
+                            for full details)
                         </Typography>
                     </Stack>
 
@@ -130,6 +145,10 @@ export default function ApplicationCriteria() {
                         sx={{
                             maxWidth: 668,
                             textAlign: 'left',
+
+                            '& ul': {
+                                paddingLeft: '20px',
+                            },
                             '& li': {
                                 fontSize: 20,
                             },
