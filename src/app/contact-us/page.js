@@ -55,8 +55,8 @@ export default function ContactUs() {
                                 maxWidth: 600,
                             }}
                         >
-                            <a href="mailto:hello@beautyandyouawards.com">
-                                hello@beautyandyouawards.com
+                            <a href="mailto:hello@thecatalystsworld.com">
+                                hello@thecatalystsworld.com
                             </a>
                         </Typography>
                     </Stack>

@@ -39,21 +39,21 @@ export default function Footer() {
                 >
                     <Stack spacing={4}>
                         <Stack spacing={2}>
-                            <Typography>The Catalyst is created by</Typography>
+                            <Typography>The Catalysts is created by</Typography>
                             <Link href="#" target="_blank">
                                 <NIVLogo />
                             </Link>
                         </Stack>
 
                         <Stack spacing={2}>
-                            <Typography>Exclusive partner</Typography>
+                            <Typography>With support from TikTok</Typography>
                             <Link href="#" target="_blank">
                                 <TikTokLogo />
                             </Link>
                         </Stack>
 
                         <Stack spacing={2}>
-                            <Typography>Exclusive producer</Typography>
+                            <Typography>Executive Producer</Typography>
                             <Link href="#" target="_blank">
                                 <IdexLogo />
                             </Link>

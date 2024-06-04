@@ -208,7 +208,7 @@ export default function ApplicationCriteria() {
                         <Typography variant="h2">ANY QUESTIONS?</Typography>
                         <Typography>
                             Check out the <Link href="/faq">FAQs</Link> or{' '}
-                            <Link href="mailto:hello@beautyandyouawards.com">
+                            <Link href="mailto:hello@thecatalystsworld.com">
                                 email
                             </Link>{' '}
                             us
