@@ -104,12 +104,23 @@ export default function ContactUs() {
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center',
-
-                                        backgroundImage: `url(${item.image.src})`,
-                                        backgroundPosition: 'center',
-                                        backgroundSize: 'cover',
                                     }}
-                                ></Box>
+                                >
+                                    {item.image && (
+                                        <Image
+                                            src={item.image.src}
+                                            width={0}
+                                            height={0}
+                                            sizes="100vw"
+                                            style={{
+                                                width: '100%',
+                                                height: '100%',
+                                                objectFit: 'cover',
+                                                objectPosition: 'center',
+                                            }}
+                                        />
+                                    )}
+                                </Box>
 
                                 <Box>
                                     <Typography variant="h4" sx={{ mb: 0.5 }}>
@@ -277,7 +288,23 @@ export default function ContactUs() {
                                                             'center',
                                                         backgroundSize: 'cover',
                                                     }}
-                                                ></Box>
+                                                >
+                                                    <Image
+                                                        src={
+                                                            nextJudge.image.src
+                                                        }
+                                                        width={0}
+                                                        height={0}
+                                                        sizes="100vw"
+                                                        style={{
+                                                            width: '100%',
+                                                            height: '100%',
+                                                            objectFit: 'cover',
+                                                            objectPosition:
+                                                                'center',
+                                                        }}
+                                                    />
+                                                </Box>
 
                                                 <Box>
                                                     <Typography

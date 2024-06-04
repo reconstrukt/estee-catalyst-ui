@@ -167,12 +167,21 @@ export default function Masterclasses() {
                                             justifyContent: 'center',
                                             borderRadius: '10px',
                                             overflow: 'hidden',
-
-                                            backgroundImage: `url(${lesson.thumb.src})`,
-                                            backgroundPosition: 'center',
-                                            backgroundSize: 'cover',
                                         }}
-                                    ></Box>
+                                    >
+                                        <Image
+                                            src={lesson.thumb.src}
+                                            width={0}
+                                            height={0}
+                                            sizes="100vw"
+                                            style={{
+                                                width: '100%',
+                                                height: '100%',
+                                                objectFit: 'cover',
+                                                objectPosition: 'center',
+                                            }}
+                                        />
+                                    </Box>
 
                                     <Box>
                                         <Typography
@@ -250,7 +259,9 @@ export default function Masterclasses() {
                                                 sizes="100vw"
                                                 style={{
                                                     width: '100%',
-                                                    height: 'auto',
+                                                    height: '100%',
+                                                    objectFit: 'cover',
+                                                    objectPosition: 'center',
                                                 }}
                                             />
                                         </Box>
@@ -341,15 +352,26 @@ export default function Masterclasses() {
                                                         alignItems: 'center',
                                                         justifyContent:
                                                             'center',
-
-                                                        backgroundImage: `url(${nextLesson.thumb.src})`,
-                                                        backgroundPosition:
-                                                            'center',
-                                                        backgroundSize: 'cover',
                                                         borderRadius: '10px',
                                                         overflow: 'hidden',
                                                     }}
-                                                ></Box>
+                                                >
+                                                    <Image
+                                                        src={
+                                                            nextLesson.thumb.src
+                                                        }
+                                                        width={0}
+                                                        height={0}
+                                                        sizes="100vw"
+                                                        style={{
+                                                            width: '100%',
+                                                            height: '100%',
+                                                            objectFit: 'cover',
+                                                            objectPosition:
+                                                                'center',
+                                                        }}
+                                                    />
+                                                </Box>
 
                                                 <Box>
                                                     <Typography
@@ -422,12 +444,23 @@ export default function Masterclasses() {
                                             display: 'flex',
                                             alignItems: 'center',
                                             justifyContent: 'center',
-
-                                            backgroundImage: `url(${item.image.src})`,
-                                            backgroundPosition: 'center',
-                                            backgroundSize: 'cover',
                                         }}
-                                    ></Box>
+                                    >
+                                        {item.image && (
+                                            <Image
+                                                src={item.image.src}
+                                                width={0}
+                                                height={0}
+                                                sizes="100vw"
+                                                style={{
+                                                    width: '100%',
+                                                    height: '100%',
+                                                    objectFit: 'cover',
+                                                    objectPosition: 'center',
+                                                }}
+                                            />
+                                        )}
+                                    </Box>
 
                                     <Box>
                                         <Typography
@@ -506,6 +539,8 @@ export default function Masterclasses() {
                                                 style={{
                                                     width: '100%',
                                                     height: '100%',
+                                                    objectFit: 'cover',
+                                                    objectPosition: 'center',
                                                 }}
                                             />
                                         </Box>
@@ -537,7 +572,8 @@ export default function Masterclasses() {
                                     style={{
                                         width: '100%',
                                         height: '100%',
-                                        objectFit: 'contain',
+                                        objectFit: 'cover',
+                                        objectPosition: 'center',
                                     }}
                                 />
                             </Box>
@@ -597,13 +633,24 @@ export default function Masterclasses() {
                                                         alignItems: 'center',
                                                         justifyContent:
                                                             'center',
-
-                                                        backgroundImage: `url(${nextJudge.image.src})`,
-                                                        backgroundPosition:
-                                                            'center',
-                                                        backgroundSize: 'cover',
                                                     }}
-                                                ></Box>
+                                                >
+                                                    <Image
+                                                        src={
+                                                            nextJudge.image.src
+                                                        }
+                                                        width={0}
+                                                        height={0}
+                                                        sizes="100vw"
+                                                        style={{
+                                                            width: '100%',
+                                                            height: '100%',
+                                                            objectFit: 'cover',
+                                                            objectPosition:
+                                                                'center',
+                                                        }}
+                                                    />
+                                                </Box>
 
                                                 <Box>
                                                     <Typography
