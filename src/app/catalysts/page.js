@@ -7,6 +7,7 @@ import Image from 'next/image';
 import CatalistsImage from '../../../assets/images/catalysts.jpg';
 import ShanaImage from '../../../assets/images/shana.jpg';
 import NIVLogo from '../../../assets/svg/NIVLogo.svg';
+import TikTokLogo from '../../../assets/svg/TikTokLogo.svg';
 
 export default function Catalysts() {
     return (
@@ -172,6 +173,109 @@ export default function Catalysts() {
                                     GLAMGLOW, KILIAN PARIS, Too Faced, Dr.Jart+,
                                     and the DECIEM family of brands, including
                                     The Ordinary and NIOD.
+                                </Typography>
+                            </Stack>
+                        </Stack>
+                    </Box>
+                </Stack>
+
+                <Stack
+                    sx={{
+                        flexDirection: {
+                            xs: 'column',
+                            md: 'row-reverse',
+                        },
+                    }}
+                >
+                    <Box
+                        sx={{
+                            minHeight: {
+                                xs: '100vw',
+                                md: '100vh',
+                            },
+                            flex: {
+                                md: '1 0 50%',
+                            },
+                            backgroundImage: `url(${ShanaImage.src})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+
+                            textAlign: 'center',
+                        }}
+                    ></Box>
+
+                    <Box
+                        sx={{
+                            flex: {
+                                md: '1 0 50%',
+                            },
+                            px: {
+                                xs: 2,
+                            },
+                            py: {
+                                xs: 10,
+                            },
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <Stack
+                            spacing={10}
+                            sx={{
+                                maxWidth: 680,
+                                textAlign: 'center',
+                            }}
+                        >
+                            <Stack direction="row" justifyContent="center">
+                                <TikTokLogo />
+                            </Stack>
+                            <Stack alignItems="center" spacing={0.5}>
+                                <Typography variant="button">
+                                    POWERING THE CATALYSTS
+                                </Typography>
+                                <Typography variant="h2">
+                                    VANESSA CRAFT
+                                </Typography>
+                                <Typography variant="button">
+                                    GLOBAL HEAD OF CONTENT PARTNERSHIPS,
+                                    <br />
+                                    TikTok
+                                </Typography>
+                            </Stack>
+
+                            <Stack
+                                sx={{
+                                    textAlign: 'center',
+                                }}
+                            >
+                                <Typography variant="body1">
+                                    TikTok is the leading destination for
+                                    short-form mobile video. Our mission is to
+                                    inspire creativity and bring joy.
+                                </Typography>
+                                <br />
+                                <Typography variant="body1">
+                                    A trailblazing thought leader, Vanessa Craft
+                                    is a champion of next-gen talent, building
+                                    engaged communities and directing
+                                    game-changing content and driving innovative
+                                    business strategies. As the Global Head of
+                                    Content Partnerships, Vanessa is responsible
+                                    for accelerating the growth, content
+                                    strategy and business development for
+                                    TikTok’s top Global partners across Fashion,
+                                    Entertainment, Lifestyle, Education and
+                                    Sports with highlights including TikTok's
+                                    first sponsorship of the Met Gala 2024.
+                                </Typography>
+                                <br />
+                                <Typography variant="body1">
+                                    Before joining the world of tech, Vanessa
+                                    was an award-winning journalist and
+                                    Editor-in-Chief at ELLE Canada and in 2021,
+                                    she was featured on Variety's 2021 Global
+                                    Entertainment Impact List.
                                 </Typography>
                             </Stack>
                         </Stack>
