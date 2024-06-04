@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import Logo from '../../../assets/svg/logo.svg';
 import MenuIcon from '../../../assets/svg/MenuIcon.svg';
@@ -13,6 +15,12 @@ export default function Header({ transparentHeader }) {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
+        if (!menuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+
         setMenuOpen((val) => !val);
     };
 
@@ -169,12 +177,14 @@ export default function Header({ transparentHeader }) {
 
                     opacity: menuOpen ? 1 : 0,
                     pointerEvents: menuOpen ? 'all' : 'none',
+
+                    overflowY: 'scroll',
                 }}
             >
                 <Box
                     sx={{
                         width: '100%',
-                        height: '100%',
+                        minHeight: '100%',
                         backgroundColor: 'rgba(0, 0, 0, 0.3)',
                         backdropFilter: 'blur(5px)',
                     }}
@@ -186,6 +196,7 @@ export default function Header({ transparentHeader }) {
                             textTransform: 'uppercase',
                             paddingTop: '70px',
                             minHeight: '100%',
+                            pb: 2,
 
                             a: {
                                 textDecoration: 'none !important',
