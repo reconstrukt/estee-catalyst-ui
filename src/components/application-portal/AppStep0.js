@@ -34,7 +34,7 @@ export default function AppStep0() {
             // TODO REMOVE THIS:
             if (res.data.url) {
                 const link = res.data.url.replace(
-                    'https://estee-catalyst.reconstrukt.net',
+                    'https://estee-catalyst-ui.vercel.app',
                     '',
                 );
                 setLink(link);

@@ -18,6 +18,7 @@ export default function AppStep3() {
     const { application, updateApplication, values, setValues } =
         useApplicationPortal();
     const [loading, setLoading] = useState(false);
+    const [errors, setErrors] = useState({});
 
     useEffect(() => {
         setValues({
@@ -37,14 +38,49 @@ export default function AppStep3() {
         });
     }, []);
 
+    const validate = () => {
+        let result = { ...errors };
+
+        if (!!values['in_market']) {
+            if (!values['company_launch_date']) {
+                result['company_launch_date'] = 'This field is required.';
+            }
+            if (!values['company_country']) {
+                result['company_country'] = 'This field is required.';
+            }
+            if (!values['num_of_employees']) {
+                result['num_of_employees'] = 'This field is required.';
+            }
+        }
+
+        if (!values['company_category']) {
+            result['company_category'] = 'This field is required.';
+        }
+
+        if (Object.keys(result).length > 0) {
+            setErrors(result);
+            return false;
+        }
+
+        return true;
+    };
+
     const handleChange = (e, field) => {
         setValues((val) => ({
             ...val,
             [field]: e.target.value,
         }));
+
+        setErrors((val) => {
+            const newVal = { ...val };
+            delete newVal[field];
+            return newVal;
+        });
     };
 
     const handleNext = async () => {
+        if (!validate()) return;
+
         setLoading(true);
         const res = await updateApplication();
 
@@ -62,6 +98,16 @@ export default function AppStep3() {
             ...val,
             in_market: newValue === 'yes' ? 1 : 0,
         }));
+
+        if (newValue != 'yes') {
+            setErrors((val) => {
+                const newVal = { ...val };
+                delete newVal['company_launch_date'];
+                delete newVal['company_country'];
+                delete newVal['num_of_employees'];
+                return newVal;
+            });
+        }
     };
 
     return (
@@ -103,6 +149,8 @@ export default function AppStep3() {
                             <Box>
                                 <InputLabel>Date of Company Launch</InputLabel>
                                 <TextField
+                                    error={!!errors['company_launch_date']}
+                                    helperText={errors['company_launch_date']}
                                     type="date"
                                     fullWidth
                                     value={values.company_launch_date}
@@ -115,6 +163,8 @@ export default function AppStep3() {
                             <Box>
                                 <InputLabel>Country of Company HQ</InputLabel>
                                 <TextField
+                                    error={!!errors['company_country']}
+                                    helperText={errors['company_country']}
                                     fullWidth
                                     value={values.company_country}
                                     onChange={(e) =>
@@ -132,6 +182,8 @@ export default function AppStep3() {
                                     onChange={(e) =>
                                         handleChange(e, 'num_of_employees')
                                     }
+                                    error={!!errors['num_of_employees']}
+                                    helperText={errors['num_of_employees']}
                                 >
                                     <option value="1-10">1-10</option>
                                     <option value="10-50">10-50</option>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import StepWrapper from './StepWrapper';
-import { Stack, Box, InputLabel, TextField } from '@mui/material';
+import { Stack, Box, InputLabel, TextField, Typography } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 
@@ -45,6 +45,11 @@ export default function AppStep2() {
     return (
         <StepWrapper>
             <Stack spacing={5}>
+                <Box>
+                    <Typography>
+                        Please share any accounts that are applicable.
+                    </Typography>
+                </Box>
                 <Stack spacing={1}>
                     <Box>
                         <InputLabel>Company or Personal Website</InputLabel>

@@ -8,6 +8,7 @@ export default function AppStep4() {
     const { application, updateApplication, values, setValues } =
         useApplicationPortal();
     const [loading, setLoading] = useState(false);
+    const [errors, setErrors] = useState({});
 
     useEffect(() => {
         setValues({
@@ -20,9 +21,28 @@ export default function AppStep4() {
             ...val,
             [field]: e.target.value,
         }));
+
+        setErrors((old) => {
+            let ret = { ...old };
+            delete ret.video_link;
+            return ret;
+        });
+    };
+
+    const validate = () => {
+        if (!values['video_link']) {
+            setErrors({
+                video_link: 'This field is required.',
+            });
+            return false;
+        }
+
+        return true;
     };
 
     const handleNext = async () => {
+        if (!validate()) return;
+
         setLoading(true);
         const res = await updateApplication();
 
@@ -58,6 +78,8 @@ export default function AppStep4() {
                     <Box>
                         <InputLabel>Paste link here</InputLabel>
                         <TextField
+                            error={!!errors['video_link']}
+                            helperText={errors['video_link']}
                             fullWidth
                             value={values.video_link}
                             onChange={(e) => handleChange(e, 'video_link')}
