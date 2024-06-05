@@ -6,6 +6,7 @@ import {
     Box,
     InputLabel,
     FormControlLabel,
+    FormHelperText,
     Checkbox,
 } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
@@ -16,6 +17,7 @@ export default function AppStep9() {
     const { application, updateApplication, values, setValues } =
         useApplicationPortal();
     const [loading, setLoading] = useState(false);
+    const [errors, setErrors] = useState({});
 
     useEffect(() => {
         setValues({
@@ -33,6 +35,12 @@ export default function AppStep9() {
             ...val,
             [field]: e.target.value,
         }));
+
+        setErrors((val) => {
+            const newVal = { ...val };
+            delete newVal[field];
+            return newVal;
+        });
     };
 
     const [checked, setChecked] = useState(
@@ -40,6 +48,29 @@ export default function AppStep9() {
             ? application.distribution_channels.split(',')
             : [],
     );
+
+    const validate = () => {
+        let result = { ...errors };
+
+        if (!values['distribution_channels']) {
+            result['distribution_channels'] =
+                'You must select at least one category.';
+        }
+
+        if (checked.includes('OTHER')) {
+            if (!values['distribution_channels_other']) {
+                result['distribution_channels_other'] =
+                    'This field is required.';
+            }
+        }
+
+        if (Object.keys(result).length > 0) {
+            setErrors(result);
+            return false;
+        }
+
+        return true;
+    };
 
     const toggleCheck = (val) => {
         setChecked((old) => {
@@ -54,6 +85,8 @@ export default function AppStep9() {
 
             return newArr;
         });
+
+        setErrors({});
     };
 
     useEffect(() => {
@@ -68,6 +101,8 @@ export default function AppStep9() {
     }, [checked]);
 
     const handleNext = async () => {
+        if (!validate()) return;
+
         setLoading(true);
         const res = await updateApplication();
 
@@ -89,6 +124,14 @@ export default function AppStep9() {
                         select all that apply.
                     </Typography>
                 </Stack>
+
+                {errors['distribution_channels'] && (
+                    <Box>
+                        <FormHelperText error>
+                            {errors['distribution_channels']}
+                        </FormHelperText>
+                    </Box>
+                )}
 
                 <Stack direction="row">
                     <Stack sx={{ flex: 3 }}>
@@ -217,6 +260,8 @@ export default function AppStep9() {
                     <Box>
                         <InputLabel>Please indicate</InputLabel>
                         <TheTextarea
+                            error={!!errors.distribution_channels_other}
+                            helperText={errors.distribution_channels_other}
                             value={values.distribution_channels_other}
                             onChange={(e) =>
                                 handleChange(e, 'distribution_channels_other')
