@@ -9,6 +9,8 @@ export default function AppStep1() {
         useApplicationPortal();
     const [loading, setLoading] = useState(false);
 
+    const [errors, setErrors] = useState({});
+
     useEffect(() => {
         setValues({
             firstname: application.firstname ? application.firstname : '',
@@ -29,9 +31,36 @@ export default function AppStep1() {
             ...val,
             [field]: e.target.value,
         }));
+
+        setErrors((val) => {
+            const newVal = { ...val };
+            delete newVal[field];
+            return newVal;
+        });
+    };
+
+    const validate = () => {
+        let result = { ...errors };
+
+        for (let key in values) {
+            if (!values[key]) {
+                if (key != 'company' && key != 'address2') {
+                    result[key] = 'This field is required.';
+                }
+            }
+        }
+
+        if (Object.keys(result).length > 0) {
+            setErrors(result);
+            return false;
+        }
+
+        return true;
     };
 
     const handleNext = async () => {
+        if (!validate()) return;
+
         setLoading(true);
         const res = await updateApplication();
 
@@ -49,6 +78,8 @@ export default function AppStep1() {
                     <Box>
                         <InputLabel>First Name</InputLabel>
                         <TextField
+                            error={!!errors['firstname']}
+                            helperText={errors['firstname']}
                             fullWidth
                             value={values.firstname}
                             onChange={(e) => handleChange(e, 'firstname')}
@@ -58,6 +89,8 @@ export default function AppStep1() {
                     <Box>
                         <InputLabel>Last Name</InputLabel>
                         <TextField
+                            error={!!errors['lastname']}
+                            helperText={errors['lastname']}
                             fullWidth
                             value={values.lastname}
                             onChange={(e) => handleChange(e, 'lastname')}
@@ -67,6 +100,8 @@ export default function AppStep1() {
                     <Box>
                         <InputLabel>Title/Designation</InputLabel>
                         <TextField
+                            error={!!errors['title']}
+                            helperText={errors['title']}
                             fullWidth
                             value={values.title}
                             onChange={(e) => handleChange(e, 'title')}
@@ -76,6 +111,8 @@ export default function AppStep1() {
                     <Box>
                         <InputLabel>Company Name (if applicable)</InputLabel>
                         <TextField
+                            error={!!errors['company']}
+                            helperText={errors['company']}
                             fullWidth
                             value={values.company}
                             onChange={(e) => handleChange(e, 'company')}
@@ -85,6 +122,8 @@ export default function AppStep1() {
                     <Box>
                         <InputLabel>Country</InputLabel>
                         <TextField
+                            error={!!errors['country']}
+                            helperText={errors['country']}
                             fullWidth
                             value={values.country}
                             onChange={(e) => handleChange(e, 'country')}
@@ -94,6 +133,8 @@ export default function AppStep1() {
                     <Box>
                         <InputLabel>Address Line 1</InputLabel>
                         <TextField
+                            error={!!errors['address1']}
+                            helperText={errors['address1']}
                             fullWidth
                             value={values.address1}
                             onChange={(e) => handleChange(e, 'address1')}
@@ -103,6 +144,8 @@ export default function AppStep1() {
                     <Box>
                         <InputLabel>Address Line 2</InputLabel>
                         <TextField
+                            error={!!errors['address2']}
+                            helperText={errors['address2']}
                             fullWidth
                             value={values.address2}
                             onChange={(e) => handleChange(e, 'address2')}
@@ -112,6 +155,8 @@ export default function AppStep1() {
                     <Box>
                         <InputLabel>Town/City</InputLabel>
                         <TextField
+                            error={!!errors['city']}
+                            helperText={errors['city']}
                             fullWidth
                             value={values.city}
                             onChange={(e) => handleChange(e, 'city')}
@@ -121,6 +166,8 @@ export default function AppStep1() {
                     <Box>
                         <InputLabel>Zip/Post Code</InputLabel>
                         <TextField
+                            error={!!errors['zip']}
+                            helperText={errors['zip']}
                             fullWidth
                             value={values.zip}
                             onChange={(e) => handleChange(e, 'zip')}
@@ -130,6 +177,8 @@ export default function AppStep1() {
                     <Box>
                         <InputLabel>State</InputLabel>
                         <TextField
+                            error={!!errors['state']}
+                            helperText={errors['state']}
                             fullWidth
                             value={values.state}
                             onChange={(e) => handleChange(e, 'state')}
