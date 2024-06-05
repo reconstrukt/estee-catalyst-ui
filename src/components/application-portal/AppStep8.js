@@ -18,6 +18,8 @@ export default function AppStep8() {
         useApplicationPortal();
     const [loading, setLoading] = useState(false);
 
+    const [errors, setErrors] = useState({});
+
     useEffect(() => {
         setValues({
             concept_background: application.concept_background
@@ -34,9 +36,32 @@ export default function AppStep8() {
             ...val,
             [field]: e.target.value,
         }));
+
+        setErrors((val) => {
+            const newVal = { ...val };
+            delete newVal[field];
+            return newVal;
+        });
+    };
+
+    const validate = () => {
+        let result = { ...errors };
+
+        if (!values['concept_background']) {
+            result['concept_background'] = 'This field is required.';
+        }
+
+        if (Object.keys(result).length > 0) {
+            setErrors(result);
+            return false;
+        }
+
+        return true;
     };
 
     const handleNext = async () => {
+        if (!validate()) return;
+
         setLoading(true);
         const res = await updateApplication();
 
@@ -58,8 +83,12 @@ export default function AppStep8() {
                     <Box>
                         <InputLabel>Type here</InputLabel>
                         <TheTextarea
-                            value={values.elevator_pitch}
-                            onChange={(e) => handleChange(e, 'elevator_pitch')}
+                            helperText={errors.concept_background}
+                            error={!!errors.concept_background}
+                            value={values.concept_background}
+                            onChange={(e) =>
+                                handleChange(e, 'concept_background')
+                            }
                         />
                     </Box>
                 </Stack>

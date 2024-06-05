@@ -41,9 +41,7 @@ export default function AppStep7() {
 
         for (let key in values) {
             if (!values[key]) {
-                if (key != 'company' && key != 'address2') {
-                    result[key] = 'This field is required.';
-                }
+                result[key] = 'This field is required.';
             }
         }
 
