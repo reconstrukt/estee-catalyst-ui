@@ -7,6 +7,7 @@ import {
     InputLabel,
     FormControlLabel,
     Checkbox,
+    FormHelperText,
 } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
@@ -16,6 +17,7 @@ export default function AppStep5() {
     const { application, updateApplication, values, setValues } =
         useApplicationPortal();
     const [loading, setLoading] = useState(false);
+    const [errors, setErrors] = useState({});
 
     useEffect(() => {
         setValues({
@@ -33,6 +35,12 @@ export default function AppStep5() {
             ...val,
             [field]: e.target.value,
         }));
+
+        setErrors((val) => {
+            const newVal = { ...val };
+            delete newVal[field];
+            return newVal;
+        });
     };
 
     const [checked, setChecked] = useState(
@@ -54,6 +62,8 @@ export default function AppStep5() {
 
             return newArr;
         });
+
+        setErrors({});
     };
 
     useEffect(() => {
@@ -68,6 +78,8 @@ export default function AppStep5() {
     }, [checked]);
 
     const handleNext = async () => {
+        if (!validate()) return;
+
         setLoading(true);
         const res = await updateApplication();
 
@@ -76,6 +88,28 @@ export default function AppStep5() {
         }
 
         setLoading(false);
+    };
+
+    const validate = () => {
+        let result = { ...errors };
+
+        if (!values['product_categories']) {
+            result['product_categories'] =
+                'You must select at least one category.';
+        }
+
+        if (checked.includes('other')) {
+            if (!values['product_categories_other']) {
+                result['product_categories_other'] = 'This field is required.';
+            }
+        }
+
+        if (Object.keys(result).length > 0) {
+            setErrors(result);
+            return false;
+        }
+
+        return true;
     };
 
     return (
@@ -88,6 +122,13 @@ export default function AppStep5() {
                     </Typography>
                 </Stack>
 
+                {errors['product_categories'] && (
+                    <Box>
+                        <FormHelperText error>
+                            {errors['product_categories']}
+                        </FormHelperText>
+                    </Box>
+                )}
                 <Stack direction="row">
                     <Stack sx={{ flex: 3 }}>
                         <FormControlLabel
@@ -290,6 +331,8 @@ export default function AppStep5() {
                     <Box>
                         <InputLabel>Type here</InputLabel>
                         <TheTextarea
+                            error={!!errors.product_categories_other}
+                            helperText={errors.product_categories_other}
                             value={values.product_categories_other}
                             onChange={(e) =>
                                 handleChange(e, 'product_categories_other')
