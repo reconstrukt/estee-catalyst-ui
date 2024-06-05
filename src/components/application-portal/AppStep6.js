@@ -5,6 +5,7 @@ import {
     Stack,
     Box,
     FormControlLabel,
+    FormHelperText,
     Checkbox,
 } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
@@ -14,6 +15,7 @@ export default function AppStep6() {
     const { application, updateApplication, values, setValues } =
         useApplicationPortal();
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
 
     useEffect(() => {
         setValues({
@@ -31,14 +33,16 @@ export default function AppStep6() {
 
     const toggleCheck = (val) => {
         setChecked((old) => {
-            const newArr = [...old];
-            let index = newArr.findIndex((el) => el === val);
+            // const newArr = [...old];
+            // let index = newArr.findIndex((el) => el === val);
 
-            if (index > -1) {
-                newArr.splice(index, 1);
-            } else {
-                newArr.push(val);
-            }
+            // if (index > -1) {
+            //     newArr.splice(index, 1);
+            // } else {
+            //     newArr.push(val);
+            // }
+
+            const newArr = [val];
 
             return newArr;
         });
@@ -56,6 +60,11 @@ export default function AppStep6() {
     }, [checked]);
 
     const handleNext = async () => {
+        if (checked.length < 1) {
+            setError('You must select an option.');
+            return;
+        }
+
         setLoading(true);
         const res = await updateApplication();
 
@@ -74,6 +83,12 @@ export default function AppStep6() {
                         Q4. What age demographic are you targeting?
                     </Typography>
                 </Stack>
+
+                {!!error && (
+                    <Box>
+                        <FormHelperText error>{error}</FormHelperText>
+                    </Box>
+                )}
 
                 <Stack direction="row">
                     <Stack sx={{ flex: 3 }}>
