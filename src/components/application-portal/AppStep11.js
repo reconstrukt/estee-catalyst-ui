@@ -178,6 +178,15 @@ export default function AppStep11() {
                 </Stack>
 
                 <Box mt={8}>
+                    <Box mb={4}>
+                        <Typography>
+                            Once you submit, you will not be able to make any
+                            changes to your application. If you are unsure,
+                            please select save and exit in the top right hand
+                            corner and complete your application once you have
+                            confirmed all your information.
+                        </Typography>
+                    </Box>
                     <LoadingButton
                         loading={loading}
                         variant="contained"

@@ -9,6 +9,7 @@ export default function AppStep10() {
     const { application, updateApplication, values, setValues } =
         useApplicationPortal();
     const [loading, setLoading] = useState(false);
+    const [errors, setErrors] = useState({});
 
     useEffect(() => {
         setValues({
@@ -26,9 +27,34 @@ export default function AppStep10() {
             ...val,
             [field]: e.target.value,
         }));
+
+        setErrors((val) => {
+            const newVal = { ...val };
+            delete newVal[field];
+            return newVal;
+        });
+    };
+
+    const validate = () => {
+        let result = { ...errors };
+
+        for (let key in values) {
+            if (!values[key]) {
+                result[key] = 'This field is required.';
+            }
+        }
+
+        if (Object.keys(result).length > 0) {
+            setErrors(result);
+            return false;
+        }
+
+        return true;
     };
 
     const handleNext = async () => {
+        if (!validate()) return;
+
         setLoading(true);
         const res = await updateApplication();
 
@@ -52,6 +78,8 @@ export default function AppStep10() {
                     <Box>
                         <InputLabel>Type here</InputLabel>
                         <TheTextarea
+                            error={!!errors.interest_and_traction}
+                            helperText={errors.interest_and_traction}
                             value={values.interest_and_traction}
                             onChange={(e) =>
                                 handleChange(e, 'interest_and_traction')
@@ -67,6 +95,8 @@ export default function AppStep10() {
                     <Box>
                         <InputLabel>Type here</InputLabel>
                         <TheTextarea
+                            error={!!errors.why_will_you_win}
+                            helperText={errors.why_will_you_win}
                             value={values.why_will_you_win}
                             onChange={(e) =>
                                 handleChange(e, 'why_will_you_win')
