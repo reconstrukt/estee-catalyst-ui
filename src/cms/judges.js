@@ -31,11 +31,19 @@ const judges = [
         copy: `Hung Vanngo is a Vietnam-born, New York-based makeup artist known for combining glamour with an avant-garde aesthetic. He’s a go-to for prestigious brands such as Louis Vuitton, Marc Jacobs, and Calvin Klein, as well as high profile talent such as Selena Gomez, Bella Hadid, and Gwyneth Paltrow.`,
     },
 
+    // TODO: Michele Lamy goes here instead of ruba when we get an image
+
     {
-        includeOnHome: true,
         image: '',
         name: 'MICHELE LAMY',
         copy: `Michèle Lamy is an artist, entrepreneur, producer, collaborator, performer and the co-founder of Owenscorp, along with her life partner Rick Owens. In 2014, Lamy created 'LAMYLAND,' an umbrella term for her independent creative endeavours, bringing together experimentation, collaboration, storytelling, and creation. She has worked on projects at renowned institutions and art fairs, including the Museum of Contemporary Art, Los Angeles, Frieze London, the Venice Biennale, and more.`,
+    },
+
+    {
+        includeOnHome: true,
+        image: ruba,
+        name: 'RUBA ABU-NIMAH',
+        copy: `Ruba Abu-Nimah is an award-winning New York-based creative director, design and experiential curator, editor, and currently Brand Creative Director of Moncler. Ruba has held lead creative positions including Executive Creative Director of Tiffany & Co., Global Creative Director at Revlon and Shiseido, and Creative Director of ELLE Magazine.`,
     },
 
     {
