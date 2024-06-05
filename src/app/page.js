@@ -164,7 +164,7 @@ export default function Home() {
                             }}
                         >
                             <Typography variant="h1" mb={1}>
-                                CREATED IN PARTNERSHIP WITH TIKTOK
+                                CREATED WITH SUPPORT FROM TIKTOK
                             </Typography>
                             <Typography variant="subtitle1">
                                 A unique opportunity to get your brand seen by
@@ -427,57 +427,72 @@ export default function Home() {
                                 maxWidth: 1172,
                             }}
                         >
-                            {judges.map((item, index) => (
-                                <GridItem
-                                    key={index}
-                                    sx={{
-                                        flex: {
-                                            xs: '1 0 40%',
-                                            md: '1 0 21%',
-                                        },
-                                    }}
-                                >
-                                    <Stack
-                                        spacing={2}
+                            {judges
+                                .filter((i) => i.includeOnHome)
+                                .map((item, index) => (
+                                    <GridItem
+                                        key={index}
                                         sx={{
-                                            alignItems: 'center',
-                                            textAlign: 'center',
+                                            flex: {
+                                                xs: '1 0 40%',
+                                                md: '1 0 21%',
+                                            },
                                         }}
                                     >
-                                        <Box
+                                        <Stack
+                                            spacing={2}
                                             sx={{
-                                                width: {
-                                                    xs: 170,
-                                                    md: 222,
-                                                },
-                                                height: {
-                                                    xs: 217,
-                                                    md: 277,
-                                                },
-                                                display: 'flex',
                                                 alignItems: 'center',
-                                                justifyContent: 'center',
-
-                                                backgroundImage: `url(${item.image.src})`,
-                                                backgroundPosition: 'center',
-                                                backgroundSize: 'cover',
+                                                textAlign: 'center',
                                             }}
-                                        ></Box>
-
-                                        <Box>
-                                            <Typography
-                                                variant="h4"
-                                                sx={{ mb: 0.5 }}
+                                        >
+                                            <Box
+                                                sx={{
+                                                    width: {
+                                                        xs: 170,
+                                                        md: 222,
+                                                    },
+                                                    height: {
+                                                        xs: 217,
+                                                        md: 277,
+                                                    },
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                }}
                                             >
-                                                {item.name}
-                                            </Typography>
-                                            <Typography variant="body1">
-                                                {item.title}
-                                            </Typography>
-                                        </Box>
-                                    </Stack>
-                                </GridItem>
-                            ))}
+                                                {item.image && (
+                                                    <Image
+                                                        src={item.image.src}
+                                                        width={0}
+                                                        height={0}
+                                                        sizes="100vw"
+                                                        style={{
+                                                            width: '100%',
+                                                            height: '100%',
+                                                            objectFit: 'cover',
+                                                            objectPosition:
+                                                                'center',
+                                                            filter: 'grayscale(1)',
+                                                        }}
+                                                    />
+                                                )}
+                                            </Box>
+
+                                            <Box>
+                                                <Typography
+                                                    variant="h4"
+                                                    sx={{ mb: 0.5 }}
+                                                >
+                                                    {item.name}
+                                                </Typography>
+                                                <Typography variant="body1">
+                                                    {item.title}
+                                                </Typography>
+                                            </Box>
+                                        </Stack>
+                                    </GridItem>
+                                ))}
                         </Grid>
                     </Box>
 

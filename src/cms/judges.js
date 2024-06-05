@@ -11,21 +11,37 @@ import mitchell from 'assets/judges/mitchell.webp';
 
 const judges = [
     {
+        includeOnHome: true,
+        image: shana,
+        name: 'SHANA RANDHAVA',
+        copy: `As the head of New Incubation Ventures (NIV), Shana Randhava is responsible for building The Estée Lauder Companies (ELC) early-stage investment and incubation strategy. This new team is building a distinctive capability for ELC to invest in and experiment at scale and create an actionable pipeline of next generation brands for the ELC portfolio. Prior to creating NIV, Shana led the New Business Development team and was responsible for shaping and executing the ELC’s M&A strategy for DECIEM, Dr. Jart+, Forest Essentials, BY Killian and Too Faced. New Incubation Ventures (NIV) is the strategic early-stage investment and incubation arm for The Estée Lauder Companies.`,
+    },
+
+    {
+        includeOnHome: true,
+        image: vanessa,
+        name: 'VANESSA CRAFT',
+        copy: `As TikTok’s Global Head of Content Partnerships, Vanessa Craft is a champion of next-gen talent. She is responsible for building engaged communities, directing game-changing content, and driving innovative business strategies for TikTok’s top Global partners across Fashion, Entertainment, Lifestyle, Education and Sports – as well as spearheading TikTok's first sponsorship of the 2024 Met Gala.`,
+    },
+
+    {
+        includeOnHome: true,
         image: hung,
         name: 'HUNG VANNGO',
         copy: `Hung Vanngo is a Vietnam-born, New York-based makeup artist known for combining glamour with an avant-garde aesthetic. He’s a go-to for prestigious brands such as Louis Vuitton, Marc Jacobs, and Calvin Klein, as well as high profile talent such as Selena Gomez, Bella Hadid, and Gwyneth Paltrow.`,
     },
 
     {
+        includeOnHome: true,
         image: '',
-        name: 'EUGENE SOULEIMAN',
-        copy: `Originally inspired by London’s punk scene, Eugene Souleiman is a hairstylist who creates with raw emotion and technical ability. Over a career spanning more than 30 years, his unique perspective has led him to work with a diverse group of the most forward-thinking and innovative fashion designers, including John Galliano, Alexander McQueen, and Yohji Yamamoto.`,
+        name: 'MICHELE LAMY',
+        copy: `Michèle Lamy is an artist, entrepreneur, producer, collaborator, performer and the co-founder of Owenscorp, along with her life partner Rick Owens. In 2014, Lamy created 'LAMYLAND,' an umbrella term for her independent creative endeavours, bringing together experimentation, collaboration, storytelling, and creation. She has worked on projects at renowned institutions and art fairs, including the Museum of Contemporary Art, Los Angeles, Frieze London, the Venice Biennale, and more.`,
     },
 
     {
-        image: vanessa,
-        name: 'VANESSA CRAFT',
-        copy: `As TikTok’s Global Head of Content Partnerships, Vanessa Craft is a champion of next-gen talent. She is responsible for building engaged communities, directing game-changing content, and driving innovative business strategies for TikTok’s top Global partners across Fashion, Entertainment, Lifestyle, Education and Sports – as well as spearheading TikTok's first sponsorship of the 2024 Met Gala.`,
+        image: '',
+        name: 'EUGENE SOULEIMAN',
+        copy: `Originally inspired by London’s punk scene, Eugene Souleiman is a hairstylist who creates with raw emotion and technical ability. Over a career spanning more than 30 years, his unique perspective has led him to work with a diverse group of the most forward-thinking and innovative fashion designers, including John Galliano, Alexander McQueen, and Yohji Yamamoto.`,
     },
 
     {
@@ -38,12 +54,6 @@ const judges = [
         image: ruba,
         name: 'RUBA ABU-NIMAH',
         copy: `Ruba Abu-Nimah is an award-winning New York-based creative director, design and experiential curator, editor, and currently Brand Creative Director of Moncler. Ruba has held lead creative positions including Executive Creative Director of Tiffany & Co., Global Creative Director at Revlon and Shiseido, and Creative Director of ELLE Magazine.`,
-    },
-
-    {
-        image: '',
-        name: 'MICHELE LAMY',
-        copy: `Michèle Lamy is an artist, entrepreneur, producer, collaborator, performer and the co-founder of Owenscorp, along with her life partner Rick Owens. In 2014, Lamy created 'LAMYLAND,' an umbrella term for her independent creative endeavours, bringing together experimentation, collaboration, storytelling, and creation. She has worked on projects at renowned institutions and art fairs, including the Museum of Contemporary Art, Los Angeles, Frieze London, the Venice Biennale, and more.`,
     },
 
     {
@@ -74,12 +84,6 @@ const judges = [
         image: carlos,
         name: 'CARLOS NAZARIA',
         copy: `Named by the CFDA as one of the stylists shaping the future of fashion, Carlos Nazario is a fashion editor, stylist and creative consultant based in New York City. He has collaborated with esteemed photographers like Alasdair McLellan, Mert Alas & Marcus Piggott, Mario Sorrenti, and Glen Luchford; talent such as Rihanna, Rosalía, Bella Hadid, Naomi Campbell, and Frank Ocean; and magazines including American Vogue, Italian Vogue, and i-D. He is currently the Style Director at Large of Harper’s Bazaar US.`,
-    },
-
-    {
-        image: shana,
-        name: 'SHANA RANDHAVA',
-        copy: `As the head of New Incubation Ventures (NIV), Shana Randhava is responsible for building The Estée Lauder Companies (ELC) early-stage investment and incubation strategy. This new team is building a distinctive capability for ELC to invest in and experiment at scale and create an actionable pipeline of next generation brands for the ELC portfolio. Prior to creating NIV, Shana led the New Business Development team and was responsible for shaping and executing the ELC’s M&A strategy for DECIEM, Dr. Jart+, Forest Essentials, BY Killian and Too Faced. New Incubation Ventures (NIV) is the strategic early-stage investment and incubation arm for The Estée Lauder Companies.`,
     },
 
     {

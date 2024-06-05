@@ -115,6 +115,7 @@ export default function ContactUs() {
                                                 height: '100%',
                                                 objectFit: 'cover',
                                                 objectPosition: 'center',
+                                                filter: 'grayscale(1)',
                                             }}
                                         />
                                     )}
@@ -193,6 +194,7 @@ export default function ContactUs() {
                                                 style={{
                                                     width: '100%',
                                                     height: 'auto',
+                                                    filter: 'grayscale(1)',
                                                 }}
                                             />
                                         </Box>
@@ -221,7 +223,11 @@ export default function ContactUs() {
                                     width={0}
                                     height={0}
                                     sizes="100vw"
-                                    style={{ width: '100%', height: 'auto' }}
+                                    style={{
+                                        width: '100%',
+                                        height: 'auto',
+                                        filter: 'grayscale(1)',
+                                    }}
                                 />
                             </Box>
 
@@ -300,6 +306,7 @@ export default function ContactUs() {
                                                             objectFit: 'cover',
                                                             objectPosition:
                                                                 'center',
+                                                            filter: 'grayscale(1)',
                                                         }}
                                                     />
                                                 </Box>

@@ -457,6 +457,7 @@ export default function Masterclasses() {
                                                     height: '100%',
                                                     objectFit: 'cover',
                                                     objectPosition: 'center',
+                                                    filter: 'grayscale(1)',
                                                 }}
                                             />
                                         )}
@@ -541,6 +542,7 @@ export default function Masterclasses() {
                                                     height: '100%',
                                                     objectFit: 'cover',
                                                     objectPosition: 'center',
+                                                    filter: 'grayscale(1)',
                                                 }}
                                             />
                                         </Box>
@@ -574,6 +576,7 @@ export default function Masterclasses() {
                                         height: '100%',
                                         objectFit: 'cover',
                                         objectPosition: 'center',
+                                        filter: 'grayscale(1)',
                                     }}
                                 />
                             </Box>
@@ -648,6 +651,7 @@ export default function Masterclasses() {
                                                             objectFit: 'cover',
                                                             objectPosition:
                                                                 'center',
+                                                            filter: 'grayscale(1)',
                                                         }}
                                                     />
                                                 </Box>
