@@ -1,7 +1,6 @@
 'use client';
 
 import {
-    Button,
     Box,
     Typography,
     Stack,
@@ -13,7 +12,6 @@ import Hero from '@/components/sections/Hero';
 import PageLayout from '@/components/layouts/PageLayout';
 import CloseIcon from '../../../assets/svg/CloseIcon.svg';
 
-import PressImage from '../../../assets/images/press.jpg';
 import judges from '@/cms/judges';
 import Grid from '@/components/sections/Grid';
 import GridItem from '@/components/sections/GridItem';
