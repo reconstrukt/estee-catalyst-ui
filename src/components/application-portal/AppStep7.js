@@ -10,6 +10,8 @@ export default function AppStep7() {
         useApplicationPortal();
     const [loading, setLoading] = useState(false);
 
+    const [errors, setErrors] = useState({});
+
     useEffect(() => {
         setValues({
             elevator_pitch: application.elevator_pitch
@@ -26,9 +28,36 @@ export default function AppStep7() {
             ...val,
             [field]: e.target.value,
         }));
+
+        setErrors((val) => {
+            const newVal = { ...val };
+            delete newVal[field];
+            return newVal;
+        });
+    };
+
+    const validate = () => {
+        let result = { ...errors };
+
+        for (let key in values) {
+            if (!values[key]) {
+                if (key != 'company' && key != 'address2') {
+                    result[key] = 'This field is required.';
+                }
+            }
+        }
+
+        if (Object.keys(result).length > 0) {
+            setErrors(result);
+            return false;
+        }
+
+        return true;
     };
 
     const handleNext = async () => {
+        if (!validate()) return;
+
         setLoading(true);
         const res = await updateApplication();
 
@@ -50,6 +79,8 @@ export default function AppStep7() {
                     <Box>
                         <InputLabel>Type here</InputLabel>
                         <TheTextarea
+                            error={!!errors.elevator_pitch}
+                            helperText={errors.elevator_pitch}
                             value={values.elevator_pitch}
                             onChange={(e) => handleChange(e, 'elevator_pitch')}
                         />
@@ -64,6 +95,8 @@ export default function AppStep7() {
                     <Box>
                         <InputLabel>Type here</InputLabel>
                         <TheTextarea
+                            helperText={errors.market_opportunity}
+                            error={!!errors.market_opportunity}
                             value={values.market_opportunity}
                             onChange={(e) =>
                                 handleChange(e, 'market_opportunity')
