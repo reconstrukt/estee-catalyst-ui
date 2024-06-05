@@ -21,7 +21,7 @@ export default function AppStep6() {
                 ? application.target_age_demographic
                 : '',
         });
-    });
+    }, []);
 
     const [checked, setChecked] = useState(
         application.target_age_demographic

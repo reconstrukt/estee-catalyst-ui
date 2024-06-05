@@ -3,6 +3,7 @@ import StepWrapper from './StepWrapper';
 import { Typography, Stack, Box, InputLabel, TextField } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
+import Link from 'next/link';
 
 export default function AppStep4() {
     const { application, updateApplication, values, setValues } =
@@ -56,21 +57,29 @@ export default function AppStep4() {
     return (
         <StepWrapper>
             <Stack spacing={5}>
-                <Stack>
+                <Stack
+                    sx={{
+                        a: {
+                            textDecoration: 'underline',
+                        },
+                    }}
+                >
                     <Typography>
-                        Please upload a link to a TikTok that is a minimum of 1
-                        minute in length, addressing the question of what beauty
-                        means to you (TBD on exact wording) and
-                        #Jointhecatalysts. We want to hear your story and see
-                        your ideas. Be as creative as you wish! Don't forget to
-                        tag and follow @niv_elc on TikTok!
+                        Please upload a link to a TikTok video that is a minimum
+                        of 1 minute in length, addressing the question of what
+                        beauty means to you and tag #Jointhecatalysts, #contest
+                        and #niv_elc. We want to hear your story and see your
+                        ideas. Be as creative as you wish!
                     </Typography>
                     <br />
                     <Typography>
-                        If TikTok is not available to you, we will also consider
-                        a video link via another platform (e.g., Youtube, Vimeo,
+                        If TikTok is not available to you, we will consider a
+                        video link to another platform (e.g., Youtube, Vimeo,
                         etc.). If you have any questions on what to submit,
-                        please consult the Program Rules.
+                        please consult the{' '}
+                        <Link href="/terms-and-conditions" target="_blank">
+                            Terms and Conditions
+                        </Link>
                     </Typography>
                 </Stack>
 
