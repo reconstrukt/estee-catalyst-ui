@@ -20,6 +20,7 @@ import Section from '@/components/sections/Section';
 import Grid from '@/components/sections/Grid';
 import GridItem from '@/components/sections/GridItem';
 import Image from 'next/image';
+import Logo from '../../../assets/svg/logo.svg';
 
 import masterclasses from '@/cms/masterclasses';
 import experts from '@/cms/masterclassParticipants';
@@ -217,13 +218,40 @@ export default function Masterclasses() {
                             alignItems="center"
                             justifyContent="space-between"
                         >
-                            <Box>
+                            <Box sx={{ flex: 1 }}>
                                 <Typography variant="h4">
                                     {selected.lesson.toUpperCase()}
                                 </Typography>
                             </Box>
 
-                            <Box>
+                            <Box
+                                sx={{
+                                    flex: 1,
+                                    display: {
+                                        xs: 'none',
+                                        md: 'flex',
+                                    },
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                <Box
+                                    sx={{
+                                        width: {
+                                            xs: 131,
+                                            sm: 182,
+                                        },
+
+                                        height: {
+                                            xs: 18,
+                                            sm: 25,
+                                        },
+                                    }}
+                                >
+                                    <Logo width="100%" height="100%" />
+                                </Box>
+                            </Box>
+
+                            <Box sx={{ flex: 1, textAlign: 'right' }}>
                                 <IconButton
                                     variant="text"
                                     color="black"
@@ -497,13 +525,40 @@ export default function Masterclasses() {
                             alignItems="center"
                             justifyContent="space-between"
                         >
-                            <Box>
+                            <Box sx={{ flex: 1 }}>
                                 <Typography variant="h4">
                                     {selectedJudge.name}
                                 </Typography>
                             </Box>
 
-                            <Box>
+                            <Box
+                                sx={{
+                                    flex: 1,
+                                    display: {
+                                        xs: 'none',
+                                        md: 'flex',
+                                    },
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                <Box
+                                    sx={{
+                                        width: {
+                                            xs: 131,
+                                            sm: 182,
+                                        },
+
+                                        height: {
+                                            xs: 18,
+                                            sm: 25,
+                                        },
+                                    }}
+                                >
+                                    <Logo width="100%" height="100%" />
+                                </Box>
+                            </Box>
+
+                            <Box sx={{ flex: 1, textAlign: 'right' }}>
                                 <IconButton
                                     variant="text"
                                     color="black"

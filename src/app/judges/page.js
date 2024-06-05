@@ -11,6 +11,7 @@ import {
 import Hero from '@/components/sections/Hero';
 import PageLayout from '@/components/layouts/PageLayout';
 import CloseIcon from '../../../assets/svg/CloseIcon.svg';
+import Logo from '../../../assets/svg/logo.svg';
 
 import judges from '@/cms/judges';
 import Grid from '@/components/sections/Grid';
@@ -151,13 +152,40 @@ export default function ContactUs() {
                             alignItems="center"
                             justifyContent="space-between"
                         >
-                            <Box>
+                            <Box sx={{ flex: 1 }}>
                                 <Typography variant="h4">
                                     {selected.name}
                                 </Typography>
                             </Box>
 
-                            <Box>
+                            <Box
+                                sx={{
+                                    flex: 1,
+                                    display: {
+                                        xs: 'none',
+                                        md: 'flex',
+                                    },
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                <Box
+                                    sx={{
+                                        width: {
+                                            xs: 131,
+                                            sm: 182,
+                                        },
+
+                                        height: {
+                                            xs: 18,
+                                            sm: 25,
+                                        },
+                                    }}
+                                >
+                                    <Logo width="100%" height="100%" />
+                                </Box>
+                            </Box>
+
+                            <Box sx={{ flex: 1, textAlign: 'right' }}>
                                 <IconButton
                                     variant="text"
                                     color="black"
