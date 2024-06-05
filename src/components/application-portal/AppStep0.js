@@ -88,9 +88,12 @@ export default function AppStep0() {
                         }}
                     >
                         <Typography variant="h2">
-                            CATALYSTS APPLICATION PORTAL
+                            WELCOME TO THE APPLICATION PORTAL!
                         </Typography>
-                        <Typography>Get started, or continue</Typography>
+                        <Typography>
+                            To get started (or continue if you have already
+                            started your application) please enter your email.{' '}
+                        </Typography>
 
                         <Box>
                             <InputLabel>Enter email address</InputLabel>

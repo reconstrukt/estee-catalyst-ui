@@ -40,10 +40,6 @@ export default function Validate({ params }) {
                 >
                     <Typography variant="subtitle1">
                         We're loading your application...
-                        <br />
-                        {params.uuid}
-                        <br />
-                        {params.token}
                     </Typography>
                 </Box>
             </Hero>
