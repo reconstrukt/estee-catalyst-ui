@@ -42,10 +42,25 @@ export default function AppStepFinal() {
                     },
                 }}
             >
-                <Typography variant="h2">APPLICATION PORTAL</Typography>
-                <Typography>Thank you for applying</Typography>
+                <Typography variant="h2">THANK YOU FOR APPLYING!</Typography>
+                <Typography>
+                    You’re all set. We have received your application. If you
+                    are chosen as a finalist, we will contact you in September
+                    2024. For any questions, please reach out at{' '}
+                    <a href="mailto:hello@thecatalystsworld.com">
+                        hello@thecatalystsworld.com
+                    </a>
+                    . Follow us @thecatalystsworld on TikTok and Instagram for
+                    the latest news.
+                    <br />
+                    <br />
+                    Good luck!
+                    <br />
+                    <br />
+                    The Catalysts Team
+                </Typography>
             </Stack>
-            <Box mt={8}>
+            <Box mt={4}>
                 <Button
                     color="black"
                     variant="contained"
