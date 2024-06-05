@@ -35,6 +35,7 @@ export default function ApplicationPortal() {
         step,
         goBack,
         updateApplication,
+        resetApplication,
         values,
     } = useApplicationPortal();
 
@@ -47,6 +48,7 @@ export default function ApplicationPortal() {
         if (!res.success) {
             // TODO handle errs
         } else {
+            resetApplication();
             setDialogOpen(false);
         }
 
