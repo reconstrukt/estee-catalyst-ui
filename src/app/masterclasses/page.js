@@ -18,6 +18,8 @@ import experts from '@/cms/masterclassParticipants';
 import TheDialog from '@/components/sections/TheDialog';
 import PersonModal from '@/components/sections/PersonModal';
 
+import Link from 'next/link';
+
 export default function Masterclasses() {
     const [selected, setSelected] = useState(null);
 
@@ -91,6 +93,18 @@ export default function Masterclasses() {
                     industry-leading founders, storytellers, and creatives to
                     share the insights you need to build a next generation
                     beauty brand.
+                </Typography>
+
+                <Typography sx={{ mt: 4 }}>
+                    New masterclasses will be added weekly. Check back for the
+                    latest or follow on{' '}
+                    <Link
+                        target="_blank"
+                        href="https://www.tiktok.com/@thecatalystsworld"
+                    >
+                        @thecatalystsworld
+                    </Link>{' '}
+                    for newest classes.
                 </Typography>
             </Section>
 
