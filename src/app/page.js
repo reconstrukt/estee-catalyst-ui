@@ -296,8 +296,8 @@ export default function Home() {
             >
                 <Box mb={8}>
                     <Typography variant="subtitle1">
-                        By participating in the program, all applicants will
-                        have access to the following:
+                        By participating in the program, all winners will have
+                        access to the following:
                     </Typography>
                 </Box>
 
