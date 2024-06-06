@@ -37,8 +37,6 @@ export const ApplicationPortalProvider = ({ children }) => {
     };
 
     const resetApplication = () => {
-        setDialogOpen(false);
-        setStep(0);
         setApplication({});
         setEmail('');
         setValues({});

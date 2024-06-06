@@ -27,6 +27,7 @@ import AppStep11 from './AppStep11';
 import AppStepFinal from './AppStepFinal';
 import { LoadingButton } from '@mui/lab';
 import ApplicationProgress from './ApplicationProgress';
+import AppStepSaved from './AppStepSaved';
 
 export default function ApplicationPortal() {
     const {
@@ -36,6 +37,7 @@ export default function ApplicationPortal() {
         goBack,
         updateApplication,
         resetApplication,
+        setStep,
         values,
     } = useApplicationPortal();
 
@@ -49,7 +51,7 @@ export default function ApplicationPortal() {
             // TODO handle errs
         } else {
             resetApplication();
-            setDialogOpen(false);
+            setStep(13);
         }
 
         setLoading(false);
@@ -191,6 +193,7 @@ export default function ApplicationPortal() {
                         </Box>
 
                         {step === 12 && <AppStepFinal />}
+                        {step === 13 && <AppStepSaved />}
                     </Box>
                 </Stack>
             </Dialog>
