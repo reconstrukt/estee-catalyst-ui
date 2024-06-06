@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Dialog, Box, Stack, Typography, IconButton } from '@mui/material';
 import CloseIcon from '../../../assets/svg/CloseIcon.svg';
 import Logo from '../../../assets/svg/logo.svg';
+import Link from 'next/link';
 
 export default function TheDialog({ open, children, title, onClose }) {
     const dialogTitleRef = useRef();
@@ -58,7 +59,9 @@ export default function TheDialog({ open, children, title, onClose }) {
                                 },
                             }}
                         >
-                            <Logo width="100%" height="100%" />
+                            <Link href="/">
+                                <Logo width="100%" height="100%" />
+                            </Link>
                         </Box>
                     </Box>
 
