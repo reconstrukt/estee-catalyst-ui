@@ -24,7 +24,7 @@ export default function Catalysts() {
                         textAlign: 'center',
                     }}
                 >
-                    <Typography variant="h1" mb={1}>
+                    <Typography variant="h1" mt={12} mb={1}>
                         ABOUT THE CATALYSTS
                     </Typography>
                     <Typography variant="subtitle1">
@@ -35,27 +35,21 @@ export default function Catalysts() {
                         beauty – and an opportunity to receive vital funding to
                         make your plans reality.
                     </Typography>
+                    <br />
+                    <br />
+                    <Typography variant="subtitle1">
+                        Created by The Estée Lauder Companies’ New Incubation
+                        Ventures, The Catalysts is a program that seeks to
+                        identify and uplift emerging and independent creative
+                        storytellers who have visions for the beauty world by
+                        providing mentorship, financial resources, and project
+                        support. Launching for the first time in 2024, it is a
+                        year-long global initiative championing up-and-coming
+                        creative innovators defining and inspiring the beauty
+                        conversation.
+                    </Typography>
                 </Box>
             </Hero>
-
-            <Box
-                sx={{
-                    textAlign: 'center',
-                    p: 2,
-                    mb: 2,
-                }}
-            >
-                <Typography variant="subtitle1">
-                    Created by The Estée Lauder Companies’ New Incubation
-                    Ventures, The Catalysts is a program that seeks to identify
-                    and uplift emerging and independent creative storytellers
-                    who have visions for the beauty world by providing
-                    mentorship, financial resources, and project support.
-                    Launching for the first time in 2024, it is a year-long
-                    global initiative championing up-and-coming creative
-                    innovators defining and inspiring the beauty conversation.
-                </Typography>
-            </Box>
 
             <Box
                 sx={{
