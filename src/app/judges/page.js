@@ -90,7 +90,10 @@ export default function ContactUs() {
                                 </Box>
 
                                 <Box>
-                                    <Typography variant="h4" sx={{ mb: 0.5 }}>
+                                    <Typography
+                                        variant="h4"
+                                        sx={{ mb: 0.5, whiteSpace: 'nowrap' }}
+                                    >
                                         {item.name}
                                     </Typography>
                                     <Typography variant="body1">

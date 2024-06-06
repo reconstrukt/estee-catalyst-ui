@@ -482,7 +482,10 @@ export default function Home() {
                                             <Box>
                                                 <Typography
                                                     variant="h4"
-                                                    sx={{ mb: 0.5 }}
+                                                    sx={{
+                                                        mb: 0.5,
+                                                        whiteSpace: 'nowrap',
+                                                    }}
                                                 >
                                                     {item.name}
                                                 </Typography>
