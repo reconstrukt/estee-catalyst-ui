@@ -7,6 +7,8 @@ import contact from '../../../assets/images/contact.jpg';
 import Section from '@/components/sections/Section';
 import sharedStyles from '@/theme/sharedStyles';
 
+import Link from 'next/link';
+
 export default function ContactUs() {
     return (
         <PageLayout>
@@ -62,8 +64,11 @@ export default function ContactUs() {
                     </Stack>
 
                     <Typography variant="h2">
-                        FOR ANYTHING ELSE, PLEASE SEE OUR FAQ PAGE, OR CONTACT
-                        US
+                        FOR ANYTHING ELSE, PLEASE SEE OUR{' '}
+                        <Link href="/faq">FAQ</Link> PAGE, OR{' '}
+                        <a href="mailto:hello@thecatalystsworld.com">
+                            CONTACT US
+                        </a>
                     </Typography>
                 </Stack>
             </Section>
