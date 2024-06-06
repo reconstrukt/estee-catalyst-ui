@@ -46,7 +46,9 @@ export default function PersonModal({ selected, setSelected, all }) {
                                     sizes="100vw"
                                     style={{
                                         width: '100%',
-                                        height: 'auto',
+                                        height: '100%',
+                                        objectFit: 'cover',
+                                        objectPosition: 'center',
                                         filter: 'grayscale(1)',
                                     }}
                                 />
@@ -78,7 +80,9 @@ export default function PersonModal({ selected, setSelected, all }) {
                         sizes="100vw"
                         style={{
                             width: '100%',
-                            height: 'auto',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: 'center',
                             filter: 'grayscale(1)',
                         }}
                     />
@@ -136,10 +140,6 @@ export default function PersonModal({ selected, setSelected, all }) {
                                             display: 'flex',
                                             alignItems: 'center',
                                             justifyContent: 'center',
-
-                                            backgroundImage: `url(${nextJudge.image.src})`,
-                                            backgroundPosition: 'center',
-                                            backgroundSize: 'cover',
                                         }}
                                     >
                                         <Image
@@ -157,7 +157,7 @@ export default function PersonModal({ selected, setSelected, all }) {
                                         />
                                     </Box>
 
-                                    <Box>
+                                    <Box pb={4}>
                                         <Typography
                                             variant="h4"
                                             sx={{ mb: 0.5 }}

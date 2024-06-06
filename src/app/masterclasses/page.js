@@ -24,6 +24,8 @@ import Logo from '../../../assets/svg/logo.svg';
 
 import masterclasses from '@/cms/masterclasses';
 import experts from '@/cms/masterclassParticipants';
+import TheDialog from '@/components/sections/TheDialog';
+import PersonModal from '@/components/sections/PersonModal';
 
 export default function Masterclasses() {
     const [selected, setSelected] = useState(null);
@@ -509,228 +511,19 @@ export default function Masterclasses() {
                 </Grid>
             </Section>
 
-            <Dialog
+            <TheDialog
                 open={!!selectedJudge}
-                fullScreen
-                sx={{
-                    zIndex: 10000,
-                }}
+                title={selectedJudge ? selectedJudge.name : ''}
+                onClose={() => setSelectedJudge(null)}
             >
                 {selectedJudge && (
-                    <Box ref={dialogTitleRef}>
-                        <Stack
-                            direction="row"
-                            px={2}
-                            py={1}
-                            alignItems="center"
-                            justifyContent="space-between"
-                        >
-                            <Box sx={{ flex: 1 }}>
-                                <Typography variant="h4">
-                                    {selectedJudge.name}
-                                </Typography>
-                            </Box>
-
-                            <Box
-                                sx={{
-                                    flex: 1,
-                                    display: {
-                                        xs: 'none',
-                                        md: 'flex',
-                                    },
-                                    justifyContent: 'center',
-                                }}
-                            >
-                                <Box
-                                    sx={{
-                                        width: {
-                                            xs: 131,
-                                            sm: 182,
-                                        },
-
-                                        height: {
-                                            xs: 18,
-                                            sm: 25,
-                                        },
-                                    }}
-                                >
-                                    <Logo width="100%" height="100%" />
-                                </Box>
-                            </Box>
-
-                            <Box sx={{ flex: 1, textAlign: 'right' }}>
-                                <IconButton
-                                    variant="text"
-                                    color="black"
-                                    onClick={() => setSelectedJudge(null)}
-                                >
-                                    <CloseIcon />
-                                </IconButton>
-                            </Box>
-                        </Stack>
-
-                        <Box>
-                            <Stack
-                                direction="row"
-                                spacing={0.5}
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                {experts.map((judge, i) => (
-                                    <ButtonBase
-                                        key={i}
-                                        onClick={() => setSelectedJudge(judge)}
-                                    >
-                                        <Box
-                                            sx={{
-                                                width: 48,
-                                                height: 60,
-                                            }}
-                                        >
-                                            <Image
-                                                src={judge.image.src}
-                                                width={0}
-                                                height={0}
-                                                sizes="100vw"
-                                                style={{
-                                                    width: '100%',
-                                                    height: '100%',
-                                                    objectFit: 'cover',
-                                                    objectPosition: 'center',
-                                                    filter: 'grayscale(1)',
-                                                }}
-                                            />
-                                        </Box>
-                                    </ButtonBase>
-                                ))}
-                            </Stack>
-                        </Box>
-
-                        <Box px={2}>
-                            <Box
-                                sx={{
-                                    width: {
-                                        xs: 234,
-                                        md: 341,
-                                    },
-                                    height: {
-                                        xs: 292,
-                                        md: 425,
-                                    },
-                                    margin: 'auto',
-                                    mt: 8,
-                                }}
-                            >
-                                <Image
-                                    src={selectedJudge.image.src}
-                                    width={0}
-                                    height={0}
-                                    sizes="100vw"
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'cover',
-                                        objectPosition: 'center',
-                                        filter: 'grayscale(1)',
-                                    }}
-                                />
-                            </Box>
-
-                            <Box
-                                mt={8}
-                                mb={10}
-                                sx={{
-                                    textAlign: 'center',
-                                }}
-                            >
-                                <Typography variant="h2" sx={{ mb: 1 }}>
-                                    {selectedJudge.name}
-                                </Typography>
-                                <Typography variant="subtitle1">
-                                    {selectedJudge.copy}
-                                </Typography>
-                            </Box>
-
-                            {nextJudge && (
-                                <Box
-                                    sx={{
-                                        maxWidth: 222,
-                                        margin: 'auto',
-                                        textAlign: 'center',
-                                    }}
-                                >
-                                    <Typography variant="h4" sx={{ mb: 8 }}>
-                                        NEXT EXPERT
-                                    </Typography>
-
-                                    <Box>
-                                        <ButtonBase
-                                            sx={{
-                                                cursor: 'pointer',
-                                            }}
-                                            onClick={onNextJudgeClick}
-                                        >
-                                            <Stack
-                                                spacing={2}
-                                                sx={{
-                                                    alignItems: 'center',
-                                                    textAlign: 'center',
-                                                }}
-                                            >
-                                                <Box
-                                                    sx={{
-                                                        width: {
-                                                            xs: 170,
-                                                            md: 222,
-                                                        },
-                                                        height: {
-                                                            xs: 217,
-                                                            md: 277,
-                                                        },
-                                                        display: 'flex',
-                                                        alignItems: 'center',
-                                                        justifyContent:
-                                                            'center',
-                                                    }}
-                                                >
-                                                    <Image
-                                                        src={
-                                                            nextJudge.image.src
-                                                        }
-                                                        width={0}
-                                                        height={0}
-                                                        sizes="100vw"
-                                                        style={{
-                                                            width: '100%',
-                                                            height: '100%',
-                                                            objectFit: 'cover',
-                                                            objectPosition:
-                                                                'center',
-                                                            filter: 'grayscale(1)',
-                                                        }}
-                                                    />
-                                                </Box>
-
-                                                <Box>
-                                                    <Typography
-                                                        variant="h4"
-                                                        sx={{ mb: 0.5 }}
-                                                    >
-                                                        {nextJudge.name}
-                                                    </Typography>
-                                                    <Typography variant="body1">
-                                                        {nextJudge.title}
-                                                    </Typography>
-                                                </Box>
-                                            </Stack>
-                                        </ButtonBase>
-                                    </Box>
-                                </Box>
-                            )}
-                        </Box>
-                    </Box>
+                    <PersonModal
+                        selected={selectedJudge}
+                        all={experts}
+                        setSelected={setSelectedJudge}
+                    />
                 )}
-            </Dialog>
+            </TheDialog>
         </PageLayout>
     );
 }
