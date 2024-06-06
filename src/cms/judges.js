@@ -10,6 +10,7 @@ import eugene from 'assets/judges/eugene.webp';
 import fabien from 'assets/judges/fabien.jpg';
 import julia from 'assets/judges/julia.jpeg';
 import michelle from 'assets/judges/michelle.jpeg';
+import francisco from 'assets/judges/francisco.jpg';
 
 import grace from 'assets/judges/grace.webp';
 import mitchell from 'assets/judges/mitchell.webp';
@@ -36,16 +37,14 @@ const judges = [
         copy: `Hung Vanngo is a Vietnam-born, New York-based makeup artist known for combining glamour with an avant-garde aesthetic. He’s a go-to for prestigious brands such as Louis Vuitton, Marc Jacobs, and Calvin Klein, as well as high profile talent such as Selena Gomez, Bella Hadid, and Gwyneth Paltrow.`,
     },
 
-    // TODO: Michele Lamy goes here instead of ruba when we get an image
-
     {
+        includeOnHome: true,
         image: michelle,
         name: 'MICHELE LAMY',
         copy: `Michèle Lamy is an artist, entrepreneur, producer, collaborator, performer and the co-founder of Owenscorp, along with her life partner Rick Owens. In 2014, Lamy created 'LAMYLAND,' an umbrella term for her independent creative endeavours, bringing together experimentation, collaboration, storytelling, and creation. She has worked on projects at renowned institutions and art fairs, including the Museum of Contemporary Art, Los Angeles, Frieze London, the Venice Biennale, and more.`,
     },
 
     {
-        includeOnHome: true,
         image: ruba,
         name: 'RUBA ABU-NIMAH',
         copy: `Ruba Abu-Nimah is an award-winning New York-based creative director, design and experiential curator, editor, and currently Brand Creative Director of Moncler. Ruba has held lead creative positions including Executive Creative Director of Tiffany & Co., Global Creative Director at Revlon and Shiseido, and Creative Director of ELLE Magazine.`,
@@ -76,7 +75,7 @@ const judges = [
     },
 
     {
-        image: '',
+        image: francisco,
         name: 'FRANCISCO COSTA',
         copy: `After serving as the creative director of Calvin Klein womenswear for 13 years, in 2016 Francisco Costa returned to his home country of Brazil. There, he launched Costa Brazil, an eco-forward skincare and fragrance line inspired by local healing rituals that works in partnership with local cooperatives and scientists, ensuring protection of both body and Earth. As well as being an avid environmentalist, Costa is engaged in numerous social causes in Brazil and around the world.`,
     },
@@ -124,7 +123,7 @@ const judges = [
     },
 
     {
-        image: '',
+        image: grace,
         name: 'GRACE CHOI',
         copy: `Grace is an augmented reality effects creator, specialising in viral beauty filters on social media. Her clients include leading beauty brands including Dior, YSL, La Mer, Nars, Fenty, Kosas, and Benefit Cosmetics. Currently ranking in the top 1% of TikTok effect creators, she serves as a TikTok Effects House Ambassador. In 2023, Grace received a Cannes Lions award for her Fenty Beauty Match Stix Snatch campaign, marking the first TikTok effect to receive such recognition. Grace is also the inventor of Mink, the first 3D makeup printer that transforms any image into a wearable colour cosmetic.`,
     },
