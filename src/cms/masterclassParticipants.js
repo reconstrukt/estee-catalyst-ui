@@ -55,7 +55,7 @@ const experts = [
         name: 'MARINA MANSOUR',
         title: (
             <>
-                Vice President- Beauty & Wellness, <br />
+                Vice President - Beauty & Wellness, <br />
                 Kyra
             </>
         ),
@@ -153,7 +153,7 @@ const experts = [
         name: 'CATHERINE PELTON',
         title: (
             <>
-                Principal, Investment, <br />
+                Investment Principal, <br />
                 True
             </>
         ),
