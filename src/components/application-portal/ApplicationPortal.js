@@ -176,17 +176,19 @@ export default function ApplicationPortal() {
                             </Stack>
                         )}
 
-                        {step === 1 && <AppStep1 />}
-                        {step === 2 && <AppStep2 />}
-                        {step === 3 && <AppStep3 />}
-                        {step === 4 && <AppStep4 />}
-                        {step === 5 && <AppStep5 />}
-                        {step === 6 && <AppStep6 />}
-                        {step === 7 && <AppStep7 />}
-                        {step === 8 && <AppStep8 />}
-                        {step === 9 && <AppStep9 />}
-                        {step === 10 && <AppStep10 />}
-                        {step === 11 && <AppStep11 />}
+                        <Box px={2}>
+                            {step === 1 && <AppStep1 />}
+                            {step === 2 && <AppStep2 />}
+                            {step === 3 && <AppStep3 />}
+                            {step === 4 && <AppStep4 />}
+                            {step === 5 && <AppStep5 />}
+                            {step === 6 && <AppStep6 />}
+                            {step === 7 && <AppStep7 />}
+                            {step === 8 && <AppStep8 />}
+                            {step === 9 && <AppStep9 />}
+                            {step === 10 && <AppStep10 />}
+                            {step === 11 && <AppStep11 />}
+                        </Box>
 
                         {step === 12 && <AppStepFinal />}
                     </Box>
