@@ -30,10 +30,26 @@ export default function AppStep4() {
         });
     };
 
+    function isUrlValid(string) {
+        try {
+            new URL(string);
+            return true;
+        } catch (err) {
+            return false;
+        }
+    }
+
     const validate = () => {
         if (!values['video_link']) {
             setErrors({
                 video_link: 'This field is required.',
+            });
+            return false;
+        }
+
+        if (!isUrlValid(values['video_link'])) {
+            setErrors({
+                video_link: 'This must be a valid link.',
             });
             return false;
         }
