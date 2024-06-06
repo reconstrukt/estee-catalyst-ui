@@ -62,34 +62,6 @@ export default function Masterclasses() {
     };
 
     const [selectedJudge, setSelectedJudge] = useState(null);
-    const [nextJudge, setNextJudge] = useState(null);
-
-    const dialogJudgeTitleRef = useRef(null);
-
-    useEffect(() => {
-        if (!selectedJudge) {
-            setNextJudge(null);
-        } else {
-            let index = experts.findIndex(
-                (el) => el.name === selectedJudge.name,
-            );
-            if (!!experts[index + 1]) {
-                setNextJudge(experts[index + 1]);
-            } else {
-                setNextJudge(experts[0]);
-            }
-        }
-    }, [selectedJudge]);
-
-    const onNextJudgeClick = () => {
-        setSelectedJudge(nextJudge);
-
-        if (dialogTitleRef.current) {
-            dialogTitleRef.current.scrollIntoView({
-                behavior: 'smooth',
-            });
-        }
-    };
 
     return (
         <PageLayout>
