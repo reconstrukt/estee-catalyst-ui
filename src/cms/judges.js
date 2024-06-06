@@ -6,6 +6,11 @@ import sallyann from 'assets/judges/sallyann.webp';
 import shana from 'assets/judges/shana.webp';
 import thomas from 'assets/judges/thomas.webp';
 import vanessa from 'assets/judges/vanessa.webp';
+import eugene from 'assets/judges/eugene.webp';
+import fabien from 'assets/judges/fabien.jpg';
+import julia from 'assets/judges/julia.jpeg';
+import michelle from 'assets/judges/michelle.jpeg';
+
 import grace from 'assets/judges/grace.webp';
 import mitchell from 'assets/judges/mitchell.webp';
 
@@ -14,7 +19,7 @@ const judges = [
         includeOnHome: true,
         image: shana,
         name: 'SHANA RANDHAVA',
-        copy: `As the head of New Incubation Ventures (NIV), Shana Randhava is responsible for building The Estée Lauder Companies (ELC) early-stage investment and incubation strategy. This new team is building a distinctive capability for ELC to invest in and experiment at scale and create an actionable pipeline of next generation brands for the ELC portfolio. Prior to creating NIV, Shana led the New Business Development team and was responsible for shaping and executing the ELC’s M&A strategy for DECIEM, Dr. Jart+, Forest Essentials, BY Killian and Too Faced. New Incubation Ventures (NIV) is the strategic early-stage investment and incubation arm for The Estée Lauder Companies.`,
+        copy: `As the head of New Incubation Ventures (NIV), Shana Randhava is responsible for building The Estée Lauder Companies (ELC) early-stage investment and incubation strategy. This new team is building a distinctive capability for ELC to invest in and experiment at scale and create an actionable pipeline of next generation brands for the ELC portfolio. Prior to creating NIV, Shana led the New Business Development team and was responsible for shaping and executing the ELC’s M&A strategy for DECIEM, Dr. Jart+, Forest Essentials, BY Killian and Too Faced. New Incubation Ventures (NIV) is the strategic early-stage investment and incubation arm for The Estée Lauder Companies. `,
     },
 
     {
@@ -34,7 +39,7 @@ const judges = [
     // TODO: Michele Lamy goes here instead of ruba when we get an image
 
     {
-        image: '',
+        image: michelle,
         name: 'MICHELE LAMY',
         copy: `Michèle Lamy is an artist, entrepreneur, producer, collaborator, performer and the co-founder of Owenscorp, along with her life partner Rick Owens. In 2014, Lamy created 'LAMYLAND,' an umbrella term for her independent creative endeavours, bringing together experimentation, collaboration, storytelling, and creation. She has worked on projects at renowned institutions and art fairs, including the Museum of Contemporary Art, Los Angeles, Frieze London, the Venice Biennale, and more.`,
     },
@@ -47,7 +52,7 @@ const judges = [
     },
 
     {
-        image: '',
+        image: eugene,
         name: 'EUGENE SOULEIMAN',
         copy: `Originally inspired by London’s punk scene, Eugene Souleiman is a hairstylist who creates with raw emotion and technical ability. Over a career spanning more than 30 years, his unique perspective has led him to work with a diverse group of the most forward-thinking and innovative fashion designers, including John Galliano, Alexander McQueen, and Yohji Yamamoto.`,
     },
@@ -77,13 +82,13 @@ const judges = [
     },
 
     {
-        image: '',
+        image: julia,
         name: 'JULIA SARR-JAMOIS',
         copy: `With over 16 years experience in the industry, Julia Sarr-Jamois is a stylist and fashion director known for her effortless mixing of streetwear and high fashion aesthetics. With years at both i-D magazine and British Vogue under her belt, she’s shot with photographers including Tyrone Lebon, Alasdair McLellan, Tyler Mitchell, and Harley Weir; collaborated with designers to create custom looks for Beyoncé; and consulted for brands including Homer, Hermes, Chanel, Zara and Nike. `,
     },
 
     {
-        image: '',
+        image: fabien,
         name: 'FABIEN BARON',
         copy: `The founder of Baron&Baron, Fabien Baron has been leading iconic creative for some of the world’s most celebrated brands for over three decades. He’s spearheaded the image of fashion houses including Calvin Klein, Balenciaga, and Burberry, reinvented illustrious magazines including Interview, French Vogue, Harper’s Bazaar, and Italian Vogue, and creative directed campaigns for the likes of Nars, Louis Vuitton, and Dior. `,
     },
@@ -97,19 +102,31 @@ const judges = [
     {
         image: courtney,
         name: 'COURTNEY MCHUGH',
-        copy: `Courtney is a key member of the founding team of United Talent Agency’s (UTA) Venture team, where she leads the Incubation division. Her role involves assisting top-tier talent in launching businesses from the incubation stage to exit. Courtney is responsible for identifying best-in-class partners, participating in deal stage negotiations, and helping talent develop their product offerings, strategic brand positioning, and go-to-market strategies. She has played a significant role in shaping the brands of Issa Rae, Emma Chamberlain, Priyanka Chopra, Taraji P Henson, Tamara Mellon, Tia Mowry, Elizabeth Banks, and others. Additionally, she is an investor in early-stage startups, a mentor for A16 TxO fund, and an advisor to founders.`,
+        copy: `Courtney is a key member of the founding team of United Talent Agency’s (UTA) Venture team, where she leads the Incubation division. Her role involves assisting top-tier talent in launching businesses from the incubation stage to exit. Courtney is responsible for identifying best-in-class partners, participating in deal stage negotiations, and helping talent develop their product offerings, strategic brand positioning, and go-to-market strategies. She has played a significant role in shaping the brands of Issa Rae, Emma Chamberlain, Priyanka Chopra, Taraji P Henson and others.`,
     },
 
-    {
-        image: '',
-        name: 'ISAMAYA FFRENCH',
-        copy: ``,
-    },
+    // {
+    //     image: '',
+    //     name: 'ISAMAYA FFRENCH',
+    //     copy: ``,
+    // },
 
     {
         image: sallyann,
         name: 'SALLYANN HOUGHTON',
-        copy: ``,
+        copy: `Sallyann Houghton is Business Development / Strategic partnership for Fashion / Retail at Epic Games, based at the Epic Games London Innovation Lab, a hub for the creative community. Prior to Epic, Sallyann worked at renowned global content creation studio The Mill, where she headed up a content division – working directly with high profile and luxury brands to create stand out tech-driven creative content, which included AR, VR, and immersive pieces, along with live action and CG animation.`,
+    },
+
+    {
+        image: '',
+        name: 'DREW ELLIOTT',
+        copy: `Drew Elliott leads M∙A∙C Cosmetics’ creative vision as Senior Vice President, Global Creative Director while also serving as Strategic Creative Advisor for Too Faced Cosmetics. At the creative helm of M·A·C Cosmetics, Drew is responsible for elevating the brand’s creative identity and trendsetting authority across all touch points of the consumer journey including retail, digital, packaging, visual merchandising, and multiplatform experiences.`,
+    },
+
+    {
+        image: '',
+        name: 'GRACE CHOI',
+        copy: `Grace is an augmented reality effects creator, specialising in viral beauty filters on social media. Her clients include leading beauty brands including Dior, YSL, La Mer, Nars, Fenty, Kosas, and Benefit Cosmetics. Currently ranking in the top 1% of TikTok effect creators, she serves as a TikTok Effects House Ambassador. In 2023, Grace received a Cannes Lions award for her Fenty Beauty Match Stix Snatch campaign, marking the first TikTok effect to receive such recognition. Grace is also the inventor of Mink, the first 3D makeup printer that transforms any image into a wearable colour cosmetic.`,
     },
 ];
 
