@@ -40,21 +40,27 @@ export default function Footer() {
                     <Stack spacing={4}>
                         <Stack spacing={2}>
                             <Typography>The Catalysts is created by</Typography>
-                            <Link href="#" target="_blank">
+                            <Link
+                                href="https://newincubationventures.com/"
+                                target="_blank"
+                            >
                                 <NIVLogo />
                             </Link>
                         </Stack>
 
                         <Stack spacing={2}>
                             <Typography>With support from TikTok</Typography>
-                            <Link href="#" target="_blank">
+                            <Link href="https://www.tiktok.com" target="_blank">
                                 <TikTokLogo />
                             </Link>
                         </Stack>
 
                         <Stack spacing={2}>
                             <Typography>Executive Producer</Typography>
-                            <Link href="#" target="_blank">
+                            <Link
+                                href="https://www.idexcap.com"
+                                target="_blank"
+                            >
                                 <IdexLogo />
                             </Link>
                         </Stack>
@@ -118,20 +124,29 @@ export default function Footer() {
 
                         <Stack spacing={2.5}>
                             <Box>
-                                <Link href="/contact">CONTACT</Link>
+                                <Link href="/contact-us">CONTACT</Link>
                             </Box>
                             <Box>
-                                <Link href="/" target="_blank">
+                                <Link
+                                    href="https://www.instagram.com/thecatalystsworld"
+                                    target="_blank"
+                                >
                                     INSTAGRAM
                                 </Link>
                             </Box>
                             <Box>
-                                <Link href="/" target="_blank">
-                                    FACEBOOK
+                                <Link
+                                    href="https://www.tiktok.com/@thecatalystsworld"
+                                    target="_blank"
+                                >
+                                    TIKTOK
                                 </Link>
                             </Box>
                             <Box>
-                                <Link href="/" target="_blank">
+                                <Link
+                                    href="https://www.linkedin.com/company/niv-elc/"
+                                    target="_blank"
+                                >
                                     LINKEDIN
                                 </Link>
                             </Box>
