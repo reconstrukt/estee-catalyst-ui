@@ -1,32 +1,22 @@
 'use client';
 
-import {
-    Box,
-    Typography,
-    Stack,
-    ButtonBase,
-    Dialog,
-    IconButton,
-} from '@mui/material';
+import { Box, Typography, Stack, ButtonBase } from '@mui/material';
 import Hero from '@/components/sections/Hero';
 import PageLayout from '@/components/layouts/PageLayout';
-import CloseIcon from '../../../assets/svg/CloseIcon.svg';
-import Logo from '../../../assets/svg/logo.svg';
 
 import judges from '@/cms/judges';
 import Grid from '@/components/sections/Grid';
 import GridItem from '@/components/sections/GridItem';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import jurymob from '../../../assets/images/jurymob.jpg';
 import jury from '../../../assets/images/jury.jpg';
+import TheDialog from '@/components/sections/TheDialog';
 
 export default function ContactUs() {
     const [selected, setSelected] = useState(null);
     const [nextJudge, setNextJudge] = useState(null);
-
-    const dialogTitleRef = useRef(null);
 
     useEffect(() => {
         if (!selected) {
@@ -43,12 +33,6 @@ export default function ContactUs() {
 
     const onNextJudgeClick = () => {
         setSelected(nextJudge);
-
-        if (dialogTitleRef.current) {
-            dialogTitleRef.current.scrollIntoView({
-                behavior: 'smooth',
-            });
-        }
     };
 
     return (
@@ -136,66 +120,13 @@ export default function ContactUs() {
                 ))}
             </Grid>
 
-            <Dialog
+            <TheDialog
                 open={!!selected}
-                fullScreen
-                sx={{
-                    zIndex: 10000,
-                }}
+                title={selected ? selected.name : ''}
+                onClose={() => setSelected(null)}
             >
                 {selected && (
-                    <Box ref={dialogTitleRef}>
-                        <Stack
-                            direction="row"
-                            px={2}
-                            py={1}
-                            alignItems="center"
-                            justifyContent="space-between"
-                        >
-                            <Box sx={{ flex: 1 }}>
-                                <Typography variant="h4">
-                                    {selected.name}
-                                </Typography>
-                            </Box>
-
-                            <Box
-                                sx={{
-                                    flex: 1,
-                                    display: {
-                                        xs: 'none',
-                                        md: 'flex',
-                                    },
-                                    justifyContent: 'center',
-                                }}
-                            >
-                                <Box
-                                    sx={{
-                                        width: {
-                                            xs: 131,
-                                            sm: 182,
-                                        },
-
-                                        height: {
-                                            xs: 18,
-                                            sm: 25,
-                                        },
-                                    }}
-                                >
-                                    <Logo width="100%" height="100%" />
-                                </Box>
-                            </Box>
-
-                            <Box sx={{ flex: 1, textAlign: 'right' }}>
-                                <IconButton
-                                    variant="text"
-                                    color="black"
-                                    onClick={() => setSelected(null)}
-                                >
-                                    <CloseIcon />
-                                </IconButton>
-                            </Box>
-                        </Stack>
-
+                    <>
                         <Box>
                             <Stack
                                 direction="row"
@@ -356,9 +287,9 @@ export default function ContactUs() {
                                 </Box>
                             )}
                         </Box>
-                    </Box>
+                    </>
                 )}
-            </Dialog>
+            </TheDialog>
         </PageLayout>
     );
 }
