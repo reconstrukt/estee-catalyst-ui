@@ -39,9 +39,9 @@ export default function Header({ transparentHeader }) {
         <Box
             component="header"
             sx={{
-                position: aboveTheFold ? 'absolute' : 'fixed',
+                position: 'fixed',
                 marginBottom: menuOpen ? 0 : aboveTheFold ? '-60px' : 0,
-                top: aboveTheFold ? 0 : scrollDirection === 'up' ? 0 : -100,
+                top: scrollDirection === 'up' ? 0 : -100,
                 color:
                     !aboveTheFold && !menuOpen
                         ? 'black'

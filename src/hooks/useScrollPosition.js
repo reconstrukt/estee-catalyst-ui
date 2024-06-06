@@ -4,9 +4,9 @@ const CLOSE_TO_TOP_THRESHOLD = 100;
 
 function useScrollPosition() {
     const [scrollPos, setScrollPos] = useState(0);
-    const [scrollDirection, setScrollDirection] = useState('');
+    const [scrollDirection, setScrollDirection] = useState('up');
     const [closeToTop, setCloseToTop] = useState(true);
-    const [aboveTheFold, setAboveTheFold] = useState(false);
+    const [aboveTheFold, setAboveTheFold] = useState(true);
 
     const [scrollElem, setScrollElem] = useState(null);
     const [scrollOffsetProp, setScrollOffsetProp] = useState(null);
