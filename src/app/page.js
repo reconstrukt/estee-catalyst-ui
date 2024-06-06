@@ -140,7 +140,7 @@ export default function Home() {
                                 Meet our jury of industry leaders
                             </Typography>
                             <Box mt={2}>
-                                <Link href="/judges">
+                                <Link href="/jury">
                                     <Button variant="outlined" color="white">
                                         THE JURY
                                     </Button>
@@ -500,7 +500,7 @@ export default function Home() {
                     </Box>
 
                     <Box>
-                        <Link href="/judges">
+                        <Link href="/jury">
                             <Button variant="outlined" color="black">
                                 READ MORE
                             </Button>

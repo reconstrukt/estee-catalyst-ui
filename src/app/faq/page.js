@@ -104,7 +104,7 @@ export default function FaqPage() {
                         investors, content creators, experts, and
                         representatives from The Estée Lauder Companies and
                         TIkTok. To see the full jury, please{' '}
-                        <Link href="/judges">click here</Link>.
+                        <Link href="/jury">click here</Link>.
                     </AccordionDetails>
                 </Accordion>
 

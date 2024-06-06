@@ -234,8 +234,8 @@ export default function Header({ transparentHeader }) {
                             </Link>
                         </Box>
                         <Box>
-                            <Link href="/judges">
-                                <Typography variant="menu">Judges</Typography>
+                            <Link href="/jury">
+                                <Typography variant="menu">Jury</Typography>
                             </Link>
                         </Box>
                         <Box>
