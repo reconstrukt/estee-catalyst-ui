@@ -24,8 +24,8 @@ import applynow from '../../assets/slider/applynow.jpg';
 import applynowmob from '../../assets/slider/applynowmob.jpg';
 import jury from '../../assets/slider/jury.jpg';
 import jurymob from '../../assets/slider/jurymob.jpg';
-import tbc from '../../assets/slider/tbc.jpg';
-import tbcmob from '../../assets/slider/tbcmob.jpg';
+import tiktok from '../../assets/slider/tiktok.jpg';
+import tiktokmob from '../../assets/slider/tiktokmob.jpg';
 import press from '@/cms/press';
 import theme from '@/theme/theme';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -152,8 +152,8 @@ export default function Home() {
                     <Hero
                         sx={{
                             backgroundImage: {
-                                xs: `url(${tbcmob.src})`,
-                                md: `url(${tbc.src})`,
+                                xs: `url(${tiktokmob.src})`,
+                                md: `url(${tiktok.src})`,
                             },
                         }}
                     >
