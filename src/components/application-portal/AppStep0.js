@@ -106,7 +106,7 @@ export default function AppStep0() {
                             />
                         </Box>
                     </Stack>
-                    <Box mt={8}>
+                    <Box mt={4}>
                         <LoadingButton
                             variant="contained"
                             color="black"
@@ -177,7 +177,7 @@ export default function AppStep0() {
 
                     <Box
                         sx={{
-                            pt: 8,
+                            pt: 4,
                         }}
                     >
                         <LoadingButton

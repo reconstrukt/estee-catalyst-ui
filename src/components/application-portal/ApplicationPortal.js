@@ -162,7 +162,7 @@ export default function ApplicationPortal() {
                     >
                         {step === 0 && <AppStep0 />}
 
-                        {step > 0 && step !== 12 && (
+                        {step > 0 && step !== 12 && step !== 13 && (
                             <Stack
                                 spacing={2}
                                 sx={{
