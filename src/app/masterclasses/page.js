@@ -170,9 +170,9 @@ export default function Masterclasses() {
                                         >
                                             {lesson.lesson}
                                         </Typography>
-                                        <Typography variant="body1">
+                                        {/* <Typography variant="body1">
                                             {lesson.title}
-                                        </Typography>
+                                        </Typography> */}
                                     </Box>
                                 </Stack>
                             </ButtonBase>
@@ -259,7 +259,8 @@ export default function Masterclasses() {
                                 }}
                             >
                                 <Typography variant="h2" sx={{ mb: 1 }}>
-                                    {selected.title.toUpperCase()}
+                                    {/* {selected.title.toUpperCase()} */}
+                                    {selected.lesson}
                                 </Typography>
                                 <Typography variant="subtitle1">
                                     {selected.copy}
@@ -275,7 +276,7 @@ export default function Masterclasses() {
                                     }}
                                 >
                                     <Typography variant="h4" sx={{ mb: 8 }}>
-                                        NEXT LESSON
+                                        NEXT EPISODE
                                     </Typography>
 
                                     <Box>
@@ -334,9 +335,9 @@ export default function Masterclasses() {
                                                     >
                                                         {nextLesson.lesson}
                                                     </Typography>
-                                                    <Typography variant="body1">
+                                                    {/* <Typography variant="body1">
                                                         {nextLesson.title}
-                                                    </Typography>
+                                                    </Typography> */}
                                                 </Box>
                                             </Stack>
                                         </ButtonBase>
