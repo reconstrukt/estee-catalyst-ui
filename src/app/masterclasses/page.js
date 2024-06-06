@@ -4,23 +4,14 @@ import React, { useState, useRef, useEffect } from 'react';
 
 import masterclassesmob from '../../../assets/images/masterclassesmob.jpg';
 import masterclassesimg from '../../../assets/images/masterclasses.jpg';
-import CloseIcon from '../../../assets/svg/CloseIcon.svg';
 
 import Hero from '@/components/sections/Hero';
 import PageLayout from '@/components/layouts/PageLayout';
-import {
-    Box,
-    ButtonBase,
-    Typography,
-    Stack,
-    Dialog,
-    IconButton,
-} from '@mui/material';
+import { Box, ButtonBase, Typography, Stack } from '@mui/material';
 import Section from '@/components/sections/Section';
 import Grid from '@/components/sections/Grid';
 import GridItem from '@/components/sections/GridItem';
 import Image from 'next/image';
-import Logo from '../../../assets/svg/logo.svg';
 
 import masterclasses from '@/cms/masterclasses';
 import experts from '@/cms/masterclassParticipants';
@@ -176,66 +167,13 @@ export default function Masterclasses() {
                 </Grid>
             </Box>
 
-            <Dialog
+            <TheDialog
                 open={!!selected}
-                fullScreen
-                sx={{
-                    zIndex: 10000,
-                }}
+                onClose={() => setSelected(null)}
+                title={selected ? selected.lesson.toUpperCase() : ''}
             >
                 {selected && (
-                    <Box ref={dialogTitleRef}>
-                        <Stack
-                            direction="row"
-                            px={2}
-                            py={1}
-                            alignItems="center"
-                            justifyContent="space-between"
-                        >
-                            <Box sx={{ flex: 1 }}>
-                                <Typography variant="h4">
-                                    {selected.lesson.toUpperCase()}
-                                </Typography>
-                            </Box>
-
-                            <Box
-                                sx={{
-                                    flex: 1,
-                                    display: {
-                                        xs: 'none',
-                                        md: 'flex',
-                                    },
-                                    justifyContent: 'center',
-                                }}
-                            >
-                                <Box
-                                    sx={{
-                                        width: {
-                                            xs: 131,
-                                            sm: 182,
-                                        },
-
-                                        height: {
-                                            xs: 18,
-                                            sm: 25,
-                                        },
-                                    }}
-                                >
-                                    <Logo width="100%" height="100%" />
-                                </Box>
-                            </Box>
-
-                            <Box sx={{ flex: 1, textAlign: 'right' }}>
-                                <IconButton
-                                    variant="text"
-                                    color="black"
-                                    onClick={() => setSelected(null)}
-                                >
-                                    <CloseIcon />
-                                </IconButton>
-                            </Box>
-                        </Stack>
-
+                    <>
                         <Box>
                             <Stack
                                 direction="row"
@@ -392,9 +330,9 @@ export default function Masterclasses() {
                                 </Box>
                             )}
                         </Box>
-                    </Box>
+                    </>
                 )}
-            </Dialog>
+            </TheDialog>
 
             <Section>
                 <Typography variant="h2">OUR EXPERTS</Typography>
