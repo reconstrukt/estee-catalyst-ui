@@ -30,24 +30,31 @@ const themeGlobalCss = (
 
                 'li button': {
                     width: 80,
-                    height: 2,
+                    height: 10,
                     padding: 0,
                     display: 'block',
 
-                    background: '#ffffff66',
                     position: 'relative',
 
                     '&::before': {
-                        display: 'none',
+                        content: '""',
+                        display: 'block',
+                        width: '100%',
+                        height: 2,
+                        position: 'absolute',
+                        top: 4,
+                        left: 0,
+                        opacity: 1,
+                        background: '#ffffff66',
                     },
 
                     '&::after': {
                         content: '""',
                         display: 'block',
                         width: '100%',
-                        height: '100%',
+                        height: 2,
                         position: 'absolute',
-                        top: 0,
+                        top: 4,
                         left: 0,
                         background: '#fff',
                         transformOrigin: 'left center',
