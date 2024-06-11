@@ -59,11 +59,9 @@ export default function Masterclasses() {
     return (
         <PageLayout>
             <Hero
-                sx={{
-                    backgroundImage: {
-                        xs: `url(${masterclassesmob.src})`,
-                        md: `url(${masterclassesimg.src})`,
-                    },
+                backgroundImage={{
+                    xs: masterclassesmob.src,
+                    md: masterclassesimg.src,
                 }}
             >
                 <Box

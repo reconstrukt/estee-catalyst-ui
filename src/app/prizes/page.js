@@ -1,10 +1,6 @@
 import { Box, Typography, Button, Stack } from '@mui/material';
 import Hero from '@/components/sections/Hero';
-import Link from 'next/link';
 import PageLayout from '@/components/layouts/PageLayout';
-import Image from 'next/image';
-
-import PrizesImage from '../../../assets/images/the-prizes.jpg';
 import prizesmob from '../../../assets/images/prizesmob.jpg';
 import prizes from '../../../assets/images/prizes.jpg';
 import Section from '@/components/sections/Section';
@@ -13,11 +9,9 @@ export default function ThePrizes() {
     return (
         <PageLayout>
             <Hero
-                sx={{
-                    backgroundImage: {
-                        xs: `url(${prizesmob.src})`,
-                        md: `url(${prizes.src})`,
-                    },
+                backgroundImage={{
+                    xs: prizesmob.src,
+                    md: prizes.src,
                 }}
             >
                 <Box

@@ -17,11 +17,9 @@ export default function FaqPage() {
     return (
         <PageLayout>
             <Hero
-                sx={{
-                    backgroundImage: {
-                        xs: `url(${faqmob.src})`,
-                        md: `url(${faq.src})`,
-                    },
+                backgroundImage={{
+                    xs: faqmob.src,
+                    md: faq.src,
                 }}
             >
                 <Box

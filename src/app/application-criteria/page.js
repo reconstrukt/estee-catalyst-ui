@@ -18,11 +18,9 @@ export default function ApplicationCriteria() {
     return (
         <PageLayout>
             <Hero
-                sx={{
-                    backgroundImage: {
-                        xs: `url(${criteriamob.src})`,
-                        md: `url(${criteria.src})`,
-                    },
+                backgroundImage={{
+                    xs: criteriamob.src,
+                    md: criteria.src,
                 }}
             >
                 <Box

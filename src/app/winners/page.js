@@ -12,11 +12,9 @@ export default function ContactUs() {
     return (
         <PageLayout>
             <Hero
-                sx={{
-                    backgroundImage: {
-                        xs: `url(${winmob.src})`,
-                        md: `url(${win.src})`,
-                    },
+                backgroundImage={{
+                    xs: winmob.src,
+                    md: win.src,
                 }}
             >
                 <Box

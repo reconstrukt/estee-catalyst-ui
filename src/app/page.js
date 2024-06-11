@@ -56,11 +56,9 @@ export default function Home() {
                     slidesToScroll={1}
                 >
                     <Hero
-                        sx={{
-                            backgroundImage: {
-                                xs: `url(${aboutmob.src})`,
-                                md: `url(${about.src})`,
-                            },
+                        backgroundImage={{
+                            xs: aboutmob.src,
+                            md: about.src,
                         }}
                     >
                         <Box
@@ -86,11 +84,9 @@ export default function Home() {
                     </Hero>
 
                     <Hero
-                        sx={{
-                            backgroundImage: {
-                                xs: `url(${applynowmob.src})`,
-                                md: `url(${applynow.src})`,
-                            },
+                        backgroundImage={{
+                            xs: applynowmob.src,
+                            md: applynow.src,
                         }}
                     >
                         <Box
@@ -116,11 +112,9 @@ export default function Home() {
                     </Hero>
 
                     <Hero
-                        sx={{
-                            backgroundImage: {
-                                xs: `url(${jurymob.src})`,
-                                md: `url(${jury.src})`,
-                            },
+                        backgroundImage={{
+                            xs: jurymob.src,
+                            md: jury.src,
                         }}
                     >
                         <Box
@@ -146,11 +140,9 @@ export default function Home() {
                     </Hero>
 
                     <Hero
-                        sx={{
-                            backgroundImage: {
-                                xs: `url(${tiktokmob.src})`,
-                                md: `url(${tiktok.src})`,
-                            },
+                        backgroundImage={{
+                            xs: tiktokmob.src,
+                            md: tiktok.src,
                         }}
                     >
                         <Box
@@ -253,11 +245,9 @@ export default function Home() {
             </Section>
 
             <Hero
-                sx={{
-                    backgroundImage: {
-                        xs: `url(${PrizesVImage.src})`,
-                        md: `url(${PrizesHImage.src})`,
-                    },
+                backgroundImage={{
+                    xs: PrizesVImage.src,
+                    md: PrizesHImage.src,
                 }}
             >
                 <Box

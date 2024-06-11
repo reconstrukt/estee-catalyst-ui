@@ -21,11 +21,9 @@ export default function ContactUs() {
     return (
         <PageLayout>
             <Hero
-                sx={{
-                    backgroundImage: {
-                        xs: `url(${jurymob.src})`,
-                        md: `url(${jury.src})`,
-                    },
+                backgroundImage={{
+                    xs: jurymob.src,
+                    md: jury.src,
                 }}
             >
                 <Box

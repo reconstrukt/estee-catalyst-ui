@@ -13,11 +13,9 @@ export default function ContactUs() {
     return (
         <PageLayout>
             <Hero
-                sx={{
-                    backgroundImage: {
-                        xs: `url(${contactmob.src})`,
-                        md: `url(${contact.src})`,
-                    },
+                backgroundImage={{
+                    xs: contactmob.src,
+                    md: contact.src,
                 }}
             >
                 <Box
