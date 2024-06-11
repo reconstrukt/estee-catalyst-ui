@@ -71,7 +71,12 @@ export default function ApplicationCriteria() {
                         alignItems: 'center',
                     }}
                 >
-                    <Typography variant="h2">CRITERIA</Typography>
+                    <Typography
+                        variant="h2"
+                        sx={{ width: '100%', textAlign: 'left' }}
+                    >
+                        CRITERIA
+                    </Typography>
 
                     <Typography
                         variant="body1"
@@ -103,8 +108,10 @@ export default function ApplicationCriteria() {
                             <li>Hair care</li>
                             <li>Fragrance</li>
                             <li>Home fragrance</li>
-                            <li>Creative storytelling – a visual concept,</li>
-                            <li>for example an exhibition, book, or film </li>
+                            <li>
+                                Creative storytelling – a visual concept, for
+                                example an exhibition, book, or film{' '}
+                            </li>
                             <li>Retail or experiential concept</li>
                         </ul>
                     </Typography>
@@ -121,7 +128,7 @@ export default function ApplicationCriteria() {
                     }}
                 >
                     <Stack>
-                        <Typography variant="h2">
+                        <Typography variant="h2" sx={{ textAlign: 'left' }}>
                             WHAT YOU WILL NEED TO COMPLETE YOUR APPLICATION
                         </Typography>
                         <Typography
@@ -130,8 +137,10 @@ export default function ApplicationCriteria() {
                                 a: {
                                     textDecoration: 'underline',
                                 },
+                                textAlign: 'left',
                             }}
                         >
+                            <br />
                             (may very depending on category, please review of{' '}
                             <Link href="/terms-and-conditions">
                                 Terms & Conditions
@@ -168,10 +177,11 @@ export default function ApplicationCriteria() {
                         following points in your summary:
                         <br />
                         <ul>
+                            <li>Vision for beauty – What inspires you.</li>
                             <li>
-                                Vision for Beauty—What inspires you. Market
-                                opportunity – why you have identified this area
-                                as a space you feel would benefit from your idea
+                                Market opportunity – why you have identified
+                                this area as a space you feel would benefit from
+                                your idea
                             </li>
                             <li>
                                 Problem and solution – what problem your idea
@@ -188,7 +198,7 @@ export default function ApplicationCriteria() {
                                 deserving of fundingA Tiktok (or other video
                                 submission if Tiktok is not available)
                                 explaining Your Vision for Beauty and tagged
-                                #JointheCatalysts.
+                                #JoinTheCatalysts
                             </li>
                         </ul>
                     </Typography>
