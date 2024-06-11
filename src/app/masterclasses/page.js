@@ -412,7 +412,6 @@ export default function Masterclasses() {
                                                     height: '100%',
                                                     objectFit: 'cover',
                                                     objectPosition: 'center',
-                                                    filter: 'grayscale(1)',
                                                 }}
                                             />
                                         )}

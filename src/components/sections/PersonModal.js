@@ -49,7 +49,6 @@ export default function PersonModal({ selected, setSelected, all }) {
                                         height: '100%',
                                         objectFit: 'cover',
                                         objectPosition: 'center',
-                                        filter: 'grayscale(1)',
                                     }}
                                 />
                             </Box>
@@ -83,7 +82,6 @@ export default function PersonModal({ selected, setSelected, all }) {
                             height: '100%',
                             objectFit: 'cover',
                             objectPosition: 'center',
-                            filter: 'grayscale(1)',
                         }}
                     />
                 </Box>
@@ -152,7 +150,6 @@ export default function PersonModal({ selected, setSelected, all }) {
                                                 height: '100%',
                                                 objectFit: 'cover',
                                                 objectPosition: 'center',
-                                                filter: 'grayscale(1)',
                                             }}
                                         />
                                     </Box>

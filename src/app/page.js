@@ -473,7 +473,6 @@ export default function Home() {
                                                             objectFit: 'cover',
                                                             objectPosition:
                                                                 'center',
-                                                            filter: 'grayscale(1)',
                                                         }}
                                                     />
                                                 )}

@@ -1,17 +1,17 @@
-import alexb from 'assets/experts/alexb.jpg';
-import alexs from 'assets/experts/alexs.jpg';
-import catherine from 'assets/experts/catherine.jpg';
-import dom from 'assets/experts/dom.jpg';
-import fenn from 'assets/experts/fenn.jpg';
-import joanna from 'assets/experts/joanna.jpg';
-import marina from 'assets/experts/marina.jpg';
-import montague from 'assets/experts/montague.jpg';
-import nellie from 'assets/experts/nellie.jpg';
-import shar from 'assets/experts/shar.jpg';
-import sophie from 'assets/experts/sophie.jpg';
-import sunday from 'assets/experts/sunday.jpg';
-import tendai from 'assets/experts/tendai.jpg';
-import yasmin from 'assets/experts/yasmin.jpg';
+import alexb from 'assets/experts/Alex Brownsell.jpg';
+import alexs from 'assets/experts/Alex Sossah.jpg';
+import catherine from 'assets/experts/Catherine Pelton.jpg';
+import dom from 'assets/experts/Dom Bridges.jpg';
+import fenn from 'assets/experts/Fenn O Meally.jpg';
+import joanna from 'assets/experts/Joanna Ellner.jpg';
+import marina from 'assets/experts/Marina Mansour.jpg';
+import montague from 'assets/experts/Montague Ashley Craic.jpg';
+import nellie from 'assets/experts/Nellie Eden.jpg';
+import sharmadean from 'assets/experts/Sharmadean Reid.jpg';
+import sophie from 'assets/experts/Sophie Carbonari.jpg';
+import sunday from 'assets/experts/Sunday Riley.jpg';
+import tendai from 'assets/experts/Tendai Moyo.jpg';
+import yasmin from 'assets/experts/Yasmin Sewell.jpg';
 
 const experts = [
     {
@@ -161,7 +161,7 @@ const experts = [
     },
 
     {
-        image: shar,
+        image: sharmadean,
         name: 'SHARMADEAN REID',
         title: (
             <>
