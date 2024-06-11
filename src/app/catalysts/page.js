@@ -10,6 +10,10 @@ import VanessaImage from '../../../assets/images/vanessa.jpeg';
 import NIVLogo from '../../../assets/svg/NIVLogo.svg';
 import TikTokLogo from '../../../assets/svg/TikTokLogo.svg';
 
+export const metadata = {
+    title: 'About - The Catalysts',
+};
+
 export default function Catalysts() {
     return (
         <PageLayout transparentHeader={false}>

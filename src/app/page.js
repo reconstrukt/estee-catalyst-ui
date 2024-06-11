@@ -453,8 +453,8 @@ export default function Home() {
                                                         md: 222,
                                                     },
                                                     height: {
-                                                        xs: 217,
-                                                        md: 277,
+                                                        xs: 300,
+                                                        md: 394,
                                                     },
                                                     display: 'flex',
                                                     alignItems: 'center',
@@ -502,7 +502,7 @@ export default function Home() {
                     <Box>
                         <Link href="/jury">
                             <Button variant="outlined" color="black">
-                                READ MORE
+                                FULL JURY
                             </Button>
                         </Link>
                     </Box>

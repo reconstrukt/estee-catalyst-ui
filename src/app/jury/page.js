@@ -64,8 +64,8 @@ export default function ContactUs() {
                                             md: 222,
                                         },
                                         height: {
-                                            xs: 217,
-                                            md: 277,
+                                            xs: 300,
+                                            md: 394,
                                         },
                                         display: 'flex',
                                         alignItems: 'center',

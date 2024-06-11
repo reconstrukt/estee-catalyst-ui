@@ -1,19 +1,20 @@
-import carlos from 'assets/judges/carlos.webp';
-import courtney from 'assets/judges/courtney.webp';
-import hung from 'assets/judges/hung.webp';
-import ruba from 'assets/judges/ruba.webp';
-import sallyann from 'assets/judges/sallyann.webp';
-import shana from 'assets/judges/shana.webp';
-import thomas from 'assets/judges/thomas.webp';
-import vanessa from 'assets/judges/vanessa.webp';
-import eugene from 'assets/judges/eugene.webp';
-import fabien from 'assets/judges/fabien.jpg';
-import julia from 'assets/judges/julia.jpeg';
-import michelle from 'assets/judges/michelle.jpeg';
-import francisco from 'assets/judges/francisco.jpg';
-
-import grace from 'assets/judges/grace.webp';
-import mitchell from 'assets/judges/mitchell.webp';
+import carlos from 'assets/judges/Carlos Nazario.jpg';
+import courtney from 'assets/judges/Courtney Mchugh.jpg';
+import drew from 'assets/judges/Drew Elliott.jpg';
+import eugene from 'assets/judges/Eugene Souleiman.jpg';
+import fabien from 'assets/judges/Fabien Baron.jpg';
+import franscisco from 'assets/judges/Franscisco Costa.jpg';
+import grace from 'assets/judges/Grace Choi.jpg';
+import hung from 'assets/judges/Hung Vangoo.jpg';
+import julia from 'assets/judges/Julia Jamois.jpg';
+import michelle from 'assets/judges/Michelle Lamy.jpg';
+import mitchell from 'assets/judges/Mitchell Halliday.jpg';
+import ruba from 'assets/judges/Ruba Abu-Nimah.jpg';
+import sallyann from 'assets/judges/Sallyann Houghton.jpg';
+import shana from 'assets/judges/Shana Randhava.jpg';
+import thomas from 'assets/judges/Thomas Roussel A.jpg';
+import vanessa from 'assets/judges/Vanessa Craft.jpg';
+import violet from 'assets/judges/Violet Chachki.jpg';
 
 const judges = [
     {
@@ -40,7 +41,7 @@ const judges = [
     {
         includeOnHome: true,
         image: michelle,
-        name: 'MICHELE LAMY',
+        name: 'MICHÈLE LAMY',
         copy: `Michèle Lamy is an artist, entrepreneur, producer, collaborator, performer and the co-founder of Owenscorp, along with her life partner Rick Owens. In 2014, Lamy created 'LAMYLAND,' an umbrella term for her independent creative endeavours, bringing together experimentation, collaboration, storytelling, and creation. She has worked on projects at renowned institutions and art fairs, including the Museum of Contemporary Art, Los Angeles, Frieze London, the Venice Biennale, and more.`,
     },
 
@@ -57,15 +58,9 @@ const judges = [
     },
 
     {
-        image: '',
+        image: violet,
         name: 'VIOLET CHACHKI',
         copy: `The winner of RuPaul’s Drag Race season seven, Violet Chachki is a trailblazing drag queen, burlesque performer, aerial artist, model and recording artist. The first drag artist to attend the Met Gala, Chachki has collaborated with leading brands including Prada, Moschino, Jean Paul Gaultier, and Miu Miu, and this summer will have a residency at famed Parisian cabaret club Crazy Horse.`,
-    },
-
-    {
-        image: ruba,
-        name: 'RUBA ABU-NIMAH',
-        copy: `Ruba Abu-Nimah is an award-winning New York-based creative director, design and experiential curator, editor, and currently Brand Creative Director of Moncler. Ruba has held lead creative positions including Executive Creative Director of Tiffany & Co., Global Creative Director at Revlon and Shiseido, and Creative Director of ELLE Magazine.`,
     },
 
     {
@@ -75,7 +70,7 @@ const judges = [
     },
 
     {
-        image: francisco,
+        image: franscisco,
         name: 'FRANCISCO COSTA',
         copy: `After serving as the creative director of Calvin Klein womenswear for 13 years, in 2016 Francisco Costa returned to his home country of Brazil. There, he launched Costa Brazil, an eco-forward skincare and fragrance line inspired by local healing rituals that works in partnership with local cooperatives and scientists, ensuring protection of both body and Earth. As well as being an avid environmentalist, Costa is engaged in numerous social causes in Brazil and around the world.`,
     },
@@ -117,7 +112,7 @@ const judges = [
     },
 
     {
-        image: '',
+        image: drew,
         name: 'DREW ELLIOTT',
         copy: `Drew Elliott leads M∙A∙C Cosmetics’ creative vision as Senior Vice President, Global Creative Director while also serving as Strategic Creative Advisor for Too Faced Cosmetics. At the creative helm of M·A·C Cosmetics, Drew is responsible for elevating the brand’s creative identity and trendsetting authority across all touch points of the consumer journey including retail, digital, packaging, visual merchandising, and multiplatform experiences.`,
     },
