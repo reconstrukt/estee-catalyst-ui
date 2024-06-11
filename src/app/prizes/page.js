@@ -96,9 +96,9 @@ export default function ThePrizes() {
                             AWARENESS:
                         </Typography>
                         <Typography variant="body1">
-                            National and international press for the winners,
-                            along with amplification on the Estée Lauder
-                            Companies platforms.
+                            International press for the winners, along with
+                            amplification on the Estée Lauder Companies
+                            platforms.
                         </Typography>
                     </Box>
                 </Stack>

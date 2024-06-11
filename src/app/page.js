@@ -103,18 +103,14 @@ export default function Home() {
                                 CALLING ALL VISIONARIES
                             </Typography>
                             <Typography variant="subtitle1">
-                                {/* New incubation ventures signature program
-                                <br />
-                                for beauty start-ups in the world. */}
+                                This is what you need to know before applying
                             </Typography>
                             <Box mt={2}>
-                                <Button
-                                    variant="outlined"
-                                    color="white"
-                                    onClick={() => setDialogOpen(true)}
-                                >
-                                    APPLY NOW
-                                </Button>
+                                <Link href="/application-criteria">
+                                    <Button variant="outlined" color="white">
+                                        LEARN MORE
+                                    </Button>
+                                </Link>
                             </Box>
                         </Box>
                     </Hero>
@@ -164,7 +160,7 @@ export default function Home() {
                             }}
                         >
                             <Typography variant="h1" mb={1}>
-                                CREATED WITH SUPPORT FROM TIKTOK
+                                SUPPORTED BY TIKTOK
                             </Typography>
                             <Typography variant="subtitle1">
                                 A unique opportunity to get your brand seen by
@@ -348,9 +344,9 @@ export default function Home() {
                             AWARENESS:
                         </Typography>
                         <Typography variant="body1">
-                            National and international press for the winners,
-                            along with amplification on the Estée Lauder
-                            Companies platforms.
+                            International press for the winners, along with
+                            amplification on the Estée Lauder Companies
+                            platforms.
                         </Typography>
                     </Box>
                 </Stack>

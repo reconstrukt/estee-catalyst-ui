@@ -445,6 +445,7 @@ export default function Masterclasses() {
                         selected={selectedJudge}
                         all={experts}
                         setSelected={setSelectedJudge}
+                        nextPersonText="NEXT EXPERT"
                     />
                 )}
             </TheDialog>

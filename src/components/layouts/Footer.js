@@ -49,7 +49,7 @@ export default function Footer() {
                         </Stack>
 
                         <Stack spacing={2}>
-                            <Typography>With support from TikTok</Typography>
+                            <Typography>With support from</Typography>
                             <Link href="https://www.tiktok.com" target="_blank">
                                 <TikTokLogo />
                             </Link>
@@ -105,7 +105,7 @@ export default function Footer() {
                     >
                         <Stack spacing={2.5}>
                             <Box>
-                                <Link href="/about">ABOUT US</Link>
+                                <Link href="/catalysts">ABOUT US</Link>
                             </Box>
                             <Box>
                                 <Link href="/faq">FAQ</Link>

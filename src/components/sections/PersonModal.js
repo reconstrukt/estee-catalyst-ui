@@ -2,7 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Box, Stack, ButtonBase, Typography } from '@mui/material';
 import Image from 'next/image';
 
-export default function PersonModal({ selected, setSelected, all }) {
+export default function PersonModal({
+    selected,
+    setSelected,
+    all,
+    nextPersonText = 'NEXT JURY MEMBER',
+}) {
     const [nextJudge, setNextJudge] = useState(null);
 
     useEffect(() => {
@@ -108,7 +113,7 @@ export default function PersonModal({ selected, setSelected, all }) {
                         }}
                     >
                         <Typography variant="h4" sx={{ mb: 8 }}>
-                            NEXT JUDGE
+                            {nextPersonText}
                         </Typography>
 
                         <Box>
