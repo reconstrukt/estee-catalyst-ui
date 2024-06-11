@@ -59,22 +59,6 @@ export default function FaqPage() {
                                 },
                             }}
                         >
-                            Participation is open only to creators who are legal
-                            residents of their country of residence, are at
-                            least 21 years of age and have attained the age of
-                            majority in their state, country or province of
-                            residence. RESIDENTS OF ANY COUNTRY CURRENTLY
-                            EMBARGOED OR SANCTIONED BY THE UNITED STATES ARE NOT
-                            ELIGIBLE TO PARTICIPATE IN THE CONTEST AND THE
-                            CONTEST IS VOID IN THESE JURISDICTIONS AND WHERE
-                            PROHIBITED (COLLECTIVELY, “INELIGIBLE COUNTRIES”).
-                            For the full eligibility requirements, please review
-                            the{' '}
-                            <Link href="/terms-and-conditions">
-                                Terms & Conditions
-                            </Link>{' '}
-                            <br />
-                            <br />
                             Applications should be in the beauty category and
                             can fall under any one or more of the below
                             subcategories:
@@ -90,6 +74,22 @@ export default function FaqPage() {
                                     for example an exhibition, book, or film{' '}
                                 </li>
                             </ul>
+                            <br />
+                            <br />
+                            Participation is open only to creators who are legal
+                            residents of their country of residence, are at
+                            least 21 years of age and have attained the age of
+                            majority in their state, country or province of
+                            residence. Residents of any country currently
+                            embargoed or sanctioned by the United States are not
+                            eligible to participate in the contest and the
+                            contest is void in these jurisdictions and where
+                            prohibited (collectively, “ineligible countries”).
+                            For the full eligibility requirements, please review
+                            the{' '}
+                            <Link href="/terms-and-conditions">
+                                Terms & Conditions
+                            </Link>
                         </Box>
                     </AccordionDetails>
                 </Accordion>
@@ -120,7 +120,7 @@ export default function FaqPage() {
 
                 <Accordion>
                     <AccordionSummary>
-                        I have an idea for a brand/product/etc but I haven't
+                        I have an idea for a brand/product/etc but I haven’t
                         launched it yet, am I eligible?
                     </AccordionSummary>
                     <AccordionDetails>
