@@ -188,7 +188,8 @@ export default function Header({ transparentHeader }) {
                     overflowY: 'scroll',
                 }}
             >
-                <Box
+                <Stack
+                    justifyContent="center"
                     sx={{
                         width: '100%',
                         minHeight: '100%',
@@ -217,7 +218,7 @@ export default function Header({ transparentHeader }) {
                         <Box>
                             <Link href="/catalysts">
                                 <Typography variant="menu">
-                                    THE CATALYSTS
+                                    ABOUT THE CATALYSTS
                                 </Typography>
                             </Link>
                         </Box>
@@ -268,7 +269,7 @@ export default function Header({ transparentHeader }) {
                             </Link>
                         </Box>
                     </Stack>
-                </Box>
+                </Stack>
             </Box>
         </Box>
     );
