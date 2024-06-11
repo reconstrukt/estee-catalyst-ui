@@ -1,8 +1,17 @@
-import lecture from '../../assets/images/lecture.jpg';
+import episode15 from 'assets/episodes/Episode-15.jpg';
+import episode16 from 'assets/episodes/Episode-16.jpg';
+import episode17 from 'assets/episodes/Episode-17.jpg';
+import episode18 from 'assets/episodes/Episode-18.jpg';
+import episode19 from 'assets/episodes/Episode-19.jpg';
+import episode20 from 'assets/episodes/Episode-20.jpg';
+import episode21 from 'assets/episodes/Episode-21.jpg';
+import episode22 from 'assets/episodes/Episode-22.jpg';
+import episode23 from 'assets/episodes/Episode-23.jpg';
+import episode24 from 'assets/episodes/Episode-24.jpg';
 
 const masterclasses = [
     {
-        thumb: lecture,
+        thumb: episode15,
         lesson: 'EPISODE 1',
         title: 'Defining brand vision',
         copy: `A lasting business has a strong brand identity. In this Masterclass, uncover the creative process behind some of the most disruptive and visionary beauty brands. Hear how our experts find inspiration using moodboards, music, mission statements and more to capture what their brand stands for. `,
@@ -10,7 +19,7 @@ const masterclasses = [
     },
 
     {
-        thumb: lecture,
+        thumb: episode16,
         lesson: 'EPISODE 2',
         title: 'Building a community',
         copy: `Your community is a key asset in building a beauty brand – but how do you identify and reach them in an authentic way? In this Masterclass, uncover the strategies to leverage your community, plus techniques for communicating with your audience. `,
@@ -18,7 +27,7 @@ const masterclasses = [
     },
 
     {
-        thumb: lecture,
+        thumb: episode17,
         lesson: 'EPISODE 3',
         title: 'Brand strategy for growth',
         copy: `Knowing the white space you want your brand to occupy in the market is critical for every future decision your business will have to make. Are you creating a luxury brand? A sustainable brand? Who is your target customer and where do they shop? Is price your winning factor, or is it packaging? This Masterclass will help you to define your brand strategy, creating a north star for success. `,
