@@ -9,6 +9,8 @@ import ShanaImage from '../../../assets/images/shana.jpg';
 import VanessaImage from '../../../assets/images/vanessa.jpeg';
 import NIVLogo from '../../../assets/svg/NIVLogo.svg';
 import TikTokLogo from '../../../assets/svg/TikTokLogo.svg';
+import NIVLargeLogo from '../../../assets/svg/NIVLargeLogo.svg';
+import TikTokStacked from '../../../assets/svg/TikTokStacked.svg';
 
 export const metadata = {
     title: 'About - The Catalysts',
@@ -88,13 +90,32 @@ export default function Catalysts() {
                             flex: {
                                 md: '1 0 50%',
                             },
-                            backgroundImage: `url(${ShanaImage.src})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
+                            backgroundColor: 'black.main',
+                            color: 'white.main',
 
                             textAlign: 'center',
                         }}
-                    ></Box>
+                    >
+                        <Stack
+                            sx={{
+                                height: '100%',
+                                width: '100%',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                            }}
+                        >
+                            <Box
+                                sx={{
+                                    height: '80%',
+                                    width: '80%',
+                                    maxWidth: 500,
+                                    maxHeight: 500,
+                                }}
+                            >
+                                <NIVLargeLogo width="100%" height="100%" />
+                            </Box>
+                        </Stack>
+                    </Box>
 
                     <Box
                         sx={{
@@ -195,13 +216,31 @@ export default function Catalysts() {
                             flex: {
                                 md: '1 0 50%',
                             },
-                            backgroundImage: `url(${VanessaImage.src})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
 
                             textAlign: 'center',
+                            backgroundColor: 'black.main',
                         }}
-                    ></Box>
+                    >
+                        <Stack
+                            sx={{
+                                height: '100%',
+                                width: '100%',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                            }}
+                        >
+                            <Box
+                                sx={{
+                                    height: '80%',
+                                    width: '80%',
+                                    maxWidth: 400,
+                                    maxHeight: 400,
+                                }}
+                            >
+                                <TikTokStacked width="100%" height="100%" />
+                            </Box>
+                        </Stack>
+                    </Box>
 
                     <Box
                         sx={{

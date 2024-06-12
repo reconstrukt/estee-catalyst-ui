@@ -37,9 +37,9 @@ const judges = [
         name: 'VANESSA CRAFT',
         title: (
             <>
-                SVP, New Incubation Ventures
+                Global Head Content Partnerships
                 <br />
-                The Estée Lauder Companies
+                TikTok
             </>
         ),
         copy: `As TikTok’s Global Head of Content Partnerships, Vanessa Craft is a champion of next-gen talent. She is responsible for building engaged communities, directing game-changing content, and driving innovative business strategies for TikTok’s top Global partners across Fashion, Entertainment, Lifestyle, Education and Sports – as well as spearheading TikTok's first sponsorship of the 2024 Met Gala.`,
@@ -61,7 +61,7 @@ const judges = [
 
     {
         includeOnHome: true,
-        image: drew,
+        image: mitchell,
         name: 'MITCHELL HALLIDAY',
         title: (
             <>

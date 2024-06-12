@@ -94,7 +94,13 @@ export default function ContactUs() {
                                     >
                                         {item.name}
                                     </Typography>
-                                    <Typography variant="body1">
+                                    <Typography
+                                        variant="body1"
+                                        sx={{
+                                            fontSize: '20px !important',
+                                            whiteSpace: 'nowrap',
+                                        }}
+                                    >
                                         {item.title}
                                     </Typography>
                                 </Box>
