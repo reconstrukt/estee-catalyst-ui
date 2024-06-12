@@ -14,6 +14,7 @@ export default function Hero({ backgroundImage, children, sx }) {
                 justifyContent: 'center',
                 alignItems: 'center',
                 position: 'relative',
+                textShadow: '0px 0px 30px #0000004D',
 
                 ...sx,
             }}
@@ -86,7 +87,6 @@ export default function Hero({ backgroundImage, children, sx }) {
                 sx={{
                     position: 'relative',
                     zIndex: 10,
-                    textShadow: '0px 0px 30px #0000004D',
                 }}
             >
                 {children}
