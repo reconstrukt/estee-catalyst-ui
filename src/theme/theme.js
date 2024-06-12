@@ -193,6 +193,40 @@ const theme = createTheme({
 
                 outlinedWhite: {
                     borderColor: palette.white.main,
+                    transition: 'all 0.2s ease',
+
+                    '&:hover': {
+                        background: palette.white.main,
+                        borderColor: palette.white.main,
+                        color: palette.black.main,
+                    },
+                },
+
+                outlinedBlack: {
+                    borderColor: palette.black.main,
+                    transition: 'all 0.2s ease',
+
+                    '&:hover': {
+                        background: palette.black.main,
+                        borderColor: palette.black.main,
+                        color: palette.white.main,
+                    },
+                },
+
+                textBlack: {
+                    '&:hover': {
+                        background: palette.black.main,
+                        borderColor: palette.black.main,
+                        color: palette.white.main,
+                    },
+                },
+
+                textWhite: {
+                    '&:hover': {
+                        background: palette.white.main,
+                        borderColor: palette.white.main,
+                        color: palette.black.main,
+                    },
                 },
 
                 containedBlack: {
