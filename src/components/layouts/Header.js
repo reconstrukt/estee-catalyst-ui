@@ -158,8 +158,20 @@ export default function Header({ transparentHeader }) {
                             }
                             endIcon={menuOpen ? <CloseIcon /> : <MenuIcon />}
                             onClick={toggleMenu}
+                            sx={{
+                                minWidth: {
+                                    xs: 0,
+                                    md: 64,
+                                },
+                                '& span.text': {
+                                    display: {
+                                        xs: 'none',
+                                        md: 'block',
+                                    },
+                                },
+                            }}
                         >
-                            MENU
+                            <span className="text">MENU</span>
                         </Button>
                     </Box>
                 </Box>
