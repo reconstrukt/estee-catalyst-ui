@@ -69,7 +69,8 @@ export default function ApplicationCriteria() {
                 >
                     <Box
                         sx={{
-                            maxWidth: 668,
+                            maxWidth: 600,
+                            px: 5,
                             textAlign: 'left',
                         }}
                     >
@@ -126,7 +127,8 @@ export default function ApplicationCriteria() {
                 >
                     <Box
                         sx={{
-                            maxWidth: 668,
+                            maxWidth: 600,
+                            px: 5,
                             textAlign: 'left',
                         }}
                     >
