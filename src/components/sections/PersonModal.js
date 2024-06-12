@@ -106,6 +106,8 @@ export default function PersonModal({
 
                 {nextJudge && (
                     <Box
+                        pt={20}
+                        pb={20}
                         sx={{
                             maxWidth: 222,
                             margin: 'auto',
