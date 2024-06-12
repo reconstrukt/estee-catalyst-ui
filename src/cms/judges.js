@@ -23,7 +23,9 @@ const judges = [
         name: 'SHANA RANDHAVA',
         title: (
             <>
-                SVP, New Incubation Ventures
+                SVP
+                <br />
+                New Incubation Ventures
                 <br />
                 The Estée Lauder Companies
             </>
