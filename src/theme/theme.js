@@ -135,6 +135,17 @@ const typography = {
         },
     },
 
+    body20: {
+        fontFamily: GaramondFont.style.fontFamily,
+        fontSize: 20,
+        lineHeight: '1em',
+
+        [defaultTheme.breakpoints.up('md')]: {
+            fontSize: 20,
+            lineHeight: '22.8px',
+        },
+    },
+
     body2: {
         fontFamily: HelveticaNowFont.style.fontFamily,
         fontSize: 16,

@@ -107,7 +107,11 @@ export default function NewsletterForm() {
                                 />
                             }
                             label={
-                                <Typography variant="button" color="black">
+                                <Typography
+                                    variant="button"
+                                    color="black"
+                                    sx={{ fontSize: 12 }}
+                                >
                                     BY CHECKING THIS BOX AND CLICKING SIGN UP, I
                                     AGREE TO THE TERMS AND CONDITIONS AND
                                     PRIVACY POLICY.

@@ -39,7 +39,9 @@ export default function Footer() {
                 >
                     <Stack spacing={4}>
                         <Stack spacing={2}>
-                            <Typography>The Catalysts is created by</Typography>
+                            <Typography variant="body20">
+                                The Catalysts is created by
+                            </Typography>
                             <Link
                                 href="https://newincubationventures.com/"
                                 target="_blank"
@@ -49,14 +51,18 @@ export default function Footer() {
                         </Stack>
 
                         <Stack spacing={2}>
-                            <Typography>With support from</Typography>
+                            <Typography variant="body20">
+                                With support from
+                            </Typography>
                             <Link href="https://www.tiktok.com" target="_blank">
                                 <TikTokLogo />
                             </Link>
                         </Stack>
 
                         <Stack spacing={2}>
-                            <Typography>Executive Producer</Typography>
+                            <Typography variant="body20">
+                                Executive Producer
+                            </Typography>
                             <Link
                                 href="https://www.idexcap.com"
                                 target="_blank"
@@ -77,7 +83,9 @@ export default function Footer() {
                     }}
                 >
                     <Stack spacing={2}>
-                        <Typography>Sign up to Our Newsletter</Typography>
+                        <Typography variant="body20">
+                            Sign up to Our Newsletter
+                        </Typography>
                         <NewsletterForm />
                     </Stack>
                 </Box>
@@ -100,7 +108,7 @@ export default function Footer() {
                                 md: 'space-evenly',
                             },
                             fontFamily: HelveticaNowFont.style.fontFamily,
-                            fontSize: 16,
+                            fontSize: 12,
                         }}
                     >
                         <Stack spacing={2.5}>
