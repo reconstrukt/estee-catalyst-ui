@@ -69,50 +69,51 @@ export default function ApplicationCriteria() {
                         alignItems: 'center',
                     }}
                 >
-                    <Typography
-                        variant="h2"
-                        sx={{ width: '100%', textAlign: 'left' }}
-                    >
-                        CRITERIA
-                    </Typography>
-
-                    <Typography
-                        variant="body1"
+                    <Box
                         sx={{
                             maxWidth: 668,
                             textAlign: 'left',
-
-                            '& ul': {
-                                paddingLeft: '20px',
-                            },
-
-                            '& li': {
-                                fontSize: 20,
-                            },
                         }}
                     >
-                        1. Applicants to The Catalysts 2024 must be at least 21
-                        years of age, as of December 31st 2023.
-                        <br />
-                        <br />
-                        2. Applications should be submitting ideas and business
-                        plans focused on the following categories:
-                        <br />
-                        <br />
-                        <ul>
-                            <li>Makeup</li>
-                            <li>Skin care</li>
-                            <li>Body care</li>
-                            <li>Hair care</li>
-                            <li>Fragrance</li>
-                            <li>Home fragrance</li>
-                            <li>
-                                Creative storytelling – a visual concept, for
-                                example an exhibition, book, or film{' '}
-                            </li>
-                            <li>Retail or experiential concept</li>
-                        </ul>
-                    </Typography>
+                        <Typography variant="h2" sx={{ mb: 4 }}>
+                            CRITERIA
+                        </Typography>
+
+                        <Typography
+                            variant="body1"
+                            sx={{
+                                '& ul': {
+                                    paddingLeft: '20px',
+                                },
+
+                                '& li': {
+                                    fontSize: 20,
+                                },
+                            }}
+                        >
+                            1. Applicants to The Catalysts 2024 must be at least
+                            21 years of age, as of December 31st 2023.
+                            <br />
+                            <br />
+                            2. Applications should be submitting ideas and
+                            business plans focused on the following categories:
+                            <br />
+                            <br />
+                            <ul>
+                                <li>Makeup</li>
+                                <li>Skin care</li>
+                                <li>Body care</li>
+                                <li>Hair care</li>
+                                <li>Fragrance</li>
+                                <li>Home fragrance</li>
+                                <li>
+                                    Creative storytelling – a visual concept,
+                                    for example an exhibition, book, or film{' '}
+                                </li>
+                                <li>Retail or experiential concept</li>
+                            </ul>
+                        </Typography>
+                    </Box>
                 </Stack>
 
                 <Stack
@@ -125,81 +126,86 @@ export default function ApplicationCriteria() {
                         alignItems: 'center',
                     }}
                 >
-                    <Stack>
-                        <Typography variant="h2" sx={{ textAlign: 'left' }}>
-                            WHAT YOU WILL NEED TO COMPLETE YOUR APPLICATION
-                        </Typography>
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                a: {
-                                    textDecoration: 'underline',
-                                },
-                                textAlign: 'left',
-                            }}
-                        >
-                            <br />
-                            (may very depending on category, please review of{' '}
-                            <Link href="/terms-and-conditions">
-                                Terms & Conditions
-                            </Link>{' '}
-                            for full details)
-                        </Typography>
-                    </Stack>
-
-                    <Typography
-                        variant="body1"
+                    <Box
                         sx={{
                             maxWidth: 668,
                             textAlign: 'left',
-
-                            '& ul': {
-                                paddingLeft: '20px',
-                            },
-                            '& li': {
-                                fontSize: 20,
-                            },
                         }}
                     >
-                        1. Company details, if applicable
-                        <br />
-                        <br />
-                        2. Country of residence
-                        <br />
-                        <br />
-                        3. Links to your social channels
-                        <br />
-                        <br />
-                        4. One page executive summary about your business, idea
-                        or creative work. Please make sure you cover the
-                        following points in your summary:
-                        <br />
-                        <ul>
-                            <li>Vision for beauty – What inspires you.</li>
-                            <li>
-                                Market opportunity – why you have identified
-                                this area as a space you feel would benefit from
-                                your idea
-                            </li>
-                            <li>
-                                Problem and solution – what problem your idea
-                                will solve, or what gap it would fill
-                            </li>
-                            <li>Brand, product or experience idea</li>
-                            <li>Your audience or community</li>
-                            <li>
-                                Distribution plan – where you see your product
-                                being sold, and on which channels
-                            </li>
-                            <li>
-                                Why your company should win – what makes you
-                                deserving of fundingA Tiktok (or other video
-                                submission if Tiktok is not available)
-                                explaining Your Vision for Beauty and tagged
-                                #JoinTheCatalysts
-                            </li>
-                        </ul>
-                    </Typography>
+                        <Stack mb={4}>
+                            <Typography variant="h2">
+                                WHAT YOU WILL NEED TO COMPLETE YOUR APPLICATION
+                            </Typography>
+                            <Typography
+                                variant="body1"
+                                sx={{
+                                    a: {
+                                        textDecoration: 'underline',
+                                    },
+                                    textAlign: 'left',
+                                }}
+                            >
+                                <br />
+                                (may very depending on category, please review
+                                of{' '}
+                                <Link href="/terms-and-conditions">
+                                    Terms & Conditions
+                                </Link>{' '}
+                                for full details)
+                            </Typography>
+                        </Stack>
+
+                        <Typography
+                            variant="body1"
+                            sx={{
+                                '& ul': {
+                                    paddingLeft: '20px',
+                                },
+                                '& li': {
+                                    fontSize: 20,
+                                },
+                            }}
+                        >
+                            1. Company details, if applicable
+                            <br />
+                            <br />
+                            2. Country of residence
+                            <br />
+                            <br />
+                            3. Links to your social channels
+                            <br />
+                            <br />
+                            4. One page executive summary about your business,
+                            idea or creative work. Please make sure you cover
+                            the following points in your summary:
+                            <br />
+                            <ul>
+                                <li>Vision for beauty – What inspires you.</li>
+                                <li>
+                                    Market opportunity – why you have identified
+                                    this area as a space you feel would benefit
+                                    from your idea
+                                </li>
+                                <li>
+                                    Problem and solution – what problem your
+                                    idea will solve, or what gap it would fill
+                                </li>
+                                <li>Brand, product or experience idea</li>
+                                <li>Your audience or community</li>
+                                <li>
+                                    Distribution plan – where you see your
+                                    product being sold, and on which channels
+                                </li>
+                                <li>
+                                    Why your company should win – what makes you
+                                    deserving of fundingA Tiktok (or other video
+                                    submission if Tiktok is not available)
+                                    explaining Your Vision for Beauty and tagged
+                                    #JoinTheCatalysts
+                                </li>
+                            </ul>
+                        </Typography>
+                    </Box>
                 </Stack>
             </Stack>
 
