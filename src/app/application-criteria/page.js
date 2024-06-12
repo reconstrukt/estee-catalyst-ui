@@ -30,9 +30,7 @@ export default function ApplicationCriteria() {
                     }}
                 >
                     <Typography variant="h1" mb={1}>
-                        APPLICATION
-                        <br />
-                        CRITERIA
+                        APPLICATION CRITERIA
                     </Typography>
                     <Typography variant="subtitle1">
                         What you need to know before applying
