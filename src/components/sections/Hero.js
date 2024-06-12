@@ -18,62 +18,70 @@ export default function Hero({ backgroundImage, children, sx }) {
                 ...sx,
             }}
         >
-            <Box
-                sx={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    zIndex: 1,
-                    display: {
-                        xs: 'block',
-                        md: 'none',
-                    },
-                }}
-            >
-                <Image
-                    alt=""
-                    src={backgroundImage.xs}
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        objectPosition: 'center center',
-                    }}
-                />
-            </Box>
-            <Box
-                sx={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    zIndex: 1,
-                    display: {
-                        xs: 'none',
-                        md: 'block',
-                    },
-                }}
-            >
-                <Image
-                    alt=""
-                    src={backgroundImage.md}
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        objectPosition: 'center center',
-                    }}
-                />
-            </Box>
+            {backgroundImage && (
+                <>
+                    <Box
+                        sx={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100%',
+                            zIndex: 1,
+                            display: {
+                                xs: 'block',
+                                md: 'none',
+                            },
+                        }}
+                    >
+                        <Image
+                            alt=""
+                            src={backgroundImage.xs}
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                                objectPosition: 'center center',
+                            }}
+                        />
+                    </Box>
+                    <Box
+                        sx={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100%',
+                            zIndex: 1,
+                            display: {
+                                xs: 'none',
+                                md: 'block',
+                            },
+                        }}
+                    >
+                        <Image
+                            alt=""
+                            src={
+                                backgroundImage.md
+                                    ? backgroundImage.md
+                                    : backgroundImage.xs
+                            }
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                                objectPosition: 'center center',
+                            }}
+                        />
+                    </Box>
+                </>
+            )}
             <Box
                 sx={{
                     position: 'relative',
