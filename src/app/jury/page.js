@@ -45,29 +45,23 @@ export default function ContactUs() {
                         <ButtonBase
                             sx={{
                                 cursor: 'pointer',
+                                display: 'block',
+                                width: '100%',
                             }}
                             onClick={() => setSelected(item)}
                         >
-                            <Stack
-                                spacing={2}
-                                sx={{
-                                    alignItems: 'center',
-                                    textAlign: 'center',
-                                }}
-                            >
+                            <Stack alignItems="center" spacing={2}>
                                 <Box
                                     sx={{
+                                        position: 'relative',
                                         width: {
-                                            xs: 170,
+                                            xs: '100%',
                                             md: 222,
                                         },
                                         height: {
-                                            xs: 300,
+                                            xs: 'auto',
                                             md: 394,
                                         },
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
                                     }}
                                 >
                                     {item.image && (
@@ -77,6 +71,9 @@ export default function ContactUs() {
                                             height={0}
                                             sizes="100vw"
                                             style={{
+                                                top: 0,
+                                                left: 0,
+                                                display: 'block',
                                                 width: '100%',
                                                 height: '100%',
                                                 objectFit: 'cover',

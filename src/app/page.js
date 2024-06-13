@@ -410,21 +410,20 @@ export default function Home() {
                     <Box>
                         <Grid
                             innerSx={{
-                                maxWidth: 1172,
+                                maxWidth: {
+                                    xs: 450,
+                                    md: 1172,
+                                },
+                                gridTemplateColumns: {
+                                    xs: '50% 50%',
+                                    md: '25% 25% 25% 25%',
+                                },
                             }}
                         >
                             {judges
                                 .filter((i) => i.includeOnHome)
                                 .map((item, index) => (
-                                    <GridItem
-                                        key={index}
-                                        sx={{
-                                            flex: {
-                                                xs: '1 0 40%',
-                                                md: '1 0 21%',
-                                            },
-                                        }}
-                                    >
+                                    <GridItem key={index}>
                                         <Stack
                                             spacing={2}
                                             sx={{
@@ -434,17 +433,16 @@ export default function Home() {
                                         >
                                             <Box
                                                 sx={{
+                                                    position: 'relative',
                                                     width: {
-                                                        xs: 170,
+                                                        xs: '100%',
                                                         md: 222,
                                                     },
+                                                    maxWidth: '100%',
                                                     height: {
-                                                        xs: 300,
+                                                        xs: 'auto',
                                                         md: 394,
                                                     },
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center',
                                                 }}
                                             >
                                                 {item.image && (

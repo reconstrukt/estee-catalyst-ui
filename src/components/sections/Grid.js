@@ -6,23 +6,24 @@ export default function Grid({ children, innerSx }) {
         <Box
             sx={{
                 py: 10,
-                px: 1,
             }}
         >
             <Box
                 sx={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    flexWrap: 'wrap',
-                    width: '100%',
-                    maxWidth: 934,
-                    margin: 'auto',
-                    columnGap: {
-                        xs: 1,
-                        md: 4,
+                    display: 'grid',
+                    gridTemplateColumns: {
+                        xs: '50% 50%',
+                        md: '33% 33% 33%',
                     },
+
+                    width: '100%',
+                    maxWidth: {
+                        xs: 450,
+                        md: 934,
+                    },
+                    margin: '0 auto',
                     rowGap: {
-                        xs: 2,
+                        xs: 4,
                         md: 10,
                     },
                     ...innerSx,
