@@ -10,6 +10,7 @@ import Hero from '@/components/sections/Hero';
 import PageLayout from '@/components/layouts/PageLayout';
 import Link from 'next/link';
 
+import PlusIcon from '../../../assets/svg/PlusIcon.svg';
 import faqmob from '../../../assets/images/faqmob.jpg';
 import faq from '../../../assets/images/faq.jpg';
 
@@ -38,14 +39,26 @@ export default function FaqPage() {
             <Box
                 sx={{
                     textAlign: 'left',
+                    borderTop: '1px solid black',
 
                     a: {
                         textDecoration: 'underline',
                     },
+
+                    '.MuiButtonBase-root': {
+                        '.MuiAccordionSummary-content': {
+                            flexGrow: 0,
+                            marginRight: '16px !important',
+                        },
+
+                        '.MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
+                            transform: 'rotate(225deg)',
+                        },
+                    },
                 }}
             >
                 <Accordion>
-                    <AccordionSummary>
+                    <AccordionSummary expandIcon={<PlusIcon />}>
                         Who is eligible to apply?
                     </AccordionSummary>
                     <AccordionDetails>
@@ -93,7 +106,7 @@ export default function FaqPage() {
                 </Accordion>
 
                 <Accordion>
-                    <AccordionSummary>
+                    <AccordionSummary expandIcon={<PlusIcon />}>
                         Who decides the winners?
                     </AccordionSummary>
                     <AccordionDetails>
@@ -107,7 +120,7 @@ export default function FaqPage() {
                 </Accordion>
 
                 <Accordion>
-                    <AccordionSummary>
+                    <AccordionSummary expandIcon={<PlusIcon />}>
                         What can I do with the award money?
                     </AccordionSummary>
                     <AccordionDetails>
@@ -117,7 +130,7 @@ export default function FaqPage() {
                 </Accordion>
 
                 <Accordion>
-                    <AccordionSummary>
+                    <AccordionSummary expandIcon={<PlusIcon />}>
                         I have an idea for a brand/product/etc but I haven’t
                         launched it yet, am I eligible?
                     </AccordionSummary>
@@ -128,7 +141,7 @@ export default function FaqPage() {
                 </Accordion>
 
                 <Accordion>
-                    <AccordionSummary>
+                    <AccordionSummary expandIcon={<PlusIcon />}>
                         What’s the deadline for applications?
                     </AccordionSummary>
                     <AccordionDetails>
@@ -137,7 +150,7 @@ export default function FaqPage() {
                 </Accordion>
 
                 <Accordion>
-                    <AccordionSummary>
+                    <AccordionSummary expandIcon={<PlusIcon />}>
                         I have more questions! Who can I contact?
                     </AccordionSummary>
                     <AccordionDetails>
