@@ -113,25 +113,25 @@ export default function Masterclasses() {
                     }}
                 >
                     {masterclasses.map((lesson, index) => (
-                        <GridItem
-                            key={index}
-                            sx={{
-                                flex: {
-                                    xs: '1 0 40%',
-                                    md: '1 0 21%',
-                                },
-                            }}
-                        >
-                            <ButtonBase onClick={() => setSelected(lesson)}>
+                        <GridItem key={index} sx={{}}>
+                            <ButtonBase
+                                onClick={() => setSelected(lesson)}
+                                sx={{
+                                    display: 'block',
+                                    width: '100%',
+                                }}
+                            >
                                 <Stack
                                     spacing={2}
                                     sx={{
                                         alignItems: 'center',
+                                        justifyContent: 'center',
                                         textAlign: 'center',
                                     }}
                                 >
                                     <Box
                                         sx={{
+                                            maxWidth: '100%',
                                             width: {
                                                 xs: 174,
                                                 md: 222,
@@ -353,27 +353,20 @@ export default function Masterclasses() {
                 <Grid
                     innerSx={{
                         maxWidth: 1420,
-                        columnGap: {
-                            xs: 1,
-                            md: 1,
+                        gridTemplateColumns: {
+                            xs: '50% 50%',
+                            md: '25% 25% 25% 25%',
+                            lg: '16.6% 16.6% 16.6% 16.6% 16.6% 16.6% ',
                         },
-                        justifyContent: 'flex-start',
                     }}
                 >
                     {experts.map((item, index) => (
-                        <GridItem
-                            key={index}
-                            sx={{
-                                flex: {
-                                    xs: '1 0 40%',
-                                    md: '1 0 28%',
-                                    lg: '1 0 13%',
-                                },
-                            }}
-                        >
+                        <GridItem key={index}>
                             <ButtonBase
                                 sx={{
                                     cursor: 'pointer',
+                                    display: 'block',
+                                    width: '100%',
                                 }}
                                 onClick={() => setSelectedJudge(item)}
                             >
@@ -386,17 +379,16 @@ export default function Masterclasses() {
                                 >
                                     <Box
                                         sx={{
+                                            position: 'relative',
+                                            maxWidth: '100%',
                                             width: {
-                                                xs: 170,
+                                                xs: 174,
                                                 md: 222,
                                             },
                                             height: {
-                                                xs: 217,
-                                                md: 277,
+                                                xs: 'auto',
+                                                md: 'auto',
                                             },
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
                                         }}
                                     >
                                         {item.image && (
@@ -406,9 +398,10 @@ export default function Masterclasses() {
                                                 height={0}
                                                 sizes="100vw"
                                                 style={{
+                                                    display: 'block',
                                                     width: '100%',
                                                     height: '100%',
-                                                    objectFit: 'cover',
+                                                    objectFit: 'contain',
                                                     objectPosition: 'center',
                                                 }}
                                             />

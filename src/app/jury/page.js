@@ -60,7 +60,7 @@ export default function ContactUs() {
                                         },
                                         height: {
                                             xs: 'auto',
-                                            md: 394,
+                                            md: 'auto',
                                         },
                                     }}
                                 >
