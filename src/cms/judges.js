@@ -40,7 +40,9 @@ const judges = [
         name: 'VANESSA CRAFT',
         title: (
             <>
-                Global Head Content Partnerships
+                Global Head
+                <br />
+                Content Partnerships
                 <br />
                 TikTok
             </>
@@ -56,7 +58,7 @@ const judges = [
             <>
                 SVP & Global Creative Director
                 <br />
-                MAC Cosmetics
+                M•A•C Cosmetics
             </>
         ),
         copy: `Drew Elliott leads M∙A∙C Cosmetics’ creative vision as Senior Vice President, Global Creative Director while also serving as Strategic Creative Advisor for Too Faced Cosmetics. At the creative helm of M·A·C Cosmetics, Drew is responsible for elevating the brand’s creative identity and trendsetting authority across all touch points of the consumer journey including retail, digital, packaging, visual merchandising, and multiplatform experiences.`,

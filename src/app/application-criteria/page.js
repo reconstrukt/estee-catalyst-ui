@@ -193,17 +193,18 @@ export default function ApplicationCriteria() {
                                 <li>Brand, product or experience idea</li>
                                 <li>Your audience or community</li>
                                 <li>
-                                    Distribution plan – where you see your
-                                    product being sold, and on which channels
+                                    Why should you win – what makes you
+                                    deserving of funding
                                 </li>
                                 <li>
-                                    Why your company should win – what makes you
-                                    deserving of fundingA Tiktok (or other video
-                                    submission if Tiktok is not available)
-                                    explaining Your Vision for Beauty and tagged
+                                    A Tiktok (or other video submission if
+                                    Tiktok is not available) explaining Your
+                                    Vision for Beauty and tagged
                                     #JoinTheCatalysts
                                 </li>
                             </ul>
+                            <br />
+                            Applications are due August 4, 2024.
                         </Typography>
                     </Box>
                 </Stack>
@@ -262,7 +263,7 @@ export default function ApplicationCriteria() {
                     <Typography variant="h1">WHO CAN APPLY</Typography>
 
                     <Stack spacing={3}>
-                        <Typography variant="h2">NEW BRANDS</Typography>
+                        <Typography variant="h2">NEW FOUNDERS</Typography>
                         <Typography>
                             Do you have a breakthrough product innovation or
                             business idea for the beauty industry that needs
@@ -273,7 +274,9 @@ export default function ApplicationCriteria() {
                     </Stack>
 
                     <Stack spacing={3}>
-                        <Typography variant="h2">EXISTING BRANDS</Typography>
+                        <Typography variant="h2">
+                            EXISTING BRAND FOUNDERS
+                        </Typography>
                         <Typography>
                             Whether a fashion designer, retailer, or another
                             business entirely, we want to hear from those who

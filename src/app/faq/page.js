@@ -147,7 +147,7 @@ export default function FaqPage() {
                         What’s the deadline for applications?
                     </AccordionSummary>
                     <AccordionDetails>
-                        11:59:59 PM ET on July 29, 2024
+                        11:59:59 PM ET on August 4, 2024
                     </AccordionDetails>
                 </Accordion>
 

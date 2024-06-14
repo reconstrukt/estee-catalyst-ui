@@ -161,9 +161,11 @@ export default function Home() {
                                 the world
                             </Typography>
                             <Box mt={2}>
-                                <Button variant="outlined" color="white">
-                                    LEARN MORE
-                                </Button>
+                                <Link href="/catalysts">
+                                    <Button variant="outlined" color="white">
+                                        LEARN MORE
+                                    </Button>
+                                </Link>
                             </Box>
                         </Box>
                     </Hero>
