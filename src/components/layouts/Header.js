@@ -6,8 +6,6 @@ import MenuIcon from '../../../assets/svg/MenuIcon.svg';
 import CloseIcon from '../../../assets/svg/CloseIcon.svg';
 import { Box, Button, Stack, Typography } from '@mui/material';
 import Link from 'next/link';
-import about from '../../../assets/slider/about.jpg';
-import aboutmob from '../../../assets/slider/aboutmob.jpg';
 import useScrollPosition from '@/hooks/useScrollPosition';
 import useApplicationPortal from '../application-portal/ApplicationContext';
 import { usePathname } from 'next/navigation';
@@ -186,14 +184,7 @@ export default function Header({ transparentHeader }) {
                     height: '100vh',
                     top: 0,
                     left: 0,
-                    backgroundImage: {
-                        xs: `url(${aboutmob.src})`,
-                        md: `url(${about.src})`,
-                    },
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundSize: 'cover',
-
+                    backgroundColor: '#0000004D',
                     transition: 'opacity 0.3s ease',
 
                     opacity: menuOpen ? 1 : 0,
