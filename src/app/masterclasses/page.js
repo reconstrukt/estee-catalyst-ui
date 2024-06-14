@@ -246,7 +246,7 @@ export default function Masterclasses() {
                                 }}
                             >
                                 <video controls>
-                                    <source src={selected.video} />
+                                    <source src={`${selected.video}#t=0.001`} />
                                 </video>
                             </Box>
 
