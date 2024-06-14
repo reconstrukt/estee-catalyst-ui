@@ -28,8 +28,20 @@ export default function PersonModal({
     };
 
     return (
-        <>
-            <Box>
+        <Box
+            sx={{
+                maxWidth: '100%',
+                position: 'relative',
+                overflowX: 'hidden',
+            }}
+        >
+            <Box
+                sx={{
+                    maxWidth: '100%',
+                    overflowX: 'auto',
+                    pb: 2,
+                }}
+            >
                 <Stack
                     direction="row"
                     spacing={0.5}
@@ -42,6 +54,21 @@ export default function PersonModal({
                                 sx={{
                                     width: 48,
                                     height: 60,
+                                    position: 'relative',
+
+                                    ...(judge.name === selected.name
+                                        ? {
+                                              '&::after': {
+                                                  content: '""',
+                                                  position: 'absolute',
+                                                  bottom: -4,
+                                                  left: 0,
+                                                  width: '100%',
+                                                  height: 2,
+                                                  background: '#FF5A00',
+                                              },
+                                          }
+                                        : {}),
                                 }}
                             >
                                 <Image
@@ -178,6 +205,6 @@ export default function PersonModal({
                     </Box>
                 )}
             </Box>
-        </>
+        </Box>
     );
 }
