@@ -442,7 +442,8 @@ export default function Home() {
                 </Stack>
             </Section>
 
-            <Section
+            {/* TODO PRESS SECTION */}
+            {/* <Section
                 sx={{
                     backgroundColor: 'black.main',
                     color: 'white.main',
@@ -513,7 +514,7 @@ export default function Home() {
                         </Malarquee>
                     </Box>
                 </Link>
-            </Section>
+            </Section> */}
         </PageLayout>
     );
 }
