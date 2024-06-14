@@ -70,9 +70,11 @@ export default function FaqPage() {
                                 },
                             }}
                         >
-                            Applications should be in the beauty category and
-                            can fall under any one or more of the below
-                            subcategories:
+                            Applicants can be from any category (e.g.,
+                            designers, content creators, creative directors,
+                            musicians, artists, set designers, filmmakers,
+                            photographers, etc.) with an idea that falls under
+                            any one or more of the below subcategories:
                             <ul>
                                 <li>Makeup</li>
                                 <li>Skin care</li>
@@ -82,7 +84,7 @@ export default function FaqPage() {
                                 <li>Home fragrance</li>
                                 <li>
                                     Creative storytelling – a visual concept,
-                                    for example an exhibition, book, or film{' '}
+                                    for example an exhibition, book, or film
                                 </li>
                             </ul>
                             <br />
@@ -124,7 +126,7 @@ export default function FaqPage() {
                         What can I do with the award money?
                     </AccordionSummary>
                     <AccordionDetails>
-                        Award money should be used to further the development of
+                        Award money must be used to further the development of
                         the idea.
                     </AccordionDetails>
                 </Accordion>

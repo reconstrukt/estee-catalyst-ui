@@ -178,11 +178,11 @@ export default function Home() {
 
                     <Typography variant="subtitle1">
                         All it takes is an idea. Whether you’re a brand founder,
-                        fashion designer, perfumer, photographer, skincare
-                        scientist, or makeup artist, The Catalysts is an open
-                        call for new ideas set to transform the future of beauty
-                        – and an opportunity to receive vital funding to make
-                        your plans into reality.{' '}
+                        content creator, fashion designer, perfumer,
+                        photographer, skincare scientist, or makeup artist, The
+                        Catalysts is an open call for new ideas set to transform
+                        the future of beauty – and an opportunity to receive
+                        vital funding to make your plans into reality.
                     </Typography>
 
                     <Link href="/catalysts">
