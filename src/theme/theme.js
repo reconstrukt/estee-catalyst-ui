@@ -185,6 +185,11 @@ const theme = createTheme({
     typography,
 
     components: {
+        MuiButtonBase: {
+            defaultProps: {
+                disableRipple: true,
+            },
+        },
         MuiButton: {
             styleOverrides: {
                 root: {
@@ -216,17 +221,17 @@ const theme = createTheme({
 
                 textBlack: {
                     '&:hover': {
-                        background: palette.black.main,
-                        borderColor: palette.black.main,
-                        color: palette.white.main,
+                        background: 'transparent !important',
+                        borderColor: 'transparent !important',
+                        // color: palette.white.main,
                     },
                 },
 
                 textWhite: {
                     '&:hover': {
-                        background: palette.white.main,
-                        borderColor: palette.white.main,
-                        color: palette.black.main,
+                        background: 'transparent !important',
+                        borderColor: 'transparent !important',
+                        // color: palette.black.main,
                     },
                 },
 
