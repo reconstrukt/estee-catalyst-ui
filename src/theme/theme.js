@@ -189,6 +189,7 @@ const theme = createTheme({
             styleOverrides: {
                 root: {
                     borderRadius: 0,
+                    minHeight: 36,
                 },
 
                 outlinedWhite: {
