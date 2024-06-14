@@ -73,7 +73,7 @@ const judges = [
                 Made by Mitchell
             </>
         ),
-        copy: ``,
+        copy: `Mitchell Halliday is a 25-year-old makeup virtuoso whose distinctive, vibrant looks and skilful transformations have captivated global audiences. In 2020, Mitchell founded Made By Mitchell, creating a range of versatile beauty products including the brand’s hero product, Blursh. After launching on TikTok Shop in 2022, Made By Mitchell's products became an integral part of the rapidly evolving beauty landscape on TikTok, further solidifying the brand's prominence in the ever-expanding world of beauty and cosmetics. `,
     },
 
     {
@@ -132,7 +132,7 @@ const judges = [
 
     {
         image: carlos,
-        name: 'CARLOS NAZARIA',
+        name: 'CARLOS NAZARIO',
         copy: `Named by the CFDA as one of the stylists shaping the future of fashion, Carlos Nazario is a fashion editor, stylist and creative consultant based in New York City. He has collaborated with esteemed photographers like Alasdair McLellan, Mert Alas & Marcus Piggott, Mario Sorrenti, and Glen Luchford; talent such as Rihanna, Rosalía, Bella Hadid, Naomi Campbell, and Frank Ocean; and magazines including American Vogue, Italian Vogue, and i-D. He is currently the Style Director at Large of Harper’s Bazaar US.`,
     },
 
@@ -157,7 +157,7 @@ const judges = [
     {
         image: craig,
         name: 'CRAIG MCDEAN',
-        copy: ``,
+        copy: `Craig McDean is one of fashion's most prolific and innovative photographers, renowned for his influential editorial images and portraiture. His career began in London in the 1990s, where he was a part of a new generation of photographers working for the cultural touchstones i-D and the Face. In the following decades, he has photographed major campaigns for fashion and beauty brands including Dior, Gucci, Yves Saint Laurent, Estee Lauder, and Calvin Klein. He regularly contributes to a range of publications including American, French, British and Italian Vogue, W, AnOther Magazine, and Interview.`,
     },
 ];
 
