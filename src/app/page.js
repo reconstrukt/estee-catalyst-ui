@@ -29,6 +29,7 @@ import tiktokmob from '../../assets/slider/tiktokmob.jpg';
 import press from '@/cms/press';
 import theme from '@/theme/theme';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Malarquee from 'react-malarquee';
 
 export default function Home() {
     const searchParams = useSearchParams();
@@ -507,65 +508,70 @@ export default function Home() {
                     py: 8,
                 }}
             >
-                <Stack mb={4}>
-                    <Typography variant="h2">PRESS</Typography>
-                </Stack>
+                <Link href="/press">
+                    <Stack mb={4}>
+                        <Typography variant="h2">PRESS</Typography>
+                    </Stack>
 
-                <Box
-                    sx={{
-                        position: 'relative',
-                        width: {
-                            xs: '150%',
-                            sm: '100%',
-                        },
-                        left: {
-                            xs: '-25%',
-                            sm: 0,
-                        },
-                    }}
-                >
-                    <Slider
-                        arrows={false}
-                        infinite={true}
-                        autoplay={true}
-                        autoplaySpeed={5000}
-                        slidesToShow={isLg ? 6 : 3}
-                        slidesToScroll={isLg ? 3 : 1}
+                    <Box
+                        sx={{
+                            position: 'relative',
+                            width: {
+                                xs: '150%',
+                                sm: '100%',
+                            },
+                            left: {
+                                xs: '-25%',
+                                sm: 0,
+                            },
+                        }}
                     >
-                        {press.map((item, index) => (
-                            <Stack
-                                key={index}
-                                spacing={2}
-                                direction="row"
-                                justifyContent="center"
-                            >
-                                <Box
-                                    sx={{
-                                        width: {
-                                            xs: '100%',
-                                            md: '100%',
-                                        },
-                                        height: {
-                                            xs: 50,
-                                            md: 50,
-                                        },
-                                        border: '1px solid',
-                                        borderColor: 'black.main',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
+                        <Malarquee>
+                            <Stack direction="row">
+                                {press.map((item, index) => (
+                                    <Stack
+                                        key={index}
+                                        spacing={2}
+                                        direction="row"
+                                        justifyContent="center"
+                                        sx={{
+                                            width: {
+                                                xs: '50vw',
+                                                sm: '33vw',
+                                                md: '25vw',
+                                                lg: '15vw',
+                                            },
+                                        }}
+                                    >
+                                        <Box
+                                            sx={{
+                                                width: {
+                                                    xs: '100%',
+                                                    md: '100%',
+                                                },
+                                                height: {
+                                                    xs: 50,
+                                                    md: 50,
+                                                },
+                                                border: '1px solid',
+                                                borderColor: 'black.main',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
 
-                                        '& svg path': {
-                                            fill: 'currentColor',
-                                        },
-                                    }}
-                                >
-                                    {item.logo}
-                                </Box>
+                                                '& svg path': {
+                                                    fill: 'currentColor',
+                                                },
+                                            }}
+                                        >
+                                            {item.logo}
+                                        </Box>
+                                    </Stack>
+                                ))}
                             </Stack>
-                        ))}
-                    </Slider>
-                </Box>
+                        </Malarquee>
+                    </Box>
+                </Link>
             </Section>
         </PageLayout>
     );
