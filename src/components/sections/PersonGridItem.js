@@ -7,6 +7,7 @@ export default function PersonGridItem({
     displayName = true,
     displayTitle = true,
     onClick = undefined,
+    nameSx,
 }) {
     return (
         <Box
@@ -51,6 +52,7 @@ export default function PersonGridItem({
                             xs: 'normal',
                             lg: 'nowrap',
                         },
+                        ...nameSx,
                     }}
                 >
                     {item.name}

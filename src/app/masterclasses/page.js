@@ -19,6 +19,7 @@ import TheDialog from '@/components/sections/TheDialog';
 import PersonModal from '@/components/sections/PersonModal';
 
 import Link from 'next/link';
+import PersonGridItem from '@/components/sections/PersonGridItem';
 
 export default function Masterclasses() {
     const [selected, setSelected] = useState(null);
@@ -362,65 +363,13 @@ export default function Masterclasses() {
                 >
                     {experts.map((item, index) => (
                         <GridItem key={index}>
-                            <ButtonBase
-                                sx={{
-                                    cursor: 'pointer',
-                                    display: 'block',
-                                    width: '100%',
-                                }}
+                            <PersonGridItem
+                                item={item}
                                 onClick={() => setSelectedJudge(item)}
-                            >
-                                <Stack
-                                    spacing={2}
-                                    sx={{
-                                        alignItems: 'center',
-                                        textAlign: 'center',
-                                    }}
-                                >
-                                    <Box
-                                        sx={{
-                                            position: 'relative',
-                                            maxWidth: '100%',
-                                            width: {
-                                                xs: 174,
-                                                md: 222,
-                                            },
-                                            height: {
-                                                xs: 'auto',
-                                                md: 'auto',
-                                            },
-                                        }}
-                                    >
-                                        {item.image && (
-                                            <Image
-                                                src={item.image.src}
-                                                width={0}
-                                                height={0}
-                                                sizes="100vw"
-                                                style={{
-                                                    display: 'block',
-                                                    width: '100%',
-                                                    height: '100%',
-                                                    objectFit: 'contain',
-                                                    objectPosition: 'center',
-                                                }}
-                                            />
-                                        )}
-                                    </Box>
-
-                                    <Box>
-                                        <Typography
-                                            variant="h4"
-                                            sx={{ mb: 0.5 }}
-                                        >
-                                            {item.name}
-                                        </Typography>
-                                        <Typography variant="body1">
-                                            {item.title}
-                                        </Typography>
-                                    </Box>
-                                </Stack>
-                            </ButtonBase>
+                                nameSx={{
+                                    whiteSpace: 'normal',
+                                }}
+                            />
                         </GridItem>
                     ))}
                 </Grid>
