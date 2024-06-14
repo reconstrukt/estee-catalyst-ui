@@ -232,10 +232,18 @@ export default function Home() {
 
                     <Stack spacing={1}>
                         <Typography variant="h2">
-                            “OUR AMBITION IS TO PARTNER WITH CREATIVE DISRUPTORS
-                            WHO ARE BUILDING EXPERIENTIAL BEAUTY BRANDS THAT
-                            SPEAK TO THE VALUES AND PASSIONS OF TODAY’S (AND
-                            TOMORROW’S) CONSUMERS.”
+                            “FOUNDING A BEAUTY BRAND TAKES MORE THAN TRADITIONAL
+                            BUSINESS ACUMEN; IT'S ABOUT CRAFTING NARRATIVES,
+                            BUILDING COMMUNITIES, AND SHAPING NOT JUST TRENDS
+                            BUT ALSO BROADER CONVERSATIONS AND MOVEMENTS.
+                            FOUNDERS ARE STORYTELLERS, CULTURAL AMBASSADORS,
+                            FILMMAKERS, DESIGNERS, GAMERS, AND ARTISTS. THEIR
+                            VISIONS OF BEAUTY — EXPRESSED VIA PRODUCT, RETAIL
+                            EXPERIENCES, FILMS, CONTENT — CONTINUE TO FUEL
+                            GROWTH IN THE BEAUTY SECTOR. WE SET OUT TO CREATE A
+                            PROGRAM TO IDENTIFY AND ELEVATE THESE VISIONARIES AS
+                            THEY CONTINUE TO DRIVE INNOVATION AND PUSH THE
+                            CONVERSATION FORWARD.”
                         </Typography>
 
                         <Typography variant="body1">
@@ -337,7 +345,7 @@ export default function Home() {
                         </Typography>
                         <Typography variant="body1">
                             International press for the winners, along with
-                            amplification on the Estée Lauder Companies
+                            amplification on The Estée Lauder Companies
                             platforms.
                         </Typography>
                     </Box>

@@ -1,4 +1,5 @@
 import carlos from 'assets/judges/Carlos Nazario.jpg';
+import craig from 'assets/judges/Craig McDean.jpg';
 import courtney from 'assets/judges/Courtney Mchugh.jpg';
 import drew from 'assets/judges/Drew Elliott.jpg';
 import eugene from 'assets/judges/Eugene Souleiman.jpg';
@@ -151,6 +152,12 @@ const judges = [
         image: grace,
         name: 'GRACE CHOI',
         copy: `Grace is an augmented reality effects creator, specialising in viral beauty filters on social media. Her clients include leading beauty brands including Dior, YSL, La Mer, Nars, Fenty, Kosas, and Benefit Cosmetics. Currently ranking in the top 1% of TikTok effect creators, she serves as a TikTok Effects House Ambassador. In 2023, Grace received a Cannes Lions award for her Fenty Beauty Match Stix Snatch campaign, marking the first TikTok effect to receive such recognition. Grace is also the inventor of Mink, the first 3D makeup printer that transforms any image into a wearable colour cosmetic.`,
+    },
+
+    {
+        image: craig,
+        name: 'CRAIG MCDEAN',
+        copy: ``,
     },
 ];
 
