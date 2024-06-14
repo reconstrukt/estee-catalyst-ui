@@ -46,6 +46,7 @@ export default function ContactUs() {
                         <PersonGridItem
                             item={item}
                             onClick={() => setSelected(item)}
+                            displayTitle={false}
                         />
                     </GridItem>
                 ))}

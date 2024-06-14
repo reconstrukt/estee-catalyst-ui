@@ -44,31 +44,36 @@ export default function PersonGridItem({
             </Box>
 
             <Box>
-                <Typography
-                    variant="h4"
-                    sx={{
-                        mb: 0.5,
-                        whiteSpace: {
-                            xs: 'normal',
-                            lg: 'nowrap',
-                        },
-                        ...nameSx,
-                    }}
-                >
-                    {item.name}
-                </Typography>
-                <Typography
-                    variant="body1"
-                    sx={{
-                        fontSize: '20px !important',
-                        whiteSpace: {
-                            xs: 'normal',
-                            lg: 'nowrap',
-                        },
-                    }}
-                >
-                    {item.title}
-                </Typography>
+                {displayName && (
+                    <Typography
+                        variant="h4"
+                        sx={{
+                            mb: 0.5,
+                            whiteSpace: {
+                                xs: 'normal',
+                                lg: 'nowrap',
+                            },
+                            ...nameSx,
+                        }}
+                    >
+                        {item.name}
+                    </Typography>
+                )}
+
+                {displayTitle && (
+                    <Typography
+                        variant="body1"
+                        sx={{
+                            fontSize: '20px !important',
+                            whiteSpace: {
+                                xs: 'normal',
+                                lg: 'nowrap',
+                            },
+                        }}
+                    >
+                        {item.title}
+                    </Typography>
+                )}
             </Box>
         </Box>
     );
