@@ -41,18 +41,20 @@ export default function Header({ transparentHeader }) {
             sx={{
                 position: 'fixed',
                 marginBottom: menuOpen ? 0 : aboveTheFold ? '-60px' : 0,
-                top: scrollDirection === 'up' ? 0 : -100,
-                color:
-                    !aboveTheFold && !menuOpen
-                        ? 'black'
-                        : transparentHeader || menuOpen
-                          ? 'white.main'
-                          : 'black',
-                backgroundColor: !aboveTheFold
-                    ? 'white.main'
-                    : transparentHeader || menuOpen
-                      ? 'transparent'
-                      : 'white.main',
+                top: scrollDirection === 'up' || scrollPos === 0 ? 0 : -100,
+                // color:
+                //     !aboveTheFold && !menuOpen
+                //         ? 'black'
+                //         : transparentHeader || menuOpen
+                //           ? 'white.main'
+                //           : 'black',
+                // backgroundColor: !aboveTheFold
+                //     ? 'white.main'
+                //     : transparentHeader || menuOpen
+                //       ? 'transparent'
+                //       : 'white.main',
+                backgroundColor: 'transparent',
+                color: transparentHeader || menuOpen ? 'white.main' : 'black',
                 transition: 'all 0.3s ease',
                 px: 2,
                 py: 2,
@@ -84,11 +86,7 @@ export default function Header({ transparentHeader }) {
                     <Button
                         variant="outlined"
                         color={
-                            !aboveTheFold && !menuOpen
-                                ? 'black'
-                                : transparentHeader || menuOpen
-                                  ? 'white'
-                                  : 'black'
+                            transparentHeader || menuOpen ? 'white' : 'black'
                         }
                         sx={{
                             padding: '5px 10px',
@@ -150,11 +148,9 @@ export default function Header({ transparentHeader }) {
                         <Button
                             variant="text"
                             color={
-                                !aboveTheFold && !menuOpen
-                                    ? 'black'
-                                    : transparentHeader || menuOpen
-                                      ? 'white'
-                                      : 'black'
+                                transparentHeader || menuOpen
+                                    ? 'white'
+                                    : 'black'
                             }
                             endIcon={menuOpen ? <CloseIcon /> : <MenuIcon />}
                             onClick={toggleMenu}
