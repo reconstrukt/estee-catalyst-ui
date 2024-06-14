@@ -30,6 +30,7 @@ import press from '@/cms/press';
 import theme from '@/theme/theme';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Malarquee from 'react-malarquee';
+import PersonGridItem from '@/components/sections/PersonGridItem';
 
 export default function Home() {
     const searchParams = useSearchParams();
@@ -425,67 +426,7 @@ export default function Home() {
                                 .filter((i) => i.includeOnHome)
                                 .map((item, index) => (
                                     <GridItem key={index}>
-                                        <Stack
-                                            spacing={2}
-                                            sx={{
-                                                alignItems: 'center',
-                                                textAlign: 'center',
-                                            }}
-                                        >
-                                            <Box
-                                                sx={{
-                                                    position: 'relative',
-                                                    width: {
-                                                        xs: '100%',
-                                                        md: 222,
-                                                    },
-                                                    maxWidth: '100%',
-                                                    height: {
-                                                        xs: 'auto',
-                                                        md: 'auto',
-                                                    },
-                                                }}
-                                            >
-                                                {item.image && (
-                                                    <Image
-                                                        src={item.image.src}
-                                                        width={0}
-                                                        height={0}
-                                                        sizes="100vw"
-                                                        style={{
-                                                            width: '100%',
-                                                            height: '100%',
-                                                            objectFit:
-                                                                'contain',
-                                                            objectPosition:
-                                                                'center',
-                                                        }}
-                                                    />
-                                                )}
-                                            </Box>
-
-                                            <Box>
-                                                <Typography
-                                                    variant="h4"
-                                                    sx={{
-                                                        mb: 0.5,
-                                                        whiteSpace: 'nowrap',
-                                                    }}
-                                                >
-                                                    {item.name}
-                                                </Typography>
-                                                <Typography
-                                                    variant="body1"
-                                                    sx={{
-                                                        fontSize:
-                                                            '20px !important',
-                                                        whiteSpace: 'nowrap',
-                                                    }}
-                                                >
-                                                    {item.title}
-                                                </Typography>
-                                            </Box>
-                                        </Stack>
+                                        <PersonGridItem item={item} />
                                     </GridItem>
                                 ))}
                         </Grid>

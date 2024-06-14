@@ -14,6 +14,7 @@ import jurymob from '../../../assets/images/jurymob.jpg';
 import jury from '../../../assets/images/jury.jpg';
 import TheDialog from '@/components/sections/TheDialog';
 import PersonModal from '@/components/sections/PersonModal';
+import PersonGridItem from '@/components/sections/PersonGridItem';
 
 export default function ContactUs() {
     const [selected, setSelected] = useState(null);
@@ -42,67 +43,10 @@ export default function ContactUs() {
             <Grid>
                 {judges.map((item, index) => (
                     <GridItem key={index}>
-                        <ButtonBase
-                            sx={{
-                                cursor: 'pointer',
-                                display: 'block',
-                                width: '100%',
-                            }}
+                        <PersonGridItem
+                            item={item}
                             onClick={() => setSelected(item)}
-                        >
-                            <Stack alignItems="center" spacing={2}>
-                                <Box
-                                    sx={{
-                                        position: 'relative',
-                                        width: {
-                                            xs: '100%',
-                                            md: 222,
-                                        },
-                                        height: {
-                                            xs: 'auto',
-                                            md: 'auto',
-                                        },
-                                    }}
-                                >
-                                    {item.image && (
-                                        <Image
-                                            src={item.image.src}
-                                            width={0}
-                                            height={0}
-                                            sizes="100vw"
-                                            style={{
-                                                top: 0,
-                                                left: 0,
-                                                display: 'block',
-                                                width: '100%',
-                                                height: '100%',
-                                                objectFit: 'cover',
-                                                objectPosition: 'center',
-                                                filter: 'grayscale(1)',
-                                            }}
-                                        />
-                                    )}
-                                </Box>
-
-                                <Box>
-                                    <Typography
-                                        variant="h4"
-                                        sx={{ mb: 0.5, whiteSpace: 'nowrap' }}
-                                    >
-                                        {item.name}
-                                    </Typography>
-                                    <Typography
-                                        variant="body1"
-                                        sx={{
-                                            fontSize: '20px !important',
-                                            whiteSpace: 'nowrap',
-                                        }}
-                                    >
-                                        {item.title}
-                                    </Typography>
-                                </Box>
-                            </Stack>
-                        </ButtonBase>
+                        />
                     </GridItem>
                 ))}
             </Grid>
