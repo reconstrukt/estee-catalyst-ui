@@ -83,15 +83,7 @@ const judges = [
     {
         image: hung,
         name: 'HUNG VANNGO',
-        // title: (
-        //     <>
-        //         Global Head
-        //         <br />
-        //         Content Partnerships
-        //         <br />
-        //         TikTok
-        //     </>
-        // ),
+        title: <>Makeup Artist</>,
         copy: `Hung Vanngo is a Vietnam-born, New York-based makeup artist known for combining glamour with an avant-garde aesthetic. He’s a go-to for prestigious brands such as Louis Vuitton, Marc Jacobs, and Calvin Klein, as well as high profile talent such as Selena Gomez, Bella Hadid, and Gwyneth Paltrow.`,
     },
 
@@ -128,15 +120,7 @@ const judges = [
     {
         image: eugene,
         name: 'EUGENE SOULEIMAN',
-        // title: (
-        //     <>
-        //         Global Head
-        //         <br />
-        //         Content Partnerships
-        //         <br />
-        //         TikTok
-        //     </>
-        // ),
+        title: <>Professional hairstylist</>,
         copy: `Originally inspired by London’s punk scene, Eugene Souleiman is a hairstylist who creates with raw emotion and technical ability. Over a career spanning more than 30 years, his unique perspective has led him to work with a diverse group of the most forward-thinking and innovative fashion designers, including John Galliano, Alexander McQueen, and Yohji Yamamoto.`,
     },
 
@@ -158,30 +142,20 @@ const judges = [
     {
         image: thomas,
         name: 'THOMAS ROUSSEL',
-        // title: (
-        //     <>
-        //         Global Head
-        //         <br />
-        //         Content Partnerships
-        //         <br />
-        //         TikTok
-        //     </>
-        // ),
+        title: <>Composer, Producer, Conductor</>,
         copy: `Thomas Roussel is a French composer and conductor based in Paris. For over twenty years, he has worked across fashion, cinema and luxury, including creating soundtracks for brands including Chanel, Dior, Givenchy, Valentino, and Cartier. He recently served as orchestra conductor and musical director for Pharrell Williams' first two shows at Louis Vuitton.`,
     },
 
     {
         image: franscisco,
         name: 'FRANCISCO COSTA',
-        // title: (
-        //     <>
-        //         Global Head
-        //         <br />
-        //         Content Partnerships
-        //         <br />
-        //         TikTok
-        //     </>
-        // ),
+        title: (
+            <>
+                Founder
+                <br />
+                Costa Brazil
+            </>
+        ),
         copy: `After serving as the creative director of Calvin Klein womenswear for 13 years, in 2016 Francisco Costa returned to his home country of Brazil. There, he launched Costa Brazil, an eco-forward skincare and fragrance line inspired by local healing rituals that works in partnership with local cooperatives and scientists, ensuring protection of both body and Earth. As well as being an avid environmentalist, Costa is engaged in numerous social causes in Brazil and around the world.`,
     },
 
@@ -203,15 +177,13 @@ const judges = [
     {
         image: fabien,
         name: 'FABIEN BARON',
-        // title: (
-        //     <>
-        //         Global Head
-        //         <br />
-        //         Content Partnerships
-        //         <br />
-        //         TikTok
-        //     </>
-        // ),
+        title: (
+            <>
+                Founder
+                <br />
+                Baron&Baron
+            </>
+        ),
         copy: `The founder of Baron&Baron, Fabien Baron has been leading iconic creative for some of the world’s most celebrated brands for over three decades. He’s spearheaded the image of fashion houses including Calvin Klein, Balenciaga, and Burberry, reinvented illustrious magazines including Interview, French Vogue, Harper’s Bazaar, and Italian Vogue, and creative directed campaigns for the likes of Nars, Louis Vuitton, and Dior. `,
     },
 
@@ -263,30 +235,14 @@ const judges = [
     {
         image: grace,
         name: 'GRACE CHOI',
-        // title: (
-        //     <>
-        //         Global Head
-        //         <br />
-        //         Content Partnerships
-        //         <br />
-        //         TikTok
-        //     </>
-        // ),
+        title: <>Content Creator</>,
         copy: `Grace is an augmented reality effects creator, specialising in viral beauty filters on social media. Her clients include leading beauty brands including Dior, YSL, La Mer, Nars, Fenty, Kosas, and Benefit Cosmetics. Currently ranking in the top 1% of TikTok effect creators, she serves as a TikTok Effects House Ambassador. In 2023, Grace received a Cannes Lions award for her Fenty Beauty Match Stix Snatch campaign, marking the first TikTok effect to receive such recognition. Grace is also the inventor of Mink, the first 3D makeup printer that transforms any image into a wearable colour cosmetic.`,
     },
 
     {
         image: craig,
         name: 'CRAIG MCDEAN',
-        // title: (
-        //     <>
-        //         Global Head
-        //         <br />
-        //         Content Partnerships
-        //         <br />
-        //         TikTok
-        //     </>
-        // ),
+        title: <>Photographer</>,
         copy: `Craig McDean is one of fashion's most prolific and innovative photographers, renowned for his influential editorial images and portraiture. His career began in London in the 1990s, where he was a part of a new generation of photographers working for the cultural touchstones i-D and the Face. In the following decades, he has photographed major campaigns for fashion and beauty brands including Dior, Gucci, Yves Saint Laurent, Estee Lauder, and Calvin Klein. He regularly contributes to a range of publications including American, French, British and Italian Vogue, W, AnOther Magazine, and Interview.`,
     },
 
