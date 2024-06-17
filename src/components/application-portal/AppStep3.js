@@ -31,7 +31,7 @@ export default function AppStep3() {
                 : '',
             num_of_employees: application.num_of_employees
                 ? application.num_of_employees
-                : '',
+                : '1-10',
             company_category: application.company_category
                 ? application.company_category
                 : '',
