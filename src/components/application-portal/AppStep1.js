@@ -3,6 +3,7 @@ import StepWrapper from './StepWrapper';
 import { Stack, Box, InputLabel, TextField } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
+import CountrySelect from '../elements/CountrySelect';
 
 export default function AppStep1() {
     const { updateApplication, application, values, setValues } =
@@ -59,6 +60,7 @@ export default function AppStep1() {
     };
 
     const handleNext = async () => {
+        console.log('FIELDS: ', values);
         if (!validate()) return;
 
         setLoading(true);
@@ -121,10 +123,9 @@ export default function AppStep1() {
 
                     <Box>
                         <InputLabel>Country</InputLabel>
-                        <TextField
+                        <CountrySelect
                             error={!!errors['country']}
                             helperText={errors['country']}
-                            fullWidth
                             value={values.country}
                             onChange={(e) => handleChange(e, 'country')}
                         />
