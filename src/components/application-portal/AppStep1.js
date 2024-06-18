@@ -76,8 +76,21 @@ export default function AppStep1() {
     return (
         <StepWrapper>
             <Stack spacing={5}>
-                <Stack spacing={1}>
-                    <Box>
+                <Stack
+                    direction="row"
+                    sx={{
+                        flexWrap: 'wrap',
+                        gap: '10px',
+                    }}
+                >
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>First Name</InputLabel>
                         <TextField
                             error={!!errors['firstname']}
@@ -88,7 +101,14 @@ export default function AppStep1() {
                         />
                     </Box>
 
-                    <Box>
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>Last Name</InputLabel>
                         <TextField
                             error={!!errors['lastname']}
@@ -99,7 +119,14 @@ export default function AppStep1() {
                         />
                     </Box>
 
-                    <Box>
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>Title/Designation</InputLabel>
                         <TextField
                             error={!!errors['title']}
@@ -110,7 +137,14 @@ export default function AppStep1() {
                         />
                     </Box>
 
-                    <Box>
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>Company Name (if applicable)</InputLabel>
                         <TextField
                             error={!!errors['company']}
@@ -121,7 +155,14 @@ export default function AppStep1() {
                         />
                     </Box>
 
-                    <Box>
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>Country</InputLabel>
                         <CountrySelect
                             error={!!errors['country']}
@@ -131,7 +172,14 @@ export default function AppStep1() {
                         />
                     </Box>
 
-                    <Box>
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>Address Line 1</InputLabel>
                         <TextField
                             error={!!errors['address1']}
@@ -142,7 +190,14 @@ export default function AppStep1() {
                         />
                     </Box>
 
-                    <Box>
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>Address Line 2</InputLabel>
                         <TextField
                             error={!!errors['address2']}
@@ -153,7 +208,14 @@ export default function AppStep1() {
                         />
                     </Box>
 
-                    <Box>
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>Town/City</InputLabel>
                         <TextField
                             error={!!errors['city']}
@@ -164,7 +226,14 @@ export default function AppStep1() {
                         />
                     </Box>
 
-                    <Box>
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>Zip/Post Code</InputLabel>
                         <TextField
                             error={!!errors['zip']}
@@ -175,7 +244,14 @@ export default function AppStep1() {
                         />
                     </Box>
 
-                    <Box>
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>State</InputLabel>
                         <TextField
                             error={!!errors['state']}

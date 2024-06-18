@@ -79,9 +79,22 @@ export default function AppStep2() {
                         Please share any accounts that are applicable.
                     </Typography>
                 </Box>
-                <Stack spacing={1}>
-                    {error && <FormHelperText error>{error}</FormHelperText>}
-                    <Box>
+                {error && <FormHelperText error>{error}</FormHelperText>}
+                <Stack
+                    direction="row"
+                    sx={{
+                        flexWrap: 'wrap',
+                        gap: '10px',
+                    }}
+                >
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>Company or Personal Website</InputLabel>
                         <TextField
                             fullWidth
@@ -90,7 +103,14 @@ export default function AppStep2() {
                         />
                     </Box>
 
-                    <Box>
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>Instagram</InputLabel>
                         <TextField
                             fullWidth
@@ -99,7 +119,14 @@ export default function AppStep2() {
                         />
                     </Box>
 
-                    <Box>
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>Facebook</InputLabel>
                         <TextField
                             fullWidth
@@ -108,7 +135,14 @@ export default function AppStep2() {
                         />
                     </Box>
 
-                    <Box>
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>Youtube</InputLabel>
                         <TextField
                             fullWidth
@@ -117,7 +151,14 @@ export default function AppStep2() {
                         />
                     </Box>
 
-                    <Box>
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>Tiktok</InputLabel>
                         <TextField
                             fullWidth
@@ -126,7 +167,14 @@ export default function AppStep2() {
                         />
                     </Box>
 
-                    <Box>
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>Linkedin</InputLabel>
                         <TextField
                             fullWidth
@@ -135,7 +183,14 @@ export default function AppStep2() {
                         />
                     </Box>
 
-                    <Box>
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>Snapchat</InputLabel>
                         <TextField
                             fullWidth
@@ -144,7 +199,14 @@ export default function AppStep2() {
                         />
                     </Box>
 
-                    <Box>
+                    <Box
+                        sx={{
+                            flex: {
+                                xs: '1 0 100%',
+                                md: '1 0 40%',
+                            },
+                        }}
+                    >
                         <InputLabel>Other</InputLabel>
                         <TextField
                             fullWidth
