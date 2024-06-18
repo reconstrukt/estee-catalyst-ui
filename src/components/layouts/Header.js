@@ -39,20 +39,14 @@ export default function Header({ transparentHeader }) {
             sx={{
                 position: 'fixed',
                 marginBottom: menuOpen ? 0 : aboveTheFold ? '-60px' : 0,
-                top: scrollDirection === 'up' || scrollPos === 0 ? 0 : -100,
+                top: 0,
                 color:
                     !aboveTheFold && !menuOpen
                         ? 'black'
                         : transparentHeader || menuOpen
                           ? 'white.main'
                           : 'black',
-                // backgroundColor: !aboveTheFold
-                //     ? 'white.main'
-                //     : transparentHeader || menuOpen
-                //       ? 'transparent'
-                //       : 'white.main',
                 backgroundColor: 'transparent',
-                // color: transparentHeader || menuOpen ? 'white.main' : 'black',
                 transition: 'all 0.3s ease',
                 px: 2,
                 py: 2,
@@ -92,6 +86,13 @@ export default function Header({ transparentHeader }) {
                         }
                         sx={{
                             padding: '5px 10px',
+                            backgroundColor:
+                                !aboveTheFold && !menuOpen
+                                    ? 'rgba(255,255,255, 0.1)'
+                                    : transparentHeader || menuOpen
+                                      ? 'rgba(0, 0, 0, 0.1)'
+                                      : 'rgba(255,255,255, 0.1)',
+                            backdropFilter: 'blur(5px)',
                         }}
                         onClick={() => setDialogOpen(true)}
                     >
