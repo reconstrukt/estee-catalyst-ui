@@ -84,6 +84,10 @@ export default function NewsletterForm() {
                                 disableElevation
                                 onClick={handleSubmit}
                                 loading={loading}
+                                sx={{
+                                    minHeight: '31px !important',
+                                    maxHeight: '31px !important',
+                                }}
                             >
                                 SUBMIT
                             </LoadingButton>
