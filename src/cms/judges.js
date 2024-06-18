@@ -13,7 +13,7 @@ import mitchell from 'assets/judges/Mitchell Halliday.jpg';
 import ruba from 'assets/judges/Ruba Abu-Nimah.jpg';
 import sallyann from 'assets/judges/Sallyann Houghton.jpg';
 import shana from 'assets/judges/Shana Randhava.jpg';
-import thomas from 'assets/judges/Thomas Roussel A.jpg';
+import thomas from 'assets/judges/Thomas Roussel B.jpg';
 import vanessa from 'assets/judges/Vanessa Craft.jpg';
 import violet from 'assets/judges/Violet Chachki.jpg';
 import hanna from 'assets/judges/hanna.jpg';
