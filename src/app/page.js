@@ -415,7 +415,8 @@ export default function Home() {
                 <Stack>
                     <Box>
                         <Typography variant="h1">
-                            A JURY OF CREATIVE LEADERS
+                            A JURY OF <br />
+                            CREATIVE LEADERS
                         </Typography>
                     </Box>
 

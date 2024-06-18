@@ -74,9 +74,25 @@ export default function ApplicationCriteria() {
                             textAlign: 'left',
                         }}
                     >
-                        <Typography variant="h2" sx={{ mb: 4 }}>
-                            CRITERIA
-                        </Typography>
+                        <Stack mb={4}>
+                            <Typography variant="h2">CRITERIA</Typography>
+                            <Typography
+                                variant="body1"
+                                sx={{
+                                    a: {
+                                        textDecoration: 'underline',
+                                    },
+                                    textAlign: 'left',
+                                }}
+                            >
+                                <br />
+                                Please review the{' '}
+                                <Link href="/terms-and-conditions">
+                                    Terms & Conditions
+                                </Link>{' '}
+                                for full details
+                            </Typography>
+                        </Stack>
 
                         <Typography
                             variant="body1"
@@ -146,12 +162,11 @@ export default function ApplicationCriteria() {
                                 }}
                             >
                                 <br />
-                                (may very depending on category, please review
-                                of{' '}
+                                Please review the{' '}
                                 <Link href="/terms-and-conditions">
                                     Terms & Conditions
                                 </Link>{' '}
-                                for full details)
+                                for full details
                             </Typography>
                         </Stack>
 
@@ -204,7 +219,8 @@ export default function ApplicationCriteria() {
                                 </li>
                             </ul>
                             <br />
-                            Applications are due August 4, 2024.
+                            Applications are due by 11:59:59 on August 4, 2024
+                            EST.
                         </Typography>
                     </Box>
                 </Stack>
