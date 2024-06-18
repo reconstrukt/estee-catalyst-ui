@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import StepWrapper from './StepWrapper';
-import { Stack, Box, InputLabel, TextField, Typography } from '@mui/material';
+import {
+    Stack,
+    Box,
+    InputLabel,
+    TextField,
+    Typography,
+    FormHelperText,
+} from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 
@@ -8,6 +15,7 @@ export default function AppStep2() {
     const { application, updateApplication, values, setValues } =
         useApplicationPortal();
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
 
     useEffect(() => {
         setValues({
@@ -25,13 +33,34 @@ export default function AppStep2() {
     }, []);
 
     const handleChange = (e, field) => {
+        setError('');
         setValues((val) => ({
             ...val,
             [field]: e.target.value,
         }));
     };
 
+    const validate = () => {
+        let res = false;
+
+        for (let key in values) {
+            if (values[key]) {
+                res = true;
+            }
+        }
+
+        if (res === false) {
+            setError(
+                'At least one account or a website url is required to proceed.',
+            );
+        }
+
+        return res;
+    };
+
     const handleNext = async () => {
+        if (!validate()) return;
+
         setLoading(true);
         const res = await updateApplication();
 
@@ -51,6 +80,7 @@ export default function AppStep2() {
                     </Typography>
                 </Box>
                 <Stack spacing={1}>
+                    {error && <FormHelperText error>{error}</FormHelperText>}
                     <Box>
                         <InputLabel>Company or Personal Website</InputLabel>
                         <TextField
