@@ -43,3 +43,18 @@ export const editApplication = (uuid, fields) => {
         (response) => response.json(),
     );
 };
+
+export const newsletterSubscribe = (email) => {
+    const formData = new FormData();
+
+    formData.append('email', email);
+
+    const options = {
+        method: 'POST',
+        body: formData,
+    };
+
+    return fetch(apiUrl + `/newsletter/subscribe`, options).then((response) =>
+        response.json(),
+    );
+};

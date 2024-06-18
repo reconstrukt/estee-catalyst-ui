@@ -7,26 +7,39 @@ import {
     Checkbox,
     Stack,
     Typography,
+    FormHelperText,
 } from '@mui/material';
 import React, { useState } from 'react';
 import { LoadingButton } from '@mui/lab';
+import { newsletterSubscribe } from '@/app/lib/api';
 
 export default function NewsletterForm() {
     const [email, setEmail] = useState('');
     const [checked, setChecked] = useState(false);
     const [loading, setLoading] = useState(false);
     const [formState, setFormState] = useState('default'); // default | success
+    const [error, setError] = useState('');
+    const [consentError, setConsentError] = useState('');
 
-    const handleSubmit = (e) => {
-        if (!checked) return;
+    const handleSubmit = async (e) => {
+        if (!checked) {
+            setConsentError('You must agree to the Terms and Conditions.');
+            return;
+        }
         if (!email) return;
 
         // TODO: FETCH
         setLoading(true);
-        setTimeout(() => {
+
+        const res = await newsletterSubscribe(email);
+
+        if (res.success) {
             onSuccess();
-            setLoading(false);
-        }, 1000);
+        } else {
+            setError(res.message);
+        }
+
+        setLoading(false);
     };
 
     const onSuccess = () => {
@@ -41,10 +54,12 @@ export default function NewsletterForm() {
     };
 
     const handleCheck = () => {
+        setConsentError(false);
         setChecked((val) => !val);
     };
 
     const handleEmailChange = (e) => {
+        setError('');
         setEmail(e.target.value);
     };
 
@@ -77,6 +92,7 @@ export default function NewsletterForm() {
                                 }}
                                 value={email}
                                 onChange={handleEmailChange}
+                                error={!!error}
                             />
                             <LoadingButton
                                 variant="outlined"
@@ -92,6 +108,11 @@ export default function NewsletterForm() {
                                 SUBMIT
                             </LoadingButton>
                         </FormGroup>
+                        {error && (
+                            <FormHelperText error sx={{ pl: 2 }}>
+                                {error}
+                            </FormHelperText>
+                        )}
                     </Box>
 
                     <Box>
@@ -113,7 +134,7 @@ export default function NewsletterForm() {
                             label={
                                 <Typography
                                     variant="button"
-                                    color="black"
+                                    color={consentError ? 'error' : 'black'}
                                     sx={{ fontSize: 12 }}
                                 >
                                     BY CHECKING THIS BOX AND CLICKING SIGN UP, I
@@ -122,6 +143,12 @@ export default function NewsletterForm() {
                                 </Typography>
                             }
                         ></FormControlLabel>
+
+                        {consentError && (
+                            <FormHelperText error sx={{ pl: 2.5 }}>
+                                {consentError}
+                            </FormHelperText>
+                        )}
                     </Box>
                 </Stack>
             )}
