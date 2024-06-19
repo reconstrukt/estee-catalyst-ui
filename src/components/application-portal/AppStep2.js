@@ -16,6 +16,7 @@ export default function AppStep2() {
         useApplicationPortal();
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+    const [errors, setErrors] = useState({});
 
     useEffect(() => {
         setValues({
@@ -38,24 +39,44 @@ export default function AppStep2() {
             ...val,
             [field]: e.target.value,
         }));
+        setErrors((val) => {
+            let newerrs = { ...val };
+            delete newerrs[field];
+            return newerrs;
+        });
     };
 
     const validate = () => {
-        let res = false;
+        let hasAny = false;
+        let errors = {};
 
         for (let key in values) {
             if (values[key]) {
-                res = true;
+                hasAny = true;
+
+                if (!validateURL(values[key])) {
+                    errors[key] = 'This must be a valid URL.';
+                }
             }
         }
 
-        if (res === false) {
+        if (hasAny === false) {
             setError(
                 'At least one account or a website url is required to proceed.',
             );
         }
 
-        return res;
+        setErrors(errors);
+
+        console.log('validation: ', hasAny, errors);
+
+        return hasAny && Object.keys(errors).length === 0;
+    };
+
+    const validateURL = (s) => {
+        const pattern = /\..+$/; // "ends with a dot followed by at least one character"
+
+        return pattern.test(s);
     };
 
     const handleNext = async () => {
@@ -100,6 +121,8 @@ export default function AppStep2() {
                             fullWidth
                             value={values.website}
                             onChange={(e) => handleChange(e, 'website')}
+                            error={!!errors['website']}
+                            helperText={errors['website']}
                         />
                     </Box>
 
@@ -116,6 +139,8 @@ export default function AppStep2() {
                             fullWidth
                             value={values.instagram}
                             onChange={(e) => handleChange(e, 'instagram')}
+                            error={!!errors['instagram']}
+                            helperText={errors['instagram']}
                         />
                     </Box>
 
@@ -132,6 +157,8 @@ export default function AppStep2() {
                             fullWidth
                             value={values.facebook}
                             onChange={(e) => handleChange(e, 'facebook')}
+                            error={!!errors['facebook']}
+                            helperText={errors['facebook']}
                         />
                     </Box>
 
@@ -148,6 +175,8 @@ export default function AppStep2() {
                             fullWidth
                             value={values.youtube}
                             onChange={(e) => handleChange(e, 'youtube')}
+                            error={!!errors['youtube']}
+                            helperText={errors['youtube']}
                         />
                     </Box>
 
@@ -164,6 +193,8 @@ export default function AppStep2() {
                             fullWidth
                             value={values.tiktok}
                             onChange={(e) => handleChange(e, 'tiktok')}
+                            error={!!errors['tiktok']}
+                            helperText={errors['tiktok']}
                         />
                     </Box>
 
@@ -180,6 +211,8 @@ export default function AppStep2() {
                             fullWidth
                             value={values.linkedin}
                             onChange={(e) => handleChange(e, 'linkedin')}
+                            error={!!errors['linkedin']}
+                            helperText={errors['linkedin']}
                         />
                     </Box>
 
@@ -196,6 +229,8 @@ export default function AppStep2() {
                             fullWidth
                             value={values.snapchat}
                             onChange={(e) => handleChange(e, 'snapchat')}
+                            error={!!errors['snapchat']}
+                            helperText={errors['snapchat']}
                         />
                     </Box>
 
@@ -212,6 +247,8 @@ export default function AppStep2() {
                             fullWidth
                             value={values.other_social}
                             onChange={(e) => handleChange(e, 'other_social')}
+                            error={!!errors['other_social']}
+                            helperText={errors['other_social']}
                         />
                     </Box>
                 </Stack>
