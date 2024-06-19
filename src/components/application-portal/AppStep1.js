@@ -35,6 +35,11 @@ export default function AppStep1() {
                 [field]: e.target.value,
                 state: '',
             }));
+            setErrors((val) => {
+                const newVal = { ...val };
+                delete newVal['state'];
+                return newVal;
+            });
         } else {
             setValues((val) => ({
                 ...val,

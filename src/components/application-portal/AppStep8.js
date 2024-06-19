@@ -25,9 +25,9 @@ export default function AppStep8() {
             concept_background: application.concept_background
                 ? application.concept_background
                 : '',
-            social_impact: application.social_impact
+            social_impact: !!application.social_impact
                 ? application.social_impact
-                : '',
+                : 'yes',
         });
     }, []);
 
@@ -100,18 +100,22 @@ export default function AppStep8() {
                     </Typography>
                     <RadioGroup
                         row
-                        value={values.social_impact}
+                        value={
+                            values && values.social_impact
+                                ? values.social_impact
+                                : 'yes'
+                        }
                         onChange={(e) => handleChange(e, 'social_impact')}
                     >
                         <FormControlLabel
-                            value={'yes'}
+                            value="yes"
                             control={<Radio color="black" />}
                             label={
                                 <Typography variant="button">YES</Typography>
                             }
                         />
                         <FormControlLabel
-                            value={'no'}
+                            value="no"
                             control={<Radio color="black" />}
                             label={<Typography variant="button">NO</Typography>}
                         />
