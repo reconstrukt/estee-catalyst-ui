@@ -39,7 +39,7 @@ export default function Header({ transparentHeader }) {
             sx={{
                 position: 'fixed',
                 marginBottom: menuOpen ? 0 : aboveTheFold ? '-60px' : 0,
-                top: 0,
+                top: scrollDirection === 'up' || scrollPos === 0 ? 0 : -100,
                 color:
                     !aboveTheFold && !menuOpen
                         ? 'black'
