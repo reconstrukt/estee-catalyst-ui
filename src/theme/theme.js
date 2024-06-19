@@ -413,6 +413,14 @@ const theme = createTheme({
                 },
             },
         },
+
+        MuiDialogContent: {
+            styleOverrides: {
+                root: {
+                    padding: '0 !important',
+                },
+            },
+        },
     },
 });
 
