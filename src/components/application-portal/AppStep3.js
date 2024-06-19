@@ -35,7 +35,7 @@ export default function AppStep3() {
                 : '1-10',
             company_category: application.company_category
                 ? application.company_category
-                : '',
+                : 'Makeup',
         });
     }, []);
 
