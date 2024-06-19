@@ -11,6 +11,7 @@ import {
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 import TheTextarea from '../elements/TheTextarea';
+import Link from 'next/link';
 
 export default function AppStep11() {
     const { application, updateApplication, values, setValues } =
@@ -167,9 +168,22 @@ export default function AppStep11() {
                                             textTransform: 'none',
                                         }}
                                     >
-                                        I confirm that I accept the Privacy
-                                        Policy, Program Rules and Terms and
-                                        Conditions.Y.
+                                        I confirm that I accept the{' '}
+                                        <Link
+                                            target="_blank"
+                                            href="/privacy-policy"
+                                        >
+                                            Privacy Policy
+                                        </Link>
+                                        ,{' '}
+                                        <Link
+                                            target="_blank"
+                                            href="/terms-and-conditions"
+                                        >
+                                            Program Rules and Terms and
+                                            Conditions
+                                        </Link>
+                                        .
                                     </Typography>
                                 }
                             />
