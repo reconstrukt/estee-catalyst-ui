@@ -455,8 +455,8 @@ export default function Home() {
 
             <Section
                 sx={{
-                    backgroundColor: 'black.main',
-                    color: 'white.main',
+                    backgroundColor: 'white.main',
+                    color: 'black.main',
                     py: 8,
                 }}
             >
@@ -505,8 +505,6 @@ export default function Home() {
                                                     xs: 50,
                                                     md: 80,
                                                 },
-                                                border: '1px solid',
-                                                borderColor: 'black.main',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
