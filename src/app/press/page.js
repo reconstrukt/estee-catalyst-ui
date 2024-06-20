@@ -9,6 +9,7 @@ import GridItem from '@/components/sections/GridItem';
 
 import pressmob from '../../../assets/images/pressmob.jpg';
 import pressimg from '../../../assets/images/press.jpg';
+import Image from 'next/image';
 
 export default function ContactUs() {
     return (
@@ -62,7 +63,18 @@ export default function ContactUs() {
                                     justifyContent: 'center',
                                 }}
                             >
-                                {item.logo}
+                                <Image
+                                    src={item.logo.src}
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'contain',
+                                        objectPosition: 'center',
+                                    }}
+                                />
                             </Box>
 
                             <Box>
