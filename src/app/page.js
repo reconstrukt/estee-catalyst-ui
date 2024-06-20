@@ -26,7 +26,7 @@ import jury from '../../assets/slider/jury.jpg';
 import jurymob from '../../assets/slider/jurymob.jpg';
 import tiktok from '../../assets/slider/tiktok.jpg';
 import tiktokmob from '../../assets/slider/tiktokmob.jpg';
-import press from '@/cms/press';
+import press, { pressLogos } from '@/cms/press';
 import theme from '@/theme/theme';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Malarquee from 'react-malarquee';
@@ -453,8 +453,7 @@ export default function Home() {
                 </Stack>
             </Section>
 
-            {/* TODO PRESS SECTION */}
-            {/* <Section
+            <Section
                 sx={{
                     backgroundColor: 'black.main',
                     color: 'white.main',
@@ -481,7 +480,7 @@ export default function Home() {
                     >
                         <Malarquee>
                             <Stack direction="row">
-                                {press.map((item, index) => (
+                                {pressLogos.map((item, index) => (
                                     <Stack
                                         key={index}
                                         spacing={2}
@@ -504,20 +503,32 @@ export default function Home() {
                                                 },
                                                 height: {
                                                     xs: 50,
-                                                    md: 50,
+                                                    md: 80,
                                                 },
                                                 border: '1px solid',
                                                 borderColor: 'black.main',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
+                                                background: 'white',
 
                                                 '& svg path': {
                                                     fill: 'currentColor',
                                                 },
                                             }}
                                         >
-                                            {item.logo}
+                                            <Image
+                                                src={item.src}
+                                                width={0}
+                                                height={0}
+                                                sizes="100vw"
+                                                style={{
+                                                    width: '100%',
+                                                    height: '100%',
+                                                    objectFit: 'contain',
+                                                    objectPosition: 'center',
+                                                }}
+                                            />
                                         </Box>
                                     </Stack>
                                 ))}
@@ -525,7 +536,7 @@ export default function Home() {
                         </Malarquee>
                     </Box>
                 </Link>
-            </Section> */}
+            </Section>
         </PageLayout>
     );
 }
