@@ -264,11 +264,11 @@ export default function Header({ transparentHeader }) {
                                 <Typography variant="menu">Contact</Typography>
                             </Link>
                         </Box>
-                        {/* <Box>
+                        <Box>
                             <Link href="/press">
                                 <Typography variant="menu">Press</Typography>
                             </Link>
-                        </Box> */}
+                        </Box>
                         <Box>
                             <Link href="/faq">
                                 <Typography variant="menu">FAQ</Typography>
