@@ -15,7 +15,7 @@ const masterclasses = [
         lesson: 'EPISODE 1',
         title: 'Defining brand vision',
         copy: `A lasting business has a strong brand identity. In this Masterclass, uncover the creative process behind some of the most disruptive and visionary beauty brands. Hear how our experts find inspiration using moodboards, music, mission statements and more to capture what their brand stands for. `,
-        video: '/videos/lesson1.mp4',
+        video: 'https://estee-catalyst-video.s3.amazonaws.com/CATALYST_EP1.mp4',
     },
 
     {
