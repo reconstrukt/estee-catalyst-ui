@@ -96,6 +96,7 @@ export default function AppStep4() {
                         <Link href="/terms-and-conditions" target="_blank">
                             Terms and Conditions
                         </Link>
+                        .
                     </Typography>
                 </Stack>
 
