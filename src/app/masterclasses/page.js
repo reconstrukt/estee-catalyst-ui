@@ -197,12 +197,32 @@ export default function Masterclasses() {
                                 {masterclasses.map((lesson, i) => (
                                     <ButtonBase
                                         key={i}
-                                        onClick={() => setSelected(lesson)}
+                                        onClick={() => {
+                                            setSelected(null);
+                                            setSelected(lesson);
+                                        }}
                                     >
                                         <Box
                                             sx={{
                                                 width: 48,
                                                 height: 60,
+
+                                                ...(lesson.lesson ===
+                                                selected.lesson
+                                                    ? {
+                                                          '&::after': {
+                                                              content: '""',
+                                                              position:
+                                                                  'absolute',
+                                                              bottom: -4,
+                                                              left: 0,
+                                                              width: '100%',
+                                                              height: 2,
+                                                              background:
+                                                                  '#FF5A00',
+                                                          },
+                                                      }
+                                                    : {}),
                                             }}
                                         >
                                             <Image
@@ -245,9 +265,13 @@ export default function Masterclasses() {
                                     },
                                 }}
                             >
-                                <video controls>
-                                    <source src={`${selected.video}#t=0.001`} />
-                                </video>
+                                {selected && selected.video && (
+                                    <video controls>
+                                        <source
+                                            src={`${selected.video}#t=0.001`}
+                                        />
+                                    </video>
+                                )}
                             </Box>
 
                             <Box

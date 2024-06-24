@@ -187,20 +187,20 @@ const judges = [
         copy: `The founder of Baron&Baron, Fabien Baron has been leading iconic creative for some of the world’s most celebrated brands for over three decades. He’s spearheaded the image of fashion houses including Calvin Klein, Balenciaga, and Burberry, reinvented illustrious magazines including Interview, French Vogue, Harper’s Bazaar, and Italian Vogue, and creative directed campaigns for the likes of Nars, Louis Vuitton, and Dior. `,
     },
 
-    {
-        image: carlos,
-        name: 'CARLOS NAZARIO',
-        // title: (
-        //     <>
-        //         Global Head
-        //         <br />
-        //         Content Partnerships
-        //         <br />
-        //         TikTok
-        //     </>
-        // ),
-        copy: `Named by the CFDA as one of the stylists shaping the future of fashion, Carlos Nazario is a fashion editor, stylist and creative consultant based in New York City. He has collaborated with esteemed photographers like Alasdair McLellan, Mert Alas & Marcus Piggott, Mario Sorrenti, and Glen Luchford; talent such as Rihanna, Rosalía, Bella Hadid, Naomi Campbell, and Frank Ocean; and magazines including American Vogue, Italian Vogue, and i-D. He is currently the Style Director at Large of Harper’s Bazaar US.`,
-    },
+    // {
+    //     image: carlos,
+    //     name: 'CARLOS NAZARIO',
+    //     // title: (
+    //     //     <>
+    //     //         Global Head
+    //     //         <br />
+    //     //         Content Partnerships
+    //     //         <br />
+    //     //         TikTok
+    //     //     </>
+    //     // ),
+    //     copy: `Named by the CFDA as one of the stylists shaping the future of fashion, Carlos Nazario is a fashion editor, stylist and creative consultant based in New York City. He has collaborated with esteemed photographers like Alasdair McLellan, Mert Alas & Marcus Piggott, Mario Sorrenti, and Glen Luchford; talent such as Rihanna, Rosalía, Bella Hadid, Naomi Campbell, and Frank Ocean; and magazines including American Vogue, Italian Vogue, and i-D. He is currently the Style Director at Large of Harper’s Bazaar US.`,
+    // },
 
     {
         image: courtney,
