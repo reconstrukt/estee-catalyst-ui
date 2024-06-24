@@ -308,10 +308,10 @@ export default function ThePrizes() {
                         <p>
                             <b>3. Start/End Dates.</b> Entry period begins at
                             12:00:01 AM Eastern Time (United States) (“ET”) on
-                            June 20, 2024 and all Submissions must be received
-                            by 11:59:59 PM ET on August 4, 2024 (“Program
-                            Period”). Sponsor’s computer is the official
-                            time-keeping device for the Program.{' '}
+                            June 25 , 2024 and all Submissions must be received
+                            by 11:59:59 PM ET on August 4 , 2024 ( “ Progra m
+                            Period”). Sponsor’s computer is the official time -
+                            keeping device for the Program
                         </p>
                     </Box>
 
