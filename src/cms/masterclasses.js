@@ -23,7 +23,7 @@ const masterclasses = [
         lesson: 'EPISODE 2',
         title: 'Building a community',
         copy: `Your community is a key asset in building a beauty brand – but how do you identify and reach them in an authentic way? In this Masterclass, uncover the strategies to leverage your community, plus techniques for communicating with your audience. `,
-        video: '/videos/lesson1.mp4',
+        video: 'https://estee-catalyst-video.s3.amazonaws.com/CATALYST_EP2.mp4',
     },
 
     {
@@ -31,7 +31,7 @@ const masterclasses = [
         lesson: 'EPISODE 3',
         title: 'Brand strategy for growth',
         copy: `Knowing the white space you want your brand to occupy in the market is critical for every future decision your business will have to make. Are you creating a luxury brand? A sustainable brand? Who is your target customer and where do they shop? Is price your winning factor, or is it packaging? This Masterclass will help you to define your brand strategy, creating a north star for success. `,
-        video: '/videos/lesson1.mp4',
+        video: 'https://estee-catalyst-video.s3.amazonaws.com/CATALYST_EP3.mp4',
     },
 
     // {
