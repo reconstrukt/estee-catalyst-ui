@@ -187,7 +187,7 @@ export default function Masterclasses() {
             >
                 {selected && (
                     <>
-                        <Box>
+                        {/* <Box>
                             <Stack
                                 direction="row"
                                 spacing={0.5}
@@ -241,7 +241,7 @@ export default function Masterclasses() {
                                     </ButtonBase>
                                 ))}
                             </Stack>
-                        </Box>
+                        </Box> */}
 
                         <Box px={2}>
                             <Box
