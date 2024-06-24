@@ -20,7 +20,6 @@ export default function AppStep0() {
     const [email, setEmail] = useState('');
     const [loading, setLoading] = useState(false);
     const [state, setState] = useState('init'); // init | exists | created | submitted
-    const [link, setLink] = useState('');
     const [error, setError] = useState('');
 
     const handleStart = async () => {
@@ -37,7 +36,7 @@ export default function AppStep0() {
                     'https://estee-catalyst-ui.vercel.app',
                     '',
                 );
-                setLink(link);
+                window.__emailLink = link;
             }
 
             if (res.data.submitted) {
@@ -150,11 +149,6 @@ export default function AppStep0() {
                     >
                         RESEND EMAIL
                     </LoadingButton>
-
-                    {/* // TODO REMOVE THIS: */}
-                    <Link href={link}>
-                        <Button>go to {link}</Button>
-                    </Link>
                 </Stack>
             )}
 
