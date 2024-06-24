@@ -45,7 +45,7 @@ export default function ApplicationPortal() {
 
     const handleSaveAndExit = async () => {
         setLoading(true);
-        const res = await updateApplication();
+        const res = await updateApplication(true); // isSaveAndExit
 
         if (!res.success) {
             // TODO handle errs

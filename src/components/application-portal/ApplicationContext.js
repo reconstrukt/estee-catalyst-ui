@@ -11,14 +11,20 @@ export const ApplicationPortalProvider = ({ children }) => {
 
     const [values, setValues] = useState({});
 
-    const updateApplication = async () => {
-        const res = await editApplication(application.uuid, {
+    const updateApplication = async (isSaveAndExit = false) => {
+        const payload = {
             ...values,
             step:
                 application && application.step && application.step > step
                     ? application.step
                     : step,
-        });
+        };
+
+        if (isSaveAndExit) {
+            payload.submitted = 0;
+        }
+
+        const res = await editApplication(application.uuid, payload);
 
         console.log('edit application', res);
 

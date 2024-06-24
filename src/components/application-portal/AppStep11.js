@@ -24,6 +24,7 @@ export default function AppStep11() {
                 ? application.anything_else
                 : '',
             terms: 0,
+            privacy: 1,
             submitted: 1,
         });
     }, []);
