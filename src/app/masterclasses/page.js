@@ -388,6 +388,8 @@ export default function Masterclasses() {
                     {experts.map((item, index) => (
                         <GridItem key={index}>
                             <PersonGridItem
+                                displayName={false}
+                                displayTitle={false}
                                 item={item}
                                 onClick={() => setSelectedJudge(item)}
                                 nameSx={{
