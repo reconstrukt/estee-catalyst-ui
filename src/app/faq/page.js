@@ -100,7 +100,10 @@ export default function FaqPage() {
                             prohibited (collectively, “ineligible countries”).
                             For the full eligibility requirements, please review
                             the{' '}
-                            <Link href="/terms-and-conditions">
+                            <Link
+                                href="/terms-and-conditions.pdf"
+                                target="_blank"
+                            >
                                 Terms & Conditions
                             </Link>
                         </Box>

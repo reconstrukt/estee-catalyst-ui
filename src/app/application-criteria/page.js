@@ -133,7 +133,10 @@ export default function ApplicationCriteria() {
                             >
                                 <br />
                                 Please review the{' '}
-                                <Link href="/terms-and-conditions">
+                                <Link
+                                    href="/terms-and-conditions.pdf"
+                                    target="_blank"
+                                >
                                     Terms & Conditions
                                 </Link>{' '}
                                 for full details
@@ -209,7 +212,10 @@ export default function ApplicationCriteria() {
                             >
                                 <br />
                                 Please review the{' '}
-                                <Link href="/terms-and-conditions">
+                                <Link
+                                    href="/terms-and-conditions.pdf"
+                                    target="_blank"
+                                >
                                     Terms & Conditions
                                 </Link>{' '}
                                 for full details

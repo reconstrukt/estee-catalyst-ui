@@ -116,7 +116,8 @@ export default function AppStep11() {
                                         and{' '}
                                         <Link
                                             target="_blank"
-                                            href="/terms-and-conditions"
+                                            href="/terms-and-conditions.pdf"
+                                            target="_blank"
                                         >
                                             Terms and Conditions
                                         </Link>{' '}
