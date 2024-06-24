@@ -31,7 +31,7 @@ export default function ContactUs() {
                         PRESS
                     </Typography>
                     <Typography variant="subtitle1">
-                        Read what others say about us
+                        Read what others say about ELC New Incubation Ventures
                     </Typography>
                 </Box>
             </Hero>

@@ -273,23 +273,25 @@ export default function Catalysts() {
                                 <Typography variant="body1">
                                     TikTok is the leading destination for
                                     short-form mobile video. Our mission is to
-                                    inspire creativity and bring joy.
+                                    inspire creativity and bring joy. TikTok is
+                                    supporting The Catalysts to amplify the next
+                                    generation of beauty founders.
                                 </Typography>
                                 <br />
                                 <Typography variant="body1">
-                                    Serving as a judge for this years program,
-                                    Vanessa Craft is a champion of next-gen
-                                    talent, building engaged communities and
-                                    directing game-changing content and driving
-                                    innovative business strategies. As the
-                                    Global Head of Content Partnerships, Vanessa
-                                    is responsible for accelerating the growth,
-                                    content strategy and business development
-                                    for TikTok’s top Global partners across
-                                    Fashion, Entertainment, Lifestyle, Education
-                                    and Sports with highlights including
-                                    TikTok's first sponsorship of the Met Gala
-                                    2024.
+                                    Vanessa Craft, TikTok’s Global Head of
+                                    Content Partnerships, will be serving as a
+                                    jury member for this year’s program. She is
+                                    a champion of next-gen talent, building
+                                    engaged communities and directing
+                                    game-changing content and driving innovative
+                                    business strategies. Vanessa is responsible
+                                    for accelerating the growth, content
+                                    strategy and business development for
+                                    TikTok’s top Global partners across Fashion,
+                                    Entertainment, Lifestyle, Education and
+                                    Sports with highlights including TikTok's
+                                    first sponsorship of the Met Gala 2024.
                                 </Typography>
                                 <br />
                                 <Typography variant="body1">

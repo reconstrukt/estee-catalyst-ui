@@ -238,11 +238,7 @@ export default function Home() {
                             BUSINESS ACUMEN; IT'S ABOUT CRAFTING NARRATIVES,
                             BUILDING COMMUNITIES, AND SHAPING NOT JUST TRENDS
                             BUT ALSO BROADER CONVERSATIONS AND MOVEMENTS.
-                            FOUNDERS ARE STORYTELLERS, CULTURAL AMBASSADORS,
-                            FILMMAKERS, DESIGNERS, GAMERS, AND ARTISTS. THEIR
-                            VISIONS OF BEAUTY — EXPRESSED VIA PRODUCT, RETAIL
-                            EXPERIENCES, FILMS, CONTENT — CONTINUE TO FUEL
-                            GROWTH IN THE BEAUTY SECTOR. WE SET OUT TO CREATE A
+                            FOUNDERS ARE STORYTELLERS… WE SET OUT TO CREATE A
                             PROGRAM TO IDENTIFY AND ELEVATE THESE VISIONARIES AS
                             THEY CONTINUE TO DRIVE INNOVATION AND PUSH THE
                             CONVERSATION FORWARD.”

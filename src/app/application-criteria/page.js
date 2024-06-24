@@ -48,6 +48,52 @@ export default function ApplicationCriteria() {
                 </Box>
             </Hero>
 
+            <Section
+                sx={{
+                    backgroundImage: sharedStyles.linearGradient.orangeRed,
+                }}
+            >
+                <Stack spacing={8} sx={{ maxWidth: 1172, margin: '0 auto' }}>
+                    <Typography variant="h1">WHO CAN APPLY</Typography>
+
+                    <Stack spacing={3}>
+                        <Typography variant="h2">NEW FOUNDERS</Typography>
+                        <Typography>
+                            Do you have a breakthrough product innovation or
+                            business idea for the beauty industry that needs
+                            funding to become a reality? The Catalysts is
+                            seeking founders who have new brand and product
+                            concepts and need support to make them happen.
+                        </Typography>
+                    </Stack>
+
+                    <Stack spacing={3}>
+                        <Typography variant="h2">
+                            EXISTING BRAND FOUNDERS
+                        </Typography>
+                        <Typography>
+                            Whether a fashion designer, retailer, or another
+                            business entirely, we want to hear from those who
+                            have already built a brand and want to extend its
+                            creativity into the world of beauty through a
+                            product line or limited edition collection.
+                        </Typography>
+                    </Stack>
+
+                    <Stack spacing={3}>
+                        <Typography variant="h2">
+                            CREATIVE STORYTELLERS
+                        </Typography>
+                        <Typography>
+                            Beyond brands, The Catalysts is open to creative
+                            practitioners who would use funding to create work
+                            such as a film, book, or podcast that speaks to new
+                            ideas and new audiences in beauty.
+                        </Typography>
+                    </Stack>
+                </Stack>
+            </Section>
+
             <Stack
                 sx={{
                     flexDirection: {
@@ -266,52 +312,6 @@ export default function ApplicationCriteria() {
                                 START APPLICATION
                             </Button>
                         </Box>
-                    </Stack>
-                </Stack>
-            </Section>
-
-            <Section
-                sx={{
-                    backgroundImage: sharedStyles.linearGradient.orangeRed,
-                }}
-            >
-                <Stack spacing={8} sx={{ maxWidth: 1172, margin: '0 auto' }}>
-                    <Typography variant="h1">WHO CAN APPLY</Typography>
-
-                    <Stack spacing={3}>
-                        <Typography variant="h2">NEW FOUNDERS</Typography>
-                        <Typography>
-                            Do you have a breakthrough product innovation or
-                            business idea for the beauty industry that needs
-                            funding to become a reality? The Catalysts is
-                            seeking founders who have new brand and product
-                            concepts and need support to make them happen.
-                        </Typography>
-                    </Stack>
-
-                    <Stack spacing={3}>
-                        <Typography variant="h2">
-                            EXISTING BRAND FOUNDERS
-                        </Typography>
-                        <Typography>
-                            Whether a fashion designer, retailer, or another
-                            business entirely, we want to hear from those who
-                            have already built a brand and want to extend its
-                            creativity into the world of beauty through a
-                            product line or limited edition collection.
-                        </Typography>
-                    </Stack>
-
-                    <Stack spacing={3}>
-                        <Typography variant="h2">
-                            CREATIVE STORYTELLERS
-                        </Typography>
-                        <Typography>
-                            Beyond brands, The Catalysts is open to creative
-                            practitioners who would use funding to create work
-                            such as a film, book, or podcast that speaks to new
-                            ideas and new audiences in beauty.
-                        </Typography>
                     </Stack>
                 </Stack>
             </Section>
