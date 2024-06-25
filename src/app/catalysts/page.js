@@ -94,27 +94,25 @@ export default function Catalysts() {
                             color: 'white.main',
 
                             textAlign: 'center',
+
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
                         }}
                     >
-                        <Stack
+                        <Box
                             sx={{
-                                height: '100%',
-                                width: '100%',
+                                height: '80%',
+                                width: '80%',
+                                maxWidth: 500,
+                                maxHeight: 500,
+                                display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
                             }}
                         >
-                            <Box
-                                sx={{
-                                    height: '80%',
-                                    width: '80%',
-                                    maxWidth: 500,
-                                    maxHeight: 500,
-                                }}
-                            >
-                                <NIVLargeLogo width="100%" height="100%" />
-                            </Box>
-                        </Stack>
+                            <NIVLargeLogo width="300" height="300" />
+                        </Box>
                     </Box>
 
                     <Box
@@ -210,27 +208,26 @@ export default function Catalysts() {
 
                             textAlign: 'center',
                             backgroundColor: 'black.main',
+
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
                         }}
                     >
-                        <Stack
+                        <Box
                             sx={{
-                                height: '100%',
-                                width: '100%',
+                                height: '80%',
+                                width: '80%',
+                                maxWidth: 400,
+                                maxHeight: 400,
+                                margin: 'auto',
+                                display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
                             }}
                         >
-                            <Box
-                                sx={{
-                                    height: '80%',
-                                    width: '80%',
-                                    maxWidth: 400,
-                                    maxHeight: 400,
-                                }}
-                            >
-                                <TikTokStacked width="100%" height="100%" />
-                            </Box>
-                        </Stack>
+                            <TikTokStacked width="300" height="300" />
+                        </Box>
                     </Box>
 
                     <Box
