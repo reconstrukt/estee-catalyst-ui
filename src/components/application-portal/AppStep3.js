@@ -13,6 +13,7 @@ import {
 } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
+import CountrySelect from '../elements/CountrySelect';
 
 export default function AppStep3() {
     const { application, updateApplication, values, setValues } =
@@ -31,10 +32,10 @@ export default function AppStep3() {
                 : '',
             num_of_employees: application.num_of_employees
                 ? application.num_of_employees
-                : '',
+                : '1-10',
             company_category: application.company_category
                 ? application.company_category
-                : '',
+                : 'Makeup',
         });
     }, []);
 
@@ -162,10 +163,9 @@ export default function AppStep3() {
 
                             <Box>
                                 <InputLabel>Country of Company HQ</InputLabel>
-                                <TextField
+                                <CountrySelect
                                     error={!!errors['company_country']}
                                     helperText={errors['company_country']}
-                                    fullWidth
                                     value={values.company_country}
                                     onChange={(e) =>
                                         handleChange(e, 'company_country')

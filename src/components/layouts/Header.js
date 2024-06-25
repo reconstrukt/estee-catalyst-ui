@@ -46,13 +46,7 @@ export default function Header({ transparentHeader }) {
                         : transparentHeader || menuOpen
                           ? 'white.main'
                           : 'black',
-                // backgroundColor: !aboveTheFold
-                //     ? 'white.main'
-                //     : transparentHeader || menuOpen
-                //       ? 'transparent'
-                //       : 'white.main',
                 backgroundColor: 'transparent',
-                // color: transparentHeader || menuOpen ? 'white.main' : 'black',
                 transition: 'all 0.3s ease',
                 px: 2,
                 py: 2,
@@ -92,6 +86,13 @@ export default function Header({ transparentHeader }) {
                         }
                         sx={{
                             padding: '5px 10px',
+                            backgroundColor:
+                                !aboveTheFold && !menuOpen
+                                    ? 'rgba(255,255,255, 0.1)'
+                                    : transparentHeader || menuOpen
+                                      ? 'rgba(0, 0, 0, 0.1)'
+                                      : 'rgba(255,255,255, 0.1)',
+                            backdropFilter: 'blur(5px)',
                         }}
                         onClick={() => setDialogOpen(true)}
                     >
@@ -263,11 +264,11 @@ export default function Header({ transparentHeader }) {
                                 <Typography variant="menu">Contact</Typography>
                             </Link>
                         </Box>
-                        {/* <Box>
+                        <Box>
                             <Link href="/press">
                                 <Typography variant="menu">Press</Typography>
                             </Link>
-                        </Box> */}
+                        </Box>
                         <Box>
                             <Link href="/faq">
                                 <Typography variant="menu">FAQ</Typography>

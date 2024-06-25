@@ -134,28 +134,19 @@ export default function Catalysts() {
                         }}
                     >
                         <Stack
-                            spacing={10}
+                            spacing={6}
                             sx={{
                                 maxWidth: 680,
                                 textAlign: 'center',
                             }}
                         >
-                            <Stack direction="row" justifyContent="center">
-                                <NIVLogo />
-                            </Stack>
-                            <Stack alignItems="center" spacing={0.5}>
+                            <Stack alignItems="center" spacing={6}>
                                 <Typography variant="button">
                                     POWERING THE CATALYSTS
                                 </Typography>
-                                <Typography variant="h2">
-                                    SHANA RANDHAVA
-                                </Typography>
-                                <Typography variant="button">
-                                    SENIOR VICE PRESIDENT, NEW INCUBATION
-                                    VENTURES,
-                                    <br />
-                                    THE ESTÉE LAUDER COMPANIES
-                                </Typography>
+                                <Stack direction="row" justifyContent="center">
+                                    <NIVLogo />
+                                </Stack>
                             </Stack>
 
                             <Stack
@@ -259,27 +250,19 @@ export default function Catalysts() {
                         }}
                     >
                         <Stack
-                            spacing={10}
+                            spacing={6}
                             sx={{
                                 maxWidth: 680,
                                 textAlign: 'center',
                             }}
                         >
-                            <Stack direction="row" justifyContent="center">
-                                <TikTokLogo />
-                            </Stack>
-                            <Stack alignItems="center" spacing={0.5}>
+                            <Stack alignItems="center" spacing={6}>
                                 <Typography variant="button">
                                     POWERING THE CATALYSTS
                                 </Typography>
-                                <Typography variant="h2">
-                                    VANESSA CRAFT
-                                </Typography>
-                                <Typography variant="button">
-                                    GLOBAL HEAD OF CONTENT PARTNERSHIPS,
-                                    <br />
-                                    TikTok
-                                </Typography>
+                                <Stack direction="row" justifyContent="center">
+                                    <TikTokLogo />
+                                </Stack>
                             </Stack>
 
                             <Stack
@@ -290,16 +273,19 @@ export default function Catalysts() {
                                 <Typography variant="body1">
                                     TikTok is the leading destination for
                                     short-form mobile video. Our mission is to
-                                    inspire creativity and bring joy.
+                                    inspire creativity and bring joy. TikTok is
+                                    supporting The Catalysts to amplify the next
+                                    generation of beauty founders.
                                 </Typography>
                                 <br />
                                 <Typography variant="body1">
-                                    A trailblazing thought leader, Vanessa Craft
-                                    is a champion of next-gen talent, building
+                                    Vanessa Craft, TikTok’s Global Head of
+                                    Content Partnerships, will be serving as a
+                                    jury member for this year’s program. She is
+                                    a champion of next-gen talent, building
                                     engaged communities and directing
                                     game-changing content and driving innovative
-                                    business strategies. As the Global Head of
-                                    Content Partnerships, Vanessa is responsible
+                                    business strategies. Vanessa is responsible
                                     for accelerating the growth, content
                                     strategy and business development for
                                     TikTok’s top Global partners across Fashion,

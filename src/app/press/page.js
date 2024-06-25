@@ -9,6 +9,7 @@ import GridItem from '@/components/sections/GridItem';
 
 import pressmob from '../../../assets/images/pressmob.jpg';
 import pressimg from '../../../assets/images/press.jpg';
+import Image from 'next/image';
 
 export default function ContactUs() {
     return (
@@ -30,7 +31,7 @@ export default function ContactUs() {
                         PRESS
                     </Typography>
                     <Typography variant="subtitle1">
-                        Read what others say about us
+                        Read what others say about ELC New Incubation Ventures
                     </Typography>
                 </Box>
             </Hero>
@@ -38,48 +39,61 @@ export default function ContactUs() {
             <Grid>
                 {press.map((item, index) => (
                     <GridItem key={index}>
-                        <Stack
-                            spacing={2}
-                            sx={{
-                                alignItems: 'center',
-                                textAlign: 'center',
-                            }}
-                        >
-                            <Box
+                        <Link href={item.link} target="_blank">
+                            <Stack
+                                spacing={2}
                                 sx={{
-                                    width: {
-                                        xs: 170,
-                                        md: 222,
-                                    },
-                                    height: {
-                                        xs: 129,
-                                        md: 165,
-                                    },
-                                    border: '1px solid',
-                                    borderColor: 'black.main',
-                                    display: 'flex',
                                     alignItems: 'center',
-                                    justifyContent: 'center',
+                                    textAlign: 'center',
                                 }}
                             >
-                                {item.logo}
-                            </Box>
+                                <Box
+                                    sx={{
+                                        width: {
+                                            xs: 170,
+                                            md: 222,
+                                        },
+                                        height: {
+                                            xs: 129,
+                                            md: 165,
+                                        },
+                                        border: '1px solid',
+                                        borderColor: 'black.main',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                    }}
+                                >
+                                    <Image
+                                        src={item.logo.src}
+                                        width={0}
+                                        height={0}
+                                        sizes="100vw"
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'contain',
+                                            objectPosition: 'center',
+                                        }}
+                                    />
+                                </Box>
 
-                            <Box>
-                                <Typography variant="h4" sx={{ mb: 0.5 }}>
-                                    {item.date}
-                                </Typography>
-                                <Typography variant="body1">
-                                    {item.title}
-                                </Typography>
-                            </Box>
+                                <Box>
+                                    <Typography variant="h4" sx={{ mb: 0.5 }}>
+                                        {item.date}
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        {item.title}
+                                    </Typography>
+                                </Box>
 
-                            <Box>
-                                <Link href={item.link} target="_blank">
-                                    READ MORE
-                                </Link>
-                            </Box>
-                        </Stack>
+                                <Box>
+                                    <Link href={item.link} target="_blank">
+                                        READ MORE
+                                    </Link>
+                                </Box>
+                            </Stack>
+                        </Link>
                     </GridItem>
                 ))}
             </Grid>

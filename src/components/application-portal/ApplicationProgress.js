@@ -6,7 +6,9 @@ export default function ApplicationProgress({ step }) {
 
     return (
         <Stack alignItems="center" spacing={0.5}>
-            <Typography variant="button">{width} DONE</Typography>
+            <Typography variant="button" sx={{ fontSize: 12 }}>
+                {width} DONE
+            </Typography>
             <Box
                 sx={{
                     height: 2,

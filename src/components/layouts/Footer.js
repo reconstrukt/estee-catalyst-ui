@@ -119,7 +119,10 @@ export default function Footer() {
                                 <Link href="/faq">FAQ</Link>
                             </Box>
                             <Box>
-                                <Link href="/terms-and-conditions">
+                                <Link
+                                    href="/terms-and-conditions.pdf"
+                                    target="_blank"
+                                >
                                     TERMS & CONDITIONS
                                 </Link>
                             </Box>

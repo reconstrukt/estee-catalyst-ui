@@ -48,6 +48,52 @@ export default function ApplicationCriteria() {
                 </Box>
             </Hero>
 
+            <Section
+                sx={{
+                    backgroundImage: sharedStyles.linearGradient.orangeRed,
+                }}
+            >
+                <Stack spacing={8} sx={{ maxWidth: 1172, margin: '0 auto' }}>
+                    <Typography variant="h1">WHO CAN APPLY</Typography>
+
+                    <Stack spacing={3}>
+                        <Typography variant="h2">NEW FOUNDERS</Typography>
+                        <Typography>
+                            Do you have a breakthrough product innovation or
+                            business idea for the beauty industry that needs
+                            funding to become a reality? The Catalysts is
+                            seeking founders who have new brand and product
+                            concepts and need support to make them happen.
+                        </Typography>
+                    </Stack>
+
+                    <Stack spacing={3}>
+                        <Typography variant="h2">
+                            EXISTING BRAND FOUNDERS
+                        </Typography>
+                        <Typography>
+                            Whether a fashion designer, retailer, or another
+                            business entirely, we want to hear from those who
+                            have already built a brand and want to extend its
+                            creativity into the world of beauty through a
+                            product line or limited edition collection.
+                        </Typography>
+                    </Stack>
+
+                    <Stack spacing={3}>
+                        <Typography variant="h2">
+                            CREATIVE STORYTELLERS
+                        </Typography>
+                        <Typography>
+                            Beyond brands, The Catalysts is open to creative
+                            practitioners who would use funding to create work
+                            such as a film, book, or podcast that speaks to new
+                            ideas and new audiences in beauty.
+                        </Typography>
+                    </Stack>
+                </Stack>
+            </Section>
+
             <Stack
                 sx={{
                     flexDirection: {
@@ -74,9 +120,28 @@ export default function ApplicationCriteria() {
                             textAlign: 'left',
                         }}
                     >
-                        <Typography variant="h2" sx={{ mb: 4 }}>
-                            CRITERIA
-                        </Typography>
+                        <Stack mb={4}>
+                            <Typography variant="h2">CRITERIA</Typography>
+                            <Typography
+                                variant="body1"
+                                sx={{
+                                    a: {
+                                        textDecoration: 'underline',
+                                    },
+                                    textAlign: 'left',
+                                }}
+                            >
+                                <br />
+                                Please review the{' '}
+                                <Link
+                                    href="/terms-and-conditions.pdf"
+                                    target="_blank"
+                                >
+                                    Terms & Conditions
+                                </Link>{' '}
+                                for full details
+                            </Typography>
+                        </Stack>
 
                         <Typography
                             variant="body1"
@@ -146,12 +211,14 @@ export default function ApplicationCriteria() {
                                 }}
                             >
                                 <br />
-                                (may very depending on category, please review
-                                of{' '}
-                                <Link href="/terms-and-conditions">
+                                Please review the{' '}
+                                <Link
+                                    href="/terms-and-conditions.pdf"
+                                    target="_blank"
+                                >
                                     Terms & Conditions
                                 </Link>{' '}
-                                for full details)
+                                for full details
                             </Typography>
                         </Stack>
 
@@ -193,17 +260,19 @@ export default function ApplicationCriteria() {
                                 <li>Brand, product or experience idea</li>
                                 <li>Your audience or community</li>
                                 <li>
-                                    Distribution plan – where you see your
-                                    product being sold, and on which channels
+                                    Why should you win – what makes you
+                                    deserving of funding
                                 </li>
                                 <li>
-                                    Why your company should win – what makes you
-                                    deserving of fundingA Tiktok (or other video
-                                    submission if Tiktok is not available)
-                                    explaining Your Vision for Beauty and tagged
+                                    A Tiktok (or other video submission if
+                                    Tiktok is not available) explaining Your
+                                    Vision for Beauty and tagged
                                     #JoinTheCatalysts
                                 </li>
                             </ul>
+                            <br />
+                            Applications are due by 11:59:59 on August 4, 2024
+                            EST.
                         </Typography>
                     </Box>
                 </Stack>
@@ -249,50 +318,6 @@ export default function ApplicationCriteria() {
                                 START APPLICATION
                             </Button>
                         </Box>
-                    </Stack>
-                </Stack>
-            </Section>
-
-            <Section
-                sx={{
-                    backgroundImage: sharedStyles.linearGradient.orangeRed,
-                }}
-            >
-                <Stack spacing={8} sx={{ maxWidth: 1172, margin: '0 auto' }}>
-                    <Typography variant="h1">WHO CAN APPLY</Typography>
-
-                    <Stack spacing={3}>
-                        <Typography variant="h2">NEW BRANDS</Typography>
-                        <Typography>
-                            Do you have a breakthrough product innovation or
-                            business idea for the beauty industry that needs
-                            funding to become a reality? The Catalysts is
-                            seeking founders who have new brand and product
-                            concepts and need support to make them happen.
-                        </Typography>
-                    </Stack>
-
-                    <Stack spacing={3}>
-                        <Typography variant="h2">EXISTING BRANDS</Typography>
-                        <Typography>
-                            Whether a fashion designer, retailer, or another
-                            business entirely, we want to hear from those who
-                            have already built a brand and want to extend its
-                            creativity into the world of beauty through a
-                            product line or limited edition collection.
-                        </Typography>
-                    </Stack>
-
-                    <Stack spacing={3}>
-                        <Typography variant="h2">
-                            CREATIVE STORYTELLERS
-                        </Typography>
-                        <Typography>
-                            Beyond brands, The Catalysts is open to creative
-                            practitioners who would use funding to create work
-                            such as a film, book, or podcast that speaks to new
-                            ideas and new audiences in beauty.
-                        </Typography>
                     </Stack>
                 </Stack>
             </Section>

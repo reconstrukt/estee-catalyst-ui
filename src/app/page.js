@@ -26,7 +26,7 @@ import jury from '../../assets/slider/jury.jpg';
 import jurymob from '../../assets/slider/jurymob.jpg';
 import tiktok from '../../assets/slider/tiktok.jpg';
 import tiktokmob from '../../assets/slider/tiktokmob.jpg';
-import press from '@/cms/press';
+import press, { pressLogos } from '@/cms/press';
 import theme from '@/theme/theme';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Malarquee from 'react-malarquee';
@@ -161,9 +161,11 @@ export default function Home() {
                                 the world
                             </Typography>
                             <Box mt={2}>
-                                <Button variant="outlined" color="white">
-                                    LEARN MORE
-                                </Button>
+                                <Link href="/catalysts">
+                                    <Button variant="outlined" color="white">
+                                        LEARN MORE
+                                    </Button>
+                                </Link>
                             </Box>
                         </Box>
                     </Hero>
@@ -178,11 +180,11 @@ export default function Home() {
 
                     <Typography variant="subtitle1">
                         All it takes is an idea. Whether you’re a brand founder,
-                        fashion designer, perfumer, photographer, skincare
-                        scientist, or makeup artist, The Catalysts is an open
-                        call for new ideas set to transform the future of beauty
-                        – and an opportunity to receive vital funding to make
-                        your plans into reality.{' '}
+                        content creator, fashion designer, perfumer,
+                        photographer, skincare scientist, or makeup artist, The
+                        Catalysts is an open call for new ideas set to transform
+                        the future of beauty – and an opportunity to receive
+                        vital funding to make your plans into reality.
                     </Typography>
 
                     <Link href="/catalysts">
@@ -232,10 +234,14 @@ export default function Home() {
 
                     <Stack spacing={1}>
                         <Typography variant="h2">
-                            “OUR AMBITION IS TO PARTNER WITH CREATIVE DISRUPTORS
-                            WHO ARE BUILDING EXPERIENTIAL BEAUTY BRANDS THAT
-                            SPEAK TO THE VALUES AND PASSIONS OF TODAY’S (AND
-                            TOMORROW’S) CONSUMERS.”
+                            “FOUNDING A BEAUTY BRAND TAKES MORE THAN TRADITIONAL
+                            BUSINESS ACUMEN; IT'S ABOUT CRAFTING NARRATIVES,
+                            BUILDING COMMUNITIES, AND SHAPING NOT JUST TRENDS
+                            BUT ALSO BROADER CONVERSATIONS AND MOVEMENTS.
+                            FOUNDERS ARE STORYTELLERS… WE SET OUT TO CREATE A
+                            PROGRAM TO IDENTIFY AND ELEVATE THESE VISIONARIES AS
+                            THEY CONTINUE TO DRIVE INNOVATION AND PUSH THE
+                            CONVERSATION FORWARD.”
                         </Typography>
 
                         <Typography variant="body1">
@@ -337,7 +343,7 @@ export default function Home() {
                         </Typography>
                         <Typography variant="body1">
                             International press for the winners, along with
-                            amplification on the Estée Lauder Companies
+                            amplification on The Estée Lauder Companies
                             platforms.
                         </Typography>
                     </Box>
@@ -405,7 +411,8 @@ export default function Home() {
                 <Stack>
                     <Box>
                         <Typography variant="h1">
-                            A JURY OF CREATIVE LEADERS
+                            A JURY OF <br />
+                            CREATIVE LEADERS
                         </Typography>
                     </Box>
 
@@ -444,8 +451,8 @@ export default function Home() {
 
             <Section
                 sx={{
-                    backgroundColor: 'black.main',
-                    color: 'white.main',
+                    backgroundColor: 'white.main',
+                    color: 'black.main',
                     py: 8,
                 }}
             >
@@ -469,7 +476,7 @@ export default function Home() {
                     >
                         <Malarquee>
                             <Stack direction="row">
-                                {press.map((item, index) => (
+                                {pressLogos.map((item, index) => (
                                     <Stack
                                         key={index}
                                         spacing={2}
@@ -492,20 +499,30 @@ export default function Home() {
                                                 },
                                                 height: {
                                                     xs: 50,
-                                                    md: 50,
+                                                    md: 80,
                                                 },
-                                                border: '1px solid',
-                                                borderColor: 'black.main',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
+                                                background: 'white',
 
                                                 '& svg path': {
                                                     fill: 'currentColor',
                                                 },
                                             }}
                                         >
-                                            {item.logo}
+                                            <Image
+                                                src={item.src}
+                                                width={0}
+                                                height={0}
+                                                sizes="100vw"
+                                                style={{
+                                                    width: '100%',
+                                                    height: '100%',
+                                                    objectFit: 'contain',
+                                                    objectPosition: 'center',
+                                                }}
+                                            />
                                         </Box>
                                     </Stack>
                                 ))}

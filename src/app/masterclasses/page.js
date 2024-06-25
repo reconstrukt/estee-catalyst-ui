@@ -23,6 +23,7 @@ import PersonGridItem from '@/components/sections/PersonGridItem';
 
 export default function Masterclasses() {
     const [selected, setSelected] = useState(null);
+    const [videoSrc, setVideoSrc] = useState(null);
 
     const [nextLesson, setNextLesson] = useState(null);
 
@@ -43,6 +44,14 @@ export default function Masterclasses() {
         }
 
         console.log('selected: ', selected);
+
+        // swap video
+        if (selected) {
+            setVideoSrc(null);
+            setTimeout(() => {
+                setVideoSrc(selected.video);
+            }, 1);
+        }
     }, [selected]);
 
     const onNextLessonClick = () => {
@@ -197,12 +206,31 @@ export default function Masterclasses() {
                                 {masterclasses.map((lesson, i) => (
                                     <ButtonBase
                                         key={i}
-                                        onClick={() => setSelected(lesson)}
+                                        onClick={() => {
+                                            setSelected(lesson);
+                                        }}
                                     >
                                         <Box
                                             sx={{
                                                 width: 48,
                                                 height: 60,
+
+                                                ...(lesson.lesson ===
+                                                selected.lesson
+                                                    ? {
+                                                          '&::after': {
+                                                              content: '""',
+                                                              position:
+                                                                  'absolute',
+                                                              bottom: -4,
+                                                              left: 0,
+                                                              width: '100%',
+                                                              height: 2,
+                                                              background:
+                                                                  '#FF5A00',
+                                                          },
+                                                      }
+                                                    : {}),
                                             }}
                                         >
                                             <Image
@@ -245,9 +273,11 @@ export default function Masterclasses() {
                                     },
                                 }}
                             >
-                                <video controls>
-                                    <source src={`${selected.video}#t=0.001`} />
-                                </video>
+                                {videoSrc && (
+                                    <video controls>
+                                        <source src={`${videoSrc}#t=0.001`} />
+                                    </video>
+                                )}
                             </Box>
 
                             <Box
@@ -364,6 +394,8 @@ export default function Masterclasses() {
                     {experts.map((item, index) => (
                         <GridItem key={index}>
                             <PersonGridItem
+                                displayName={false}
+                                displayTitle={false}
                                 item={item}
                                 onClick={() => setSelectedJudge(item)}
                                 nameSx={{

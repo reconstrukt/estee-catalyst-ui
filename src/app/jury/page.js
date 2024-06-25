@@ -31,11 +31,12 @@ export default function ContactUs() {
                     sx={{
                         textAlign: 'center',
                         color: 'white.main',
-                        maxWidth: 1164,
+                        maxWidth: 900,
                     }}
                 >
                     <Typography variant="h1" mb={1}>
-                        A JURY OF CREATIVE LEADERS
+                        A JURY OF <br />
+                        CREATIVE LEADERS
                     </Typography>
                 </Box>
             </Hero>

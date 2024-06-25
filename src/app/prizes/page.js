@@ -26,7 +26,7 @@ export default function ThePrizes() {
                     </Typography>
                     <Typography variant="subtitle1">
                         Two winners of The Catalysts will receive funding for
-                        their project based on their submitted business plans.
+                        their ideas based on their applications.
                     </Typography>
                 </Box>
             </Hero>
@@ -91,7 +91,7 @@ export default function ThePrizes() {
                         </Typography>
                         <Typography variant="body1">
                             International press for the winners, along with
-                            amplification on the Estée Lauder Companies
+                            amplification on The Estée Lauder Companies
                             platforms.
                         </Typography>
                     </Box>

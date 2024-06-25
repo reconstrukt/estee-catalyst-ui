@@ -11,6 +11,7 @@ import {
 import { LoadingButton } from '@mui/lab';
 import useApplicationPortal from './ApplicationContext';
 import TheTextarea from '../elements/TheTextarea';
+import Link from 'next/link';
 
 export default function AppStep11() {
     const { application, updateApplication, values, setValues } =
@@ -23,7 +24,7 @@ export default function AppStep11() {
                 ? application.anything_else
                 : '',
             terms: 0,
-            privacy: 0,
+            privacy: 1,
             submitted: 1,
         });
     }, []);
@@ -105,24 +106,36 @@ export default function AppStep11() {
                                             textTransform: 'none',
                                         }}
                                     >
-                                        I have read and agree to the Privacy
-                                        Policy, Program Rules, and Terms and
-                                        Conditions and confirm that all
-                                        information provided by me in this
-                                        application form is true and correct,
-                                        that I have all necessary right and
-                                        authority to submit this application and
-                                        that by doing so I am not violating any
-                                        intellectual property rights or any
-                                        other rights of any third parties,
-                                        including without limitation, any trade
-                                        secret, copyright, authorship rights,
-                                        trademark and/or personality rights
-                                        (such as image rights or privacy
-                                        rights). By submitting this application,
-                                        I consent, on my behalf and, if
-                                        applicable, on behalf of the entity I
-                                        represent, to Estée Lauder
+                                        I have read and agree to the{' '}
+                                        <Link
+                                            target="_blank"
+                                            href="/privacy-policy"
+                                        >
+                                            Privacy Policy
+                                        </Link>{' '}
+                                        and{' '}
+                                        <Link
+                                            target="_blank"
+                                            href="/terms-and-conditions.pdf"
+                                            target="_blank"
+                                        >
+                                            Terms and Conditions
+                                        </Link>{' '}
+                                        and confirm that all information
+                                        provided by me in this application form
+                                        is true and correct, that I have all
+                                        necessary right and authority to submit
+                                        this application and that by doing so I
+                                        am not violating any intellectual
+                                        property rights or any other rights of
+                                        any third parties, including without
+                                        limitation, any trade secret, copyright,
+                                        authorship rights, trademark and/or
+                                        personality rights (such as image rights
+                                        or privacy rights). By submitting this
+                                        application, I consent, on my behalf
+                                        and, if applicable, on behalf of the
+                                        entity I represent, to Estée Lauder
                                         International, Inc. (ELI), its
                                         affiliates and any party authorized by
                                         ELI to use, publicize, evaluate and
@@ -132,44 +145,6 @@ export default function AppStep11() {
                                         any purpose ELI may deem fit and
                                         appropriate, and in all forms of media
                                         now known or hereafter invented.
-                                    </Typography>
-                                }
-                            />
-
-                            <FormControlLabel
-                                sx={{
-                                    display: 'flex',
-                                    alignItems: 'flex-start',
-                                }}
-                                control={
-                                    <Checkbox
-                                        color="black"
-                                        sx={{
-                                            marginTop: -1.2,
-                                            '& .MuiSvgIcon-root': {
-                                                fontSize: 14,
-                                            },
-                                        }}
-                                        checked={values.privacy === 1}
-                                        onChange={(e) =>
-                                            handleCheck(e, 'privacy')
-                                        }
-                                    />
-                                }
-                                label={
-                                    <Typography
-                                        variant="button"
-                                        color="black"
-                                        sx={{
-                                            fontSize: 10,
-                                            lineHeight: 1.2,
-                                            textAlign: 'left',
-                                            textTransform: 'none',
-                                        }}
-                                    >
-                                        I confirm that I accept the Privacy
-                                        Policy, Program Rules and Terms and
-                                        Conditions.Y.
                                     </Typography>
                                 }
                             />
@@ -195,7 +170,7 @@ export default function AppStep11() {
                             width: 221,
                         }}
                         onClick={handleNext}
-                        disabled={!values.terms || !values.privacy}
+                        disabled={!values.terms}
                     >
                         SUBMIT
                     </LoadingButton>

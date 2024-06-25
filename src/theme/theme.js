@@ -1,6 +1,10 @@
 'use client';
 import { createTheme } from '@mui/material/styles';
 import localFont from 'next/font/local';
+import CheckboxIcon from '../../assets/svg/checkbox.svg';
+import CheckboxCheckedIcon from '../../assets/svg/checkboxChecked.svg';
+import RadioIcon from '../../assets/svg/radio.svg';
+import RadioCheckedIcon from '../../assets/svg/radioChecked.svg';
 
 const defaultTheme = createTheme();
 
@@ -332,10 +336,21 @@ const theme = createTheme({
         },
 
         MuiCheckbox: {
+            defaultProps: {
+                icon: <CheckboxIcon />,
+                checkedIcon: <CheckboxCheckedIcon />,
+            },
             styleOverrides: {
                 root: {
                     // background: 'red',
                 },
+            },
+        },
+
+        MuiRadio: {
+            defaultProps: {
+                icon: <RadioIcon />,
+                checkedIcon: <RadioCheckedIcon />,
             },
         },
 
@@ -395,6 +410,14 @@ const theme = createTheme({
                 root: {
                     fontSize: 12,
                     marginTop: 0,
+                },
+            },
+        },
+
+        MuiDialogContent: {
+            styleOverrides: {
+                root: {
+                    padding: '0 !important',
                 },
             },
         },

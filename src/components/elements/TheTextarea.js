@@ -6,6 +6,7 @@ export default function TheTextarea({
     value,
     onChange,
     maxWords = 100,
+    error,
     ...props
 }) {
     const getNumOfWords = (val) => {
@@ -43,6 +44,7 @@ export default function TheTextarea({
                 multiline
                 rows={4}
                 value={value}
+                error={error}
                 onChange={(e) => handleChange(e)}
                 {...props}
                 sx={{
@@ -59,7 +61,7 @@ export default function TheTextarea({
             <Box
                 sx={{
                     position: 'absolute',
-                    bottom: 5,
+                    bottom: error ? 26 : 5,
                     left: 14,
                 }}
             >

@@ -93,9 +93,14 @@ export default function AppStep4() {
                         video link to another platform (e.g., Youtube, Vimeo,
                         etc.). If you have any questions on what to submit,
                         please consult the{' '}
-                        <Link href="/terms-and-conditions" target="_blank">
+                        <Link
+                            href="/terms-and-conditions.pdf"
+                            target="_blank"
+                            target="_blank"
+                        >
                             Terms and Conditions
                         </Link>
+                        .
                     </Typography>
                 </Stack>
 
