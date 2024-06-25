@@ -15,17 +15,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <Stack
-                    sx={{
-                        height: '100vh',
-                        width: '100%',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                    }}
-                >
-                    <Logo width={250} height={250} />
-                </Stack>
-                {/* <Box
+                <Box
                     sx={{
                         position: 'relative',
                         overflowX: 'hidden',
@@ -34,7 +24,7 @@ export default function RootLayout({ children }) {
                     <AppRouterCacheProvider>
                         <Providers>{children}</Providers>
                     </AppRouterCacheProvider>
-                </Box> */}
+                </Box>
             </body>
         </html>
     );
