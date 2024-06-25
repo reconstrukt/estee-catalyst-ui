@@ -14,8 +14,16 @@ import JingDaily from 'assets/press/JingDaily.png';
 import MarieClaire from 'assets/press/MarieClaire.png';
 import VogueBusiness from 'assets/press/VogueBusiness.png';
 import WWD from 'assets/press/WWD.png';
+import BusinessWire from 'assets/press/BusinessWire.png';
 
 const press = [
+    {
+        logo: BusinessWire,
+        date: `JUN 25, 2024`,
+        title: `ELC’s NIV to Launch The Catalysts Program with Support from TikTok`,
+        link: `https://www.businesswire.com/news/home/20240625291418/en/The-Est%C3%A9e-Lauder-Companies%E2%80%99-NIV-with-Support-from-TikTok-to-Launch-The-Catalysts-Program?_gl=1*7i2jov*_gcl_aw*R0NMLjE3MTkzMjAxNTUuQ2p3S0NBancxZW16QmhCOEVpd0FId1paeGN5MmM0RS04QWlnalNReFRjTVBDWlZSOWJHQWR6ZW9YMEswNS1JZTA2b205ODl0TEJoTWtob0NkUGNRQXZEX0J3RQ..*_gcl_au*MTM1NTY4MjgxOS4xNzE1MjAyNjM2*_ga*NjAyNDI5NTI4LjE3MDY4MDg4NTM.*_ga_ZQWF70T3FK*MTcxOTMyMDE1NC42OC4xLjE3MTkzMjA1ODEuNDUuMC4w`,
+    },
+
     {
         logo: VogueBusiness,
         date: `FEB 9, 2024`,
@@ -160,6 +168,7 @@ const press = [
 export default press;
 
 export const pressLogos = [
+    BusinessWire,
     BeautyMatter,
     BeautyPackaging,
     BOF,
