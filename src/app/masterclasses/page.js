@@ -274,7 +274,7 @@ export default function Masterclasses() {
                                 }}
                             >
                                 {videoSrc && (
-                                    <video controls>
+                                    <video controls key={videoSrc}>
                                         <source src={`${videoSrc}#t=0.001`} />
                                     </video>
                                 )}
