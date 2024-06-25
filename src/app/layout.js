@@ -1,9 +1,8 @@
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import Providers from '@/components/providers/Providers';
-import { Box, Stack } from '@mui/material';
+import { Box } from '@mui/material';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Logo from '../../assets/svg/logo.svg';
 
 export const metadata = {
     title: 'The Catalysts',
