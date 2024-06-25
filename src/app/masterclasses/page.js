@@ -23,6 +23,7 @@ import PersonGridItem from '@/components/sections/PersonGridItem';
 
 export default function Masterclasses() {
     const [selected, setSelected] = useState(null);
+    const [videoSrc, setVideoSrc] = useState(null);
 
     const [nextLesson, setNextLesson] = useState(null);
 
@@ -43,6 +44,14 @@ export default function Masterclasses() {
         }
 
         console.log('selected: ', selected);
+
+        // swap video
+        if (selected) {
+            setVideoSrc(null);
+            setTimeout(() => {
+                setVideoSrc(selected.video);
+            }, 1);
+        }
     }, [selected]);
 
     const onNextLessonClick = () => {
@@ -187,7 +196,7 @@ export default function Masterclasses() {
             >
                 {selected && (
                     <>
-                        {/* <Box>
+                        <Box>
                             <Stack
                                 direction="row"
                                 spacing={0.5}
@@ -198,7 +207,6 @@ export default function Masterclasses() {
                                     <ButtonBase
                                         key={i}
                                         onClick={() => {
-                                            setSelected(null);
                                             setSelected(lesson);
                                         }}
                                     >
@@ -241,7 +249,7 @@ export default function Masterclasses() {
                                     </ButtonBase>
                                 ))}
                             </Stack>
-                        </Box> */}
+                        </Box>
 
                         <Box px={2}>
                             <Box
@@ -265,11 +273,9 @@ export default function Masterclasses() {
                                     },
                                 }}
                             >
-                                {selected && selected.video && (
+                                {videoSrc && (
                                     <video controls>
-                                        <source
-                                            src={`${selected.video}#t=0.001`}
-                                        />
+                                        <source src={`${videoSrc}#t=0.001`} />
                                     </video>
                                 )}
                             </Box>
